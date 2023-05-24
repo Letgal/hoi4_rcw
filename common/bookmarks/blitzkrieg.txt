@@ -1,0 +1,38 @@
+bookmarks = {
+	bookmark = {
+		name = "BLITZKRIEG_NAME"
+		desc = "BLITZKRIEG_DESC"
+		date = 1917.11.11.1
+		picture = "GFX_select_date_1939"
+		default_country = "RUS"
+
+		"RUS"={
+			history = "RUS_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				provisional_government_idea
+				RUS_undersupplied_army
+				RUS_failing_state_dummy
+			}
+			focuses = {
+				WHI_anti_soviet_operations
+				WHI_our_movement
+				WHI_russia_reunited
+			}
+		}
+
+		#"SOV"={
+		#	history = "SOV_GATHERING_STORM_DESC"
+		#	ideology = communism
+		#	ideas = {
+		#		unrecognized_state
+		#		communist_fervor
+		#		RUS_undersupplied_army
+		#	}
+		#	focuses = {
+		#		SOV_stabilize_the_country
+		#		SOV_marxism_leninism
+		#	}
+		#}
+	}
+}

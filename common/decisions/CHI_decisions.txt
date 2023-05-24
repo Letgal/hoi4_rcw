@@ -1,0 +1,11 @@
+CHI_anti_imperialism = {
+	CHI_scorched_earth_tactics = { }
+	CHI_60_divisions_plan = { }
+	CHI_forced_loans = { }
+	CHI_release_korea = { activation = { always = no } days_mission_timeout = 1 }
+	CHI_overlordship_over_indochina = { activation = { always = no } days_mission_timeout = 1 }
+	CHI_build_a_carrier = { activation = { always = no } days_mission_timeout = 1 }
+	CHI_expand_the_burma_road = { }
+	CHI_flying_tigers = { }
+	CHI_soviet_volunteer_group = { }
+}

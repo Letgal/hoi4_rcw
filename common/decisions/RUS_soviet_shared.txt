@@ -1,0 +1,67 @@
+RUS_balance_of_power_category = {
+	#complete_effect = {
+	#	add_popularity = {
+	#		ideology = communism
+	#		popularity = -0.05
+	#	}
+	#	if = {
+	#		limit = { has_dlc = "By Blood Alone" }
+	#		add_power_balance_value = {
+	#			id = RUS_provisional_bop
+	#			value = 0.1
+	#		}
+	#	}
+	#}
+	RUS_limit_the_soviets_influence = {
+		priority = 1
+		icon = oppression
+		allowed = { has_dlc = "By Blood Alone" }
+		visible = {
+			OR = {
+				has_completed_focus = RUS_purge_the_soviets
+				has_completed_focus = RUS_cooperate_with_the_soviets
+			}
+		}
+		cost = 30
+		days_remove = 14
+		complete_effect = {
+			add_stability = -0.05
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_power_balance_value = {
+					id = RUS_provisional_bop
+					value = 0.05
+				}
+			}
+		}
+	}
+	RUS_deepen_the_rsdlp_divide = {
+		priority = 1
+		icon = generic_wreckers
+		visible = {
+			OR = {
+				has_completed_focus = RUS_purge_the_soviets
+				has_completed_focus = RUS_cooperate_with_the_soviets
+			}
+		}
+		cost = 30
+		days_remove = 14
+		remove_effect = {
+			add_to_variable = {
+				rsdlp_divide = 1
+				tooltip = rsdlp_divide_plus_1
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_power_balance_value = {
+					id = RUS_provisional_bop
+					value = 0.1
+				}
+			}
+		}
+	}
+}

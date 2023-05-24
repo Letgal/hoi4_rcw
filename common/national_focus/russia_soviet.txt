@@ -1,0 +1,421 @@
+﻿focus_tree = {
+	id = soviet_russia_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	default = no
+
+	focus = {
+		id = SOV_stabilize_the_country
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 0
+		cost = 2
+		search_filters = { FOCUS_FILTER_STABILITY }
+		ai_will_do = { factor = 1 }
+		completion_reward = { add_stability = 0.1 }
+	}
+
+	focus = {
+		id = SOV_address_the_war
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = SOV_stabilize_the_country }
+		relative_position_id = SOV_stabilize_the_country
+		x = -3
+		y = 1
+		cost = 5
+		available = { has_war_with = GER }
+		bypass = { NOT = { has_war_with = GER } }
+		ai_will_do = { factor = 2 }
+		completion_reward = {
+			add_timed_idea = {
+				idea = RUS_improved_supply_temp
+				days = 60
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_propose_a_truce
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = SOV_address_the_war }
+		mutually_exclusive = { focus = SOV_continue_the_war }
+		relative_position_id = SOV_address_the_war
+		x = -1
+		y = 1
+		cost = 2
+		available = { has_war_with = GER }
+		bypass = { NOT = { has_war_with = GER } }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = { factor = 2 }
+		completion_reward = {
+			add_to_variable = { RUS_war_weariness_ws = 0.05 }
+			custom_effect_tooltip = RUS_war_weariness_ws_5
+			GER = {
+				country_event = {
+					id = RCW_treaty.1
+					days = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_continue_the_war
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = SOV_address_the_war }
+		mutually_exclusive = { focus = SOV_propose_a_truce }
+		relative_position_id = SOV_address_the_war
+		x = 1
+		y = 1
+		cost = 3
+		available = { has_war_with = GER }
+		bypass = { NOT = { has_war_with = GER } }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.1
+			}
+			add_to_variable = { RUS_war_weariness_ws = 0.05 }
+			custom_effect_tooltip = RUS_war_weariness_ws_5
+			custom_effect_tooltip = unpopular_option_tt
+		}
+	}
+
+	focus = {
+		id = SOV_propose_a_peace_treaty
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SOV_propose_a_truce }
+		relative_position_id = SOV_propose_a_truce
+		x = 0
+		y = 1
+		cost = 3
+		available = { has_war_with = GER }
+		bypass = { NOT = { has_war_with = GER } }
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		ai_will_do = { factor = 2 }
+		completion_reward = {
+			GER = {
+				country_event = {
+					id = RCW_treaty.3
+					days = 3
+				}
+			}
+			custom_effect_tooltip = will_lose_territory_tt
+		}
+	}
+
+	focus = {
+		id = SOV_bolshevik_propaganda
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = SOV_continue_the_war }
+		relative_position_id = SOV_continue_the_war
+		x = 0
+		y = 1
+		cost = 4
+		available = { has_war_with = GER }
+		bypass = { NOT = { has_war_with = GER } }
+		search_filters = { FOCUS_FILTER_PROPAGANDA FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_to_variable = { RUS_war_weariness_ws = 0.1 }
+			custom_effect_tooltip = RUS_war_weariness_ws_10
+		}
+	}
+
+	focus = {
+		id = SOV_frontline_spies
+		icon = GFX_focus_generic_vatican_agents
+		prerequisite = { focus = SOV_propose_a_truce focus = SOV_continue_the_war }
+		relative_position_id = SOV_propose_a_peace_treaty
+		x = 1
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = recon_tech
+				name = SOV_frontline_spies
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_road_map
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = SOV_stabilize_the_country }
+		relative_position_id = SOV_stabilize_the_country
+		x = 2
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
+		ai_will_do = { factor = 1 }
+		completion_reward = { add_political_power = 90 }
+	}
+
+	focus = {
+		id = SOV_purge_the_mensheviks
+		icon = GFX_focus_SOV_the_last_purge
+		prerequisite = { focus = SOV_road_map }
+		mutually_exclusive = { focus = SOV_cooperate_with_the_mensheviks }
+		relative_position_id = SOV_road_map
+		x = -2
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SOV_cooperate_with_the_mensheviks
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = SOV_road_map }
+		mutually_exclusive = { focus = SOV_purge_the_mensheviks }
+		relative_position_id = SOV_road_map
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SOV_plans_of_rebuilding
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SOV_road_map }
+		relative_position_id = SOV_road_map
+		x = 4
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_to_variable = { RUS_failing_state_cs = 0.1 }
+			custom_effect_tooltip = RUS_failing_state_cs_10
+		}
+	}
+
+	focus = {
+		id = SOV_comintern
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = SOV_purge_the_mensheviks focus = SOV_cooperate_with_the_mensheviks }
+		relative_position_id = SOV_purge_the_mensheviks
+		x = 0
+		y = 1
+		cost = 10
+		available = {
+			is_puppet = no
+			has_war = no
+			is_in_faction = no
+			has_country_leader = {
+				character = SOV_vladimir_lenin
+				ruling_only = yes
+			}
+		}
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = Comintern
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_marxism_leninism
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism
+		prerequisite = { focus = SOV_purge_the_mensheviks focus = SOV_cooperate_with_the_mensheviks }
+		relative_position_id = SOV_cooperate_with_the_mensheviks
+		x = 0
+		y = 1
+		cost = 10
+		available = {
+			has_country_leader = {
+				character = SOV_vladimir_lenin
+				ruling_only = yes
+			}
+		}
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SOV_emergency_industry
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = SOV_plans_of_rebuilding }
+		relative_position_id = SOV_plans_of_rebuilding
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_timed_idea = {
+				idea = RUS_emergency_industry_temp
+				days = 60
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_military_communism
+		icon = GFX_goal_generic_political_pressure
+		#prerequisite = { focus = SOV_continue_the_war }
+		prerequisite = { focus = SOV_marxism_leninism }
+		mutually_exclusive = { focus = SOV_organize_the_trade_unions }
+		relative_position_id = SOV_marxism_leninism
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = -0.1
+			add_ideas = RUS_harsher_work_quotas_idea
+		}
+	}
+
+	focus = {
+		id = SOV_organize_the_trade_unions
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = SOV_marxism_leninism }
+		mutually_exclusive = { focus = SOV_military_communism }
+		relative_position_id = SOV_marxism_leninism
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = -0.1
+			add_ideas = RUS_improved_worker_conditions
+		}
+	}
+
+	focus = {
+		id = SOV_abolish_the_church
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		prerequisite = { focus = SOV_marxism_leninism }
+		relative_position_id = SOV_marxism_leninism
+		x = 2
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 1 }
+		completion_reward = { add_ideas = SOV_church_abolished }
+	}
+
+	focus = {
+		id = SOV_grand_infrastructure_projects
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SOV_emergency_industry }
+		relative_position_id = SOV_emergency_industry
+		x = 0
+		y = 1
+		cost = 8
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = { factor = 1 }
+		completion_reward = { add_ideas = SOV_infrastructure_networks }
+	}
+
+	focus = {
+		id = SOV_field_research_teams
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = SOV_military_communism focus = SOV_organize_the_trade_unions }
+		relative_position_id = SOV_military_communism
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 1 }
+		completion_reward = { add_ideas = RUS_field_research_teams_1 }
+	}
+
+	focus = {
+		id = SOV_small_arms_innovations
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_military_communism focus = SOV_organize_the_trade_unions }
+		relative_position_id = SOV_organize_the_trade_unions
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			if = {
+				limit = { has_idea = RUS_field_research_teams_1 }
+				swap_ideas = {
+					remove_idea = RUS_field_research_teams_1
+					add_idea = RUS_field_research_teams_2
+				}
+				else = { custom_effect_tooltip = improves_field_research_tt }
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				name = SOV_small_arms_innovations
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_revoltion_triumphant
+		icon = GFX_focus_generic_population_growth
+		prerequisite = { focus = SOV_abolish_the_church }
+		prerequisite = { focus = SOV_grand_infrastructure_projects }
+		relative_position_id = SOV_abolish_the_church
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		ai_will_do = { factor = 1 }
+	}
+
+	focus = {
+		id = SOV_truck_research
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = SOV_small_arms_innovations }
+		relative_position_id = SOV_small_arms_innovations
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+				name = SOV_truck_research
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_artillery_innovations
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SOV_small_arms_innovations }
+		relative_position_id = SOV_small_arms_innovations
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = artillery
+				name = SOV_artillery_innovations
+			}
+		}
+	}
+}

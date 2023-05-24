@@ -1,0 +1,18 @@
+RCW_peace_treaty_category = {
+	icon = GFX_decision_category_generic_political_actions
+	allowed = {
+		original_tag = GER
+		#OR = {
+		#	original_tag = RUS
+		#	original_tag = SOV
+		#	original_tag = GER
+		#	original_tag = AUS
+		#	original_tag = POL
+		#}
+	}
+	highlight_states = {
+		highlight_color_before_active = 2
+		highlight_color_while_active = 3
+	}
+	priority = 30
+}

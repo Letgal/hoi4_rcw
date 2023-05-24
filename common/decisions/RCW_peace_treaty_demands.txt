@@ -1,0 +1,237 @@
+RCW_peace_treaty_category = {
+	GER_demand_POL = {
+		icon = eng_trade_unions_demand
+		visible = {
+			has_global_flag = peace_negotiations_ongoing
+			NOT = { has_variable = RUS.POL_concession }
+		}
+		available = {
+			NOT = { has_country_flag = is_sending_demands }
+		}
+		fire_only_once = yes
+		state_target = yes
+		targets = { 10 }
+		highlight_states = {
+			highlight_state_targets = {
+				state = 10
+				state = 87
+				state = 90
+				state = 92
+				state = 97
+				state = 98
+			}
+		}
+		ai_will_do = { base = 5 }
+
+		complete_effect = {
+			set_country_flag = is_sending_demands
+			hidden_effect = {
+				RUS = {
+					country_event = {
+						id = RCW_treaty.5
+						days = 2
+						random_days = 2
+					}
+				}
+			}
+		}
+		days_remove = 7
+		remove_effect = {
+			clr_country_flag = is_sending_demands
+			custom_effect_tooltip = demand_is_set_tt
+		}
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = concession_denied_tt
+				check_variable = { RUS.POL_concession = 2 }
+			}
+		}
+		cancel_effect = { clr_country_flag = is_sending_demands }
+	}
+	GER_demand_RUT = {
+		icon = eng_trade_unions_demand
+		visible = {
+			has_global_flag = peace_negotiations_ongoing
+			NOT = { has_variable = RUS.RUT_concession }
+		}
+		available = {
+			NOT = { has_country_flag = is_sending_demands }
+		}
+		fire_only_once = yes
+		state_target = yes
+		targets = { 202 }
+		ai_will_do = { base = 5 }
+
+		complete_effect = {
+			set_country_flag = is_sending_demands
+			hidden_effect = {
+				RUS = {
+					country_event = {
+						id = RCW_treaty.6
+						days = 2
+						random_days = 2
+					}
+				}
+			}
+		}
+		days_remove = 7
+		remove_effect = {
+			clr_country_flag = is_sending_demands
+			custom_effect_tooltip = demand_is_set_tt
+		}
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = concession_denied_tt
+				check_variable = { RUS.RUT_concession = 2 }
+			}
+		}
+		cancel_effect = { clr_country_flag = is_sending_demands }
+	}
+	GER_demand_BAL = {
+		icon = eng_trade_unions_demand
+		visible = {
+			has_global_flag = peace_negotiations_ongoing
+			NOT = { has_variable = RUS.BAL_concession }
+		}
+		available = {
+			NOT = { has_country_flag = is_sending_demands }
+		}
+		fire_only_once = yes
+		state_target = yes
+		targets = { 808 }
+		ai_will_do = { base = 5 }
+
+		complete_effect = {
+			set_country_flag = is_sending_demands
+			hidden_effect = {
+				RUS = {
+					country_event = {
+						id = RCW_treaty.7
+						days = 2
+						random_days = 2
+					}
+				}
+			}
+		}
+		days_remove = 7
+		remove_effect = {
+			clr_country_flag = is_sending_demands
+			custom_effect_tooltip = demand_is_set_tt
+		}
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = concession_denied_tt
+				check_variable = { RUS.BAL_concession = 2 }
+			}
+		}
+		cancel_effect = { clr_country_flag = is_sending_demands }
+	}
+	GER_demand_FIN = {
+		icon = eng_trade_unions_demand
+		visible = {
+			has_global_flag = peace_negotiations_ongoing
+			NOT = { has_variable = RUS.FIN_concession }
+		}
+		available = {
+			NOT = { has_country_flag = is_sending_demands }
+		}
+		fire_only_once = yes
+		state_target = yes
+		targets = { 111 }
+		ai_will_do = { base = 5 }
+
+		complete_effect = {
+			set_country_flag = is_sending_demands
+			hidden_effect = {
+				RUS = {
+					country_event = {
+						id = RCW_treaty.8
+						days = 2
+						random_days = 2
+					}
+				}
+			}
+		}
+		days_remove = 7
+		remove_effect = {
+			clr_country_flag = is_sending_demands
+			custom_effect_tooltip = demand_is_set_tt
+		}
+		cancel_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = concession_denied_tt
+				check_variable = { RUS.FIN_concession = 2 }
+			}
+		}
+		cancel_effect = { clr_country_flag = is_sending_demands }
+	}
+	GER_quit_the_negotiations = {
+		icon = generic_break_treaty
+		visible = {
+			has_global_flag = peace_negotiations_ongoing
+			OR = {
+				check_variable = { RUS.POL_concession = 2 }
+				check_variable = { RUS.RUT_concession = 2 }
+				check_variable = { RUS.BAL_concession = 2 }
+				check_variable = { RUS.FIN_concession = 2 }
+			}
+		}
+		available = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = denied_POL_tt
+					check_variable = { RUS.POL_concession = 2 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = denied_RUT_tt
+					check_variable = { RUS.RUT_concession = 2 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = denied_BAL_tt
+					check_variable = { RUS.BAL_concession = 2 }
+				}
+				custom_trigger_tooltip = {
+					tooltip = denied_FIN_tt
+					check_variable = { RUS.FIN_concession = 2 }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 3
+				OR = {
+					check_variable = { RUS.POL_concession = 2 }
+					check_variable = { RUS.RUT_concession = 2 }
+					check_variable = { RUS.BAL_concession = 2 }
+					check_variable = { RUS.FIN_concession = 2 }
+				}
+			}
+			modifier = {
+				add = 3
+				count_triggers = {
+					amount = 2
+					check_variable = { RUS.POL_concession = 2 }
+					check_variable = { RUS.RUT_concession = 2 }
+					check_variable = { RUS.BAL_concession = 2 }
+					check_variable = { RUS.FIN_concession = 2 }
+				}
+			}
+			modifier = {
+				add = 3
+				count_triggers = {
+					amount = 3
+					check_variable = { RUS.POL_concession = 2 }
+					check_variable = { RUS.RUT_concession = 2 }
+					check_variable = { RUS.BAL_concession = 2 }
+					check_variable = { RUS.FIN_concession = 2 }
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				RUS = { country_event = RCW_treaty.9 }
+			}
+		}
+	}
+}

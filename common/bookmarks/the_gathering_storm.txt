@@ -1,0 +1,41 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1917.4.1.1
+		picture = "GFX_select_date_1936"
+		default_country = "RUS"
+		default = yes
+
+		"RUS"={
+			history = "RUS_GATHERING_STORM_DESC"
+			ideology = democratic
+			available = { has_dlc = "By Blood Alone" } 
+			ideas = {
+				provisional_government_idea
+				RUS_bop_dummy
+				RUS_failing_state_dummy
+			}
+			focuses = {
+				RUS_address_the_war
+				RUS_convene_the_constituent_assembly
+				RUS_russias_bright_future
+			}
+		}
+		"RUS"={
+			history = "RUS_GATHERING_STORM_DESC"
+			ideology = democratic
+			available = { NOT = { has_dlc = "By Blood Alone" } } 
+			ideas = {
+				provisional_government_idea
+				RUS_petrograd_soviet_1
+				RUS_failing_state_dummy
+			}
+			focuses = {
+				RUS_address_the_war
+				RUS_convene_the_constituent_assembly
+				RUS_russias_bright_future
+			}
+		}
+	}
+}

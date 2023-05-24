@@ -1,0 +1,15 @@
+PRO = {
+	original_tag = RUS
+	has_government = democratic
+	has_cosmetic_tag = RUS_provisional
+}
+KRN = {
+	original_tag = RUS
+	has_government = neutrality
+	has_cosmetic_tag = RUS_kornilov
+}
+WHI = {
+	original_tag = RUS
+	has_government = neutrality
+	has_cosmetic_tag = RUS_white
+}

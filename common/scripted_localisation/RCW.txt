@@ -1,0 +1,16 @@
+defined_text = {
+	name = GetBopDecisionCatName
+	text = {
+		trigger = {
+			THIS = { has_completed_focus = RUS_purge_the_soviets }
+		}
+		localization_key = RUS_purge_the_soviets_category
+	}
+	text = {
+		trigger = {
+			THIS = { has_completed_focus = RUS_cooperate_with_the_soviets }
+		}
+		localization_key = RUS_cooperate_with_the_soviets_category
+	}
+	text = { localization_key = RUS_provisional_bop }
+}

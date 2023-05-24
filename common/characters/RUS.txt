@@ -1,0 +1,402 @@
+characters = {
+	### COUNTRY LEADERS ###
+	RUS_aleksandr_kerensky = {
+		name = RUS_aleksandr_kerensky
+		portraits = {
+			civilian = { large = GFX_portrait_RUS_aleksandr_kerensky }
+			army = { small = GFX_idea_alexander_kerensky }
+		}
+		country_leader = {
+			ideology = socialism
+			traits = { incompetent_leader }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_aleksandr_kerensky
+			allowed = { original_tag = RUS }
+			visible = { is_country_leader = no }
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+				is_country_leader = no
+				#NOT = { has_character_flag = RUS_exiled_flag }
+			}
+			traits = { democratic_reformer }
+		}
+	}
+
+	RUS_vladimir_lenin = {
+		name = RUS_vladimir_lenin
+		portraits = {
+			civilian = { large = GFX_portrait_RUS_vladimir_lenin }
+		}
+		country_leader = {
+			ideology = leninism
+			expire = "1953.3.1.1"
+			id = -1
+		}
+	}
+
+	RUS_irakli_tsereteli = {
+		name = RUS_irakli_tsereteli
+		portraits = {
+			civilian = { large = GFX_portrait_RUS_irakli_tsereteli }
+			army = { small = GFX_idea_europe_generic_4 }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_irakli_tsereteli
+			allowed = { original_tag = RUS }
+			visible = { is_country_leader = no }
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+				is_country_leader = no
+				has_government = democratic
+				has_completed_focus = RUS_moderate_communism
+				#NOT = { has_character_flag = RUS_exiled_flag }
+			}
+			traits = { patriotic_socialist }
+		}
+	}
+
+	### LATER COUNTRY LEADERS ###
+	RUS_lavr_kornilov = {
+		name = RUS_lavr_kornilov
+		portraits = {
+			civilian = { large = "GFX_portrait_RUS_lavr_kornilov" }
+			army = {
+				large = "GFX_portrait_RUS_lavr_kornilov"
+				small = "GFX_idea_RUS_pyotr_krasnov" # Temp
+			}
+		}
+		field_marshal = {
+			traits = { old_guard }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	RUS_provisional_government = {
+		name = RUS_provisional_government
+		portraits = {
+			civilian = { large = "GFX_portrait_RUS_white_transitionary_council" }
+		}
+		#country_leader = {
+		#	ideology = despotism
+		#	expire = "1953.3.1.1"
+		#	id = -1
+		#	traits = {
+		#		emigre_connections desperate_gambit dysfunctional_assembly
+		#	}
+		#}
+	}
+
+	### ADVISORS ###
+	RUS_pavel_milyukov = {
+		name = RUS_pavel_milyukov
+		portraits = {
+			army = { small = GFX_idea_europe_generic_2 }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_pavel_milyukov
+			allowed = { original_tag = RUS }
+			available = {
+				has_government = democratic
+				NOT = {
+					has_completed_focus = RUS_moderate_communism
+					#has_character_flag = RUS_exiled_flag
+				}
+			}
+			removal_cost = -1 # Pre-1.12.8
+			can_be_fired = no
+			traits = { liberal_professor }
+		}
+	}
+
+	RUS_georgi_lvov = {
+		name = RUS_georgi_lvov
+		portraits = {
+			army = { small = GFX_idea_south_america_generic_8 }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_georgi_lvov
+			allowed = { original_tag = RUS }
+			available = {
+				has_government = democratic
+				NOT = {
+					has_completed_focus = RUS_moderate_communism
+					#has_character_flag = RUS_exiled_flag
+				}
+			}
+			traits = { noble_beurocrat }
+		}
+	}
+
+	RUS_mikhail_rodzyanko = {
+		name = RUS_mikhail_rodzyanko
+		portraits = {
+			army = { small = GFX_idea_europe_generic_4 }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_mikhail_rodzyanko
+			allowed = { original_tag = RUS }
+			available = {
+				has_government = democratic
+				NOT = {
+					has_completed_focus = RUS_moderate_communism
+					#has_character_flag = RUS_exiled_flag
+				}
+			}
+			traits = { SWI_conservative_democrat }
+		}
+	}
+
+	RUS_patriarch_sergy = {
+		name = RUS_patriarch_sergy
+		portraits = {
+			army = { small = "GFX_idea_RUS_patriarch_sergy" }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_patriarch_sergy
+			allowed = { original_tag = SOV }
+			visible = { has_completed_focus = RUS_preserve_church_power }
+			available = { has_completed_focus = RUS_preserve_church_power }
+			traits = { patriarch_of_moscow_and_all_russia }
+		}
+	}
+
+	RUS_metropolitan_meletius = {
+		name = RUS_metropolitan_meletius
+		portraits = {
+			#civilian = { large = "GFX_portrait_RUS_patriarch_meletius" }
+			army = { small = "GFX_idea_RUS_patriarch_meletius" }
+		}
+		#country_leader = {
+		#	ideology = despotism
+		#	expire = "1953.3.1.1"
+		#	id = -1
+		#	traits = {
+		#		defier_of_the_sun_god
+		#		supreme_representative_of_god_on_earth
+		#	}
+		#}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_patriarch_meletius
+			allowed = { original_tag = SOV }
+			visible = { has_completed_focus = RUS_preserve_church_power }
+			available = { has_completed_focus = RUS_preserve_church_power }
+			traits = { the_masses_opium }
+		}
+	}
+
+	RUS_metropolitan_anastasy = {
+		name = RUS_metropolitan_anastasy
+		portraits = {
+			army = { small = "GFX_idea_RUS_metropolitan_anastasy" }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_metropolitan_anastasy
+			allowed = { original_tag = SOV }
+			visible = { has_completed_focus = RUS_preserve_church_power }
+			available = { has_completed_focus = RUS_preserve_church_power }
+			traits = { orthodox_rabblerouser }
+		}
+	}
+
+	RUS_metropolitan_nikolay = {
+		name = RUS_metropolitan_nikolay
+		portraits = {
+			army = { small = "GFX_idea_RUS_metropolitan_nikolay" }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_metropolitan_nikolay
+			allowed = { original_tag = SOV }
+			visible = { has_completed_focus = RUS_preserve_church_power }
+			available = { has_completed_focus = RUS_preserve_church_power }
+			traits = { theocratic_diplomat }
+		}
+	}
+
+	RUS_metropolitan_aleksy = {
+		name = RUS_metropolitan_aleksy
+		portraits = {
+			army = { small = "GFX_idea_RUS_metropolitan_aleksy" }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RUS_metropolitan_aleksy
+			allowed = { original_tag = SOV }
+			visible = { has_completed_focus = RUS_preserve_church_power }
+			available = { has_completed_focus = RUS_preserve_church_power }
+			traits = { driver_of_the_faithful }
+		}
+	}
+
+	### ARMY ADVISORS (incl. commanders) ###
+	RUS_anton_denikin = {
+		name = RUS_anton_denikin
+		portraits = {
+			army = {
+				large = "GFX_portrait_RUS_anton_denikin"
+				small = "GFX_idea_RUS_anton_denikin"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = anton_denikin
+			allowed = { original_tag = SOV }
+			available = {
+				if = {
+					limit = { has_character_flag = RUS_exiled_flag }
+					NOT = { has_character_flag = RUS_exiled_flag }
+				}
+			}
+			traits = { army_chief_drill_1 }
+			cost = 50
+		}
+		field_marshal = {
+			traits = {
+				old_guard
+				inflexible_strategist
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	### NON-ADVISOR ARMY LEADERS ###
+	RUS_pyotr_krasnov = {
+		name = RUS_pyotr_krasnov
+		portraits = {
+			army = {
+				large = "GFX_portrait_RUS_pyotr_krasnov"
+				small = "GFX_idea_RUS_pyotr_krasnov"
+			}
+		}
+		field_marshal = {
+			traits = { cavalry_leader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	RUS_konstantin_nechayev = {
+		name = RUS_konstantin_nechayev
+		portraits = {
+			army = {
+				large = "GFX_portrait_RUS_konstantin_nechayev"
+				small = "GFX_idea_RUS_konstantin_nechayev"
+			}
+		}
+		field_marshal = {
+			traits = {
+				infantry_officer
+				war_hero
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	RUS_vladimir_kosmin = {
+		name = RUS_vladimir_kosmin
+		portraits = {
+			army = {
+				large = "GFX_portrait_RUS_vladimir_kosmin"
+				small = "GFX_idea_RUS_vladimir_kosmin"
+			}
+		}
+		field_marshal = {
+			traits = {
+				winter_expert
+				trait_mountaineer
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	RUS_aleksandr_rodzyanko = {
+		name = RUS_aleksandr_rodzyanko
+		portraits = {
+			army = {
+				large = "GFX_portrait_RUS_aleksandr_rodzyanko"
+				small = "GFX_idea_RUS_aleksandr_rodzyanko"
+			}
+		}
+		field_marshal = {
+			traits = { cavalry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	RUS_andrey_shkuro = {
+		name = RUS_andrey_shkuro
+		portraits = {
+			army = {
+				large = "GFX_portrait_RUS_andrey_shkuro"
+				small = "GFX_idea_RUS_andrey_shkuro"
+			}
+		}
+		field_marshal = {
+			traits = {
+				trait_reckless
+				cavalry_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+
+	RUS_aleksey_polivanov = {
+		name = RUS_aleksey_polivanov
+		portraits = {
+			army = {
+				large = "GFX_portrait_south_america_generic_8"
+				small = "GFX_idea_south_america_generic_8"
+			}
+		}
+		corps_commander = {
+			traits = { } # INF
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

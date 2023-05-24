@@ -1,0 +1,162 @@
+﻿add_namespace = RCW_treaty
+
+### TRUCE ###
+country_event = {
+	id = RCW_treaty.1 # Offer: Truce (GER)
+	title = RCW_treaty.1.t
+	desc = RCW_treaty.1.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RCW_treaty.1.a
+		RUS = {
+			country_event = {
+				id = RCW_treaty.2
+				days = 3
+			}
+		}
+	}
+}
+country_event = {
+	id = RCW_treaty.2 # Response: Rejected (RUS)
+	title = RCW_treaty.2.t
+	desc = RCW_treaty.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { name = RCW_treaty.2.a }
+}
+
+### PEACE NEGOTIATIONS ###
+country_event = {
+	id = RCW_treaty.3 # Offer: Peace Treaty (GER)
+	title = RCW_treaty.3.t
+	desc = RCW_treaty.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RCW_treaty.3.a
+		RUS = {
+			country_event = {
+				id = RCW_treaty.4
+				days = 6
+			}
+		}
+	}
+}
+country_event = {
+	id = RCW_treaty.4 # Response: Accepted (RUS)
+	title = RCW_treaty.4.t
+	desc = RCW_treaty.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RCW_treaty.4.a
+		set_global_flag = peace_negotiations_ongoing
+		GER = { unlock_decision_category_tooltip = RCW_peace_treaty_category }
+		#unlock_decision_category_tooltip = RCW_peace_treaty_category
+		#every_enemy_country = { unlock_decision_category_tooltip = RCW_peace_treaty_category }
+	}
+}
+country_event = {
+	id = RCW_treaty.5 # German Demand: Poland (RUS)
+	title = RCW_treaty.5.t
+	desc = RCW_treaty.5.d
+	picture = GFX_report_event_german_polish_border
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RCW_treaty.5.a # Accept; leads to giving up Bialystok:97, also add starting cores to remove
+		set_variable = { POL_concession = 1 }
+		add_to_variable = { concessions_count = 1 }
+	}
+	# Set condition for if you control some Polish territories, also do so for other demands
+	#option = {
+	#	name = RCW_treaty.5.b # Reject
+	#	set_variable = { POL_concession = 2 }
+	#}
+}
+country_event = {
+	id = RCW_treaty.6 # German Demand: Ruthenia (RUS)
+	title = RCW_treaty.6.t
+	desc = RCW_treaty.6.d
+	picture = GFX_report_event_german_polish_border
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RCW_treaty.5.a # Accept
+		set_variable = { RUT_concession = 1 }
+		add_to_variable = { concessions_count = 1 }
+	}
+	option = {
+		name = RCW_treaty.5.b # Reject
+		set_variable = { RUT_concession = 2 }
+	}
+}
+country_event = {
+	id = RCW_treaty.7 # German Demand: Baltic (RUS)
+	title = RCW_treaty.7.t
+	desc = RCW_treaty.7.d
+	picture = GFX_report_event_german_polish_border
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RCW_treaty.5.a # Accept
+		set_variable = { BAL_concession = 1 }
+		add_to_variable = { concessions_count = 1 }
+	}
+	option = {
+		name = RCW_treaty.5.b # Reject
+		set_variable = { BAL_concession = 2 }
+	}
+}
+country_event = {
+	id = RCW_treaty.8 # German Demand: Finland (RUS)
+	title = RCW_treaty.8.t
+	desc = RCW_treaty.8.d
+	picture = GFX_report_event_german_polish_border
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RCW_treaty.8.a # Accept
+		set_variable = { FIN_concession = 1 }
+		add_to_variable = { concessions_count = 1 }
+	}
+	option = {
+		name = RCW_treaty.8.b # Reject
+		set_variable = { FIN_concession = 2 }
+	}
+}
+country_event = {
+	id = RCW_treaty.9 # Germany Quits (RUS)
+	title = RCW_treaty.9.t
+	desc = RCW_treaty.9.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = RCW_treaty.9.a
+		add_war_support = 0.1
+	}
+}

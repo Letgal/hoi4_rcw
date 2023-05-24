@@ -1,0 +1,19 @@
+﻿add_namespace = rcw_news
+
+news_event = {
+	id = rcw_news.1 # The US join the Great War
+	title = rcw_news.1.t
+	desc = rcw_news.1.d
+	picture = GFX_report_event_generic_riot
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1917.3.31
+		date < 1917.6.1
+	}
+
+	mean_time_to_happen = { days = 6 }
+
+	option = { name = rcw_news.1.a }
+}
