@@ -138,6 +138,24 @@ characters = {
 		}
 	}
 
+	SOV_provisional_government = {
+		name = SOV_provisional_government
+
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SOV_white_transitionary_council"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1953.3.1.1"
+			id = -1
+			traits = {
+				emigre_connections desperate_gambit dysfunctional_assembly
+			}
+		}
+	}
+
 
    # #    #####   #    #  #   #      #        ######    ##    #####   ######  #####    ####  
   #   #   #    #  ##  ##   # #       #        #        #  #   #    #  #       #    #  #      
@@ -3461,6 +3479,65 @@ characters = {
 				ai_will_do = {
 					factor = 0.000
 				}
+			}
+		}
+	}
+
+	SOV_aleksandr_kerensky = {
+		name = SOV_aleksandr_kerensky
+
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SOV_aleksandr_kerensky
+			}
+			army = {
+				small = "GFX_idea_alexander_kerensky"
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1953.3.1.1"
+			id = -1
+		}
+		allowed_civil_war = { tag = SOV}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_aleksandr_kerensky
+			allowed = {
+					original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				democratic_reformer 
+			}
+			do_effect = {
+				NOT = {
+					has_government = democratic 
+				}
+			}
+			ai_will_do = {
+				factor = 0.000
 			}
 		}
 	}
