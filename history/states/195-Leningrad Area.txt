@@ -1,0 +1,44 @@
+
+state={
+	id=195
+	name="STATE_195"
+	manpower = 3750158
+	
+	state_category = metropolis
+
+	history={
+		owner = RUS
+		victory_points = {
+			3151 30.0
+		}
+		buildings = {
+			infrastructure = 4 #was: 7
+			arms_factory = 6
+			industrial_complex = 1
+			dockyard = 3
+			air_base = 10
+			3151 ={
+				naval_base = 10
+				coastal_bunker = 5
+			}
+		}
+		add_core_of = RUS
+		1917.11.11 = {
+			owner = SOV
+			add_core_of = SOV
+		}
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 7
+			}
+		}
+		set_state_name = SOV_petrograd
+		set_province_name = { id = 3151 name = SOV_petrograd }
+	}
+
+	provinces={
+		79 149 3151 6174 11068 
+	}
+
+	local_supplies=11.0 
+}
