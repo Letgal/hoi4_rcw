@@ -1,0 +1,79 @@
+﻿l_english:
+ ### PROVISIONAL GOVERNMENT ###
+ provisional.1.t:0 "Milyukov's Note"
+ provisional.1.d:0 ""
+ provisional.1.a:0 "That's not good."
+ provisional.2.t:2 "The [GetMonth] Days" # DESC UNFINISHED
+ provisional.2.d:1 "One of the leading ideas of the Revolution was putting an end to war...\nHow shocking it must've been to realize that the war isn't going to end anytime soon. Deeply angered by our decision to continue the war by all costs, many—primarily soldiers and workers—have organized riots in the streets of [ROOT.Capital.GetCapitalVictoryPointName]."
+ provisional.2.a:0 "Send in the police!"
+ provisional.2.b:0 "Attempt to reason with them."
+ provisional.3.t:0 "Kornilov's Coup"
+ provisional.3.d:0 ""
+ provisional.3.a:0 "Arrest him this instant!"
+ provisional.3.b:0 "Da zdravstvuyet gyenyeral Kornilov!"
+
+ provisional.4.t:0 "Drafting the Constitution"
+ provisional.4.d:0 "The constitution-drafting process is no easy feat and sometimes requires direct government support to move on faster."
+ provisional.4.a:0 "Let's deal with this."
+ provisional.4.b:1 "We can't afford this right now."
+ provisional.5.t:0 "Drafting the Constitution: Success"
+ provisional.5.d:0 "The Constitution is finally finished. Taking heavy inspiration from the original French “Declaration of the Rights of Man and of the Citizen”, our new and glorious Constitution enshrines many civil and political rights of our citizens, while also implementing appropriate limitations as to not let [ROOT.GetNonIdeologyName] dissolve into chaos."
+ provisional.5.a:0 "A glorious day."
+
+ provisional.101.t:0 "Soviet Coup!"
+ provisional.101.d:0 ""
+ provisional.101.a:0 "Curse them!"
+ provisional.102.t:0 "Triumph of Democracy"
+ provisional.102.d:0 "Russia grew noticeably in the last months, surpassing even pre-war levels back when our country was an autocracy. All thanks to the Provisional Government.\nOur success has proven once again that a revolutionary state CAN achieve greatness. The Russian Revolution of 1917 will be an inspiration for republicans worldwide, on par with the French Revolution in some aspects and even surpassing it in others."
+ provisional.102.a:0 "Da zdravstvuyet Rossiya!"
+
+ ### SOVIET RUSSIA ###
+ #soviet_russia.1.t:0 "The "Whites" Rebel!"
+ #soviet_russia.1.d:0 ""
+ #soviet_russia.1.a:0 "Damn counter-revolutionaries!"
+
+ ### CIVIL WAR ###
+ rcw.1.t:0 "[ROOT.GetAdjective] Civil War!"
+ rcw.1.d:0 ""
+ rcw.1.a:0 ""
+
+ rcw.101.t:0 "Reclamation of Warsaw"
+ rcw.101.d:0 ""
+ rcw.101.a:0 "Vperyod!"
+ rcw.102.t:0 "Capture of Königsberg"
+ rcw.102.d:0 ""
+
+ rcw.103.t:0 "Second Capture of Lemberg"
+ rcw.103.d:0 ""
+ rcw.104.t:0 "Capture of Krakau"
+ rcw.104.d:0 ""
+
+ ### RCW TREATIES ###
+ # Truce
+ RCW_treaty.1.t:0 "[FROM.GetNameDefCap] wants a truce"
+ RCW_treaty.1.d:0 ""
+ RCW_treaty.1.a:0 "What an absurd suggestion."
+ RCW_treaty.2.t:0 "The [FROM.GetAdjective]s refuse"
+ RCW_treaty.2.d:1 "[FROM.GetNameDefCap] has rejected our offer of truce, saying there is no point because we'll “inevitably fall”."
+ RCW_treaty.2.a:0 "Damn it!"
+
+ # Peace Treaty
+ RCW_treaty.3.t:0 "[FROM.GetNameDefCap] wants to sign peace"
+ #RCW_treaty.3.d:0 "Today we've received a peculiar message from [FROM.GetNameDef]: they want to end the war and sign peace between us."
+ #RCW_treaty.3.a:0 "Let's negotiate this..."
+ RCW_treaty.4.t:0 "The [FROM.GetAdjective]s accept"
+ RCW_treaty.4.d:0 "We were informed that [FROM.GetNameDef] has accepted our proposal of peace treaty. The negotiations are to begin soon."
+ RCW_treaty.4.a:0 "Let's hope this works."
+ RCW_treaty.5.t:0 "[FROM.GetNonIdeologyName] Demands Polish Recognition"
+ RCW_treaty.5.d:0 "Poland has existed as a client state of [FROM.GetNameDef] since January 1917, although nobody really recognized it. Now the [FROM.GetAdjective]s demand us to officially recognize Poland as a client state."
+ RCW_treaty.5.a:0 "Do we even have other choice?"
+ RCW_treaty.5.b:0 "This is too much! We absolutely cannot agree to this!"
+ RCW_treaty.6.t:0 "[FROM.GetNonIdeologyName] Demands White Ruthenia and Ukraine"
+ RCW_treaty.6.d:0 "White Ruthenia is a strategically important land, and Ukraine is even more so, not mentioning that Ukraine is called the "Russia's breadbasket" not without reason. Giving up such important regions will surely hurt us. That is clearly what the [FROM.GetAdjective]s are aiming at, plus they could use Ukrainian grain for themselves.\n\nThey also demand that we give up [78.GetName] to [ROM.GetNonIdeologyName]."
+ RCW_treaty.7.t:0 "[FROM.GetNonIdeologyName] Demands the Baltic"
+ RCW_treaty.7.d:1 "The Baltic Sea and its eastern coast are important for Russia to project its power. It also serves as a buffer to [195.GetCapitalVictoryPointName]." # \n\nAdditionally, they want us to liberate Finland and renounce all claims on it, which makes [195.GetCapitalVictoryPointName] even more exposed.
+ RCW_treaty.8.t:0 "[FROM.GetNonIdeologyName] Demands Finnish Independence"
+ RCW_treaty.8.d:0 ""
+ RCW_treaty.9.t:0 "Germany Quits the Negotiations"
+ RCW_treaty.9.d:0 "Unsatisfied by the concessions they got in the peace treaty negotiations, [GER.GetNameDef] has quit in fury, declaring that the war is to continue as usual."
+ RCW_treaty.9.a:0 "Uh-oh."

@@ -1,0 +1,32 @@
+﻿l_english:
+ soviet_russia_focus:0 "Russian SSR Focus Tree"
+
+ ### STABILIZATION ###
+ SOV_stabilize_the_country:0 "Stabilize the Country" # This one fails as RCW starts and other focuses are loaded
+
+ ### WAR ISSUES ###
+ SOV_address_the_war:0 "Address the War"
+ # Peace
+ SOV_propose_a_truce:0 "Propose a Truce"
+ SOV_propose_a_peace_treaty:0 "Propose a Peace Treaty"
+ # War
+ SOV_continue_the_war:0 "Continue the War"
+ SOV_bolshevik_propaganda:0 "Bolshevik Propaganda"
+ SOV_frontline_spies:0 "Frontline Spies"
+ # Research
+ SOV_field_research_teams:0 "Field Research Teams"
+
+ ### INTERNAL ISSUES ###
+ SOV_road_map:0 "Road Map"
+ # Anti-Menshevik Branch
+ SOV_purge_the_mensheviks:0 "Purge the Mensheviks"
+ # Pro-Menshevik Branch
+ SOV_cooperate_with_the_mensheviks:0 "Cooperate with the Mensheviks"
+ # Industry
+ SOV_rebuilding_plans:0 "Rebuilding Plans"
+
+ ### SOVIET SUCCESS ###
+ SOV_marxism_leninism:0 "Marxism–Leninism"
+
+ ### SOVIET SPHERE ###
+ SOV_comintern:0 "The Comintern"

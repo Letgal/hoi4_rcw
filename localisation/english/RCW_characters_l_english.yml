@@ -1,0 +1,16 @@
+﻿l_english:
+ ### PROVISONAL GOVERNMENT ###
+ RUS_aleksandr_kerensky:0 "Aleksandr Kerensky"
+ RUS_vladimir_lenin:0 "Vladimir Lenin"
+ RUS_irakli_tsereteli:0 "Irakli Tsereteli"
+ RUS_lavr_kornilov:0 "Lavr Kornilov"
+ RUS_provisional_government:0 "The Provisional Government"
+ # Advisors
+ RUS_pavel_milyukov:0 "Pavel Milyukov"
+ RUS_georgi_lvov:0 "Georgi L'vov"
+ RUS_mikhail_rodzyanko:0 "Mikhail Rodzyanko"
+ # Generals
+ RUS_aleksey_polivanov:0 "Aleksey Polivanov"
+
+ ### SOVIET RUSSIA ###
+ SOV_vladimir_lenin:0 "Vladimir Lenin"

@@ -1,0 +1,204 @@
+﻿### GENERAL INFO ###
+capital = 195 # Petrograd; originally 219 - Moscow
+set_stability = 0.5
+set_war_support = 0.5
+set_research_slots = 3
+set_convoys = 50
+
+set_cosmetic_tag = RUS_provisional
+
+### IDEAS AND WHATNOT ###
+add_ideas = {
+	limited_conscription
+	war_economy
+	provisional_government_idea
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_power_balance = {
+		id = RUS_provisional_bop
+		set_default = yes
+	}
+	else = { add_ideas = RUS_petrograd_soviet_1 }
+}
+
+add_ideas = RUS_undersupplied_army
+
+add_dynamic_modifier = { modifier = RUS_failing_state }
+set_variable = { RUS_failing_state_cg = 0.1 }
+set_variable = { RUS_failing_state_cs = -0.3 }
+set_variable = { RUS_failing_state_fo = -0.15 }
+set_variable = { RUS_failing_state_do = -0.1 }
+set_variable = { RUS_failing_state_se = -0.15 }
+
+add_dynamic_modifier = { modifier = RUS_war_weariness }
+set_variable = { RUS_war_weariness_ws = -0.75 }
+set_variable = { RUS_war_weariness_pc = 0.003 }
+
+### TECHNOLOGIES ###
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	basic_train = 1
+	gw_artillery = 1
+}
+
+### CHARACTERS ###
+# Leaders
+recruit_character = RUS_aleksandr_kerensky
+recruit_character = RUS_vladimir_lenin # Dummy
+recruit_character = RUS_provisional_government # Dummy
+recruit_character = RUS_irakli_tsereteli
+#recruit_character = RUS_lev_trotsky
+recruit_character = RUS_lavr_kornilov
+
+recruit_character = RUS_pavel_milyukov
+activate_advisor = RUS_pavel_milyukov # This bastard will ruin your country and he cannot even be fired
+recruit_character = RUS_georgi_lvov
+recruit_character = RUS_mikhail_rodzyanko
+
+recruit_character = RUS_patriarch_sergy
+recruit_character = RUS_metropolitan_anastasy
+recruit_character = RUS_metropolitan_nikolay
+recruit_character = RUS_metropolitan_aleksy
+recruit_character = RUS_metropolitan_meletius
+
+recruit_character = RUS_anton_denikin
+
+recruit_character = RUS_pyotr_krasnov
+recruit_character = RUS_konstantin_nechayev
+recruit_character = RUS_vladimir_kosmin
+recruit_character = RUS_aleksandr_rodzyanko
+recruit_character = RUS_andrey_shkuro
+recruit_character = RUS_aleksey_polivanov
+
+starting_train_buffer = 3.0
+
+set_oob = "RUS_1917"
+
+if = {
+	limit = { has_dlc = "Together for Victory" }
+	set_autonomy = {
+		target = FIN
+		autonomy_state = autonomy_integrated_puppet
+	}
+	else = {
+		annex_country = {
+			target = FIN
+			transfer_troops = yes
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Together for Victory" }
+	set_autonomy = {
+		target = KHI
+		autonomy_state = autonomy_integrated_puppet
+	}
+	else = {
+		annex_country = {
+			target = KHI
+			transfer_troops = yes
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Together for Victory" }
+	set_autonomy = {
+		target = BUK
+		autonomy_state = autonomy_integrated_puppet
+	}
+	else = {
+		annex_country = {
+			target = BUK
+			transfer_troops = yes
+		}
+	}
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1917.3.16"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 70
+	communism = 17
+	neutrality = 10
+	fascism = 3
+}
+
+1917.11.11 = {
+	capital = 219
+
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1917.11.7"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		neutrality = 77
+		democratic = 14
+		fascism = 7
+		communism = 2
+	}
+	remove_dynamic_modifier = { modifier = RUS_failing_state }
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		remove_power_balance = { id = RUS_provisional_bop }
+		else = {
+			remove_ideas = RUS_petrograd_soviet_1
+			remove_ideas = RUS_petrograd_soviet_2
+			remove_ideas = RUS_petrograd_soviet_3
+		}
+	}
+
+	leave_faction = yes
+	if = {
+		limit = { has_dlc = "Together for Victory" }
+		set_autonomy = {
+			target = FIN
+			autonomy_state = autonomy_free
+		}
+		else = { release = FIN }
+	}
+	release = MOL
+
+	set_global_flag = RCW_ongoing
+
+	ENG = { add_to_faction = FIN }
+	every_other_country = {
+		limit = { is_in_faction_with = ROOT }
+		add_to_war = {
+			targeted_alliance = ROOT
+			enemy = GER
+			hostility_reason = asked_to_join
+		}
+	}
+
+	set_cosmetic_tag = RUS_white
+	load_focus_tree = white_russia_focus
+	add_country_leader_role = {
+		character = RUS_provisional_government
+		promote_leader = yes
+		country_leader = {
+			ideology = despotism
+			expire = "1953.3.1.1"
+		}
+	}
+	set_party_name = {
+		ideology = neutrality
+		name = RUS_white_movement
+		long_name = RUS_white_movement
+	}
+
+	create_faction = white_movement
+	add_to_faction = GEO
+
+	RUS_pavel_milyukov = { retire = yes }
+	RUS_georgi_lvov = { retire = yes }
+	RUS_mikhail_rodzyanko = { retire = yes }
+}

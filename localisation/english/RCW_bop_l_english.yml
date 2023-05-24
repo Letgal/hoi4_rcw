@@ -1,0 +1,14 @@
+﻿l_english:
+ RUS_provisional_bop:0 "Power Struggle"
+ RUS_soviet_side:0 "Petrograd Soviet"
+ RUS_government_side:0 "Provisional Government"
+
+ RUS_balance_range:0 "Power Equilibrium"
+ RUS_soviet_low_control_range:0 "Soviet Leaning"
+ RUS_soviet_medium_control_range:0 "Soviet Influence"
+ RUS_soviet_high_control_range:0 "Soviet Dominance"
+ RUS_soviet_total_control_range:0 "Soviet Control"
+ RUS_government_low_control_range:0 "Government Leaning"
+ RUS_government_medium_control_range:0 "Government Influence"
+ RUS_government_high_control_range:0 "Government Dominance"
+ RUS_government_total_control_range:0 "Government Control"

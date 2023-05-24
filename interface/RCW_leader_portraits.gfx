@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_portrait_RUS_aleksandr_kerensky
+		texturefile = "gfx/leaders/SOV/portrait_SOV_kerensky.dds"
+	}
+	spriteType = {
+		name = GFX_portrait_RUS_vladimir_lenin
+		texturefile = "gfx/leaders/SOV/portrait_SOV_lenin.dds"
+	}
+	spriteType = {
+		name = GFX_portrait_RUS_lavr_kornilov
+		texturefile = "gfx/leaders/SOV/portrait_SOV_leonid_govorov.dds"
+	}
+	spriteType = {
+		name = GFX_portrait_RUS_irakli_tsereteli
+		texturefile = "gfx/leaders/Europe/portrait_europe_generic_4.dds"
+	}
+}

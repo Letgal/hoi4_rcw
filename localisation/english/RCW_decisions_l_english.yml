@@ -1,0 +1,30 @@
+﻿l_english:
+ RUS_kornilov_putsch_mission:0 "Kornilov's Putsch"
+
+ RUS_purge_the_soviets_category:2 "Purging the Soviets"
+ RUS_cooperate_with_the_soviets_category:0 "Cooperation with the Soviets"
+ RUS_balance_of_power_category:0 "[ROOT.GetBopDecisionCatName]"
+ RUS_balance_of_power_category_desc:0 "The Provisional Government's rule was established in no small part thanks to "help" from the Petrograd Soviet. However, the Soviet demanded representation in the government in exchange. Having no other choice, we had to accept. Ever since then, the Soviet has been trying to destabilize our administration and woo our supporters to their side.\nThis creates a very dangerous situation. If the Soviets get enough power, they will swiftly overthrow the Provisional Government."
+ # Shared
+ RUS_limit_the_soviets_influence:0 "Limit the Soviet's Influence"
+ # Purge
+ RUS_abolish_the_soviet:0 "Abolish the Soviet" # Final Solution
+ RUS_abolish_the_soviet_desc:0 "After months of causing trouble the Petrograd Soviet has finally been weakened so much that we can just abolish this nuisance of an organization without much risk."
+ # Cooperation
+ RUS_handle_kornilov:0 "Handle Kornilov"
+ RUS_hire_soviet_commanders:0 "Hire the Soviet Commanders"
+ RUS_hire_soviet_commanders_desc:0 "Dealing with the communists is a dangerous job. However, we can't deny that they have some of the most competent people in their ranks. We should formally hire them to serve our needs."
+ RUS_sway_the_mensheviks:1 "Sway the Mensheviks"
+ RUS_sway_the_mensheviks_desc:0 "On a closer look, it turns out that our socialist ideology isn't that different to the social communism of the Mensheviks. By improving our ties with them, we can sway them to our side, weakening the Petrograd Soviet in the process."
+ RUS_deepen_the_rsdlp_divide:0 "Deepen the RSDLP Divide"
+ RUS_deepen_the_rsdlp_divide_desc:0 "It is no secret that the RSDLP is deeply divided. We can exploit this." # ADD
+ RUS_dissolve_the_soviet:0 "Dissolve the Soviet" # Final Solution
+ RUS_dissolve_the_soviet_desc:0 "The Mensheviks are now officially part of our government, and the only ones who remain in the Soviet are the Bolsheviks and the ‘left Esers’, who have been weakened so much as to become inconsequential. Now we can just dissolve this nuisance of an organization without much risk."
+
+ ### PEACE NEGOTIATIONS ###
+ #RCW_peace_treaty_category:0 "Peace Treaty with [SOV.GetNonIdeologyName]"
+ #GER_demand_POL:0 "Demand Recognition of [POL.GetNameDef]"
+ #GER_demand_RUT:0 "Demand Ruthenia and Bessarabia"
+ #GER_demand_BAL:0 "Demand Lithuania and Livonia"
+ #GER_demand_FIN:0 "Demand Freedom for [FIN.GetNonIdeologyName]"
+ #GER_quit_the_negotiations:0 "Quit the Negotiations"

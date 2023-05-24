@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_DOCTRINE"
+		texturefile = "gfx/interface/focusview/filter/doctrine.dds"
+	}
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_NO_EFFECTS"
+		texturefile = "gfx/interface/focusview/filter/no_fx.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SPA_recovering_from_the_civil_war"
+		texturefile = "gfx/interface/ideas/spa_recovering_from_the_civil_war.dds"
+	}
+}

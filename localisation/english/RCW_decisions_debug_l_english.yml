@@ -1,0 +1,11 @@
+﻿l_english:
+ DEBUG_RUS_bop_set_max:0 "£GFX_BoP_right_texticon £GFX_BoP_right_texticon£"
+ DEBUG_RUS_bop_set_min:0 "£GFX_BoP_left_texticon £GFX_BoP_left_texticon£"
+ DEBUG_RUS_bop_add_50:0 "£GFX_BoP_right_texticon£50%"
+ DEBUG_RUS_bop_add_25:0 "£GFX_BoP_right_texticon£25%"
+ DEBUG_RUS_bop_add_15:0 "£GFX_BoP_right_texticon£15%"
+ DEBUG_RUS_bop_add_5:0 "£GFX_BoP_right_texticon£5%"
+ DEBUG_RUS_bop_sub_50:0 "£GFX_BoP_left_texticon£50%"
+ DEBUG_RUS_bop_sub_25:0 "£GFX_BoP_left_texticon£25%"
+ DEBUG_RUS_bop_sub_15:0 "£GFX_BoP_left_texticon£15%"
+ DEBUG_RUS_bop_sub_5:0 "£GFX_BoP_left_texticon£5%"

@@ -1,0 +1,31 @@
+﻿l_english:
+ RUS_fascism:0 "Russian Empire"
+ RUS_fascism_DEF:0 "the Russian Empire"
+ RUS_democratic:0 "Russian Republic"
+ RUS_democratic_DEF:0 "the Russian Republic"
+ RUS_neutrality:0 "Russian Empire"
+ RUS_neutrality_DEF:0 "the Russian Empire"
+ RUS_communism:0 "$SOV_russia_communism$"
+ RUS_communism_DEF:0 "$SOV_russia_communism_DEF$"
+ RUS:0 "Russia"
+ RUS_DEF:0 "Russia"
+ RUS_ADJ:0 "Russian"
+
+ RUS_provisional:0 "Provisional Government of Russia"
+ RUS_provisional_DEF:0 "the Provisional Government of Russia"
+ RUS_kornilov:0 "$RUS$"
+ RUS_kornilov_DEF:0 "$RUS_DEF$"
+ RUS_white:0 "White Russia"
+ RUS_white_DEF:0 "the White Russia"
+
+ FIN_RUS_autonomy_integrated_puppet:0 "Grand Duchy of Finland"
+ FIN_RUS_autonomy_integrated_puppet_DEF:0 "the Grand Duchy of Finland"
+ TAN_RUS_autonomy_collaboration_government:0 "Tannu-Uriankhai"
+ TAN_RUS_autonomy_collaboration_government_DEF:0 "Tannu-Uriankhai"
+
+ POL_GER_autonomy_integrated_puppet:0 "Kingdom of Poland"
+ POL_GER_autonomy_integrated_puppet_DEF:0 "the Kingdom of Poland"
+
+ KAZ_alash:0 "Alash Autonomy"
+ KAZ_alash_DEF:0 "the Alash Autonomy"
+ KAZ_alash_ADJ:0 "Alash"
