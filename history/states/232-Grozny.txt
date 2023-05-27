@@ -18,8 +18,9 @@ state={
 		victory_points = {
 			6701 3 
 		}
-		add_core_of = SOV
+		add_core_of = RUS
 		add_core_of = DAG
+		1917.11.11 = { add_core_of = SOV }
 	}
 
 	provinces = {

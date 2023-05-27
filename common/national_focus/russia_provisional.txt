@@ -102,7 +102,6 @@
 		cost = 2
 		available = { has_idea = RUS_undersupplied_army }
 		bypass_if_unavailable = yes
-		bypass = { NOT = { has_war_with = GER } }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
@@ -155,7 +154,7 @@
 		y = 1
 		cost = 4
 		available = { has_war = yes }
-		bypass = { has_war = no }
+		bypass_if_unavailable = yes
 		search_filters = { FOCUS_FILTER_PROPAGANDA FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_to_variable = { RUS_war_weariness_ws = 0.1 }

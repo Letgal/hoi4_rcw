@@ -7,32 +7,32 @@ bookmarks = {
 		default_country = "RUS"
 
 		"RUS"={
-			history = "RUS_GATHERING_STORM_DESC"
+			history = "RUS_BLITZKRIEG_DESC"
 			ideology = neutrality
 			ideas = {
 				provisional_government_idea
+				WHI_factionalism
 				RUS_undersupplied_army
-				RUS_failing_state_dummy
 			}
 			focuses = {
-				WHI_anti_soviet_operations
 				WHI_our_movement
+				WHI_restore_the_government
 				WHI_russia_reunited
 			}
 		}
 
-		#"SOV"={
-		#	history = "SOV_GATHERING_STORM_DESC"
-		#	ideology = communism
-		#	ideas = {
-		#		unrecognized_state
-		#		communist_fervor
-		#		RUS_undersupplied_army
-		#	}
-		#	focuses = {
-		#		SOV_stabilize_the_country
-		#		SOV_marxism_leninism
-		#	}
-		#}
+		"SOV"={
+			minor = yes
+			history = "SOV_BLITZKRIEG_DESC"
+			ideology = communism
+			ideas = {
+				unrecognized_state
+				communist_fervor
+			}
+			focuses = {
+				SOV_stabilize_the_country
+				SOV_marxism_leninism
+			}
+		}
 	}
 }

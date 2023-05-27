@@ -1,4 +1,4 @@
-﻿capital = 4
+﻿capital = 88 # 4 - Vienna
 
 set_major = yes
 
@@ -20,8 +20,20 @@ set_cosmetic_tag = HUN_EMPIRE
 
 1914.7.28 = {
 	add_named_threat = {
-		threat = 50
+		threat = 30
 		name = WAR_NAME_GER_SOV
+	}
+	RUS = {
+		add_named_threat = {
+			threat = 15
+			name = WAR_NAME_GER_SOV
+		}
+	}
+	GER = {
+		add_named_threat = {
+			threat = 15
+			name = WAR_NAME_GER_SOV
+		}
 	}
 	declare_war_on = {
 		target = RUS
@@ -53,6 +65,7 @@ set_cosmetic_tag = HUN_EMPIRE
 	}
 }
 
+recruit_character = AUS_karl_von_habsburg
 recruit_character = AUS_kurt_schuschnigg
 recruit_character = AUS_karl_renner
 recruit_character = AUS_arthur_seyss-inquart

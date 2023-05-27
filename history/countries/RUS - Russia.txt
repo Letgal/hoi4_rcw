@@ -46,15 +46,15 @@ set_technology = {
 
 ### CHARACTERS ###
 # Leaders
-recruit_character = RUS_aleksandr_kerensky
-recruit_character = RUS_vladimir_lenin # Dummy
-recruit_character = RUS_provisional_government # Dummy
+recruit_character = RUS_aleksandr_kerensky # He will ruin your country
+recruit_character = RUS_vladimir_lenin # Dummy Character
+recruit_character = RUS_provisional_government
 recruit_character = RUS_irakli_tsereteli
 #recruit_character = RUS_lev_trotsky
 recruit_character = RUS_lavr_kornilov
 
 recruit_character = RUS_pavel_milyukov
-activate_advisor = RUS_pavel_milyukov # This bastard will ruin your country and he cannot even be fired
+activate_advisor = RUS_pavel_milyukov # He will ruin your country too and he cannot even be fired
 recruit_character = RUS_georgi_lvov
 recruit_character = RUS_mikhail_rodzyanko
 
@@ -155,6 +155,10 @@ set_popularities = {
 			remove_ideas = RUS_petrograd_soviet_3
 		}
 	}
+	add_ideas = WHI_factionalism
+
+	retire_character = RUS_irakli_tsereteli
+	retire_character = RUS_lavr_kornilov
 
 	leave_faction = yes
 	if = {
@@ -169,7 +173,7 @@ set_popularities = {
 
 	set_global_flag = RCW_ongoing
 
-	ENG = { add_to_faction = FIN }
+	#ENG = { add_to_faction = FIN }
 	every_other_country = {
 		limit = { is_in_faction_with = ROOT }
 		add_to_war = {

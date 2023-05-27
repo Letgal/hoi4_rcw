@@ -5,11 +5,10 @@ state=
 	manpower = 820000
 	
 	state_category = rural
-	impassable = yes
 	
 	history=
 	{
-		owner = AUS
+		
 		victory_points = {
 			3583 5
 		}

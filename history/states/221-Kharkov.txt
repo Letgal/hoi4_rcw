@@ -20,8 +20,9 @@ state={
 			arms_factory = 1
 			air_base = 5
 		}
-		add_core_of = SOV
+		add_core_of = RUS
 		add_core_of = UKR
+		1917.11.11 = { add_core_of = SOV }
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 2

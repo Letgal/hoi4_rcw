@@ -18,8 +18,9 @@ state={
 		victory_points = {
 			6338 10
 		}
-		add_core_of = SOV
+		add_core_of = RUS
 		add_core_of = TAT
+		1917.11.11 = { add_core_of = SOV }
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 2

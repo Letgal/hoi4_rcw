@@ -1,15 +1,8 @@
 ﻿l_english:
+ LOADING_TIP_6: "Thanks for playing the "Russian Civil War" mod."
+
  FE_INTERESTING_COUNTRIES: "Russia Overview"
  FE_COUNTRY_INFO_TITLE: "Country Overview"
-
- GATHERING_STORM_NAME: "The Russian Republic"
- GATHERING_STORM_DESC: "Less than a month ago the revolutionaries forced Tsar Nicholas II to abdicate. In the old autocracy's place a new republic was established.\nFuture looks promising for the new Russia, but there are still many problems along the way, like the internal power struggle, and the fact Russia is still at war."
- RUS_GATHERING_STORM_DESC: "$GATHERING_STORM_DESC$"
-
- BLITZKRIEG_NAME: "Red October"
- BLITZKRIEG_DESC: "The revolution is a success! The bourgeois Provisional Government was weak and indecisive, driving the country into ruin with its handling of both internal and foreign policy."
- #“To Citizens of Russia.\n   The Provisional Government is deposed. The state power is transferred into the hands of the Military Revolutionary Committee, an organ of the Petrograd Soviet of Workers' and Soldiers' Deputies, which heads the Petrograd proletariat and garrison.\n   (...) Long live the revolution of workers, soldiers and peasants!”
- RUS_BLITZKRIEG_DESC: "$BLITZKRIEG_DESC$"
 
  BOP_TOOLTIP: "The §Y[ROOT.GetPowerBalanceName]§! is currently [?.ROOT.power_balance_value|0%H] on the side of §Ythe [ROOT.GetActiveSideName]§!."
 
@@ -23,6 +16,9 @@
  FRA_neutrality: "Allied Powers"
  FRA_neutrality_DEF: "the Allied Powers"
  FRA_neutrality_ADJ: "Allied"
+ FRA: "Allied Powers"
+ FRA_DEF: "the Allied Powers"
+ FRA_ADJ: "Allied"
 
  SOV_democratic_party: "Trudovik Group"
  SOV_democratic_party_long: "Trudovik Faction of the PSR"
@@ -36,6 +32,8 @@
  SOV_fascism_party_russian_long: "Vserossiyskaya fashistskaya partiya"
 
  STATE_11: "Kovno"
+ STATE_86: "Posen"
+ STATE_88: "Krakau"
  STATE_89: "Stanislau"
  STATE_91: "Lemberg"
  STATE_93: "Volyn"
@@ -43,7 +41,10 @@
  STATE_197: "Nikolayev"
  STATE_198: "Vinnitsa"
  STATE_199: "Proskurov"
+ STATE_201: "Zhitomir"
  STATE_203: "Cherkassy"
+ STATE_762: "Kattowitz"
+ STATE_834: "Pridnestrovye"
 
  KIEL_CANAL: "Kaiser-Wilhelm-Kanal"
 
@@ -51,10 +52,17 @@
  VICTORY_POINTS_476: "Vinnitsa"
  VICTORY_POINTS_488: "Cherkassy"
  VICTORY_POINTS_560: "Pinsk"
+ VICTORY_POINTS_577: "Czernowitz"
+ VICTORY_POINTS_3295: "Thorn"
  VICTORY_POINTS_3392: "Brest-Litovsk"
  VICTORY_POINTS_3457: "Proskurov"
+ VICTORY_POINTS_3544: "Warszawa"
  VICTORY_POINTS_6296: "Kovno"
+ VICTORY_POINTS_6464: "Kattowitz"
  VICTORY_POINTS_6557: "Rovno"
+ VICTORY_POINTS_6558: "Posen"
+ VICTORY_POINTS_6593: "Zhitomir"
+ VICTORY_POINTS_9427: "Krakau"
  VICTORY_POINTS_11411: "Stanislau"
  VICTORY_POINTS_11479: "Lemberg"
  VICTORY_POINTS_11561: "Krivoy Rog"

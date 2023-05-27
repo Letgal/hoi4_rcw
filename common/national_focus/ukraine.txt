@@ -1,0 +1,116 @@
+﻿focus_tree = {
+	id = ukraine_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = UKR
+		}
+	}
+	default = no
+
+	shared_focus = SHRGEN_army_effort
+	shared_focus = SHRGEN_aviation_effort
+	shared_focus = SHRGEN_naval_effort
+	shared_focus = SHRGEN_industrial_effort
+
+	focus = {
+		id = UKR_negotiate_with_the_reds
+		icon = GFX_goal_generic_dangerous_deal
+		mutually_exclusive = { focus = UKR_our_struggle focus = UKR_negotiate_with_the_whites }
+		x = 1
+		y = 0
+		cost = 10
+		available = { country_exists = SOV }
+		bypass = {
+			NOT = {
+				country_exists = SOV
+				has_global_flag = RCW_ongoing
+			}
+		}
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	}
+
+	focus = {
+		id = UKR_our_struggle
+		icon = GFX_goal_generic_defence
+		mutually_exclusive = { focus = UKR_negotiate_with_the_reds focus = UKR_negotiate_with_the_whites }
+		x = 3
+		y = 0
+		cost = 10
+		available = {
+			OR = {
+				has_war_with = RUS
+				has_war_with = SOV
+			}
+		}
+		bypass_if_unavailable = yes
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		ai_will_do = { factor = 3 }
+	}
+
+	focus = {
+		id = UKR_negotiate_with_the_whites
+		icon = GFX_goal_generic_military_deal
+		mutually_exclusive = { focus = UKR_negotiate_with_the_reds focus = UKR_our_struggle }
+		x = 5
+		y = 0
+		cost = 10
+		available = { country_exists = RUS }
+		bypass = {
+			NOT = {
+				country_exists = RUS
+				has_global_flag = RCW_ongoing
+			}
+		}
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	}
+
+	focus = {
+		id = UKR_soviet_state
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = UKR_negotiate_with_the_reds focus = UKR_our_struggle }
+		mutually_exclusive = { focus = UKR_social_democracy focus = UKR_national_republic focus = UKR_hetmanate }
+		relative_position_id = UKR_negotiate_with_the_reds
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	}
+
+	focus = {
+		id = UKR_social_democracy
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = UKR_our_struggle }
+		mutually_exclusive = { focus = UKR_soviet_state focus = UKR_national_republic focus = UKR_hetmanate }
+		relative_position_id = UKR_our_struggle
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	}
+
+	focus = {
+		id = UKR_national_republic
+		icon = GFX_focus_SOV_panslavic_nationalism
+		prerequisite = { focus = UKR_our_struggle }
+		mutually_exclusive = { focus = UKR_soviet_state focus = UKR_social_democracy focus = UKR_hetmanate }
+		relative_position_id = UKR_our_struggle
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	}
+
+	focus = {
+		id = UKR_hetmanate
+		icon = GFX_focus_POL_cossack_king
+		prerequisite = { focus = UKR_our_struggle focus = UKR_negotiate_with_the_whites }
+		mutually_exclusive = { focus = UKR_soviet_state focus = UKR_social_democracy focus = UKR_national_republic }
+		relative_position_id = UKR_negotiate_with_the_whites
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	}
+}

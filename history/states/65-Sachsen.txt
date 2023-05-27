@@ -8,10 +8,9 @@ state={
 	}
 
 	state_category = metropolis
-	impassable = yes
 
 	history={
-		owner = GER
+		
 		buildings = {
 			infrastructure = 4
 			arms_factory = 2

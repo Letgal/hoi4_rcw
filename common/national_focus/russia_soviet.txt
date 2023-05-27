@@ -29,7 +29,7 @@
 		y = 1
 		cost = 5
 		available = { has_war_with = GER }
-		bypass = { NOT = { has_war_with = GER } }
+		bypass_if_unavailable = yes
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_timed_idea = {
@@ -49,7 +49,7 @@
 		y = 1
 		cost = 2
 		available = { has_war_with = GER }
-		bypass = { NOT = { has_war_with = GER } }
+		bypass_if_unavailable = yes
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
@@ -74,7 +74,7 @@
 		y = 1
 		cost = 3
 		available = { has_war_with = GER }
-		bypass = { NOT = { has_war_with = GER } }
+		bypass_if_unavailable = yes
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_stability = -0.1
@@ -97,7 +97,7 @@
 		y = 1
 		cost = 3
 		available = { has_war_with = GER }
-		bypass = { NOT = { has_war_with = GER } }
+		bypass_if_unavailable = yes
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
@@ -120,7 +120,7 @@
 		y = 1
 		cost = 4
 		available = { has_war_with = GER }
-		bypass = { NOT = { has_war_with = GER } }
+		bypass_if_unavailable = yes
 		search_filters = { FOCUS_FILTER_PROPAGANDA FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_to_variable = { RUS_war_weariness_ws = 0.1 }

@@ -14,8 +14,9 @@ state = {
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = SOV
+		add_core_of = RUS
 		add_core_of = CHU
+		1917.11.11 = { add_core_of = SOV }
 	}
 
 	provinces = {

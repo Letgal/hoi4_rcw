@@ -5,10 +5,9 @@ state={
 	manpower=2352700
 	
 	state_category = town
-	impassable = yes
 	
 	history={
-		owner = AUS
+		
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

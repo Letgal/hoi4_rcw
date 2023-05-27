@@ -10,10 +10,9 @@ state={
 	}
 	
 	state_category = large_city
-	impassable = yes
 
 	history={
-		owner = GER
+		
 		victory_points = { 3561 5 }
 		victory_points = { 425 3 }
 		buildings = {

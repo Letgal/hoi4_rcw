@@ -14,10 +14,11 @@ state={
 		victory_points = {
 			560 1
 		}
-		add_core_of = SOV
+		add_core_of = RUS
 		add_core_of = BLR
 		1917.11.11 = {
 			controller = GER
+			add_core_of = SOV
 			SOV = {
 				set_province_controller = 535
 				set_province_controller = 6579

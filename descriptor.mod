@@ -1,4 +1,4 @@
-name="Russian Civil War (1917)"
+name="Russian Civil War"
 version="1"
 tags={
 	"Historical"
@@ -7,3 +7,4 @@ tags={
 	"1.12"
 }
 supported_version="1.12.*"
+path="mod/hoi4_rcw"

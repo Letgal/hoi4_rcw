@@ -22,8 +22,9 @@ state={
 			}
 
 		}
-		add_core_of = SOV
+		add_core_of = RUS
 		add_core_of = LAT
+		1917.11.11 = { add_core_of = SOV }
 
 	}
 

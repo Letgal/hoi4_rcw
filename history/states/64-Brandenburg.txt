@@ -6,10 +6,9 @@ state={
 	buildings_max_level_factor = 1
 
 	state_category = megalopolis
-	impassable = yes
 
 	history={
-		owner = GER
+		
 		victory_points = {
 			6521 50 
 		}

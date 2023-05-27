@@ -4,10 +4,9 @@ state={
 	manpower = 836353
 
 	state_category = town
-	impassable = yes
 
 	history={
-		owner = GER
+		
 		victory_points = {
 			321 5
 		}

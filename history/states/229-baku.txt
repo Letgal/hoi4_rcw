@@ -19,9 +19,12 @@ state={
 			fuel_silo = 1
 			air_base = 1
 		}
-		add_core_of = SOV
+		add_core_of = RUS
 		add_core_of = AZR
-		1917.11.11 = { owner = GEO }
+		1917.11.11 = {
+			owner = GEO
+			add_core_of = SOV
+		}
 	}
 
 	provinces={

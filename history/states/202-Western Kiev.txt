@@ -22,9 +22,12 @@ state={
 			fuel_silo = 1
 			air_base = 8
 		}
-		add_core_of = SOV
+		add_core_of = RUS
 		add_core_of = UKR
-		1917.11.11 = { owner = UKR }
+		1917.11.11 = {
+			owner = UKR
+			add_core_of = SOV
+		}
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 3

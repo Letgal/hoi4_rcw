@@ -28,6 +28,13 @@ recruit_character = SOV_vladimir_lenin
 		type = civil_war
 	}
 	add_civil_war_target = RUS
+	RUS = {
+		transfer_units_fraction = {
+			target = ROOT
+			size = 0.4
+			stockpile_ratio = 0.6
+		}
+	}
 }
 
 

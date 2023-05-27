@@ -9,10 +9,9 @@ state={
 	}
 	
 	state_category = large_city
-	impassable = yes
 
 	history={
-		owner = AUS
+		
 		buildings = {
 			infrastructure = 3
 			arms_factory = 4

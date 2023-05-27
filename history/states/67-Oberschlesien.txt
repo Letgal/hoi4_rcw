@@ -9,7 +9,6 @@ state={
 	}
 	
 	state_category = city
-	impassable = yes
 
 	history={
 		owner = GER
@@ -27,7 +26,7 @@ state={
 	}
 
 	provinces={
-		479 6512 9457 9511 11467 
+		479 3283 6462 9511 11467 
 	}
 
 	local_supplies=4.0 

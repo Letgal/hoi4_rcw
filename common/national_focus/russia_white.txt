@@ -12,70 +12,133 @@
 	default = no
 
 	focus = {
-		id = WHI_anti_soviet_operations
+		id = WHI_the_issue_at_hand
 		icon = GFX_focus_attack_soviet
-		x = 0
+		x = 1
 		y = 0
 		cost = 10
 		available = {
-			SOV = {
-				has_government = communism
-				exists = yes
-			}
+			country_exists = SOV
+			#SOV = {
+			#	exists = yes
+			#	has_government = communism
+			#}
 		}
-		bypass = {
-			SOV = {
-				has_government = communism
-				exists = no
-			}
-		}
+		bypass_if_unavailable = yes
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 	}
 
 	focus = {
 		id = WHI_strike_at_ruthenia
-		icon = GFX_focus_POL_ukrainian_army
-		prerequisite = { focus = WHI_anti_soviet_operations }
-		relative_position_id = WHI_anti_soviet_operations
-		x = -2
+		icon = GFX_focus_SOV_free_Rutenia # GFX_focus_POL_ukrainian_army
+		prerequisite = { focus = WHI_the_issue_at_hand }
+		relative_position_id = WHI_the_issue_at_hand
+		x = -1
 		y = 1
 		cost = 10
 		available = {
 			OR = {
-				country_exists = UKR
-				country_exists = BLR
+				UKR = {
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
+				BLR = {
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
-
-	focus = {
-		id = WHI_white_propaganda
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = WHI_anti_soviet_operations }
-		relative_position_id = WHI_anti_soviet_operations
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		bypass_if_unavailable = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = UKR }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = UKR
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_war_with = BLR }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BLR
+				}
+			}
+		}
 	}
 
 	focus = {
 		id = WHI_strike_at_baltic
 		icon = GFX_focus_SOV_baltic_security
-		prerequisite = { focus = WHI_anti_soviet_operations }
-		relative_position_id = WHI_anti_soviet_operations
-		x = 2
+		prerequisite = { focus = WHI_the_issue_at_hand }
+		relative_position_id = WHI_the_issue_at_hand
+		x = 1
 		y = 1
 		cost = 10
 		available = {
 			OR = {
-				country_exists = LIT
-				country_exists = LAT
-				country_exists = EST
+				LIT = {
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
+				LAT = {
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
+				EST = {
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		bypass_if_unavailable = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = LIT }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LIT
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_war_with = LAT }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LAT
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_war_with = EST }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = EST
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = WHI_white_propaganda
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = WHI_the_issue_at_hand }
+		prerequisite = { focus = WHI_our_movement }
+		relative_position_id = WHI_the_issue_at_hand
+		x = 3
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_PROPAGANDA FOCUS_FILTER_NO_EFFECTS }
 	}
 
 	focus = {
@@ -83,11 +146,31 @@
 		icon = GFX_focus_generic_polish_deal
 		prerequisite = { focus = WHI_strike_at_ruthenia }
 		relative_position_id = WHI_strike_at_ruthenia
-		x = 1
+		x = 0
 		y = 1
 		cost = 10
-		available = { country_exists = POL }
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			POL = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+		bypass_if_unavailable = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = POL }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = POL
+				}
+			}
+		}
 	}
 
 	focus = {
@@ -95,18 +178,58 @@
 		icon = GFX_focus_generic_attack_finland
 		prerequisite = { focus = WHI_strike_at_baltic }
 		relative_position_id = WHI_strike_at_baltic
-		x = -1
+		x = 0
 		y = 1
 		cost = 10
-		available = { country_exists = FIN }
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+		available = {
+			FIN = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+					is_subject_of = ROOT
+				}
+			}
+		}
+		bypass_if_unavailable = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = FIN }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FIN
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = WHI_restore_the_government
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = WHI_the_issue_at_hand }
+		relative_position_id = WHI_the_issue_at_hand
+		x = 0
+		y = 4
+		cost = 10
+		available = {
+			NOT = {
+				country_exists = SOV
+				has_global_flag = RCW_ongoing
+			}
+		}
+		completion_reward = {
+			add_political_power = 120
+			set_cosmetic_tag = RUS_provisional
+		}
 	}
 
 	focus = {
 		id = WHI_our_movement
-		icon = GFX_focus_SOV_panslavic_nationalism
-		relative_position_id = WHI_anti_soviet_operations
-		x = 6
+		icon = GFX_focus_SOV_the_true_tsars
+		relative_position_id = WHI_the_issue_at_hand
+		x = 8
 		y = 0
 		cost = 10
 		available = { has_idea = WHI_factionalism }
@@ -120,17 +243,17 @@
 		id = WHI_kadet_supremacy
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = WHI_our_movement }
-		mutually_exclusive = { focus = WHI_fascist_supremacy }
+		mutually_exclusive = { focus = WHI_nationalist_supremacy }
 		mutually_exclusive = { focus = WHI_tsarist_supremacy }
 		relative_position_id = WHI_our_movement
-		x = -2
+		x = -3
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 	}
 
 	focus = {
-		id = WHI_fascist_supremacy
+		id = WHI_nationalist_supremacy
 		icon = GFX_focus_generic_fascist_troops
 		prerequisite = { focus = WHI_our_movement }
 		mutually_exclusive = { focus = WHI_kadet_supremacy }
@@ -144,19 +267,19 @@
 
 	focus = {
 		id = WHI_tsarist_supremacy
-		icon = GFX_focus_generic_monarchy_2
+		icon = GFX_focus_generic_strike_at_democracy1
 		prerequisite = { focus = WHI_our_movement }
 		mutually_exclusive = { focus = WHI_kadet_supremacy }
-		mutually_exclusive = { focus = WHI_fascist_supremacy }
+		mutually_exclusive = { focus = WHI_nationalist_supremacy }
 		relative_position_id = WHI_our_movement
-		x = 2
+		x = 3
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 	}
 
 	focus = {
-		id = WHI_restore_the_right_esers
+		id = WHI_bring_back_the_right_esers
 		icon = GFX_focus_prc_agrarian_socialism
 		prerequisite = { focus = WHI_kadet_supremacy }
 		relative_position_id = WHI_kadet_supremacy
@@ -169,19 +292,8 @@
 	focus = {
 		id = WHI_restore_the_black_hundred
 		icon = GFX_focus_generic_little_entente
-		prerequisite = { focus = WHI_fascist_supremacy }
-		relative_position_id = WHI_fascist_supremacy
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
-
-	focus = {
-		id = WHI_constitutional_monarchy
-		icon = GFX_focus_rom_handle_king
-		prerequisite = { focus = WHI_restore_the_right_esers }
-		relative_position_id = WHI_restore_the_right_esers
+		prerequisite = { focus = WHI_nationalist_supremacy }
+		relative_position_id = WHI_nationalist_supremacy
 		x = 0
 		y = 1
 		cost = 10
@@ -191,21 +303,80 @@
 	focus = {
 		id = WHI_white_terror
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = WHI_fascist_supremacy focus = WHI_tsarist_supremacy }
-		relative_position_id = WHI_fascist_supremacy
+		prerequisite = { focus = WHI_nationalist_supremacy focus = WHI_tsarist_supremacy }
+		relative_position_id = WHI_nationalist_supremacy
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	}
+
+	focus = {
+		id = WHI_a_path_to_republic
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = WHI_bring_back_the_right_esers }
+		mutually_exclusive = { focus = WHI_constitutional_monarchy }
+		relative_position_id = WHI_bring_back_the_right_esers
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	}
+
+	focus = {
+		id = WHI_constitutional_monarchy
+		icon = GFX_focus_rom_handle_king
+		prerequisite = { focus = WHI_bring_back_the_right_esers }
+		mutually_exclusive = { focus = WHI_a_path_to_republic }
+		relative_position_id = WHI_bring_back_the_right_esers
 		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	}
+
+	focus = {
+		id = WHI_undivisible_empire
+		icon = GFX_focus_SOV_panslavic_nationalism
+		prerequisite = { focus = WHI_restore_the_black_hundred }
+		relative_position_id = WHI_restore_the_black_hundred
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	}
+
+	focus = {
+		id = WHI_coronate_a_new_tsar
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = WHI_tsarist_supremacy }
+		relative_position_id = WHI_tsarist_supremacy
+		x = 0
 		y = 2
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 	}
 
 	focus = {
-		id = WHI_restore_the_tsar
-		icon = GFX_focus_generic_monarchy_2
-		prerequisite = { focus = WHI_tsarist_supremacy }
-		relative_position_id = WHI_tsarist_supremacy
+		id = WHI_confederation
+		icon = GFX_focus_SWI_dissolve_the_federal_council
+		prerequisite = { focus = WHI_a_path_to_republic focus = WHI_constitutional_monarchy }
+		mutually_exclusive = { focus = WHI_russian_federation }
+		relative_position_id = WHI_a_path_to_republic
 		x = 0
-		y = 3
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	}
+
+	focus = {
+		id = WHI_russian_federation
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = WHI_a_path_to_republic focus = WHI_constitutional_monarchy }
+		mutually_exclusive = { focus = WHI_confederation }
+		relative_position_id = WHI_constitutional_monarchy
+		x = 0
+		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 	}
@@ -213,9 +384,10 @@
 	focus = {
 		id = WHI_russia_reunited
 		icon = GFX_focus_generic_population_growth
-		prerequisite = { focus = WHI_constitutional_monarchy }
-		prerequisite = { focus = WHI_restore_the_black_hundred }
-		prerequisite = { focus = WHI_restore_the_tsar }
+		prerequisite = { focus = WHI_restore_the_government }
+		prerequisite = { focus = WHI_a_path_to_republic focus = WHI_constitutional_monarchy }
+		prerequisite = { focus = WHI_undivisible_empire }
+		prerequisite = { focus = WHI_coronate_a_new_tsar }
 		relative_position_id = WHI_our_movement
 		x = 0
 		y = 5

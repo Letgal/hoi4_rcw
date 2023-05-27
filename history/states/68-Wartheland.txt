@@ -8,10 +8,9 @@ state={
 	}
 
 	state_category = city
-	impassable = yes
 
 	history={
-		owner = GER
+		
 		victory_points = {
 			3473 1
 		}

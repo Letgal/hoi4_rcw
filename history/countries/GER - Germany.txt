@@ -1,4 +1,4 @@
-﻿capital = 64
+﻿capital = 763 # 64 - Königsberg
 
 set_cosmetic_tag = GER_german_empire
 

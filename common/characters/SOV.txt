@@ -150,9 +150,7 @@ characters = {
 			ideology = despotism
 			expire = "1953.3.1.1"
 			id = -1
-			traits = {
-				emigre_connections desperate_gambit dysfunctional_assembly
-			}
+			traits = { desperate_gambit dysfunctional_assembly }
 		}
 	}
 
@@ -3488,7 +3486,7 @@ characters = {
 
 		portraits = {
 			civilian = {
-				large = GFX_portrait_SOV_aleksandr_kerensky
+				large = GFX_portrait_RUS_aleksandr_kerensky
 			}
 			army = {
 				small = "GFX_idea_alexander_kerensky"
@@ -3499,7 +3497,7 @@ characters = {
 			expire = "1953.3.1.1"
 			id = -1
 		}
-		allowed_civil_war = { tag = SOV}
+		allowed_civil_war = { tag = SOV }
 
 		advisor = {
 			slot = political_advisor

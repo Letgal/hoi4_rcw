@@ -21,9 +21,12 @@ state = {
 			}
 
 		}
-		add_core_of = SOV
+		add_core_of = RUS
 		add_core_of = GEO
-		1917.11.11 = { owner = GEO }
+		1917.11.11 = {
+			owner = GEO
+			add_core_of = SOV
+		}
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 2

@@ -5,13 +5,12 @@ state={
 	manpower = 2197605
 	
 	state_category = city
-	impassable = yes
 	resources={
 		oil = 1 # was: 1
 		aluminium=60 # moved from Northern Hungary
 	}
 	history={
-		owner = AUS
+		
 		victory_points = {
 			11610 5 
 		}

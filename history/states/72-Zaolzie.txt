@@ -4,10 +4,9 @@ state={
 	manpower = 152000
 	
 	state_category = rural
-	impassable = yes
 	
 	history={
-		owner = AUS
+		
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
