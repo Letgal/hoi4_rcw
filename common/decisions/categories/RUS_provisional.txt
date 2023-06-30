@@ -1,6 +1,17 @@
-RUS_balance_of_power_category = {
+RUS_balance_of_power_category_bba = {
 	icon = GFX_decision_category_power_struggle
-	allowed = { original_tag = RUS }
+	allowed = {
+		has_dlc = "By Blood Alone"
+		original_tag = RUS
+	}
+	priority = 60
+}
+RUS_balance_of_power_category = { # Workaround, since the category is tied to the BOP no matter what
+	icon = GFX_decision_category_power_struggle
+	allowed = {
+		NOT = { has_dlc = "By Blood Alone" }
+		original_tag = RUS
+	}
 	priority = 60
 }
 RUS_purge_the_soviets_category = { }

@@ -1,21 +1,43 @@
+# BBA
+RUS_balance_of_power_category_bba = {
+	RUS_abolish_the_soviet_bba = {
+		priority = -1
+		icon = generic_break_treaty
+		visible = { has_completed_focus = RUS_purge_the_soviets }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = rsdlp_divide_is_6
+				check_variable = { rsdlp_divide > 5 }
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			remove_power_balance = { id = RUS_provisional_bop }
+		}
+	}
+}
+
+# No BBA
 RUS_balance_of_power_category = {
 	RUS_abolish_the_soviet = {
 		priority = -1
 		icon = generic_break_treaty
 		visible = { has_completed_focus = RUS_purge_the_soviets }
 		available = {
-			if = {
-				limit = {
-					NOT = { has_dlc = "By Blood Alone" }
-				}
+			custom_trigger_tooltip = {
+				tooltip = RUS_petrograd_soviet_crippled
 				NOT = {
-					has_idea = RUS_petrograd_soviet_1
-					has_idea = RUS_petrograd_soviet_2
+					has_idea = RUS_petrograd_soviet_passive
+					has_idea = RUS_petrograd_soviet_domineering
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = rsdlp_divide_is_12
-				check_variable = { rsdlp_divide > 11 }
+				tooltip = rsdlp_divide_is_6
+				check_variable = { rsdlp_divide > 5 }
 			}
 		}
 		fire_only_once = yes
@@ -25,9 +47,8 @@ RUS_balance_of_power_category = {
 				popularity = -0.1
 			}
 			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				remove_power_balance = { id = RUS_provisional_bop }
-				else = { remove_ideas = RUS_petrograd_soviet_3 }
+				limit = { has_idea = RUS_petrograd_soviet_weakened }
+				remove_ideas = RUS_petrograd_soviet_weakened
 			}
 		}
 	}

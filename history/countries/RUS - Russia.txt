@@ -20,7 +20,7 @@ if = {
 		id = RUS_provisional_bop
 		set_default = yes
 	}
-	else = { add_ideas = RUS_petrograd_soviet_1 }
+	else = { add_ideas = RUS_petrograd_soviet_passive }
 }
 
 add_ideas = RUS_undersupplied_army
@@ -150,9 +150,9 @@ set_popularities = {
 		limit = { has_dlc = "By Blood Alone" }
 		remove_power_balance = { id = RUS_provisional_bop }
 		else = {
-			remove_ideas = RUS_petrograd_soviet_1
-			remove_ideas = RUS_petrograd_soviet_2
-			remove_ideas = RUS_petrograd_soviet_3
+			remove_ideas = RUS_petrograd_soviet_passive
+			remove_ideas = RUS_petrograd_soviet_domineering
+			remove_ideas = RUS_petrograd_soviet_weakened
 		}
 	}
 	add_ideas = WHI_factionalism

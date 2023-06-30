@@ -1,25 +1,103 @@
-RUS_balance_of_power_category = {
-	RUS_handle_kornilov = {
-		priority = 1
-		icon = generic_political_discourse
-		visible = { has_active_mission = RUS_kornilov_putsch_mission }
-		cost = 100
+# BBA
+RUS_balance_of_power_category_bba = {
+	RUS_hire_soviet_commanders_bba = {
+		icon = generic_army_support
+		visible = { has_completed_focus = RUS_cooperate_with_the_soviets }
 		fire_only_once = yes
 		complete_effect = {
-			retire_character = RUS_lavr_kornilov
 			add_popularity = {
 				ideology = communism
 				popularity = 0.1
 			}
-			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				add_power_balance_value = {
-					id = RUS_provisional_bop
-					value = -0.15
+			add_power_balance_value = {
+				id = RUS_provisional_bop
+				value = -0.15
+			}
+			add_corps_commander_role = {
+				character = RUS_lev_trotsky
+				traits = { trait_trotsky_commander }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			add_advisor_role = {
+				character = RUS_lev_trotsky
+				advisor = {
+					slot = army_chief
+					cost = 100
+					idea_token = RUS_lev_trotsky
+					traits = { infantry_officer }
 				}
+			}
+			#remove_advisor_role = {
+			#	character = RUS_lev_trotsky
+			#	slot = political_advisor
+			#}
+		}
+	}
+	RUS_sway_the_mensheviks_bba = {
+		icon = generic_political_discourse
+		visible = { has_completed_focus = RUS_cooperate_with_the_soviets }
+		cost = 20
+		days_remove = 14
+		remove_effect = {
+			add_to_variable = {
+				menshevik_attitude = 1
+				tooltip = menshevik_attitude_improve
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_power_balance_value = {
+				id = RUS_provisional_bop
+				value = -0.05
 			}
 		}
 	}
+	RUS_dissolve_the_soviet_bba = {
+		priority = -1
+		icon = generic_break_treaty
+		visible = { has_completed_focus = RUS_cooperate_with_the_soviets }
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = RUS_moderate_communism
+					power_balance_value = {
+						id = RUS_provisional_bop
+						value > 0.75
+					}
+				}
+				power_balance_value = {
+					id = RUS_provisional_bop
+					value > 0.9
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = mensheviks_are_cooperative
+				check_variable = { menshevik_attitude > 9 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = rsdlp_divide_is_6
+				check_variable = { rsdlp_divide > 5 }
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = petrograd_soviet_destroyed
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			remove_power_balance = { id = RUS_provisional_bop }
+		}
+	}
+}
+
+# No BBA
+RUS_balance_of_power_category = {
 	RUS_hire_soviet_commanders = {
 		icon = generic_army_support
 		visible = { has_completed_focus = RUS_cooperate_with_the_soviets }
@@ -67,19 +145,12 @@ RUS_balance_of_power_category = {
 		days_remove = 14
 		remove_effect = {
 			add_to_variable = {
-				menshevik_opinion = 1
-				tooltip = menshevik_opinion_plus_1
+				menshevik_attitude = 1
+				tooltip = menshevik_attitude_improve
 			}
 			add_popularity = {
 				ideology = communism
 				popularity = 0.05
-			}
-			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				add_power_balance_value = {
-					id = RUS_provisional_bop
-					value = -0.05
-				}
 			}
 		}
 	}
@@ -88,30 +159,20 @@ RUS_balance_of_power_category = {
 		icon = generic_break_treaty
 		visible = { has_completed_focus = RUS_cooperate_with_the_soviets }
 		available = {
-			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				OR = {
-					AND = {
-						has_completed_focus = RUS_moderate_communism
-						power_balance_value = {
-							id = RUS_provisional_bop
-							value > 0.75
-						}
-					}
-					power_balance_value = {
-						id = RUS_provisional_bop
-						value > 0.9
-					}
+			custom_trigger_tooltip = {
+				tooltip = RUS_petrograd_soviet_crippled
+				NOT = {
+					has_idea = RUS_petrograd_soviet_passive
+					has_idea = RUS_petrograd_soviet_domineering
 				}
-				else = { has_idea = RUS_petrograd_soviet_3 }
 			}
 			custom_trigger_tooltip = {
-				tooltip = menshevik_opinion_is_12
-				check_variable = { menshevik_opinion > 11 }
+				tooltip = mensheviks_are_cooperative
+				check_variable = { menshevik_attitude > 9 }
 			}
 			custom_trigger_tooltip = {
-				tooltip = rsdlp_divide_is_12
-				check_variable = { rsdlp_divide > 11 }
+				tooltip = rsdlp_divide_is_6
+				check_variable = { rsdlp_divide > 5 }
 			}
 		}
 		fire_only_once = yes
@@ -122,9 +183,8 @@ RUS_balance_of_power_category = {
 				popularity = -0.1
 			}
 			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				remove_power_balance = { id = RUS_provisional_bop }
-				else = { remove_ideas = RUS_petrograd_soviet_3 }
+				limit = { has_idea = RUS_petrograd_soviet_weakened }
+				remove_ideas = RUS_petrograd_soviet_weakened
 			}
 		}
 	}

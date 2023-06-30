@@ -9,6 +9,11 @@
  RUS_pavel_milyukov:0 "Pavel Milyukov"
  RUS_georgi_lvov:0 "Georgi L'vov"
  RUS_mikhail_rodzyanko:0 "Mikhail Rodzyanko"
+ RUS_patriarch_sergy:0 "$SOV_patriarch_sergy$"
+ RUS_metropolitan_meletius:0 "$SOV_metropolitan_meletius$"
+ RUS_metropolitan_anastasy:0 "$SOV_metropolitan_anastasy$"
+ RUS_metropolitan_nikolay:0 "$SOV_metropolitan_nikolay$"
+ RUS_metropolitan_aleksy:0 "$SOV_metropolitan_aleksy$"
  # Generals
  RUS_aleksey_polivanov:0 "Aleksey Polivanov"
 

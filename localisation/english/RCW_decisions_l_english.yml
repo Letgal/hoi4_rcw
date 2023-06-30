@@ -21,6 +21,25 @@
  RUS_dissolve_the_soviet:0 "Dissolve the Soviet" # Final Solution
  RUS_dissolve_the_soviet_desc:0 "The Mensheviks are now officially part of our government, and the only ones who remain in the Soviet are the Bolsheviks and the ‘left Esers’, who have been weakened so much as to become inconsequential. Now we can just dissolve this nuisance of an organization without much risk."
 
+ # BBA Workaround
+ RUS_kornilov_putsch_mission_bba:0 "$RUS_kornilov_putsch_mission$"
+ RUS_purge_the_soviets_category_bba:0 "$RUS_purge_the_soviets_category$"
+ RUS_cooperate_with_the_soviets_category_bba:0 "$RUS_cooperate_with_the_soviets_category$"
+ RUS_balance_of_power_category_bba:0 "$RUS_balance_of_power_category$"
+ RUS_balance_of_power_category_desc_bba:0 "$RUS_balance_of_power_category_desc$"
+ RUS_limit_the_soviets_influence_bba:0 "$RUS_limit_the_soviets_influence$"
+ RUS_abolish_the_soviet_bba:0 "$RUS_abolish_the_soviet$"
+ RUS_abolish_the_soviet_desc_bba:0 "$RUS_abolish_the_soviet_desc$"
+ RUS_handle_kornilov_bba:0 "$RUS_handle_kornilov$"
+ RUS_hire_soviet_commanders_bba:0 "$RUS_hire_soviet_commanders$"
+ RUS_hire_soviet_commanders_desc_bba:0 "$RUS_hire_soviet_commanders_desc$"
+ RUS_sway_the_mensheviks_bba:0 "$RUS_sway_the_mensheviks$"
+ RUS_sway_the_mensheviks_desc_bba:0 "$RUS_sway_the_mensheviks_desc$"
+ RUS_deepen_the_rsdlp_divide_bba:0 "$RUS_deepen_the_rsdlp_divide$"
+ RUS_deepen_the_rsdlp_divide_desc_bba:0 "$RUS_deepen_the_rsdlp_divide_desc$"
+ RUS_dissolve_the_soviet_bba:0 "$RUS_dissolve_the_soviet$"
+ RUS_dissolve_the_soviet_desc_bba:0 "$RUS_dissolve_the_soviet_desc$"
+
  ### PEACE NEGOTIATIONS ###
  #RCW_peace_treaty_category:0 "Peace Treaty with [SOV.GetNonIdeologyName]"
  #GER_demand_POL:0 "Demand Recognition of [POL.GetNameDef]"

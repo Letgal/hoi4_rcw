@@ -490,9 +490,9 @@
 				}
 				else = {
 					NOT = {
-						has_idea = RUS_petrograd_soviet_1
-						has_idea = RUS_petrograd_soviet_2
-						has_idea = RUS_petrograd_soviet_3
+						has_idea = RUS_petrograd_soviet_passive
+						has_idea = RUS_petrograd_soviet_domineering
+						has_idea = RUS_petrograd_soviet_weakened
 					}
 				}
 			}
@@ -531,9 +531,9 @@
 				}
 				else = {
 					NOT = {
-						has_idea = RUS_petrograd_soviet_1
-						has_idea = RUS_petrograd_soviet_2
-						has_idea = RUS_petrograd_soviet_3
+						has_idea = RUS_petrograd_soviet_passive
+						has_idea = RUS_petrograd_soviet_domineering
+						has_idea = RUS_petrograd_soviet_weakened
 					}
 				}
 			}
@@ -541,8 +541,6 @@
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			set_variable = { menshevik_opinion = 2 }
-			set_variable = { rsdlp_divide = 6 }
 			unlock_decision_category_tooltip = RUS_cooperate_with_the_soviets_category
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
@@ -559,14 +557,20 @@
 		relative_position_id = RUS_road_map
 		x = 1
 		y = 1
-		cost = 10
+		cost = 15
 		#bypass = { has_country_flag = constitution_drafted }
 		#search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
 		cancelable = no
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			custom_effect_tooltip = drafting_the_constitution_tt
-			set_country_flag = constitution_drafted
+			if = {
+				limit = {
+					NOT = { has_country_flag = constitution_drafted }
+				}
+				custom_effect_tooltip = if_drafting_failed
+				add_stability = -0.15
+			}
 		}
 	}
 
@@ -604,8 +608,8 @@
 				}
 				else = {
 					NOT = {
-						has_idea = RUS_petrograd_soviet_1
-						has_idea = RUS_petrograd_soviet_2
+						has_idea = RUS_petrograd_soviet_passive
+						has_idea = RUS_petrograd_soviet_domineering
 					}
 				}
 			}
@@ -644,8 +648,8 @@
 		cost = 10
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = menshevik_opinion_is_8
-				check_variable = { menshevik_opinion > 7 }
+				tooltip = menshevik_attitude_is_8
+				check_variable = { menshevik_attitude > 7 }
 			}
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
@@ -655,8 +659,8 @@
 				}
 				else = {
 					OR = {
-						has_idea = RUS_petrograd_soviet_1
-						has_idea = RUS_petrograd_soviet_2
+						has_idea = RUS_petrograd_soviet_passive
+						has_idea = RUS_petrograd_soviet_domineering
 					}
 				}
 			}
@@ -670,8 +674,8 @@
 				}
 				else = {
 					NOT = {
-						has_idea = RUS_petrograd_soviet_1
-						has_idea = RUS_petrograd_soviet_2
+						has_idea = RUS_petrograd_soviet_passive
+						has_idea = RUS_petrograd_soviet_domineering
 					}
 				}
 			}
@@ -733,10 +737,10 @@
 			add_ideas = RUS_approved_by_church
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = RUS_patriarch_sergy
-			show_ideas_tooltip = RUS_metropolitan_meletius
-			show_ideas_tooltip = RUS_metropolitan_anastasy
-			show_ideas_tooltip = RUS_metropolitan_nikolay
-			show_ideas_tooltip = RUS_metropolitan_aleksy
+			#show_ideas_tooltip = RUS_metropolitan_meletius
+			#show_ideas_tooltip = RUS_metropolitan_anastasy
+			#show_ideas_tooltip = RUS_metropolitan_nikolay
+			#show_ideas_tooltip = RUS_metropolitan_aleksy
 		}
 	}
 
@@ -845,9 +849,9 @@
 				}
 				else = {
 					NOT = {
-						has_idea = RUS_petrograd_soviet_1
-						has_idea = RUS_petrograd_soviet_2
-						has_idea = RUS_petrograd_soviet_3
+						has_idea = RUS_petrograd_soviet_passive
+						has_idea = RUS_petrograd_soviet_domineering
+						has_idea = RUS_petrograd_soviet_weakened
 					}
 				}
 			}

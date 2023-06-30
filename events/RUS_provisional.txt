@@ -32,8 +32,8 @@ country_event = {
 		#	}
 		#	else = {
 		#		swap_ideas = {
-		#			remove_idea = RUS_petrograd_soviet_1
-		#			add_idea = RUS_petrograd_soviet_2
+		#			remove_idea = RUS_petrograd_soviet_passive
+		#			add_idea = RUS_petrograd_soviet_domineering
 		#		}
 		#	}
 		#}
@@ -179,20 +179,22 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 
 	trigger = {
+		NOT = { has_completed_focus = RUS_convene_the_constituent_assembly }
 		focus_progress = {
 			focus = RUS_convene_the_constituent_assembly
 			progress > 0
 		}
-		check_variable = { constitution_process < 3 }
+		check_variable = { constitution_process < 4 }
 	}
 	mean_time_to_happen = { days = 15 }
 
 	option = {
 		name = provisional.4.a
+		trigger = { has_political_power > 29 }
 		add_political_power = -30
 		add_to_variable = { constitution_process = 1 }
 	}
-	option = { name = provisional.2.b }
+	option = { name = provisional.4.b }
 }
 
 country_event = {
@@ -202,12 +204,14 @@ country_event = {
 	picture = GFX_report_event_generic_conference
 
 	trigger = {
-		check_variable = { constitution_process = 3 }
+		NOT = { has_completed_focus = RUS_convene_the_constituent_assembly }
+		check_variable = { constitution_process = 4 }
 	}
 	mean_time_to_happen = { days = 15 }
 
 	option = {
 		name = provisional.5.a
+		add_stability = 0.1
 		set_country_flag = constitution_drafted
 		complete_national_focus = RUS_convene_the_constituent_assembly
 	}
@@ -250,16 +254,16 @@ country_event = {
 			add_idea = unrecognized_state
 		}
 		if = {
-			limit = { has_idea = RUS_petrograd_soviet_1 }
-			remove_ideas = RUS_petrograd_soviet_1
+			limit = { has_idea = RUS_petrograd_soviet_passive }
+			remove_ideas = RUS_petrograd_soviet_passive
 		}
 		if = {
-			limit = { has_idea = RUS_petrograd_soviet_2 }
-			remove_ideas = RUS_petrograd_soviet_2
+			limit = { has_idea = RUS_petrograd_soviet_domineering }
+			remove_ideas = RUS_petrograd_soviet_domineering
 		}
 		if = {
-			limit = { has_idea = RUS_petrograd_soviet_3 }
-			remove_ideas = RUS_petrograd_soviet_3
+			limit = { has_idea = RUS_petrograd_soviet_weakened }
+			remove_ideas = RUS_petrograd_soviet_weakened
 		}
 	}
 }

@@ -28,7 +28,7 @@ bookmarks = {
 			available = { NOT = { has_dlc = "By Blood Alone" } } 
 			ideas = {
 				provisional_government_idea
-				RUS_petrograd_soviet_1
+				RUS_petrograd_soviet_passive
 				RUS_failing_state_dummy
 			}
 			focuses = {

@@ -12,12 +12,12 @@
  # Balance of Power
  RUS_bop_dummy:0 "$RUS_balance_of_power_category$ §T(Balance of Power)§!"
  RUS_bop_dummy_desc:0 "$RUS_balance_of_power_category_desc$"
- RUS_petrograd_soviet_1:1 "Passive Petrograd Soviet"
- RUS_petrograd_soviet_1_desc:0 "The Provisional Government's rule was established in no small part thanks to "help" from the Petrograd Soviet. However, the Soviet demanded representation in the government in exchange. Having no other choice, we had to accept. Ever since then, the Soviet has been trying to destabilize our administration and woo our supporters to their side.\nThis creates a very dangerous situation. If the Soviets get enough power, they will swiftly overthrow the Provisional Government."
- RUS_petrograd_soviet_2:1 "Domineering Petrograd Soviet"
- RUS_petrograd_soviet_2_desc:0 "$RUS_petrograd_soviet_1_desc$"
- RUS_petrograd_soviet_3:0 "Weakened Petrograd Soviet"
- RUS_petrograd_soviet_3_desc:0 "$RUS_petrograd_soviet_1_desc$"
+ RUS_petrograd_soviet_passive:1 "Passive Petrograd Soviet"
+ RUS_petrograd_soviet_passive_desc:0 "The Provisional Government's rule was established in no small part thanks to "help" from the Petrograd Soviet. However, the Soviet demanded representation in the government in exchange. Having no other choice, we had to accept. Ever since then, the Soviet has been trying to destabilize our administration and woo our supporters to their side.\nThis creates a very dangerous situation. If the Soviets get enough power, they will swiftly overthrow the Provisional Government."
+ RUS_petrograd_soviet_domineering:1 "Domineering Petrograd Soviet"
+ RUS_petrograd_soviet_domineering_desc:0 "$RUS_petrograd_soviet_passive_desc$"
+ RUS_petrograd_soviet_weakened:0 "Weakened Petrograd Soviet"
+ RUS_petrograd_soviet_weakened_desc:0 "$RUS_petrograd_soviet_passive_desc$"
 
  # Starting Ideas
  RUS_failing_state:0 "A Failing State"

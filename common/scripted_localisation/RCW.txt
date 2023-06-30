@@ -14,3 +14,31 @@ defined_text = {
 	}
 	text = { localization_key = RUS_provisional_bop }
 }
+defined_text = {
+	name = GetMenshevikOpinionRange
+	text = {
+		trigger = {
+			check_variable = { menshevik_attitude > 9 }
+		}
+		localization_key = menshevik_attitude_cooperative
+	}
+	text = {
+		trigger = {
+			check_variable = { menshevik_attitude > 7 }
+		}
+		localization_key = menshevik_attitude_friendly
+	}
+	text = {
+		trigger = {
+			check_variable = { menshevik_attitude > 6 }
+		}
+		localization_key = menshevik_attitude_amicable
+	}
+	text = {
+		trigger = {
+			check_variable = { menshevik_attitude > 2 }
+		}
+		localization_key = menshevik_attitude_lukewarm
+	}
+	text = { localization_key = menshevik_attitude_indifferent }
+}
