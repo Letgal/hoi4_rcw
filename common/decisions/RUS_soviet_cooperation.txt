@@ -39,7 +39,10 @@ RUS_balance_of_power_category_bba = {
 	}
 	RUS_sway_the_mensheviks_bba = {
 		icon = generic_political_discourse
-		visible = { has_completed_focus = RUS_cooperate_with_the_soviets }
+		visible = {
+			has_completed_focus = RUS_cooperate_with_the_soviets
+			check_variable = { menshevik_attitude < 10 }
+		}
 		cost = 20
 		days_remove = 14
 		remove_effect = {
@@ -110,15 +113,15 @@ RUS_balance_of_power_category = {
 			if = {
 				limit = { has_idea = RUS_petrograd_soviet_passive }
 				swap_ideas = {
-					add_idea = RUS_petrograd_soviet_passive
-					remove_idea = RUS_petrograd_soviet_domineering
+					add_idea = RUS_petrograd_soviet_domineering
+					remove_idea = RUS_petrograd_soviet_passive
 				}
 			}
 			if = {
 				limit = { has_idea = RUS_petrograd_soviet_weakened }
 				swap_ideas = {
-					add_idea = RUS_petrograd_soviet_weakened
-					remove_idea = RUS_petrograd_soviet_domineering
+					add_idea = RUS_petrograd_soviet_domineering
+					remove_idea = RUS_petrograd_soviet_weakened
 				}
 			}
 			add_corps_commander_role = {
@@ -147,7 +150,10 @@ RUS_balance_of_power_category = {
 	}
 	RUS_sway_the_mensheviks = {
 		icon = generic_political_discourse
-		visible = { has_completed_focus = RUS_cooperate_with_the_soviets }
+		visible = {
+			has_completed_focus = RUS_cooperate_with_the_soviets
+			check_variable = { menshevik_attitude < 10 }
+		}
 		cost = 20
 		days_remove = 14
 		remove_effect = {

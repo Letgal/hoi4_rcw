@@ -32,8 +32,6 @@ state={
 				arms_factory = 7
 			}
 		}
-		set_state_name = SOV_petrograd
-		set_province_name = { id = 3151 name = SOV_petrograd }
 	}
 
 	provinces={

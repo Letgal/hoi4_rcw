@@ -23,8 +23,6 @@ state={
 				arms_factory = 2
 			}
 		}
-		set_state_name = SOV_Tsaritsyn
-		set_province_name = { id = 3529 name = SOV_Tsaritsyn }
 	}
 
 	provinces={

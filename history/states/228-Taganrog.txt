@@ -16,8 +16,6 @@ state={
 		}
 		add_core_of = RUS
 		add_core_of = UKR
-		set_state_name = SOV_lugansk
-		set_province_name = { id = 9461 name = SOV_lugansk }
 	}
 
 	provinces={

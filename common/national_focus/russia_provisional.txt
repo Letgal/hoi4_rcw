@@ -648,8 +648,12 @@
 		cost = 10
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = menshevik_attitude_is_8
-				check_variable = { menshevik_attitude > 7 }
+				tooltip = mensheviks_are_amicable
+				check_variable = { menshevik_attitude > 5 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = rsdlp_divide_is_3
+				check_variable = { rsdlp_divide > 2 }
 			}
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
@@ -698,8 +702,8 @@
 				}
 				set_party_name = {
 					ideology = communism
-					name = RUS_menshevik_party
-					long_name = RUS_menshevik_party_long
+					name = SOV_menshevik_party
+					long_name = SOV_menshevik_party_long
 				}
 			}
 		}

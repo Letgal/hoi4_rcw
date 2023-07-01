@@ -30,7 +30,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			check_variable = { menshevik_attitude > 6 }
+			check_variable = { menshevik_attitude > 5 }
 		}
 		localization_key = menshevik_attitude_amicable
 	}

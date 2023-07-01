@@ -36,6 +36,23 @@ add_dynamic_modifier = { modifier = RUS_war_weariness }
 set_variable = { RUS_war_weariness_ws = -0.75 }
 set_variable = { RUS_war_weariness_pc = 0.003 }
 
+### PARTIES ###
+set_party_name = {
+	ideology = communism
+	long_name = SOV_communism_party_long
+	name = SOV_communism_party
+}
+set_party_name = {
+	ideology = democratic
+	long_name = SOV_democratic_party_long
+	name = SOV_democratic_party
+}
+set_party_name = {
+	ideology = fascism
+	long_name = SOV_fascism_party_long
+	name = SOV_fascism_party
+}
+
 ### TECHNOLOGIES ###
 set_technology = {
 	infantry_weapons = 1
@@ -50,7 +67,7 @@ recruit_character = RUS_aleksandr_kerensky # He will ruin your country
 recruit_character = RUS_vladimir_lenin # Dummy Character
 recruit_character = RUS_provisional_government
 recruit_character = RUS_irakli_tsereteli
-#recruit_character = RUS_lev_trotsky
+recruit_character = RUS_lev_trotsky
 recruit_character = RUS_lavr_kornilov
 
 recruit_character = RUS_pavel_milyukov

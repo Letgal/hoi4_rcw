@@ -27,6 +27,7 @@ RUS_balance_of_power_category_bba = {
 				has_completed_focus = RUS_purge_the_soviets
 				has_completed_focus = RUS_cooperate_with_the_soviets
 			}
+			check_variable = { rsdlp_divide < 6 }
 		}
 		cost = 30
 		days_remove = 14
@@ -57,6 +58,7 @@ RUS_balance_of_power_category = {
 				has_completed_focus = RUS_purge_the_soviets
 				has_completed_focus = RUS_cooperate_with_the_soviets
 			}
+			check_variable = { rsdlp_divide < 6 }
 		}
 		cost = 30
 		days_remove = 14

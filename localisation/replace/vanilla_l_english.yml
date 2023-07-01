@@ -1,5 +1,5 @@
 ﻿l_english:
- LOADING_TIP_6: "Thanks for playing the "Russian Civil War" mod."
+ LOADING_TIP_6: "Thanks for playing the “Russian Civil War” mod."
 
  FE_INTERESTING_COUNTRIES: "Russia Overview"
  FE_COUNTRY_INFO_TITLE: "Country Overview"
@@ -24,16 +24,12 @@
  FRA_DEF: "the Allied Powers"
  FRA_ADJ: "Allied"
 
- SOV_democratic_party: "Trudovik Group"
- SOV_democratic_party_long: "Trudovik Faction of the PSR"
- SOV_democratic_party_russian: "Trudovaya gruppa"
- SOV_democratic_party_russian_long: "Fraktsiya trudovikov PSR"
- SOV_communism_party_russian: "RSDRP(b)"
- SOV_communism_party_russian_long: "Rossiyskaya sotsial-demokraticheskaya rabochaya partiya (bol'shevikov)"
- SOV_menshevik_party_russian: "RSDRP(m)"
- SOV_menshevik_party_russian_long: "Rossiyskaya sotsial-demokraticheskaya rabochaya partiya (men'shevikov)"
- SOV_fascism_party_russian: "VFP"
- SOV_fascism_party_russian_long: "Vserossiyskaya fashistskaya partiya"
+ SOV_democratic_party: "Trudovaya gruppa"
+ SOV_democratic_party_long: "Fraktsiya trudovikov PSR"
+ SOV_communism_party: "RSDRP(b)"
+ SOV_communism_party_long: "Rossiyskaya sotsial-demokraticheskaya rabochaya partiya (bol'shevikov)"
+ SOV_fascism_party: "VFP"
+ SOV_fascism_party_long: "Vserossiyskaya fashistskaya partiya"
 
  KIEL_CANAL: "Kaiser-Wilhelm-Kanal"
 

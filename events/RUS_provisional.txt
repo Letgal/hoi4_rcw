@@ -61,6 +61,10 @@ country_event = {
 			ideology = ROOT
 			popularity = -0.1
 		}
+		set_country_flag = {
+			flag = april_days
+			days = 30
+		}
 	}
 	option = {
 		name = provisional.2.b
@@ -68,6 +72,10 @@ country_event = {
 		add_popularity = {
 			ideology = ROOT
 			popularity = -0.2
+		}
+		set_country_flag = {
+			flag = april_days
+			days = 30
 		}
 	}
 }
@@ -78,12 +86,18 @@ country_event = {
 	desc = provisional.3.d
 	picture = GFX_report_event_generic_conference
 
+	fire_only_once = yes
 	trigger = {
 		original_tag = RUS
 		has_civil_war = no
-		has_stability < 0.2
+		#has_stability < 0.2
 		has_character = RUS_lavr_kornilov
+		has_country_leader = {
+			character = RUS_aleksandr_kerensky
+			ruling_only = yes
+		}
 		has_completed_focus = RUS_continue_the_war
+		has_country_flag = april_days
 	}
 	mean_time_to_happen = { days = 15 }
 
@@ -103,17 +117,18 @@ country_event = {
 
 	option = {
 		name = provisional.4.a
-		trigger = {
-			has_completed_focus = RUS_purge_the_soviets
-			has_political_power > 199
-		}
+		trigger = { has_political_power > 199 }
 		retire_character = RUS_lavr_kornilov
 		add_political_power = -200
 	}
 	option = {
 		name = provisional.4.b
-		trigger = { has_completed_focus = RUS_cooperate_with_the_soviets }
+		trigger = {
+			has_political_power > 49
+			has_completed_focus = RUS_cooperate_with_the_soviets
+		}
 		retire_character = RUS_lavr_kornilov
+		add_political_power = -50
 		add_popularity = {
 			ideology = communism
 			popularity = 0.1
@@ -122,7 +137,23 @@ country_event = {
 			limit = { has_dlc = "By Blood Alone" }
 			add_power_balance_value = {
 				id = RUS_provisional_bop
-				value = -0.15
+				value = -0.2
+			}
+		}
+		else = {
+			if = {
+				limit = { has_idea = RUS_petrograd_soviet_passive }
+				swap_ideas = {
+					add_idea = RUS_petrograd_soviet_domineering
+					remove_idea = RUS_petrograd_soviet_passive
+				}
+			}
+			if = {
+				limit = { has_idea = RUS_petrograd_soviet_weakened }
+				swap_ideas = {
+					add_idea = RUS_petrograd_soviet_domineering
+					remove_idea = RUS_petrograd_soviet_weakened
+				}
 			}
 		}
 	}

@@ -5,7 +5,6 @@ crisis = {
 		activation = { always = no }
 		available = {
 			NOT = { has_character = RUS_lavr_kornilov }
-			hidden_trigger = { always = no }
 		}
 		days_mission_timeout = 60
 		timeout_effect = { country_event = provisional.5 }
@@ -19,7 +18,6 @@ crisis = {
 				has_completed_focus = RUS_cooperate_with_the_soviets
 			}
 		}
-		cost = 100
 		complete_effect = { country_event = provisional.4 }
 	}
 }

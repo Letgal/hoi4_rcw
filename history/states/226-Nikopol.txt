@@ -25,8 +25,6 @@ state={
 		}
 		add_core_of = RUS
 		add_core_of = UKR
-		set_state_name = SOV_yekaterinoslav
-		set_province_name = { id = 11437 name = SOV_yekaterinoslav }
 	}
 
 	provinces={

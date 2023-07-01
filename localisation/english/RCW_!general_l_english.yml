@@ -3,26 +3,18 @@
  FOCUS_FILTER_DOCTRINE:0 "Military Doctrine"
  FOCUS_FILTER_NO_EFFECTS:0 "No Effects"
 
- WAR_NAME_AUS_SOV:0 "The Great War"
- WAR_NAME_GER_SOV:0 "The Great War"
+ WAR_NAME_AUS_RUS:0 "The Great War"
+ WAR_NAME_GER_RUS:0 "The Great War"
 
  ENG_entente_faction:0 "Entente"
  white_movement:0 "White Movement"
 
- RUS_democratic_party:0 "$SOV_democratic_party_russian$"
- RUS_democratic_party_long:0 "$SOV_democratic_party_russian_long$"
- RUS_communism_party:0 "$SOV_communism_party_russian$"
- RUS_communism_party_long:0 "$SOV_communism_party_russian_long$"
- RUS_menshevik_party:0 "$SOV_menshevik_party_russian$"
- RUS_menshevik_party_long:0 "$SOV_menshevik_party_russian_long$"
- RUS_fascism_party:0 "$SOV_fascism_party_russian$"
- RUS_fascism_party_long:0 "$SOV_fascism_party_russian_long$"
+ SOV_menshevik_party:0 "RSDRP(m)"
+ SOV_menshevik_party_long:0 "Rossiyskaya sotsial-demokraticheskaya rabochaya partiya (men'shevikov)"
+
  RUS_kornilov_gvt:1 "Pravityel'stvo Kornilova"
  RUS_kornilov_gvt_long:1 "Vryemyennoye pravityel'stvo gyenyerala Kornilova"
  RUS_white_movement:1 "Byeloye dvizheniye"
-
- SOV_yekaterinoslav:0 "Yekaterinoslav"
- SOV_lugansk:0 "Lugansk"
 
  RULE_FACTION_BLOCKED_TT:0 "§R(Game Rule) Cannot join or invite others into factions§!"
 
@@ -51,13 +43,14 @@
  can_lead_to_a_coup_tt:1 "§RCooperation with the communists can lead to a coup if they are not weakened!§!"
  drafting_the_constitution_tt:1 "The §HConstitution§! will be drafted over the course of this focus."
  if_drafting_failed:2 "§HEffect if the focus ends before the Constitution is drafted:§!"
- menshevik_attitude_is_8:2 "The Mensheviks are $menshevik_attitude_friendly$ (currently they are [GetMenshevikOpinionRange])"
+ mensheviks_are_amicable:4 "The Mensheviks are at least $menshevik_attitude_amicable$ (they are [GetMenshevikOpinionRange] as of now)"
+ rsdlp_divide_is_3:0 "RSDLP Divide is at least §Y3§! (currently [?rsdlp_divide|0Y])"
  setting_the_course_tt:1 "Improves the idea one gets by completing either §H$RUS_social_democracy$§!, §H$RUS_democratic_socialism$§! or §H$RUS_moderate_communism$§!." # by\n$MODIFIER_DRIFT_DEFENCE_FACTOR$: §G+30.0%§!\n$democratic_drift$: §G+0.02§!
 
  # Decisions: Power Struggle
  menshevik_attitude_improve:1 "Menshevik Attitude: §G+1§! (currently $LEFT|0Y$: [GetMenshevikOpinionRange])"
  rsdlp_divide_plus_1:0 "RSDLP Divide: §G+1§! (currently $LEFT|0Y$)"
- mensheviks_are_cooperative:3 "The Mensheviks are $menshevik_attitude_cooperative$ (as of now they are [GetMenshevikOpinionRange])"
+ mensheviks_are_cooperative:4 "The Mensheviks are $menshevik_attitude_cooperative$ (they are [GetMenshevikOpinionRange] as of now)"
  rsdlp_divide_is_6:1 "RSDLP Divide is at least §Y6§! (currently [?rsdlp_divide|0Y])"
  RUS_petrograd_soviet_crippled:0 "The §YPetrograd Soviet§! is neither §YPassive§! nor §YDomineering§!"
 
