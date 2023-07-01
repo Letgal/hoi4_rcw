@@ -206,7 +206,7 @@
 	}
 
 	focus = {
-		id = WHI_restore_the_government
+		id = WHI_restore_the_civilian_government
 		icon = GFX_focus_generic_improve_the_administration
 		prerequisite = { focus = WHI_the_issue_at_hand }
 		relative_position_id = WHI_the_issue_at_hand
@@ -312,7 +312,7 @@
 	}
 
 	focus = {
-		id = WHI_a_path_to_republic
+		id = WHI_path_to_the_republic
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = WHI_bring_back_the_right_esers }
 		mutually_exclusive = { focus = WHI_constitutional_monarchy }
@@ -327,7 +327,7 @@
 		id = WHI_constitutional_monarchy
 		icon = GFX_focus_rom_handle_king
 		prerequisite = { focus = WHI_bring_back_the_right_esers }
-		mutually_exclusive = { focus = WHI_a_path_to_republic }
+		mutually_exclusive = { focus = WHI_path_to_the_republic }
 		relative_position_id = WHI_bring_back_the_right_esers
 		x = 1
 		y = 1
@@ -358,11 +358,11 @@
 	}
 
 	focus = {
-		id = WHI_confederation
+		id = WHI_confederation_project
 		icon = GFX_focus_SWI_dissolve_the_federal_council
-		prerequisite = { focus = WHI_a_path_to_republic focus = WHI_constitutional_monarchy }
+		prerequisite = { focus = WHI_path_to_the_republic focus = WHI_constitutional_monarchy }
 		mutually_exclusive = { focus = WHI_russian_federation }
-		relative_position_id = WHI_a_path_to_republic
+		relative_position_id = WHI_path_to_the_republic
 		x = 0
 		y = 1
 		cost = 10
@@ -372,8 +372,8 @@
 	focus = {
 		id = WHI_russian_federation
 		icon = GFX_goal_generic_national_unity
-		prerequisite = { focus = WHI_a_path_to_republic focus = WHI_constitutional_monarchy }
-		mutually_exclusive = { focus = WHI_confederation }
+		prerequisite = { focus = WHI_path_to_the_republic focus = WHI_constitutional_monarchy }
+		mutually_exclusive = { focus = WHI_confederation_project }
 		relative_position_id = WHI_constitutional_monarchy
 		x = 0
 		y = 1
@@ -384,8 +384,8 @@
 	focus = {
 		id = WHI_russia_reunited
 		icon = GFX_focus_generic_population_growth
-		prerequisite = { focus = WHI_restore_the_government }
-		prerequisite = { focus = WHI_a_path_to_republic focus = WHI_constitutional_monarchy }
+		prerequisite = { focus = WHI_restore_the_civilian_government }
+		prerequisite = { focus = WHI_path_to_the_republic focus = WHI_constitutional_monarchy }
 		prerequisite = { focus = WHI_undivisible_empire }
 		prerequisite = { focus = WHI_coronate_a_new_tsar }
 		relative_position_id = WHI_our_movement

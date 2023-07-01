@@ -16,7 +16,6 @@ state = {
 		add_core_of = TAJ
 		add_core_of = BUK
 		add_claim_by = RUS
-		1917.11.11 = { add_claim_by = SOV }
 	}
 
 	provinces = {

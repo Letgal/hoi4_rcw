@@ -55,3 +55,7 @@
  ### SOVIET REPUBLIC ###
  SOV_red_army:0 "The Red Army"
  SOV_home_of_revolution:0 "$home_of_revolution$"
+
+ ### WHITE RUSSIA ###
+ WHI_factionalism:0 "Factionalism"
+ WHI_factionalism_desc:0 "The White Movement is but a coalition united against the Soviet coup. This doesn't mean, however, that the constituent parties and organizations have abandoned their views and ambitions. Quite on the contrary, actually.\n\nMany of them still seek to achieve their goals using the instability in the country."

@@ -74,7 +74,7 @@ characters = {
 				small = "GFX_idea_RUS_pyotr_krasnov" # Temp
 			}
 		}
-		field_marshal = {
+		corps_commander = {
 			traits = { old_guard }
 			skill = 2
 			attack_skill = 2
@@ -281,24 +281,6 @@ characters = {
 	}
 
 	### NON-ADVISOR ARMY LEADERS ###
-	RUS_pyotr_krasnov = {
-		name = RUS_pyotr_krasnov
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_pyotr_krasnov"
-				small = "GFX_idea_SOV_pyotr_krasnov"
-			}
-		}
-		field_marshal = {
-			traits = { cavalry_leader }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-		}
-	}
-
 	RUS_konstantin_nechayev = {
 		name = RUS_konstantin_nechayev
 		portraits = {
@@ -317,27 +299,6 @@ characters = {
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 3
-		}
-	}
-
-	RUS_vladimir_kosmin = {
-		name = RUS_vladimir_kosmin
-		portraits = {
-			army = {
-				large = "GFX_portrait_SOV_vladimir_kosmin"
-				small = "GFX_idea_SOV_vladimir_kosmin"
-			}
-		}
-		field_marshal = {
-			traits = {
-				winter_expert
-				trait_mountaineer
-			}
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
 		}
 	}
 
@@ -376,6 +337,45 @@ characters = {
 			attack_skill = 2
 			defense_skill = 1
 			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+
+	RUS_pyotr_krasnov = {
+		name = RUS_pyotr_krasnov
+		portraits = {
+			army = {
+				large = "GFX_portrait_SOV_pyotr_krasnov"
+				small = "GFX_idea_SOV_pyotr_krasnov"
+			}
+		}
+		field_marshal = {
+			traits = { cavalry_leader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	RUS_vladimir_kosmin = {
+		name = RUS_vladimir_kosmin
+		portraits = {
+			army = {
+				large = "GFX_portrait_SOV_vladimir_kosmin"
+				small = "GFX_idea_SOV_vladimir_kosmin"
+			}
+		}
+		field_marshal = {
+			traits = {
+				winter_expert
+				trait_mountaineer
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
 			logistics_skill = 1
 		}
 	}

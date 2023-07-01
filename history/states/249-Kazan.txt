@@ -20,7 +20,6 @@ state={
 		}
 		add_core_of = RUS
 		add_core_of = TAT
-		1917.11.11 = { add_core_of = SOV }
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 2

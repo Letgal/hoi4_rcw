@@ -19,7 +19,6 @@ state = {
 		}
 		add_core_of = RUS
 		add_core_of = KOM
-		1917.11.11 = { add_core_of = SOV }
 	}
 
 	provinces = {

@@ -30,6 +30,7 @@
  motorized_equipment_0_desc:0 "Placeholder"
 
  country_declares_independence:2 "§H[THIS.GetName]§! declares war of independence from §H[ROOT.GetNonIdeologyName]§!.\n"
+ country_declares_independence_capital:0 "§H[THIS.GetName]§! declares war of independence from §H[ROOT.GetNonIdeologyName]§! with its capital in §H[THIS.Capital.GetName]§!.\n"
 
  ### FLAGS ###
  # Global
@@ -56,7 +57,7 @@
  # Decisions: Power Struggle
  menshevik_attitude_improve:1 "Menshevik Attitude: §G+1§! (currently $LEFT|0Y$: [GetMenshevikOpinionRange])"
  rsdlp_divide_plus_1:0 "RSDLP Divide: §G+1§! (currently $LEFT|0Y$)"
- mensheviks_are_cooperative:2 "The Mensheviks are $menshevik_attitude_cooperative$ (currently they are [GetMenshevikOpinionRange])"
+ mensheviks_are_cooperative:3 "The Mensheviks are $menshevik_attitude_cooperative$ (as of now they are [GetMenshevikOpinionRange])"
  rsdlp_divide_is_6:1 "RSDLP Divide is at least §Y6§! (currently [?rsdlp_divide|0Y])"
  RUS_petrograd_soviet_crippled:0 "The §YPetrograd Soviet§! is neither §YPassive§! nor §YDomineering§!"
 

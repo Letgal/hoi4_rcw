@@ -11,7 +11,7 @@ RUS_balance_of_power_category_bba = {
 			}
 			add_power_balance_value = {
 				id = RUS_provisional_bop
-				value = -0.15
+				value = -0.2
 			}
 			add_corps_commander_role = {
 				character = RUS_lev_trotsky
@@ -108,10 +108,17 @@ RUS_balance_of_power_category = {
 				popularity = 0.1
 			}
 			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				add_power_balance_value = {
-					id = RUS_provisional_bop
-					value = -0.15
+				limit = { has_idea = RUS_petrograd_soviet_passive }
+				swap_ideas = {
+					add_idea = RUS_petrograd_soviet_passive
+					remove_idea = RUS_petrograd_soviet_domineering
+				}
+			}
+			if = {
+				limit = { has_idea = RUS_petrograd_soviet_weakened }
+				swap_ideas = {
+					add_idea = RUS_petrograd_soviet_weakened
+					remove_idea = RUS_petrograd_soviet_domineering
 				}
 			}
 			add_corps_commander_role = {

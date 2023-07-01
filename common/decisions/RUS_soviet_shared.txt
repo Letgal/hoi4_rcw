@@ -1,23 +1,5 @@
 # BBA
 RUS_balance_of_power_category_bba = {
-	RUS_handle_kornilov_bba = {
-		priority = 1
-		icon = generic_political_discourse
-		visible = { has_active_mission = RUS_kornilov_putsch_mission }
-		cost = 100
-		fire_only_once = yes
-		complete_effect = {
-			retire_character = RUS_lavr_kornilov
-			add_popularity = {
-				ideology = communism
-				popularity = 0.1
-			}
-			add_power_balance_value = {
-				id = RUS_provisional_bop
-				value = -0.15
-			}
-		}
-	}
 	RUS_limit_the_soviets_influence_bba = {
 		priority = 1
 		icon = oppression
@@ -67,20 +49,6 @@ RUS_balance_of_power_category_bba = {
 
 # No BBA
 RUS_balance_of_power_category = {
-	RUS_handle_kornilov = {
-		priority = 1
-		icon = generic_political_discourse
-		visible = { has_active_mission = RUS_kornilov_putsch_mission }
-		cost = 100
-		fire_only_once = yes
-		complete_effect = {
-			retire_character = RUS_lavr_kornilov
-			add_popularity = {
-				ideology = communism
-				popularity = 0.1
-			}
-		}
-	}
 	RUS_deepen_the_rsdlp_divide = {
 		priority = 1
 		icon = generic_wreckers

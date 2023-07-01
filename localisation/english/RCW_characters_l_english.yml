@@ -15,6 +15,11 @@
  RUS_metropolitan_nikolay:0 "$SOV_metropolitan_nikolay$"
  RUS_metropolitan_aleksy:0 "$SOV_metropolitan_aleksy$"
  # Generals
+ RUS_konstantin_nechayev:0 "$SOV_konstantin_nechayev$"
+ RUS_aleksandr_rodzyanko:0 "$SOV_aleksandr_rodzyanko$"
+ RUS_andrey_shkuro:0 "$SOV_andrey_shkuro$"
+ RUS_pyotr_krasnov:0 "$SOV_pyotr_krasnov$"
+ RUS_vladimir_kosmin:0 "$SOV_vladimir_kosmin$"
  RUS_aleksey_polivanov:0 "Aleksey Polivanov"
 
  ### SOVIET RUSSIA ###

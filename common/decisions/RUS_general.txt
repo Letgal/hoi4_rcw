@@ -2,19 +2,24 @@ crisis = {
 	RUS_kornilov_putsch_mission = {
 		priority = 1
 		icon = generic_speech
-		activation = {
-			original_tag = RUS
-			has_civil_war = no
-			has_stability < 0.2
-			has_character = RUS_lavr_kornilov
-			has_completed_focus = RUS_continue_the_war
-			NOT = { has_decision = RUS_handle_kornilov }
-		}
+		activation = { always = no }
 		available = {
+			NOT = { has_character = RUS_lavr_kornilov }
 			hidden_trigger = { always = no }
 		}
 		days_mission_timeout = 60
-		timeout_effect = { country_event = provisional.3 }
+		timeout_effect = { country_event = provisional.5 }
 	}
-	# Getting help from the Soviets is located in RUS_soviet_cooperation
+	RUS_handle_kornilov = {
+		icon = generic_political_discourse
+		visible = { has_active_mission = RUS_kornilov_putsch_mission }
+		available = {
+			OR = {
+				has_completed_focus = RUS_purge_the_soviets
+				has_completed_focus = RUS_cooperate_with_the_soviets
+			}
+		}
+		cost = 100
+		complete_effect = { country_event = provisional.4 }
+	}
 }

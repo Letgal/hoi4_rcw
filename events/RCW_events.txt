@@ -20,7 +20,7 @@ country_event = {
 	option = {
 		name = rcw.1.a
 		start_civil_war = {
-			ruling_party = communism
+			ruling_party = ROOT
 			ideology = neutrality
 			size = 0.6
 			capital = 219
@@ -28,35 +28,32 @@ country_event = {
 			states_filter = {
 				NOT = { region = 132 }
 			}
-		}
-		hidden_effect = {
-			random_country = {
-				limit = {
-					original_tag = RUS
-					has_government = neutrality
-				}
+			PREV = {
+				RUS_provisional_government = { set_nationality = PREV.PREV }
+			}
+			hidden_effect = {
 				set_cosmetic_tag = RUS_white
 				set_party_name = {
 					ideology = neutrality
 					name = RUS_white_movement
 					long_name = RUS_white_movement
 				}
-				#add_country_leader_role = {
-				#	character = RUS_provisional_government
-				#	promote_leader = yes
-				#	country_leader = {
-				#		ideology = despotism
-				#		expire = "1953.3.1.1"
-				#		traits = {
-				#			emigre_connections
-				#			desperate_gambit
-				#			dysfunctional_assembly
-				#		}
-				#	}
-				#}
-				add_ideas = WHI_factionalism
 			}
-			RUS = {
+			add_country_leader_role = {
+				character = RUS_provisional_government
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1953.3.1.1"
+					traits = {
+						emigre_connections
+						desperate_gambit
+						dysfunctional_assembly
+					}
+				}
+			}
+			add_ideas = WHI_factionalism
+			PREV = {
 				if = {
 					limit = { has_war_with = GER }
 					set_truce = {
@@ -67,7 +64,6 @@ country_event = {
 				release = FIN
 				release = MOL
 			}
-			set_global_flag = RCW_ongoing
 		}
 	}
 }
@@ -82,22 +78,33 @@ country_event = {
 
 	trigger = {
 		has_global_flag = RCW_ongoing
-		original_tag = RUS
+		OR = {
+			original_tag = RUS
+			original_tag = SOV
+		}
+		UKR = {
+			exists = no
+			NOT = {
+				has_war_with_wargoal_against = {
+					target = RUS
+					type = independence_wargoal
+				}
+			}
+		}
 	}
 
 	mean_time_to_happen = { days = 60 }
 
+	immediate = {
+		hidden_effect = {
+			202 = { transfer_state_to = UKR }
+			203 = { transfer_state_to = UKR }
+		}
+	}
+
 	option = {
 		name = rcw.2.a
 		hidden_effect = {
-			RUS = {
-				release = UKR
-				release = MOL
-			}
-			SOV = {
-				release = UKR
-				release = MOL
-			}
 			UKR = {
 				declare_war_on = {
 					target = RUS
@@ -109,7 +116,97 @@ country_event = {
 				}
 			}
 		}
-		UKR = { custom_effect_tooltip = country_declares_independence }
+		UKR = { custom_effect_tooltip = country_declares_independence_capital }
+	}
+	option = {
+		name = rcw.2.b
+		hidden_effect = {
+			UKR = {
+				declare_war_on = {
+					target = RUS
+					type = independence_wargoal
+				}
+				declare_war_on = {
+					target = SOV
+					type = independence_wargoal
+				}
+			}
+		}
+		UKR = {
+			custom_effect_tooltip = country_declares_independence_capital
+			change_tag_from = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = rcw.3
+	title = rcw.3.t
+	desc = rcw.3.d
+	picture = GFX_report_event_generic_riot
+
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = RCW_ongoing
+		OR = {
+			original_tag = RUS
+			original_tag = SOV
+		}
+		KAZ = {
+			exists = no
+			NOT = {
+				has_war_with_wargoal_against = {
+					target = RUS
+					type = independence_wargoal
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 60 }
+
+	immediate = {
+		hidden_effect = {
+			588 = { transfer_state_to = KAZ }
+			882 = { transfer_state_to = KAZ }
+		}
+	}
+
+	option = {
+		name = rcw.2.a
+		hidden_effect = {
+			KAZ = {
+				declare_war_on = {
+					target = RUS
+					type = independence_wargoal
+				}
+				declare_war_on = {
+					target = SOV
+					type = independence_wargoal
+				}
+			}
+		}
+		KAZ = { custom_effect_tooltip = country_declares_independence_capital }
+	}
+	option = {
+		name = rcw.3.b
+		hidden_effect = {
+			KAZ = {
+				declare_war_on = {
+					target = RUS
+					type = independence_wargoal
+				}
+				declare_war_on = {
+					target = SOV
+					type = independence_wargoal
+				}
+			}
+		}
+		KAZ = {
+			custom_effect_tooltip = country_declares_independence_capital
+			change_tag_from = ROOT
+		}
 	}
 }
 

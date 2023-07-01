@@ -19,7 +19,6 @@ state = {
 		add_core_of = RUS
 		add_core_of = UZB
 		add_core_of = KKP
-		1917.11.11 = { add_core_of = SOV }
 		
 	}
 

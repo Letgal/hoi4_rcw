@@ -15,7 +15,6 @@ state = {
 		victory_points = {
 			9663 1
 		}
-		1917.11.11 = { add_core_of = SOV }
 	}
 
 	provinces = {
