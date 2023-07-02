@@ -21,6 +21,8 @@ set_technology = {
 
 ### CHARACTERS ###
 recruit_character = SOV_vladimir_lenin
+recruit_character = SOV_aleksandr_kerensky
+recruit_character = SOV_konstantin_rodzayevsky
 
 1917.11.11 = {
 	declare_war_on = {
@@ -42,7 +44,6 @@ recruit_character = SOV_vladimir_lenin
 #### NO STEP BACK
 ####
 
-#COUNTRY LEADERS
 recruit_character = SOV_iosif_stalin
 recruit_character = SOV_supreme_soviet #This is a fake character! Proper country leader role is added via focus
 if = {
@@ -78,8 +79,6 @@ recruit_character = SOV_grigory_sokolnikov
 recruit_character = SOV_grigory_zinovyev
 recruit_character = SOV_lev_kamenev
 recruit_character = SOV_martemyan_ryutin
-recruit_character = SOV_aleksandr_kerensky
-recruit_character = SOV_konstantin_rodzayevsky
 
 
 recruit_character = SOV_aleksandr_vasilevsky

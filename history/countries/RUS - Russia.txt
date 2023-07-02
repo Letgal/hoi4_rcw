@@ -17,7 +17,7 @@ add_ideas = {
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 	set_power_balance = {
-		id = RUS_provisional_bop
+		id = PRO_balance_of_power
 		set_default = yes
 	}
 	else = { add_ideas = PRO_petrograd_soviet_passive }
@@ -64,25 +64,26 @@ set_technology = {
 ### CHARACTERS ###
 # Leaders
 recruit_character = RUS_aleksandr_kerensky # He will ruin your country
-recruit_character = RUS_vladimir_lenin # Dummy Character
+recruit_character = RUS_vladimir_lenin
+recruit_character = RUS_konstantin_rodzayevsky
 recruit_character = RUS_provisional_government
-recruit_character = RUS_irakli_tsereteli
-recruit_character = RUS_lev_trotsky
-recruit_character = RUS_lavr_kornilov
 
+# Later Leaders
+recruit_character = RUS_lavr_kornilov
+recruit_character = RUS_irakli_tsereteli
+
+# Advisors
 recruit_character = RUS_pavel_milyukov
-activate_advisor = RUS_pavel_milyukov # He will ruin your country too and he cannot even be fired
+activate_advisor = RUS_pavel_milyukov # He will ruin your country as well and he cannot even be fired
 recruit_character = RUS_georgi_lvov
 recruit_character = RUS_mikhail_rodzyanko
-
+recruit_character = RUS_lev_trotsky
 recruit_character = RUS_patriarch_sergy
-recruit_character = RUS_metropolitan_anastasy
-recruit_character = RUS_metropolitan_nikolay
-recruit_character = RUS_metropolitan_aleksy
-recruit_character = RUS_metropolitan_meletius
 
+# Army Advisors (incl. commanders)
 recruit_character = RUS_anton_denikin
 
+# Army Commanders
 recruit_character = RUS_pyotr_krasnov
 recruit_character = RUS_konstantin_nechayev
 recruit_character = RUS_vladimir_kosmin
@@ -165,7 +166,7 @@ set_popularities = {
 	remove_dynamic_modifier = { modifier = PRO_failing_state }
 	if = {
 		limit = { has_dlc = "By Blood Alone" }
-		remove_power_balance = { id = RUS_provisional_bop }
+		remove_power_balance = { id = PRO_balance_of_power }
 		else = {
 			remove_ideas = PRO_petrograd_soviet_passive
 			remove_ideas = PRO_petrograd_soviet_domineering
@@ -177,8 +178,11 @@ set_popularities = {
 		communism_banned
 	}
 
-	retire_character = RUS_irakli_tsereteli
 	retire_character = RUS_lavr_kornilov
+	retire_character = RUS_irakli_tsereteli
+	retire_character = RUS_pavel_milyukov
+	retire_character = RUS_georgi_lvov
+	retire_character = RUS_mikhail_rodzyanko
 
 	leave_faction = yes
 	if = {
@@ -205,14 +209,6 @@ set_popularities = {
 
 	set_cosmetic_tag = RUS_white
 	load_focus_tree = white_russia_focus
-	add_country_leader_role = {
-		character = RUS_provisional_government
-		promote_leader = yes
-		country_leader = {
-			ideology = despotism
-			expire = "1953.3.1.1"
-		}
-	}
 	set_party_name = {
 		ideology = neutrality
 		name = RUS_white_movement
@@ -221,8 +217,4 @@ set_popularities = {
 
 	create_faction = white_movement
 	add_to_faction = GEO
-
-	RUS_pavel_milyukov = { retire = yes }
-	RUS_georgi_lvov = { retire = yes }
-	RUS_mikhail_rodzyanko = { retire = yes }
 }

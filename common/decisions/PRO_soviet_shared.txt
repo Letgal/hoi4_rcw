@@ -1,0 +1,76 @@
+# BBA
+PRO_balance_of_power_category_bba = {
+	PRO_limit_the_soviets_influence_bba = {
+		priority = 1
+		icon = oppression
+		visible = {
+			OR = {
+				has_completed_focus = PRO_purge_the_soviets
+				has_completed_focus = PRO_cooperate_with_the_soviets
+			}
+		}
+		cost = 30
+		days_remove = 14
+		complete_effect = {
+			add_stability = -0.05
+			add_power_balance_value = {
+				id = PRO_balance_of_power
+				value = 0.05
+			}
+		}
+	}
+	PRO_deepen_the_rsdlp_divide_bba = {
+		priority = 1
+		icon = generic_wreckers
+		visible = {
+			OR = {
+				has_completed_focus = PRO_purge_the_soviets
+				has_completed_focus = PRO_cooperate_with_the_soviets
+			}
+			check_variable = { rsdlp_divide < 6 }
+		}
+		cost = 30
+		days_remove = 14
+		remove_effect = {
+			add_to_variable = {
+				rsdlp_divide = 1
+				tooltip = rsdlp_divide_plus_1
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			add_power_balance_value = {
+				id = PRO_balance_of_power
+				value = 0.1
+			}
+		}
+	}
+}
+
+# No BBA
+PRO_balance_of_power_category = {
+	PRO_deepen_the_rsdlp_divide = {
+		priority = 1
+		icon = generic_wreckers
+		visible = {
+			OR = {
+				has_completed_focus = PRO_purge_the_soviets
+				has_completed_focus = PRO_cooperate_with_the_soviets
+			}
+			check_variable = { rsdlp_divide < 6 }
+		}
+		cost = 30
+		days_remove = 14
+		remove_effect = {
+			add_to_variable = {
+				rsdlp_divide = 1
+				tooltip = rsdlp_divide_plus_1
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+		}
+	}
+}

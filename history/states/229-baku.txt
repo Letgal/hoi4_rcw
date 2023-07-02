@@ -21,10 +21,7 @@ state={
 		}
 		add_core_of = RUS
 		add_core_of = AZR
-		1917.11.11 = {
-			owner = GEO
-			add_core_of = SOV
-		}
+		1917.11.11 = { owner = GEO }
 	}
 
 	provinces={

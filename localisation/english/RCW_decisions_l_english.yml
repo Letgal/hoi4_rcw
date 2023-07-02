@@ -1,43 +1,43 @@
 ﻿l_english:
- RUS_kornilov_putsch_mission:0 "Kornilov's Putsch"
+ PRO_kornilov_putsch_mission:0 "Kornilov's Putsch"
+ PRO_handle_kornilov:0 "Handle Kornilov"
 
  PRO_purge_the_soviets_category:2 "Purging the Soviets"
  PRO_cooperate_with_the_soviets_category:0 "Cooperation with the Soviets"
- PRO_balance_of_power_category:0 "[ROOT.GetBopDecisionCatName]"
+ PRO_balance_of_power_category:0 "[GetBopDecisionCatName]"
  PRO_balance_of_power_category_desc:0 "The Provisional Government's rule was established in no small part thanks to "help" from the Petrograd Soviet. However, the Soviet demanded representation in the government in exchange. Having no other choice, we had to accept. Ever since then, the Soviet has been trying to destabilize our administration and woo our supporters to their side.\nThis creates a very dangerous situation. If the Soviets get enough power, they will swiftly overthrow the Provisional Government."
  # Shared
- RUS_limit_the_soviets_influence:0 "Limit the Soviet's Influence"
+ PRO_limit_the_soviets_influence:0 "Limit the Soviet's Influence"
  # Purge
- RUS_abolish_the_soviet:0 "Abolish the Soviet" # Final Solution
- RUS_abolish_the_soviet_desc:0 "After months of causing trouble the Petrograd Soviet has finally been weakened so much that we can just abolish this nuisance of an organization without much risk."
+ PRO_abolish_the_soviet:0 "Abolish the Soviet" # Final Solution
+ PRO_abolish_the_soviet_desc:0 "After months of causing trouble the Petrograd Soviet has finally been weakened so much that we can just abolish this nuisance of an organization without much risk."
  # Cooperation
- RUS_handle_kornilov:0 "Handle Kornilov"
- RUS_hire_soviet_commanders:0 "Hire the Soviet Commanders"
- RUS_hire_soviet_commanders_desc:0 "Dealing with the communists is a dangerous job. However, we can't deny that they have some of the most competent people in their ranks. We should formally hire them to serve our needs."
- RUS_sway_the_mensheviks:1 "Sway the Mensheviks"
- RUS_sway_the_mensheviks_desc:0 "On a closer look, it turns out that our socialist ideology isn't that different to the social communism of the Mensheviks. By improving our ties with them, we can sway them to our side, weakening the Petrograd Soviet in the process."
- RUS_deepen_the_rsdlp_divide:0 "Deepen the RSDLP Divide"
- RUS_deepen_the_rsdlp_divide_desc:0 "It is no secret that the RSDLP is deeply divided. We can exploit this." # ADD
- RUS_dissolve_the_soviet:0 "Dissolve the Soviet" # Final Solution
- RUS_dissolve_the_soviet_desc:0 "The Mensheviks are now officially part of our government, and the only ones who remain in the Soviet are the Bolsheviks and the ‘left Esers’, who have been weakened so much as to become inconsequential. Now we can just dissolve this nuisance of an organization without much risk."
+ PRO_hire_soviet_commanders:0 "Hire the Soviet Commanders"
+ PRO_hire_soviet_commanders_desc:0 "Dealing with the communists is a dangerous job. However, we can't deny that they have some of the most competent people in their ranks. We should formally hire them to serve our needs."
+ PRO_sway_the_mensheviks:1 "Sway the Mensheviks"
+ PRO_sway_the_mensheviks_desc:0 "On a closer look, it turns out that our socialist ideology isn't that different to the social communism of the Mensheviks. By improving our ties with them, we can sway them to our side, weakening the Petrograd Soviet in the process."
+ PRO_deepen_the_rsdlp_divide:0 "Deepen the RSDLP Divide"
+ PRO_deepen_the_rsdlp_divide_desc:0 "It is no secret that the RSDLP is deeply divided. We can exploit this." # ADD
+ PRO_dissolve_the_soviet:0 "Dissolve the Soviet" # Final Solution
+ PRO_dissolve_the_soviet_desc:0 "The Mensheviks are now officially part of our government, and the only ones who remain in the Soviet are the Bolsheviks and the ‘left Esers’, who have been weakened so much as to become inconsequential. Now we can just dissolve this nuisance of an organization without much risk."
 
  # BBA Workaround
- RUS_kornilov_putsch_mission_bba:0 "$RUS_kornilov_putsch_mission$"
- PRO_purge_the_soviets_category_bba:0 "$PRO_purge_the_soviets_category$"
- PRO_cooperate_with_the_soviets_category_bba:0 "$PRO_cooperate_with_the_soviets_category$"
- PRO_balance_of_power_category_bba:0 "$PRO_balance_of_power_category$"
- PRO_balance_of_power_category_desc_bba:0 "$PRO_balance_of_power_category_desc$"
- RUS_limit_the_soviets_influence_bba:0 "$RUS_limit_the_soviets_influence$"
- RUS_abolish_the_soviet_bba:0 "$RUS_abolish_the_soviet$"
- RUS_abolish_the_soviet_desc_bba:0 "$RUS_abolish_the_soviet_desc$"
- RUS_hire_soviet_commanders_bba:0 "$RUS_hire_soviet_commanders$"
- RUS_hire_soviet_commanders_desc_bba:0 "$RUS_hire_soviet_commanders_desc$"
- RUS_sway_the_mensheviks_bba:0 "$RUS_sway_the_mensheviks$"
- RUS_sway_the_mensheviks_desc_bba:0 "$RUS_sway_the_mensheviks_desc$"
- RUS_deepen_the_rsdlp_divide_bba:0 "$RUS_deepen_the_rsdlp_divide$"
- RUS_deepen_the_rsdlp_divide_desc_bba:0 "$RUS_deepen_the_rsdlp_divide_desc$"
- RUS_dissolve_the_soviet_bba:0 "$RUS_dissolve_the_soviet$"
- RUS_dissolve_the_soviet_desc_bba:0 "$RUS_dissolve_the_soviet_desc$"
+  PRO_kornilov_putsch_mission_bba:0 "$PRO_kornilov_putsch_mission$"
+  PRO_purge_the_soviets_category_bba:0 "$PRO_purge_the_soviets_category$"
+  PRO_cooperate_with_the_soviets_category_bba:0 "$PRO_cooperate_with_the_soviets_category$"
+  PRO_balance_of_power_category_bba:0 "$PRO_balance_of_power_category$"
+  PRO_balance_of_power_category_desc_bba:0 "$PRO_balance_of_power_category_desc$"
+  PRO_limit_the_soviets_influence_bba:0 "$PRO_limit_the_soviets_influence$"
+  PRO_abolish_the_soviet_bba:0 "$PRO_abolish_the_soviet$"
+  PRO_abolish_the_soviet_desc_bba:0 "$PRO_abolish_the_soviet_desc$"
+  PRO_hire_soviet_commanders_bba:0 "$PRO_hire_soviet_commanders$"
+  PRO_hire_soviet_commanders_desc_bba:0 "$PRO_hire_soviet_commanders_desc$"
+  PRO_sway_the_mensheviks_bba:0 "$PRO_sway_the_mensheviks$"
+  PRO_sway_the_mensheviks_desc_bba:0 "$PRO_sway_the_mensheviks_desc$"
+  PRO_deepen_the_rsdlp_divide_bba:0 "$PRO_deepen_the_rsdlp_divide$"
+  PRO_deepen_the_rsdlp_divide_desc_bba:0 "$PRO_deepen_the_rsdlp_divide_desc$"
+  PRO_dissolve_the_soviet_bba:0 "$PRO_dissolve_the_soviet$"
+  PRO_dissolve_the_soviet_desc_bba:0 "$PRO_dissolve_the_soviet_desc$"
 
  ### WHITE RUSSIA ###
  # Factionalism

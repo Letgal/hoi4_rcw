@@ -1,18 +1,14 @@
 defined_text = {
 	name = GetBopDecisionCatName
 	text = {
-		trigger = {
-			THIS = { has_completed_focus = PRO_purge_the_soviets }
-		}
+		trigger = { has_completed_focus = PRO_purge_the_soviets }
 		localization_key = PRO_purge_the_soviets_category
 	}
 	text = {
-		trigger = {
-			THIS = { has_completed_focus = PRO_cooperate_with_the_soviets }
-		}
+		trigger = { has_completed_focus = PRO_cooperate_with_the_soviets }
 		localization_key = PRO_cooperate_with_the_soviets_category
 	}
-	text = { localization_key = RUS_provisional_bop }
+	text = { localization_key = PRO_balance_of_power }
 }
 defined_text = {
 	name = GetMenshevikOpinionRange

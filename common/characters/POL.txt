@@ -1,4 +1,28 @@
 characters = {
+	POL_provisional_council = {
+		name = POL_provisional_council
+		portraits = {
+			civilian = { large = GFX_portrait_POL_provisional_council }
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1917.8.25.1"
+			id = -1
+		}
+	}
+
+	POL_regency_council = {
+		name = POL_regency_council
+		portraits = {
+			civilian = { large = GFX_portrait_POL_regency_council }
+		}
+		country_leader = {
+			ideology = oligarchism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
 	POL_anna_andersson = {
 		name="Anastasia Romanov"
 		portraits = {
@@ -41,34 +65,6 @@ characters = {
 			expire="1965.1.1.1"
 			id=-1
 			traits = { royal_legitimist }
-		}
-	}
-
-	POL_provisional_council = {
-		name=POL_provisional_council
-		portraits = {
-			civilian = {
-				large="GFX_portrait_POL_Sejmik_Regency" 
-			}
-		}
-		country_leader = {
-			ideology=oligarchism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
-	POL_sejmik_regency = {
-		name=POL_sejmik_regency
-		portraits = {
-			civilian = {
-				large="GFX_portrait_POL_Sejmik_Regency" 
-			}
-		}
-		country_leader = {
-			ideology=oligarchism
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 

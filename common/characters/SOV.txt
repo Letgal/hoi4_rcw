@@ -1,15 +1,31 @@
-# Aleksandra Kollontay has an unused portrait
-# Viktor Baydalakov has an unused portrait
-
 characters = {
-
-
-  ####    ####   #    #  #    #  #####  #####   #   #      #       ######    ##    #####   ######  #####    ####  
- #    #  #    #  #    #  ##   #    #    #    #   # #       #       #        #  #   #    #  #       #    #  #      
- #       #    #  #    #  # #  #    #    #    #    #        #       #####   #    #  #    #  #####   #    #   ####  
- #       #    #  #    #  #  # #    #    #####     #        #       #       ######  #    #  #       #####        # 
- #    #  #    #  #    #  #   ##    #    #   #     #        #       #       #    #  #    #  #       #   #   #    # 
-  ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   ####  
+	### STARTING COUNTRY LEADERS ###
+	SOV_aleksandr_kerensky = {
+		name = SOV_aleksandr_kerensky
+		portraits = {
+			civilian = { large = GFX_portrait_SOV_aleksandr_kerensky_updated }
+			army = { small = GFX_idea_alexander_kerensky }
+		}
+		country_leader = {
+			ideology = socialism
+			traits = { incompetent_leader }
+			expire = "1953.3.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_aleksandr_kerensky
+			visible = { is_country_leader = no }
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+				is_country_leader = no
+			}
+			traits = { democratic_reformer }
+		}
+	}
 
 	SOV_vladimir_lenin = {
 		name = SOV_vladimir_lenin
@@ -23,46 +39,68 @@ characters = {
 		}
 	}
 
+	SOV_konstantin_rodzayevsky = {
+		name = SOV_konstantin_rodzayevsky
+		portraits = {
+			civilian = { large = GFX_portrait_SOV_konstantin_rodzayevsky }
+			army = { small = GFX_idea_konstantin_rodzaevsky }
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { fascist_orchestrator }
+			expire = "1953.3.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = konstantin_rodzaevsky
+			visible = { is_country_leader = no }
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+				is_country_leader = no
+			}
+			traits = { fascist_demagogue }
+		}
+	}
+
+	SOV_provisional_government = {
+		name = SOV_provisional_government
+		portraits = {
+			civilian = { large = GFX_portrait_SOV_provisional_government }
+		}
+		country_leader = {
+			ideology = oligarchism
+			traits = { desperate_gambit dysfunctional_assembly }
+			expire = "1953.3.1.1"
+		}
+	}
+
 	SOV_lev_trotsky = {
 		name = SOV_lev_trotsky
 		portraits = {
-			civilian = {
-				large = GFX_portrait_SOV_lev_trotsky
-			}
-			army = {
-				small = "GFX_idea_SOV_lev_trotsky"
-			}
+			civilian = { large = GFX_portrait_SOV_lev_trotsky }
+			army = { small = GFX_idea_SOV_lev_trotsky }
 		}
-
-		#advisor = {
-		#	slot = political_advisor
-		#	idea_token = SOV_lev_trotsky
-		#	allowed = { original_tag = SOV }
-		#	visible = { is_country_leader = no }
-		#	available = {
-		#		is_country_leader = no
-		#		if = {
-		#			limit = { has_character_flag = SOV_exiled_flag }
-		#			NOT = { has_character_flag = SOV_exiled_flag }
-		#		}
-		#		if = {
-		#			limit = {
-		#				has_idea = MEX_leon_trotsky
-		#				has_country_leader = { character = MEX_leon_trotsky
-		#			}
-		#			MEX = { 
-		#				NOT = { has_idea = MEX_leon_trotsky }
-		#				NOT = { has_country_leader = { character = MEX_leon_trotsky } }
-		#			}
-		#		}
-		#	}
-		#	traits = {
-		#		pc_military_naval_affairs
-		#	}
-		#}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_lev_trotsky
+			visible = { is_country_leader = no }
+			available = { is_country_leader = no }
+			traits = { pc_military_naval_affairs }
+		}
 	}
 
-	### OTHER VANILLA ###
+
+  ####    ####   #    #  #    #  #####  #####   #   #      #       ######    ##    #####   ######  #####    ####  
+ #    #  #    #  #    #  ##   #    #    #    #   # #       #       #        #  #   #    #  #       #    #  #      
+ #       #    #  #    #  # #  #    #    #    #    #        #       #####   #    #  #    #  #####   #    #   ####  
+ #       #    #  #    #  #  # #    #    #####     #        #       #       ######  #    #  #       #####        # 
+ #    #  #    #  #    #  #   ##    #    #   #     #        #       #       #    #  #    #  #       #   #   #    # 
+  ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   ####  
+                                                                                                                  
 
 	SOV_iosif_stalin = {
 		name = SOV_iosif_stalin
@@ -98,6 +136,8 @@ characters = {
 		}
 	}
 
+	# Kerensky and Rodzaevsky moved to the bottom of the file
+
 	SOV_tsar_vladimir_kirillovich = {
 		name = SOV_tsar_vladimir_kirillovich
 		portraits = {
@@ -128,6 +168,48 @@ characters = {
 		}
 	}
 
+	SOV_metropolitan_meletius = {
+		name = SOV_metropolitan_meletius
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SOV_patriarch_meletius"
+			}
+			army = {
+				small = "GFX_idea_SOV_patriarch_meletius"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1953.3.1.1"
+			id = -1
+			traits = {
+				defier_of_the_sun_god supreme_representative_of_god_on_earth
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_patriarch_meletius
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				has_completed_focus = SOV_beaten_but_not_defeated
+				NOT = {
+					has_completed_focus = SOV_the_third_rome
+				}
+			}
+			available = {
+				has_completed_focus = SOV_the_hands_do
+				NOT = {
+					has_completed_focus = SOV_the_third_rome
+				}
+			}
+			traits = {
+				the_masses_opium
+			}
+		}	
+	}
+
 	SOV_supreme_soviet = { #Country Leader role added via focus
 		name = SOV_supreme_soviet
 
@@ -135,22 +217,6 @@ characters = {
 			civilian = {
 				large = GFX_portrait_SOV_supreme_soviet
 			}
-		}
-	}
-
-	SOV_provisional_government = {
-		name = SOV_provisional_government
-
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_SOV_white_transitionary_council"
-			}
-		}
-		country_leader = {
-			ideology = despotism
-			expire = "1953.3.1.1"
-			id = -1
-			traits = { desperate_gambit dysfunctional_assembly }
 		}
 	}
 
@@ -1890,11 +1956,13 @@ characters = {
 		}
 	}
 
+
 	###   ##  #   ### ### ###  ##   ##  #        ##  ###  #   # ###  ##  ##  ###   ## 
 	#  # #  # #    #   #   #  #  # #  # #       #  # #  # #   #  #  #   #  # #  # #   
 	###  #  # #    #   #   #  #    #### #       #### #  #  # #   #   #  #  # ###   #  
 	#    #  # #    #   #   #  #  # #  # #       #  # #  #  # #   #    # #  # #  #   # 
 	#     ##  ### ###  #  ###  ##  #  # ###     #  # ###    #   ### ##   ##  #  # ##  
+
 
 	SOV_mikhail_kalinin = {
 		name = SOV_mikhail_kalinin
@@ -2079,7 +2147,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SOV_genrikh_yagoda
-			removal_cost = -1
+			can_be_fired = no
 			allowed = {
 				original_tag = SOV
 			}
@@ -2130,7 +2198,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = SOV_nikolay_yezhov
-			removal_cost = -1
+			can_be_fired = no
 			allowed = {
 				original_tag = SOV
 			}
@@ -2177,7 +2245,7 @@ characters = {
 				slot = political_advisor
 				idea_token = SOV_lavrenty_beriya
 				name = SOV_lavrenty_beriya
-				removal_cost = -1
+				can_be_fired = no
 				allowed = {
 					original_tag = SOV
 				}
@@ -2228,7 +2296,7 @@ characters = {
 				slot = political_advisor
 				idea_token = SOV_lavrenty_beriya
 				name = SOV_lavrenty_beriya
-				removal_cost = -1
+				can_be_fired = no
 				allowed = {
 					original_tag = SOV
 				}
@@ -3053,6 +3121,101 @@ characters = {
 			}
 		}
 	}
+	
+	SOV_metropolitan_anastasy = {
+		name = SOV_metropolitan_anastasy
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_metropolitan_anastasy"
+			}
+		}
+		allowed_civil_war = {
+			OR = {
+				has_government = neutrality 
+				has_government = fascism
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_metropolitan_anastasy
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
+			available = {
+				has_completed_focus = SOV_return_of_the_rocor
+			}
+			traits = {
+				orthodox_rabblerouser
+			}
+		}		
+	}
+
+	SOV_metropolitan_nikolay = {
+		name = SOV_metropolitan_nikolay
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_metropolitan_nikolay"
+			}
+		}
+		allowed_civil_war = {
+			OR = {
+				has_government = neutrality 
+				has_government = fascism
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_metropolitan_nikolay
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
+			available = {
+				has_completed_focus = SOV_the_declaration
+			}
+			traits = {
+				theocratic_diplomat
+			}
+		}
+	}
+
+	SOV_metropolitan_aleksy = {
+		name = SOV_metropolitan_aleksy
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_metropolitan_aleksy"
+			}
+		}
+		allowed_civil_war = {
+			OR = {
+				has_government = neutrality 
+				has_government = fascism
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_metropolitan_aleksy
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = SOV_the_declaration
+			}
+			visible = {
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
+			traits = {
+				driver_of_the_faithful
+			}
+		}		
+	}
 
 	SOV_anastasy_vonsyatsky = {
 		name = SOV_anastasy_vonsyatsky
@@ -3394,149 +3557,6 @@ characters = {
 				}
 			}
 			traits = { air_air_superiority_2 }
-		}
-	}	
-
-
-  ####    ####   #    #  #    #  #####  #####   #   #      #       ######    ##    #####   ######  #####    ####  
- #    #  #    #  #    #  ##   #    #    #    #   # #       #       #        #  #   #    #  #       #    #  #      
- #       #    #  #    #  # #  #    #    #    #    #        #       #####   #    #  #    #  #####   #    #   ####  
- #       #    #  #    #  #  # #    #    #####     #        #       #       ######  #    #  #       #####        # 
- #    #  #    #  #    #  #   ##    #    #   #     #        #       #       #    #  #    #  #       #   #   #    # 
-  ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   ####  
-
-	SOV_konstantin_rodzayevsky = {
-		instance = {
-			allowed = {
-				has_dlc = "No Step Back"
-			}
-			name = SOV_konstantin_rodzayevsky
-
-			portraits = {
-				civilian = {
-					large = GFX_portrait_SOV_konstantin_rodzayevsky
-				}
-				army = {
-					small = "GFX_idea_konstantin_rodzaevsky"
-				}
-			}
-
-			country_leader = {
-				ideology = fascism_ideology
-				traits = { fascist_orchestrator }
-				expire = "1953.3.1.1"
-				id = -1
-			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "No Step Back" }
-			}
-			name = SOV_konstantin_rodzayevsky
-
-			portraits = {
-				army = {
-					small = "GFX_idea_konstantin_rodzaevsky"
-				}
-			}
-			advisor = {
-				slot = political_advisor
-				idea_token = konstantin_rodzaevsky
-				allowed = {
-					original_tag = SOV
-				}
-				visible = {
-					NOT = {
-						has_character_flag = SOV_character_purged_flag 
-					}
-				}
-				available = {
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-					if = {
-						limit = {
-							has_character_flag = SOV_exiled_flag
-						}
-						NOT = { has_character_flag = SOV_exiled_flag }
-					}
-				}
-				traits = {
-					fascist_demagogue 
-				}
-				do_effect = {
-					NOT = {
-						has_government = fascism 
-					}
-				}
-				ai_will_do = {
-					factor = 0.000
-				}
-			}
-		}
-	}
-
-	SOV_aleksandr_kerensky = {
-		name = SOV_aleksandr_kerensky
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_RUS_aleksandr_kerensky
-			}
-			army = {
-				small = "GFX_idea_alexander_kerensky"
-			}
-		}
-		country_leader = {
-			ideology = socialism
-			expire = "1953.3.1.1"
-			id = -1
-		}
-		allowed_civil_war = { tag = SOV }
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_aleksandr_kerensky
-			allowed = {
-					original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				democratic_reformer 
-			}
-			do_effect = {
-				NOT = {
-					has_government = democratic 
-				}
-			}
-			ai_will_do = {
-				factor = 0.000
-			}
 		}
 	}
 }

@@ -1,43 +1,40 @@
 WHI_power_struggle = {
-	WHI_propaganda = {
-		icon = eng_propaganda_campaigns
-		visible = {
-			OR = {
-				has_completed_focus = WHI_kadet_supremacy
-				has_completed_focus = WHI_nationalist_supremacy
-				has_completed_focus = WHI_tsarist_supremacy
-			}
-		}
-		cost = 100
-		days_remove = 90
-		modifier = {
-			if = {
-				limit = { has_completed_focus = WHI_kadet_supremacy }
-				democratic_drift = 0.05
-			}
-			else_if = {
-				limit = { has_completed_focus = WHI_nationalist_supremacy }
-				fascism_drift = 0.05
-			}
-			else_if = {
-				limit = { has_completed_focus = WHI_tsarist_supremacy }
-				neutrality_drift = 0.05
-			}
-		}
-	}
-
 	# Kadets
 	WHI_kadet_stuff = {
 		visible = { has_completed_focus = WHI_kadet_supremacy }
+	}
+	WHI_kadet_propaganda = {
+		icon = eng_propaganda_campaigns
+		visible = { has_completed_focus = WHI_kadet_supremacy }
+		cost = 100
+		days_remove = 90
+		days_re_enable = 45
+		modifier = { democratic_drift = 0.05 }
 	}
 
 	# Nationalists
 	WHI_nationalist_stuff = {
 		visible = { has_completed_focus = WHI_nationalist_supremacy }
 	}
+	WHI_nationalist_propaganda = {
+		icon = eng_propaganda_campaigns
+		visible = { has_completed_focus = WHI_nationalist_supremacy }
+		cost = 100
+		days_remove = 90
+		days_re_enable = 45
+		modifier = { fascism_drift = 0.05 }
+	}
 
 	# Tsarists
 	WHI_tsarist_stuff = {
 		visible = { has_completed_focus = WHI_tsarist_supremacy }
+	}
+	WHI_tsarist_propaganda = {
+		icon = eng_propaganda_campaigns
+		visible = { has_completed_focus = WHI_tsarist_supremacy }
+		cost = 100
+		days_remove = 90
+		days_re_enable = 45
+		modifier = { neutrality_drift = 0.05 }
 	}
 }

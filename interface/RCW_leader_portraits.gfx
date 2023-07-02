@@ -1,18 +1,45 @@
 spriteTypes = {
+	# RUS/SOV
 	spriteType = {
-		name = GFX_portrait_RUS_aleksandr_kerensky
-		texturefile = "gfx/leaders/SOV/portrait_SOV_kerensky.dds"
+		name = GFX_portrait_SOV_aleksandr_kerensky_updated # Called this way to avoid having to replace _leader_portraits.gfx
+		texturefile = "gfx/leaders/SOV/portrait_SOV_aleksandr_kerensky.dds"
 	}
 	spriteType = {
-		name = GFX_portrait_RUS_vladimir_lenin
-		texturefile = "gfx/leaders/SOV/portrait_SOV_lenin.dds"
+		name = GFX_portrait_SOV_vladimir_lenin
+		texturefile = "gfx/leaders/SOV/portrait_SOV_vladimir_lenin.dds"
 	}
 	spriteType = {
-		name = GFX_portrait_RUS_lavr_kornilov
-		texturefile = "gfx/leaders/SOV/portrait_SOV_leonid_govorov.dds"
+		name = GFX_portrait_SOV_lavr_kornilov
+		texturefile = "gfx/leaders/SOV/portrait_SOV_lavr_kornilov.dds"
 	}
 	spriteType = {
-		name = GFX_portrait_RUS_irakli_tsereteli
+		name = GFX_portrait_SOV_irakli_tsereteli
 		texturefile = "gfx/leaders/Europe/portrait_europe_generic_4.dds"
+	}
+	spriteType = {
+		name = GFX_portrait_SOV_provisional_government
+		texturefile = "gfx/leaders/SOV/portrait_SOV_provisional_government.dds"
+	}
+
+	# AUS
+	spriteType = {
+		name = GFX_portrait_AUS_karl_von_habsburg
+		texturefile = "gfx/leaders/AUS/portrait_AUS_karl_von_habsburg.dds"
+	}
+
+	# POL
+	spriteType = {
+		name = GFX_portrait_POL_provisional_council
+		texturefile = "gfx/leaders/POL/portrait_POL_provisional_council.dds"
+	}
+	spriteType = {
+		name = GFX_portrait_POL_regency_council
+		texturefile = "gfx/leaders/POL/portrait_POL_regency_council.dds"
+	}
+
+	# UKR
+	spriteType = {
+		name = GFX_portrait_UKR_volodymyr_vynnychenko
+		texturefile = "gfx/leaders/UKR/portrait_UKR_volodymyr_vynnychenko.dds"
 	}
 }

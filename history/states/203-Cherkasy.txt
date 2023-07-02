@@ -17,10 +17,7 @@ state={
 		}
 		add_core_of = RUS
 		add_core_of = UKR
-		1917.11.11 = {
-			owner = UKR
-			add_core_of = SOV
-		}
+		1917.11.11 = { owner = UKR }
 	}
 
 	provinces={

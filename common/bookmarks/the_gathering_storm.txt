@@ -7,8 +7,8 @@ bookmarks = {
 		default_country = "RUS"
 		default = yes
 
-		"RUS"={
-			history = "RUS_GATHERING_STORM_DESC"
+		"RUS" = {
+			history = "GATHERING_STORM_DESC"
 			ideology = democratic
 			available = { has_dlc = "By Blood Alone" } 
 			ideas = {
@@ -22,8 +22,8 @@ bookmarks = {
 				PRO_russias_bright_future
 			}
 		}
-		"RUS"={
-			history = "RUS_GATHERING_STORM_DESC"
+		"RUS" = {
+			history = "GATHERING_STORM_DESC"
 			ideology = democratic
 			available = { NOT = { has_dlc = "By Blood Alone" } } 
 			ideas = {

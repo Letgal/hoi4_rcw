@@ -1,19 +1,20 @@
 characters = {
-	### COUNTRY LEADERS ###
+	### STARTING COUNTRY LEADERS ###
 	RUS_aleksandr_kerensky = {
-		name = RUS_aleksandr_kerensky
+		name = SOV_aleksandr_kerensky
 		portraits = {
-			civilian = { large = GFX_portrait_RUS_aleksandr_kerensky }
+			civilian = { large = GFX_portrait_RUS_aleksandr_kerensky_updated }
 			army = { small = GFX_idea_alexander_kerensky }
 		}
 		country_leader = {
 			ideology = socialism
 			traits = { incompetent_leader }
+			expire = "1953.3.1.1"
+			id = -1
 		}
 		advisor = {
 			slot = political_advisor
 			idea_token = RUS_aleksandr_kerensky
-			allowed = { original_tag = RUS }
 			visible = { is_country_leader = no }
 			available = {
 				if = {
@@ -21,16 +22,15 @@ characters = {
 					NOT = { has_autonomy_state = autonomy_supervised_state }
 				}
 				is_country_leader = no
-				#NOT = { has_character_flag = RUS_exiled_flag }
 			}
 			traits = { democratic_reformer }
 		}
 	}
 
 	RUS_vladimir_lenin = {
-		name = RUS_vladimir_lenin
+		name = SOV_vladimir_lenin
 		portraits = {
-			civilian = { large = GFX_portrait_RUS_vladimir_lenin }
+			civilian = { large = GFX_portrait_SOV_vladimir_lenin }
 		}
 		country_leader = {
 			ideology = leninism
@@ -39,10 +39,69 @@ characters = {
 		}
 	}
 
-	RUS_irakli_tsereteli = {
-		name = RUS_irakli_tsereteli
+	RUS_konstantin_rodzayevsky = {
+		name = SOV_konstantin_rodzayevsky
 		portraits = {
-			civilian = { large = GFX_portrait_RUS_irakli_tsereteli }
+			civilian = { large = GFX_portrait_SOV_konstantin_rodzayevsky }
+			army = { small = GFX_idea_konstantin_rodzaevsky }
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { fascist_orchestrator }
+			expire = "1953.3.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = konstantin_rodzaevsky
+			visible = { is_country_leader = no }
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+				is_country_leader = no
+			}
+			traits = { fascist_demagogue }
+		}
+	}
+
+	RUS_provisional_government = {
+		name = SOV_provisional_government
+		portraits = {
+			civilian = { large = GFX_portrait_SOV_provisional_government }
+		}
+		country_leader = {
+			ideology = oligarchism
+			traits = { desperate_gambit dysfunctional_assembly }
+			expire = "1953.3.1.1"
+		}
+	}
+
+	### LATER COUNTRY LEADERS ###
+	RUS_lavr_kornilov = {
+		name = RUS_lavr_kornilov
+		portraits = {
+			civilian = { large = GFX_portrait_RUS_lavr_kornilov }
+			army = {
+				large = GFX_portrait_RUS_lavr_kornilov
+				small = GFX_idea_SOV_pyotr_krasnov # Temp
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	RUS_irakli_tsereteli = {
+		name = SOV_irakli_tsereteli
+		portraits = {
+			civilian = { large = GFX_portrait_SOV_irakli_tsereteli }
 			army = { small = GFX_idea_europe_generic_4 }
 		}
 		advisor = {
@@ -56,50 +115,36 @@ characters = {
 					NOT = { has_autonomy_state = autonomy_supervised_state }
 				}
 				is_country_leader = no
-				has_government = democratic
 				has_completed_focus = PRO_moderate_communism
-				#NOT = { has_character_flag = RUS_exiled_flag }
 			}
 			traits = { patriotic_socialist }
 		}
 	}
 
-	### LATER COUNTRY LEADERS ###
-	RUS_lavr_kornilov = {
-		name = RUS_lavr_kornilov
+	RUS_lev_trotsky = {
+		name = SOV_lev_trotsky
 		portraits = {
-			civilian = { large = "GFX_portrait_RUS_lavr_kornilov" }
-			army = {
-				large = "GFX_portrait_RUS_lavr_kornilov"
-				small = "GFX_idea_RUS_pyotr_krasnov" # Temp
-			}
+			civilian = { large = GFX_portrait_SOV_lev_trotsky }
+			army = { small = GFX_idea_SOV_lev_trotsky }
 		}
-		corps_commander = {
-			traits = { old_guard }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 1
-		}
-	}
-
-	RUS_provisional_government = {
-		name = RUS_provisional_government
-		portraits = {
-			civilian = { large = "GFX_portrait_SOV_white_transitionary_council" }
-		}
-		country_leader = {
-			ideology = despotism
-			expire = "1953.3.1.1"
-			id = -1
-			traits = { desperate_gambit dysfunctional_assembly }
-		}
+		#advisor = {
+		#	slot = political_advisor
+		#	idea_token = RUS_lev_trotsky
+		#	allowed = {
+		#		OR = {
+		#			original_tag = RUS
+		#			original_tag = SOV
+		#		}
+		#	}
+		#	visible = { is_country_leader = no }
+		#	available = { is_country_leader = no }
+		#	traits = { pc_military_naval_affairs }
+		#}
 	}
 
 	### ADVISORS ###
 	RUS_pavel_milyukov = {
-		name = RUS_pavel_milyukov
+		name = SOV_pavel_milyukov
 		portraits = {
 			army = { small = GFX_idea_europe_generic_2 }
 		}
@@ -109,10 +154,7 @@ characters = {
 			allowed = { original_tag = RUS }
 			available = {
 				has_government = democratic
-				NOT = {
-					has_completed_focus = PRO_moderate_communism
-					#has_character_flag = RUS_exiled_flag
-				}
+				NOT = { has_completed_focus = PRO_moderate_communism }
 			}
 			removal_cost = -1 # Pre-1.12.8
 			can_be_fired = no
@@ -121,7 +163,7 @@ characters = {
 	}
 
 	RUS_georgi_lvov = {
-		name = RUS_georgi_lvov
+		name = SOV_georgi_lvov
 		portraits = {
 			army = { small = GFX_idea_south_america_generic_8 }
 		}
@@ -131,17 +173,14 @@ characters = {
 			allowed = { original_tag = RUS }
 			available = {
 				has_government = democratic
-				NOT = {
-					has_completed_focus = PRO_moderate_communism
-					#has_character_flag = RUS_exiled_flag
-				}
+				NOT = { has_completed_focus = PRO_moderate_communism }
 			}
 			traits = { noble_beurocrat }
 		}
 	}
 
 	RUS_mikhail_rodzyanko = {
-		name = RUS_mikhail_rodzyanko
+		name = SOV_mikhail_rodzyanko
 		portraits = {
 			army = { small = GFX_idea_europe_generic_4 }
 		}
@@ -151,127 +190,43 @@ characters = {
 			allowed = { original_tag = RUS }
 			available = {
 				has_government = democratic
-				NOT = {
-					has_completed_focus = PRO_moderate_communism
-					#has_character_flag = RUS_exiled_flag
-				}
+				NOT = { has_completed_focus = PRO_moderate_communism }
 			}
 			traits = { SWI_conservative_democrat }
 		}
 	}
 
 	RUS_patriarch_sergy = {
-		name = RUS_patriarch_sergy
+		name = SOV_patriarch_sergy
 		portraits = {
-			army = { small = "GFX_idea_SOV_patriarch_sergy" }
+			army = { small = GFX_idea_SOV_patriarch_sergy }
 		}
 		advisor = {
 			slot = political_advisor
 			idea_token = RUS_patriarch_sergy
-			allowed = { original_tag = RUS }
-			visible = { has_completed_focus = PRO_preserve_church_power }
 			available = { has_completed_focus = PRO_preserve_church_power }
 			traits = { patriarch_of_moscow_and_all_russia }
 		}
 	}
 
-	RUS_metropolitan_meletius = {
-		name = RUS_metropolitan_meletius
-		portraits = {
-			#civilian = { large = "GFX_portrait_SOV_patriarch_meletius" }
-			army = { small = "GFX_idea_SOV_patriarch_meletius" }
-		}
-		#country_leader = {
-		#	ideology = despotism
-		#	expire = "1953.3.1.1"
-		#	id = -1
-		#	traits = {
-		#		defier_of_the_sun_god
-		#		supreme_representative_of_god_on_earth
-		#	}
-		#}
-		advisor = {
-			slot = political_advisor
-			idea_token = RUS_patriarch_meletius
-			#allowed = { original_tag = RUS }
-			visible = { has_completed_focus = PRO_preserve_church_power }
-			available = { has_completed_focus = PRO_preserve_church_power }
-			traits = { the_masses_opium }
-		}
-	}
-
-	RUS_metropolitan_anastasy = {
-		name = RUS_metropolitan_anastasy
-		portraits = {
-			army = { small = "GFX_idea_SOV_metropolitan_anastasy" }
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = RUS_metropolitan_anastasy
-			#allowed = { original_tag = RUS }
-			visible = { has_completed_focus = PRO_preserve_church_power }
-			available = { has_completed_focus = PRO_preserve_church_power }
-			traits = { orthodox_rabblerouser }
-		}
-	}
-
-	RUS_metropolitan_nikolay = {
-		name = RUS_metropolitan_nikolay
-		portraits = {
-			army = { small = "GFX_idea_SOV_metropolitan_nikolay" }
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = RUS_metropolitan_nikolay
-			#allowed = { original_tag = RUS }
-			visible = { has_completed_focus = PRO_preserve_church_power }
-			available = { has_completed_focus = PRO_preserve_church_power }
-			traits = { theocratic_diplomat }
-		}
-	}
-
-	RUS_metropolitan_aleksy = {
-		name = RUS_metropolitan_aleksy
-		portraits = {
-			army = { small = "GFX_idea_SOV_metropolitan_aleksy" }
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = RUS_metropolitan_aleksy
-			#allowed = { original_tag = RUS }
-			visible = { has_completed_focus = PRO_preserve_church_power }
-			available = { has_completed_focus = PRO_preserve_church_power }
-			traits = { driver_of_the_faithful }
-		}
-	}
-
 	### ARMY ADVISORS (incl. commanders) ###
 	RUS_anton_denikin = {
-		name = RUS_anton_denikin
+		name = SOV_anton_denikin
 		portraits = {
 			army = {
-				large = "GFX_portrait_SOV_anton_denikin"
-				small = "GFX_idea_SOV_anton_denikin"
+				large = GFX_portrait_SOV_anton_denikin
+				small = GFX_idea_SOV_anton_denikin
 			}
 		}
 		advisor = {
 			slot = army_chief
 			idea_token = anton_denikin
-			allowed = { original_tag = RUS }
-			available = {
-				if = {
-					limit = { has_character_flag = RUS_exiled_flag }
-					NOT = { has_character_flag = RUS_exiled_flag }
-				}
-			}
 			traits = { army_chief_drill_1 }
 			cost = 50
 		}
+		
 		field_marshal = {
-			traits = {
-				old_guard
-				inflexible_strategist
-			}
+			traits = { old_guard inflexible_strategist }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -282,18 +237,15 @@ characters = {
 
 	### NON-ADVISOR ARMY LEADERS ###
 	RUS_konstantin_nechayev = {
-		name = RUS_konstantin_nechayev
+		name = SOV_konstantin_nechayev
 		portraits = {
 			army = {
-				large = "GFX_portrait_SOV_konstantin_nechayev"
-				small = "GFX_idea_SOV_konstantin_nechayev"
+				large = GFX_portrait_SOV_konstantin_nechayev
+				small = GFX_idea_SOV_konstantin_nechayev
 			}
 		}
 		field_marshal = {
-			traits = {
-				infantry_officer
-				war_hero
-			}
+			traits = { infantry_officer war_hero }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -303,11 +255,11 @@ characters = {
 	}
 
 	RUS_aleksandr_rodzyanko = {
-		name = RUS_aleksandr_rodzyanko
+		name = SOV_aleksandr_rodzyanko
 		portraits = {
 			army = {
-				large = "GFX_portrait_SOV_aleksandr_rodzyanko"
-				small = "GFX_idea_SOV_aleksandr_rodzyanko"
+				large = GFX_portrait_SOV_aleksandr_rodzyanko
+				small = GFX_idea_SOV_aleksandr_rodzyanko
 			}
 		}
 		field_marshal = {
@@ -321,18 +273,15 @@ characters = {
 	}
 
 	RUS_andrey_shkuro = {
-		name = RUS_andrey_shkuro
+		name = SOV_andrey_shkuro
 		portraits = {
 			army = {
-				large = "GFX_portrait_SOV_andrey_shkuro"
-				small = "GFX_idea_SOV_andrey_shkuro"
+				large = GFX_portrait_SOV_andrey_shkuro
+				small = GFX_idea_SOV_andrey_shkuro
 			}
 		}
 		field_marshal = {
-			traits = {
-				trait_reckless
-				cavalry_officer
-			}
+			traits = { trait_reckless cavalry_officer }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
@@ -342,11 +291,11 @@ characters = {
 	}
 
 	RUS_pyotr_krasnov = {
-		name = RUS_pyotr_krasnov
+		name = SOV_pyotr_krasnov
 		portraits = {
 			army = {
-				large = "GFX_portrait_SOV_pyotr_krasnov"
-				small = "GFX_idea_SOV_pyotr_krasnov"
+				large = GFX_portrait_SOV_pyotr_krasnov
+				small = GFX_idea_SOV_pyotr_krasnov
 			}
 		}
 		field_marshal = {
@@ -360,18 +309,15 @@ characters = {
 	}
 
 	RUS_vladimir_kosmin = {
-		name = RUS_vladimir_kosmin
+		name = SOV_vladimir_kosmin
 		portraits = {
 			army = {
-				large = "GFX_portrait_SOV_vladimir_kosmin"
-				small = "GFX_idea_SOV_vladimir_kosmin"
+				large = GFX_portrait_SOV_vladimir_kosmin
+				small = GFX_idea_SOV_vladimir_kosmin
 			}
 		}
 		field_marshal = {
-			traits = {
-				winter_expert
-				trait_mountaineer
-			}
+			traits = { winter_expert trait_mountaineer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -381,11 +327,11 @@ characters = {
 	}
 
 	RUS_aleksey_polivanov = {
-		name = RUS_aleksey_polivanov
+		name = SOV_aleksey_polivanov
 		portraits = {
 			army = {
-				large = "GFX_portrait_south_america_generic_8"
-				small = "GFX_idea_south_america_generic_8"
+				large = GFX_portrait_south_america_generic_8
+				small = GFX_idea_south_america_generic_8
 			}
 		}
 		corps_commander = {

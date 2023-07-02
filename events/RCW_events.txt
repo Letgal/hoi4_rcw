@@ -39,31 +39,20 @@ country_event = {
 					long_name = RUS_white_movement
 				}
 			}
-			add_country_leader_role = {
-				character = RUS_provisional_government
-				promote_leader = yes
-				country_leader = {
-					ideology = despotism
-					expire = "1953.3.1.1"
-					traits = {
-						emigre_connections
-						desperate_gambit
-						dysfunctional_assembly
-					}
-				}
-			}
 			add_ideas = {
 				WHI_factionalism
 				communism_banned
 			}
-			PREV = {
-				if = {
-					limit = { has_war_with = GER }
-					set_truce = {
-						target = GER
-						days = 60
-					}
+			if = {
+				limit = { has_war_with = GER }
+				set_truce = {
+					target = GER
+					days = 60
 				}
+			}
+			release = FIN
+			release = MOL
+			PREV = {
 				release = FIN
 				release = MOL
 			}

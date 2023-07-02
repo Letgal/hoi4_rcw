@@ -21,10 +21,7 @@ state={
 		}
 		add_core_of = RUS
 		add_core_of = POL
-		1917.11.11 = {
-			add_core_of = SOV
-			controller = GER
-		}
+		1917.11.11 = { controller = GER }
 	}
 
 	provinces={

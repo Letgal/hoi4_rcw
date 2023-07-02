@@ -35,6 +35,7 @@ news_event = {
 				is_ally_with = SOV
 			}
 		}
+	}
 	option = {
 		name = rcw_news.101.b
 		trigger = {

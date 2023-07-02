@@ -1,12 +1,12 @@
-RUS_provisional_bop = {
+PRO_balance_of_power = {
 	initial_value = 0
-	left_side = RUS_soviet_side	
-	right_side = RUS_government_side	
+	left_side = PRO_soviet_side	
+	right_side = PRO_government_side	
 	decision_category = PRO_balance_of_power_category_bba
 
 	### Neutral status
 	range = {
-		id = RUS_balance_range
+		id = PRO_balance_range
 		min = -0.10
 		max = 0.10
 		modifier = { }
@@ -16,11 +16,11 @@ RUS_provisional_bop = {
 
 	### Communist
 	side = {
-		id = RUS_soviet_side
+		id = PRO_soviet_side
 		icon = GFX_bop_ITA_communism_side
 
 		range = {
-			id = RUS_soviet_low_control_range
+			id = PRO_soviet_low_control_range
 			min = -0.3
 			max = -0.1
 			modifier = {
@@ -34,7 +34,7 @@ RUS_provisional_bop = {
 		}
 
 		range = {
-			id = RUS_soviet_medium_control_range
+			id = PRO_soviet_medium_control_range
 			min = -0.6
 			max = -0.3
 			modifier = {
@@ -48,7 +48,7 @@ RUS_provisional_bop = {
 		}
 
 		range = {
-			id = RUS_soviet_high_control_range
+			id = PRO_soviet_high_control_range
 			min = -0.9
 			max = -0.6
 			modifier = {
@@ -63,7 +63,7 @@ RUS_provisional_bop = {
 		}
 
 		range = {
-			id = RUS_soviet_total_control_range
+			id = PRO_soviet_total_control_range
 			min = -1
 			max = -0.9
 			modifier = {
@@ -74,16 +74,16 @@ RUS_provisional_bop = {
 			}
 			on_activate = {
 				set_power_balance_gfx = {
-					id = RUS_provisional_bop
-					side = RUS_soviet_side
+					id = PRO_balance_of_power
+					side = PRO_soviet_side
 					gfx = GFX_bop_ITA_communism_improved_side
 				}
 				hidden_effect = { country_event = petrograd.2 }
 			}
 			on_deactivate = {
 				set_power_balance_gfx = {
-					id = RUS_provisional_bop
-					side = RUS_soviet_side
+					id = PRO_balance_of_power
+					side = PRO_soviet_side
 					gfx = GFX_bop_ITA_communism_side
 				}
 			}
@@ -92,11 +92,11 @@ RUS_provisional_bop = {
 
 	### Democratic
 	side = {
-		id = RUS_government_side
+		id = PRO_government_side
 		icon = GFX_bop_ITA_democratic_side
 
 		range = {
-			id = RUS_government_low_control_range
+			id = PRO_government_low_control_range
 			min = 0.1
 			max = 0.3
 			modifier = {
@@ -110,7 +110,7 @@ RUS_provisional_bop = {
 		}
 
 		range = {
-			id = RUS_government_medium_control_range
+			id = PRO_government_medium_control_range
 			min = 0.3
 			max = 0.6
 			modifier = {
@@ -124,7 +124,7 @@ RUS_provisional_bop = {
 		}
 
 		range = {
-			id = RUS_government_high_control_range
+			id = PRO_government_high_control_range
 			min = 0.6
 			max = 0.9
 			modifier = {
@@ -139,7 +139,7 @@ RUS_provisional_bop = {
 		}
 
 		range = {
-			id = RUS_government_total_control_range
+			id = PRO_government_total_control_range
 			min = 0.9
 			max = 1
 			modifier = {
@@ -151,15 +151,15 @@ RUS_provisional_bop = {
 			}
 			on_activate = {
 				set_power_balance_gfx = {
-					id = RUS_provisional_bop
-					side = RUS_government_side
+					id = PRO_balance_of_power
+					side = PRO_government_side
 					gfx = GFX_bop_ITA_democratic_improved_side
 				}
 			}
 			on_deactivate = {
 				set_power_balance_gfx = {
-					id = RUS_provisional_bop
-					side = RUS_government_side
+					id = PRO_balance_of_power
+					side = PRO_government_side
 					gfx = GFX_bop_ITA_democratic_side
 				}
 			}

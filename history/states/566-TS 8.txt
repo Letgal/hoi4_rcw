@@ -20,10 +20,7 @@ state={
 
 		}
 		add_core_of = RUS
-		1917.11.11 = {
-			owner = SOV
-			add_core_of = SOV
-		}
+		1917.11.11 = { owner = SOV }
 	}
 
 	provinces={

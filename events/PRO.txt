@@ -27,7 +27,7 @@ country_event = {
 		#if = {
 		#	limit = { has_dlc = "By Blood Alone" }
 		#	add_power_balance_modifier = {
-		#		id = RUS_provisional_bop
+		#		id = PRO_balance_of_power
 		#		modifier = $
 		#	}
 		#	else = {
@@ -103,7 +103,7 @@ country_event = {
 
 	option = {
 		name = provisional.3.a
-		activate_mission = RUS_kornilov_putsch_mission
+		activate_mission = PRO_kornilov_putsch_mission
 	}
 }
 
@@ -136,7 +136,7 @@ country_event = {
 		if = {
 			limit = { has_dlc = "By Blood Alone" }
 			add_power_balance_value = {
-				id = RUS_provisional_bop
+				id = PRO_balance_of_power
 				value = -0.2
 			}
 		}
@@ -317,9 +317,9 @@ country_event = {
 		load_focus_tree = soviet_russia_focus
 		if = {
 			limit = {
-				has_power_balance = { id = RUS_provisional_bop }
+				has_power_balance = { id = PRO_balance_of_power }
 			}
-			remove_power_balance = { id = RUS_provisional_bop }
+			remove_power_balance = { id = PRO_balance_of_power }
 		}
 		swap_ideas = {
 			remove_idea = provisional_government_idea

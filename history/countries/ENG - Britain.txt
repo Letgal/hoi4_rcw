@@ -9,6 +9,13 @@ set_war_support = 0.1
 
 set_convoys = 600
 
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	basic_train = 1
+	gw_artillery = 1
+}
+
 create_faction = ENG_entente_faction
 add_to_faction = RUS
 
@@ -87,8 +94,6 @@ recruit_character = ENG_cyril_newall
 recruit_character = ENG_sholto_douglas
 recruit_character = ENG_edward_ellington
 
-
-
 recruit_character = ENG_john_beckett
 recruit_character = ENG_corgis_1
 recruit_character = ENG_corgis_2
@@ -119,7 +124,6 @@ recruit_character = ENG_sylvia_pankhurst
 recruit_character = ENG_stewart_menzies
 recruit_character = ENG_maxwell_aitken
 recruit_character = ENG_thomas_moore
-
 
 
 if = {

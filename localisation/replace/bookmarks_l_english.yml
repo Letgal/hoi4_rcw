@@ -1,7 +1,6 @@
 ﻿l_english:
  GATHERING_STORM_NAME: "The Russian Republic"
  GATHERING_STORM_DESC: "Less than a month ago the revolutionaries forced Tsar Nicholas II to abdicate. In the old autocracy's place a new republic was established.\nFuture looks promising for the new Russia, but there are still many problems along the way, like the internal power struggle, and the fact Russia is still at war."
- RUS_GATHERING_STORM_DESC: "$GATHERING_STORM_DESC$"
 
  BLITZKRIEG_NAME: "Red October"
  BLITZKRIEG_DESC: "Placeholder"

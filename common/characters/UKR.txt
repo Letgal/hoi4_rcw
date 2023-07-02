@@ -1,0 +1,13 @@
+characters = {
+	UKR_volodymyr_vynnychenko = {
+		name = UKR_volodymyr_vynnychenko
+		portraits = {
+			civilian = { large = GFX_portrait_UKR_volodymyr_vynnychenko }
+		}
+		country_leader = {
+			ideology = conservatism # (&?)
+			expire = "1951.3.6.1"
+			id = -1
+		}
+	}
+}

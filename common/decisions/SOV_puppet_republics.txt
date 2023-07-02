@@ -3,7 +3,7 @@ foreign_influence = {
 		priority = 1
 		#icon = generic_political_discourse
 		visible = {
-			has_original_tag = SOV
+			original_tag = SOV
 			has_government = communism
 		}
 		available = {

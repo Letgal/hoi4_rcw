@@ -1,18 +1,17 @@
-characters={
-	AUS_karl_von_habsburg={
-		name=AUS_karl_von_habsburg
-		portraits={
-			civilian={
-				large="GFX_Portrait_hungary_otto_von_hapsburg"
-			}
+characters = {
+	AUS_karl_von_habsburg = {
+		name = AUS_karl_von_habsburg
+		portraits = {
+			civilian={ large = GFX_portrait_AUS_karl_von_habsburg }
 		}
-		country_leader={
-			ideology=despotism
-			traits={  }
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = despotism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
+
 	AUS_kurt_schuschnigg={
 		name=AUS_kurt_schuschnigg
 		portraits={

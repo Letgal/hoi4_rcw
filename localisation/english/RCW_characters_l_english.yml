@@ -1,30 +1,22 @@
 ﻿l_english:
- ### PROVISONAL GOVERNMENT ###
- RUS_aleksandr_kerensky:0 "Aleksandr Kerensky"
- RUS_vladimir_lenin:0 "Vladimir Lenin"
- RUS_irakli_tsereteli:0 "Irakli Tsereteli"
- RUS_lavr_kornilov:0 "Lavr Kornilov"
- RUS_provisional_government:0 "The Provisional Government"
- # Advisors
- RUS_pavel_milyukov:0 "Pavel Milyukov"
- RUS_georgi_lvov:0 "Georgi L'vov"
- RUS_mikhail_rodzyanko:0 "Mikhail Rodzyanko"
- RUS_patriarch_sergy:0 "$SOV_patriarch_sergy$"
- RUS_metropolitan_meletius:0 "$SOV_metropolitan_meletius$"
- RUS_metropolitan_anastasy:0 "$SOV_metropolitan_anastasy$"
- RUS_metropolitan_nikolay:0 "$SOV_metropolitan_nikolay$"
- RUS_metropolitan_aleksy:0 "$SOV_metropolitan_aleksy$"
- # Generals
- RUS_anton_denikin:0 "$SOV_anton_denikin$"
- RUS_konstantin_nechayev:0 "$SOV_konstantin_nechayev$"
- RUS_aleksandr_rodzyanko:0 "$SOV_aleksandr_rodzyanko$"
- RUS_andrey_shkuro:0 "$SOV_andrey_shkuro$"
- RUS_pyotr_krasnov:0 "$SOV_pyotr_krasnov$"
- RUS_vladimir_kosmin:0 "$SOV_vladimir_kosmin$"
- RUS_aleksey_polivanov:0 "Aleksey Polivanov"
-
- ### SOVIET RUSSIA ###
+ ### RUSSIA ###
+ # Country Leaders
  SOV_vladimir_lenin:0 "Vladimir Lenin"
+ SOV_lavr_kornilov:0 "Lavr Kornilov"
+ SOV_irakli_tsereteli:0 "Irakli Tsereteli"
+ # Advisors
+ SOV_pavel_milyukov:0 "Pavel Milyukov"
+ SOV_georgi_lvov:0 "Georgi L'vov"
+ SOV_mikhail_rodzyanko:0 "Mikhail Rodzyanko"
+ # Generals
+ SOV_aleksey_polivanov:0 "Aleksey Polivanov"
+
+ ### AUSTRIA-HUNGARY ###
+ AUS_karl_von_habsburg:0 "Karl I"
 
  ### POLAND ###
  POL_provisional_council:0 "Provisional Council of State"
+ POL_regency_council:0 "Regency Council"
+
+ ### UKRAINE ###
+ UKR_volodymyr_vynnychenko:0 "Volodymyr Vynnychenko"

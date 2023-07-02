@@ -17,6 +17,7 @@
  SOV_communism: "$SOV_russia_communism$"
  SOV_communism_DEF: "$SOV_russia_communism_DEF$"
  SOV_communism_ADJ: "$SOV_russia_communism_ADJ$"
+
  FRA_neutrality: "Allied Powers"
  FRA_neutrality_DEF: "the Allied Powers"
  FRA_neutrality_ADJ: "Allied"

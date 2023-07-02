@@ -1,0 +1,204 @@
+# BBA
+PRO_balance_of_power_category_bba = {
+	PRO_hire_soviet_commanders_bba = {
+		icon = generic_army_support
+		visible = { has_completed_focus = PRO_cooperate_with_the_soviets }
+		fire_only_once = yes
+		complete_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_power_balance_value = {
+				id = PRO_balance_of_power
+				value = -0.2
+			}
+			#remove_advisor_role = {
+			#	character = RUS_lev_trotsky
+			#	slot = political_advisor
+			#}
+			add_corps_commander_role = {
+				character = RUS_lev_trotsky
+				traits = { trait_trotsky_commander }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			add_advisor_role = {
+				character = RUS_lev_trotsky
+				advisor = {
+					slot = army_chief
+					cost = 100
+					idea_token = RUS_lev_trotsky
+					traits = { infantry_officer }
+				}
+			}
+		}
+	}
+	PRO_sway_the_mensheviks_bba = {
+		icon = generic_political_discourse
+		visible = {
+			has_completed_focus = PRO_cooperate_with_the_soviets
+			check_variable = { menshevik_attitude < 10 }
+		}
+		cost = 20
+		days_remove = 14
+		remove_effect = {
+			add_to_variable = {
+				menshevik_attitude = 1
+				tooltip = menshevik_attitude_improve
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_power_balance_value = {
+				id = PRO_balance_of_power
+				value = -0.05
+			}
+		}
+	}
+	PRO_dissolve_the_soviet_bba = {
+		priority = -1
+		icon = generic_break_treaty
+		visible = { has_completed_focus = PRO_cooperate_with_the_soviets }
+		available = {
+			OR = {
+				AND = {
+					has_completed_focus = PRO_moderate_communism
+					power_balance_value = {
+						id = PRO_balance_of_power
+						value > 0.75
+					}
+				}
+				power_balance_value = {
+					id = PRO_balance_of_power
+					value > 0.9
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = mensheviks_are_cooperative
+				check_variable = { menshevik_attitude > 9 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = rsdlp_divide_is_6
+				check_variable = { rsdlp_divide > 5 }
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = petrograd_soviet_destroyed
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			remove_power_balance = { id = PRO_balance_of_power }
+		}
+	}
+}
+
+# No BBA
+PRO_balance_of_power_category = {
+	PRO_hire_soviet_commanders = {
+		icon = generic_army_support
+		visible = { has_completed_focus = PRO_cooperate_with_the_soviets }
+		fire_only_once = yes
+		complete_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			if = {
+				limit = { has_idea = PRO_petrograd_soviet_passive }
+				swap_ideas = {
+					add_idea = PRO_petrograd_soviet_domineering
+					remove_idea = PRO_petrograd_soviet_passive
+				}
+			}
+			if = {
+				limit = { has_idea = PRO_petrograd_soviet_weakened }
+				swap_ideas = {
+					add_idea = PRO_petrograd_soviet_domineering
+					remove_idea = PRO_petrograd_soviet_weakened
+				}
+			}
+			add_corps_commander_role = {
+				character = RUS_lev_trotsky
+				traits = { trait_trotsky_commander }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			add_advisor_role = {
+				character = RUS_lev_trotsky
+				advisor = {
+					slot = army_chief
+					cost = 100
+					idea_token = RUS_lev_trotsky
+					traits = { infantry_officer }
+				}
+			}
+			#remove_advisor_role = {
+			#	character = RUS_lev_trotsky
+			#	slot = political_advisor
+			#}
+		}
+	}
+	PRO_sway_the_mensheviks = {
+		icon = generic_political_discourse
+		visible = {
+			has_completed_focus = PRO_cooperate_with_the_soviets
+			check_variable = { menshevik_attitude < 10 }
+		}
+		cost = 20
+		days_remove = 14
+		remove_effect = {
+			add_to_variable = {
+				menshevik_attitude = 1
+				tooltip = menshevik_attitude_improve
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+	PRO_dissolve_the_soviet = {
+		priority = -1
+		icon = generic_break_treaty
+		visible = { has_completed_focus = PRO_cooperate_with_the_soviets }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRO_petrograd_soviet_crippled
+				NOT = {
+					has_idea = PRO_petrograd_soviet_passive
+					has_idea = PRO_petrograd_soviet_domineering
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = mensheviks_are_cooperative
+				check_variable = { menshevik_attitude > 9 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = rsdlp_divide_is_6
+				check_variable = { rsdlp_divide > 5 }
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = petrograd_soviet_destroyed
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			if = {
+				limit = { has_idea = PRO_petrograd_soviet_weakened }
+				remove_ideas = PRO_petrograd_soviet_weakened
+			}
+		}
+	}
+}

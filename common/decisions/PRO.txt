@@ -1,0 +1,23 @@
+crisis = {
+	PRO_kornilov_putsch_mission = {
+		priority = 1
+		icon = generic_speech
+		activation = { always = no }
+		available = {
+			NOT = { has_character = RUS_lavr_kornilov }
+		}
+		days_mission_timeout = 60
+		timeout_effect = { country_event = provisional.5 }
+	}
+	PRO_handle_kornilov = {
+		icon = generic_political_discourse
+		visible = { has_active_mission = PRO_kornilov_putsch_mission }
+		available = {
+			OR = {
+				has_completed_focus = PRO_purge_the_soviets
+				has_completed_focus = PRO_cooperate_with_the_soviets
+			}
+		}
+		complete_effect = { country_event = provisional.4 }
+	}
+}

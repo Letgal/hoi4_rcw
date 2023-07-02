@@ -47,7 +47,7 @@ debug_decisions = {
 		}
 		complete_effect = { load_focus_tree = white_russia_focus }
 	}
-	DEBUG_RUS_bop_activate = {
+	DEBUG_PRO_bop_activate = {
 		allowed = {
 			has_dlc = "By Blood Alone"
 			original_tag = RUS
@@ -56,14 +56,14 @@ debug_decisions = {
 		available = {
 			has_government = democratic
 			NOT = {
-				has_power_balance = { id = RUS_provisional_bop }
+				has_power_balance = { id = PRO_balance_of_power }
 			}
 		}
 		complete_effect = {
-			set_power_balance = { id = RUS_provisional_bop }
+			set_power_balance = { id = PRO_balance_of_power }
 		}
 	}
-	DEBUG_RUS_bop_deactivate = {
+	DEBUG_PRO_bop_deactivate = {
 		allowed = {
 			has_dlc = "By Blood Alone"
 			original_tag = RUS
@@ -71,121 +71,111 @@ debug_decisions = {
 		visible = { is_debug = yes }
 		available = {
 			has_government = democratic
-			has_power_balance = { id = RUS_provisional_bop }
+			has_power_balance = { id = PRO_balance_of_power }
 		}
 		complete_effect = {
-			remove_power_balance = { id = RUS_provisional_bop }
+			remove_power_balance = { id = PRO_balance_of_power }
 		}
 	}
 }
 
-PRO_balance_of_power_category = {
-	DEBUG_RUS_bop_set_max = {
+PRO_balance_of_power_category_bba = {
+	DEBUG_PRO_bop_set_max = {
 		priority = -2
-		allowed = { has_dlc = "By Blood Alone" }
 		visible = { is_debug = yes }
 		complete_effect = {
 			set_power_balance = {
-				id = RUS_provisional_bop
+				id = PRO_balance_of_power
 				set_value = 1
 			}
 		}
 	}
-	DEBUG_RUS_bop_set_min = {
+	DEBUG_PRO_bop_set_min = {
 		priority = -2
-		allowed = { has_dlc = "By Blood Alone" }
 		visible = { is_debug = yes }
 		complete_effect = {
 			set_power_balance = {
-				id = RUS_provisional_bop
+				id = PRO_balance_of_power
 				set_value = -1
 			}
 		}
 	}
-	DEBUG_RUS_bop_add_50 = {
+	DEBUG_PRO_bop_add_50 = {
 		priority = -2
-		allowed = { has_dlc = "By Blood Alone" }
 		visible = { is_debug = yes }
 		complete_effect = {
 			add_power_balance_value = {
-				id = RUS_provisional_bop
+				id = PRO_balance_of_power
 				value = 0.5
 			}
 		}
 	}
-	DEBUG_RUS_bop_add_25 = {
+	DEBUG_PRO_bop_add_25 = {
 		priority = -2
-		allowed = { has_dlc = "By Blood Alone" }
 		visible = { is_debug = yes }
 		complete_effect = {
 			add_power_balance_value = {
-				id = RUS_provisional_bop
+				id = PRO_balance_of_power
 				value = 0.25
 			}
 		}
 	}
-	DEBUG_RUS_bop_add_15 = {
+	DEBUG_PRO_bop_add_15 = {
 		priority = -2
-		allowed = { has_dlc = "By Blood Alone" }
 		visible = { is_debug = yes }
 		complete_effect = {
 			add_power_balance_value = {
-				id = RUS_provisional_bop
+				id = PRO_balance_of_power
 				value = 0.15
 			}
 		}
 	}
-	DEBUG_RUS_bop_add_5 = {
+	DEBUG_PRO_bop_add_5 = {
 		priority = -2
-		allowed = { has_dlc = "By Blood Alone" }
 		visible = { is_debug = yes }
 		complete_effect = {
 			add_power_balance_value = {
-				id = RUS_provisional_bop
+				id = PRO_balance_of_power
 				value = 0.05
 			}
 		}
 	}
-	DEBUG_RUS_bop_sub_50 = {
+	DEBUG_PRO_bop_sub_50 = {
 		priority = -2
-		allowed = { has_dlc = "By Blood Alone" }
 		visible = { is_debug = yes }
 		complete_effect = {
 			add_power_balance_value = {
-				id = RUS_provisional_bop
+				id = PRO_balance_of_power
 				value = -0.5
 			}
 		}
 	}
-	DEBUG_RUS_bop_sub_25 = {
+	DEBUG_PRO_bop_sub_25 = {
 		priority = -2
-		allowed = { has_dlc = "By Blood Alone" }
 		visible = { is_debug = yes }
 		complete_effect = {
 			add_power_balance_value = {
-				id = RUS_provisional_bop
+				id = PRO_balance_of_power
 				value = -0.25
 			}
 		}
 	}
-	DEBUG_RUS_bop_sub_15 = {
+	DEBUG_PRO_bop_sub_15 = {
 		priority = -2
-		allowed = { has_dlc = "By Blood Alone" }
 		visible = { is_debug = yes }
 		complete_effect = {
 			add_power_balance_value = {
-				id = RUS_provisional_bop
+				id = PRO_balance_of_power
 				value = -0.15
 			}
 		}
 	}
-	DEBUG_RUS_bop_sub_5 = {
+	DEBUG_PRO_bop_sub_5 = {
 		priority = -2
-		allowed = { has_dlc = "By Blood Alone" }
 		visible = { is_debug = yes }
 		complete_effect = {
 			add_power_balance_value = {
-				id = RUS_provisional_bop
+				id = PRO_balance_of_power
 				value = -0.05
 			}
 		}

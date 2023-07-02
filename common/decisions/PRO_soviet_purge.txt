@@ -1,0 +1,55 @@
+# BBA
+PRO_balance_of_power_category_bba = {
+	PRO_abolish_the_soviet_bba = {
+		priority = -1
+		icon = generic_break_treaty
+		visible = { has_completed_focus = PRO_purge_the_soviets }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = rsdlp_divide_is_6
+				check_variable = { rsdlp_divide > 5 }
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			remove_power_balance = { id = PRO_balance_of_power }
+		}
+	}
+}
+
+# No BBA
+PRO_balance_of_power_category = {
+	PRO_abolish_the_soviet = {
+		priority = -1
+		icon = generic_break_treaty
+		visible = { has_completed_focus = PRO_purge_the_soviets }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRO_petrograd_soviet_crippled
+				NOT = {
+					has_idea = PRO_petrograd_soviet_passive
+					has_idea = PRO_petrograd_soviet_domineering
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = rsdlp_divide_is_6
+				check_variable = { rsdlp_divide > 5 }
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			if = {
+				limit = { has_idea = PRO_petrograd_soviet_weakened }
+				remove_ideas = PRO_petrograd_soviet_weakened
+			}
+		}
+	}
+}

@@ -19,17 +19,7 @@ state={
 		}
 		add_core_of = RUS
 		add_core_of = UKR
-		1917.11.11 = {
-			controller = GER
-			add_core_of = SOV
-			SOV = {
-				set_province_controller = 572
-				set_province_controller = 6435
-				set_province_controller = 6520
-				set_province_controller = 6557
-				set_province_controller = 11543
-			}
-		}
+		1917.11.11 = { controller = GER }
 	}
 
 	provinces={
