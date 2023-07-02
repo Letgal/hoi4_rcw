@@ -8,49 +8,50 @@
  communist_fervor:0 "Communist Fervor"
  communist_fervor_desc: ""
 
+ war_weariness:0 "War Weariness"
+ war_weariness_desc:0 "Waging war, even a defensive one, is very unpopular among civilians and soldiers alike.\nToo many have died already."
+
  ### PROVISIONAL GOVERNMENT ###
  # Balance of Power
- RUS_bop_dummy:0 "$RUS_balance_of_power_category$ §T(Balance of Power)§!"
- RUS_bop_dummy_desc:0 "$RUS_balance_of_power_category_desc$"
- RUS_petrograd_soviet_passive:1 "Passive Petrograd Soviet"
- RUS_petrograd_soviet_passive_desc:0 "The Provisional Government's rule was established in no small part thanks to "help" from the Petrograd Soviet. However, the Soviet demanded representation in the government in exchange. Having no other choice, we had to accept. Ever since then, the Soviet has been trying to destabilize our administration and woo our supporters to their side.\nThis creates a very dangerous situation. If the Soviets get enough power, they will swiftly overthrow the Provisional Government."
- RUS_petrograd_soviet_domineering:1 "Domineering Petrograd Soviet"
- RUS_petrograd_soviet_domineering_desc:0 "$RUS_petrograd_soviet_passive_desc$"
- RUS_petrograd_soviet_weakened:0 "Weakened Petrograd Soviet"
- RUS_petrograd_soviet_weakened_desc:0 "$RUS_petrograd_soviet_passive_desc$"
+ PRO_bop_dummy:0 "$PRO_balance_of_power_category$ §T(Balance of Power)§!"
+ PRO_bop_dummy_desc:0 "$PRO_balance_of_power_category_desc$"
+ PRO_petrograd_soviet_passive:1 "Passive Petrograd Soviet"
+ PRO_petrograd_soviet_passive_desc:0 "The Provisional Government's rule was established in no small part thanks to "help" from the Petrograd Soviet. However, the Soviet demanded representation in the government in exchange. Having no other choice, we had to accept. Ever since then, the Soviet has been trying to destabilize our administration and woo our supporters to their side.\nThis creates a very dangerous situation. If the Soviets get enough power, they will swiftly overthrow the Provisional Government."
+ PRO_petrograd_soviet_domineering:1 "Domineering Petrograd Soviet"
+ PRO_petrograd_soviet_domineering_desc:0 "$PRO_petrograd_soviet_passive_desc$"
+ PRO_petrograd_soviet_weakened:0 "Weakened Petrograd Soviet"
+ PRO_petrograd_soviet_weakened_desc:0 "$PRO_petrograd_soviet_passive_desc$"
 
  # Starting Ideas
- RUS_failing_state:0 "A Failing State"
- RUS_failing_state_desc: ""
+ PRO_failing_state:0 "A Failing State"
+ PRO_failing_state_desc: ""
  RUS_undersupplied_army:0 "Undersupplied Army"
  # Add [GetRussiasState] into desc?
  RUS_undersupplied_army_desc:0 "The Great War has rocked our military hard.\nNobody could anticipate that the war would go this bad for us. The army desperately needs equipment."
  #RUS_undersupplied_army_war:0 "And if that wasn't enough, we are still at war with the Central Powers!"
  #RUS_undersupplied_army_peace:0 "Thankfully, the Central Powers agreed for a truce with us, which gives us some time to reorganize. But so will do our enemies."
- RUS_war_weariness:0 "War Weariness"
- RUS_war_weariness_desc:0 "Waging war, even a defensive one, is very unpopular among civilians and soldiers alike.\nToo many have died already."
 
  # From Focuses
- RUS_improved_supply_temp:0 "Revised Supply Management"
- RUS_mass_infantry_eq_temp:0 "Intensified Rifle Production"
- RUS_harsher_work_quotas_idea:0 "$RUS_harsher_work_quotas$"
- RUS_improved_working_conditions:0 "Improved Working Conditions"
- RUS_rearmament_plan_idea:0 "$RUS_rearmament_plan$ §R(unfinshed)§!"
- RUS_field_research_teams_1:0 "$RUS_field_research_teams$"
+ PRO_improved_supply_temp:0 "Revised Supply Management"
+ PRO_mass_infantry_eq_temp:0 "Intensified Rifle Production"
+ PRO_harsher_work_quotas_idea:0 "$PRO_harsher_work_quotas$"
+ PRO_improved_working_conditions:0 "Improved Working Conditions"
+ PRO_rearmament_plan_idea:0 "$PRO_rearmament_plan$ §R(unfinshed)§!"
+ PRO_field_research_teams_1:0 "$PRO_field_research_teams$"
 
- RUS_social_democracy_1:1 "Direction – Social Democracy"
- RUS_social_democracy_1_desc:0 "Having established a coalition with the liberal Kadets, our government is now favoring social democracy over socialism."
- RUS_democratic_socialism_1:1 "Direction – Democratic Socialism"
- RUS_democratic_socialism_1_desc:0 "Now that the Esers have firmly entrenched themselves in the government, Russia can now properly follow the democratic socialist course."
- RUS_moderate_communism_1:1 "Direction – Moderate Communism"
- RUS_moderate_communism_1_desc: ""
- RUS_approved_by_church:0 "Approved by the Church"
- RUS_approved_by_church_desc:0 "Having secured our support from the Russian Orthodox Church, we can rest assured they will stay on our side."
- RUS_full_secularization_idea:0 "$RUS_full_secularization$"
- RUS_republican_literature_idea:0 "$RUS_republican_literature$"
+ PRO_social_democracy_1:1 "Direction – Social Democracy"
+ PRO_social_democracy_1_desc:0 "Having established a coalition with the liberal Kadets, our government is now favoring social democracy over socialism."
+ PRO_democratic_socialism_1:1 "Direction – Democratic Socialism"
+ PRO_democratic_socialism_1_desc:0 "Now that the Esers have firmly entrenched themselves in the government, Russia can now properly follow the democratic socialist course."
+ PRO_moderate_communism_1:1 "Direction – Moderate Communism"
+ PRO_moderate_communism_1_desc: ""
+ PRO_approved_by_church:0 "Approved by the Church"
+ PRO_approved_by_church_desc:0 "Having secured our support from the Russian Orthodox Church, we can rest assured they will stay on our side."
+ PRO_full_secularization_idea:0 "$PRO_full_secularization$"
+ PRO_republican_literature_idea:0 "$PRO_republican_literature$"
 
- RUS_emergency_industry_temp:0 "$RUS_emergency_industry$"
- RUS_infrastructure_networks:0 "Infrastructure Networks of [SOV.GetNonIdeologyName]"
+ PRO_emergency_industry_temp:0 "$PRO_emergency_industry$"
+ PRO_infrastructure_networks:0 "Infrastructure Networks of [SOV.GetNonIdeologyName]"
 
  ### SOVIET REPUBLIC ###
  SOV_red_army:0 "The Red Army"
@@ -58,4 +59,4 @@
 
  ### WHITE RUSSIA ###
  WHI_factionalism:0 "Factionalism"
- WHI_factionalism_desc:0 "The White Movement is but a coalition united against the Soviet coup. This doesn't mean, however, that the constituent parties and organizations have abandoned their views and ambitions. Quite on the contrary, actually.\n\nMany of them still seek to achieve their goals using the instability in the country."
+ WHI_factionalism_desc:1 "The only one thing uniting the White Movement is Anti-Communism. This doesn't mean, however, that the constituent parties and organizations have abandoned their views and ambitions. Quite on the contrary, actually.\n\nMany of them still seek to achieve their goals using the instability in the country."

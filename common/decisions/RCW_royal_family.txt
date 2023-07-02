@@ -1,0 +1,59 @@
+RCW_royal_family_category = {
+	RCW_evacuate_the_royal_family = {
+		icon = infiltrate_state
+		visible = {
+			tag = WHI
+			has_variable = global.tsars_location
+		}
+		available = {
+			controls_state = global.tsars_location
+			var:global.tsars_location = { any_neighbor_state = { is_controlled_by = SOV } }
+			controls_state = FROM
+			NOT = { has_country_flag = tsar_is_evacuating }
+		}
+		state_target = yes
+		on_map_mode = map_only
+		targets = { 403 408 409 561 563 564 566 567 568 569 570 571 572 653 657 }
+		target_trigger = {
+			FROM = {
+				any_neighbor_state = {
+					state = global.tsars_location
+					NOT = { is_controlled_by = SOV }
+				}
+			}
+		}
+		cost = 50
+		days_remove = 30
+		days_re_enable = 15
+		complete_effect = {
+			set_country_flag = tsar_is_evacuating
+		}
+		remove_effect = {
+			clr_country_flag = tsar_is_evacuating
+			set_variable = { global.tsars_location = FROM }
+			custom_effect_tooltip = move_the_tsar_tt
+		}
+	}
+	RCW_assassinate_the_royal_family = {
+		icon = generic_assassination
+		visible = {
+			tag = SOV
+			has_variable = global.tsars_location
+			FROM = {
+				OR = {
+					is_controlled_by = SOV
+					any_neighbor_state = { is_controlled_by = SOV }
+				}
+			}
+		}
+		available = { controls_state = global.tsars_location }
+		state_target = yes
+		targets = { state = global.tsars_location }
+		cost = 50
+		days_remove = 3
+		remove_effect = {
+			clear_variable = global.tsars_location
+			news_event = rcw_news.101
+		}
+	}
+}

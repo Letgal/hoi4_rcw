@@ -42,29 +42,29 @@
  #soviet_russia.1.a:0 "Damn counter-revolutionaries!"
 
  ### CIVIL WAR ###
- rcw.1.t:0 "[ROOT.GetAdjective] Civil War!"
- rcw.1.d: ""
- rcw.1.a: ""
+ russian_civil_war.1.t:0 "[ROOT.GetAdjective] Civil War!"
+ russian_civil_war.1.d: ""
+ russian_civil_war.1.a: ""
 
- rcw.2.t:0 "[UKR.GetName] Rebels!"
- rcw.2.d: ""
- rcw.2.a:0 "We must crush them as fast as possible!"
- rcw.2.b:0 "Long live the [UKR.GetAdjective] state!"
+ russian_civil_war.2.t:0 "[UKR.GetName] Rebels!"
+ russian_civil_war.2.d: ""
+ russian_civil_war.2.a:0 "We must crush them as fast as possible!"
+ russian_civil_war.2.b:0 "Long live the [UKR.GetAdjective] state!"
 
- rcw.3.t:0 "[KAZ.GetName] Rebels!"
- rcw.3.d: ""
- rcw.3.b:0 "Long live the [KAZ.GetAdjective] state!"
+ russian_civil_war.3.t:0 "[KAZ.GetName] Rebels!"
+ russian_civil_war.3.d: ""
+ russian_civil_war.3.b:0 "Long live the [KAZ.GetAdjective] state!"
 
- rcw.101.t:0 "Reclamation of Warsaw"
- rcw.101.d: ""
- rcw.101.a:0 "Vperyod!"
- rcw.102.t:0 "Capture of Königsberg"
- rcw.102.d: ""
+ russian_civil_war.101.t:0 "Reclamation of Warsaw"
+ russian_civil_war.101.d: ""
+ russian_civil_war.101.a:0 "Vperyod!"
+ russian_civil_war.102.t:0 "Capture of Königsberg"
+ russian_civil_war.102.d: ""
 
- rcw.103.t:0 "Second Capture of Lemberg"
- rcw.103.d: ""
- rcw.104.t:0 "Capture of Krakau"
- rcw.104.d: ""
+ russian_civil_war.103.t:0 "Second Capture of Lemberg"
+ russian_civil_war.103.d: ""
+ russian_civil_war.104.t:0 "Capture of Krakau"
+ russian_civil_war.104.d: ""
 
  ### RCW TREATIES ###
  # Truce

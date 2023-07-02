@@ -1,9 +1,9 @@
 # BBA
-RUS_balance_of_power_category_bba = {
+PRO_balance_of_power_category_bba = {
 	RUS_abolish_the_soviet_bba = {
 		priority = -1
 		icon = generic_break_treaty
-		visible = { has_completed_focus = RUS_purge_the_soviets }
+		visible = { has_completed_focus = PRO_purge_the_soviets }
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = rsdlp_divide_is_6
@@ -22,17 +22,17 @@ RUS_balance_of_power_category_bba = {
 }
 
 # No BBA
-RUS_balance_of_power_category = {
+PRO_balance_of_power_category = {
 	RUS_abolish_the_soviet = {
 		priority = -1
 		icon = generic_break_treaty
-		visible = { has_completed_focus = RUS_purge_the_soviets }
+		visible = { has_completed_focus = PRO_purge_the_soviets }
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = RUS_petrograd_soviet_crippled
+				tooltip = PRO_petrograd_soviet_crippled
 				NOT = {
-					has_idea = RUS_petrograd_soviet_passive
-					has_idea = RUS_petrograd_soviet_domineering
+					has_idea = PRO_petrograd_soviet_passive
+					has_idea = PRO_petrograd_soviet_domineering
 				}
 			}
 			custom_trigger_tooltip = {
@@ -47,8 +47,8 @@ RUS_balance_of_power_category = {
 				popularity = -0.1
 			}
 			if = {
-				limit = { has_idea = RUS_petrograd_soviet_weakened }
-				remove_ideas = RUS_petrograd_soviet_weakened
+				limit = { has_idea = PRO_petrograd_soviet_weakened }
+				remove_ideas = PRO_petrograd_soviet_weakened
 			}
 		}
 	}

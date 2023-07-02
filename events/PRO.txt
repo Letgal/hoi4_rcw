@@ -1,0 +1,369 @@
+﻿add_namespace = provisional
+
+country_event = {
+	id = provisional.1 # Milyukov's Note
+	title = provisional.1.t
+	desc = provisional.1.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	fire_only_once = yes
+	trigger = {
+		original_tag = RUS
+		has_idea = RUS_pavel_milyukov
+		focus_progress = {
+			focus = PRO_stabilize_the_country
+			progress > 0
+		}
+	}
+	mean_time_to_happen = { days = 20 }
+
+	option = {
+		name = provisional.1.a
+		add_stability = -0.1
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.1
+		}
+		#if = {
+		#	limit = { has_dlc = "By Blood Alone" }
+		#	add_power_balance_modifier = {
+		#		id = RUS_provisional_bop
+		#		modifier = $
+		#	}
+		#	else = {
+		#		swap_ideas = {
+		#			remove_idea = PRO_petrograd_soviet_passive
+		#			add_idea = PRO_petrograd_soviet_domineering
+		#		}
+		#	}
+		#}
+	}
+}
+
+country_event = {
+	id = provisional.2 # Anti-War Riots
+	title = provisional.2.t
+	desc = provisional.2.d
+	picture = GFX_report_event_gathering_protest
+
+	fire_only_once = yes
+	trigger = {
+		original_tag = RUS
+		has_stability < 0.3
+		has_completed_focus = PRO_continue_the_war
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = provisional.2.a
+		add_stability = -0.2
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.1
+		}
+		set_country_flag = {
+			flag = april_days
+			days = 30
+		}
+	}
+	option = {
+		name = provisional.2.b
+		add_stability = -0.1
+		add_popularity = {
+			ideology = ROOT
+			popularity = -0.2
+		}
+		set_country_flag = {
+			flag = april_days
+			days = 30
+		}
+	}
+}
+
+country_event = {
+	id = provisional.3 # The Kornilov Affair
+	title = provisional.3.t
+	desc = provisional.3.d
+	picture = GFX_report_event_generic_conference
+
+	fire_only_once = yes
+	trigger = {
+		original_tag = RUS
+		has_civil_war = no
+		#has_stability < 0.2
+		has_character = RUS_lavr_kornilov
+		has_country_leader = {
+			character = RUS_aleksandr_kerensky
+			ruling_only = yes
+		}
+		has_completed_focus = PRO_continue_the_war
+		has_country_flag = april_days
+	}
+	mean_time_to_happen = { days = 15 }
+
+	option = {
+		name = provisional.3.a
+		activate_mission = RUS_kornilov_putsch_mission
+	}
+}
+
+country_event = {
+	id = provisional.4 # Handling Kornilov
+	title = provisional.4.t
+	desc = provisional.4.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = provisional.4.a
+		trigger = { has_political_power > 199 }
+		retire_character = RUS_lavr_kornilov
+		add_political_power = -200
+	}
+	option = {
+		name = provisional.4.b
+		trigger = {
+			has_political_power > 49
+			has_completed_focus = PRO_cooperate_with_the_soviets
+		}
+		retire_character = RUS_lavr_kornilov
+		add_political_power = -50
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			add_power_balance_value = {
+				id = RUS_provisional_bop
+				value = -0.2
+			}
+		}
+		else = {
+			if = {
+				limit = { has_idea = PRO_petrograd_soviet_passive }
+				swap_ideas = {
+					add_idea = PRO_petrograd_soviet_domineering
+					remove_idea = PRO_petrograd_soviet_passive
+				}
+			}
+			if = {
+				limit = { has_idea = PRO_petrograd_soviet_weakened }
+				swap_ideas = {
+					add_idea = PRO_petrograd_soviet_domineering
+					remove_idea = PRO_petrograd_soviet_weakened
+				}
+			}
+		}
+	}
+	option = { name = provisional.4.c }
+}
+
+country_event = {
+	id = provisional.5 # Kornilov's Coup
+	title = provisional.5.t
+	desc = provisional.5.d
+	picture = GFX_report_event_gathering_protest
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = provisional.5.a
+		start_civil_war = {
+			ruling_party = ROOT
+			ideology = neutrality
+			size = 0.6
+			capital = 219
+			states = all
+			states_filter = {
+				OR = {
+					region = 133
+					region = 150
+				}
+			}
+			keep_all_characters = yes
+			PREV = {
+				RUS_lavr_kornilov = { set_nationality = PREV.PREV }
+			}
+			hidden_effect = {
+				set_cosmetic_tag = RUS_kornilov
+				set_party_name = {
+					ideology = neutrality
+					name = RUS_kornilov_gvt
+					long_name = RUS_kornilov_gvt_long
+				}
+			}
+			add_country_leader_role = {
+				character = RUS_lavr_kornilov
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+				}
+			}
+		}
+	}
+	option = {
+		name = provisional.5.b
+		start_civil_war = {
+			ruling_party = ROOT
+			ideology = neutrality
+			size = 0.6
+			capital = 219
+			states = all
+			states_filter = {
+				OR = {
+					region = 133
+					region = 150
+				}
+			}
+			keep_all_characters = yes
+			PREV = {
+				RUS_lavr_kornilov = { set_nationality = PREV.PREV }
+			}
+			hidden_effect = {
+				set_cosmetic_tag = RUS_kornilov
+				set_party_name = {
+					ideology = neutrality
+					name = RUS_kornilov_gvt
+					long_name = RUS_kornilov_gvt_long
+				}
+			}
+			add_country_leader_role = {
+				character = RUS_lavr_kornilov
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+				}
+			}
+			change_tag_from = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = provisional.6 # Drafting the Constitution - Progress
+	title = provisional.6.t
+	desc = provisional.6.d
+	picture = GFX_report_event_generic_conference
+
+	trigger = {
+		NOT = { has_completed_focus = PRO_convene_the_constituent_assembly }
+		focus_progress = {
+			focus = PRO_convene_the_constituent_assembly
+			progress > 0
+		}
+		check_variable = { constitution_process < 4 }
+	}
+	mean_time_to_happen = { days = 15 }
+
+	option = {
+		name = provisional.6.a
+		trigger = { has_political_power > 29 }
+		add_political_power = -30
+		add_to_variable = { constitution_process = 1 }
+	}
+	option = { name = provisional.6.b }
+}
+
+country_event = {
+	id = provisional.7 # Drafting the Constitution - Success
+	title = provisional.7.t
+	desc = provisional.7.d
+	picture = GFX_report_event_generic_conference
+
+	trigger = {
+		NOT = { has_completed_focus = PRO_convene_the_constituent_assembly }
+		check_variable = { constitution_process = 4 }
+	}
+	mean_time_to_happen = { days = 15 }
+
+	option = {
+		name = provisional.7.a
+		add_stability = 0.1
+		set_country_flag = constitution_drafted
+		complete_national_focus = PRO_convene_the_constituent_assembly
+	}
+}
+
+### "ENDGAME" EVENTS ###
+country_event = {
+	id = provisional.101 # Soviet Coup
+	title = provisional.101.t
+	desc = provisional.101.d
+	picture = GFX_report_event_generic_riot
+
+	fire_only_once = yes
+	is_triggered_only = yes # Temp
+
+	option = {
+		name = provisional.101.a
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_popularities = {
+				communism = 55
+				neutrality = 25
+				democratic = 15
+				fascism = 5
+			}
+		}
+		drop_cosmetic_tag = yes
+		load_focus_tree = soviet_russia_focus
+		if = {
+			limit = {
+				has_power_balance = { id = RUS_provisional_bop }
+			}
+			remove_power_balance = { id = RUS_provisional_bop }
+		}
+		swap_ideas = {
+			remove_idea = provisional_government_idea
+			add_idea = unrecognized_state
+		}
+		if = {
+			limit = { has_idea = PRO_petrograd_soviet_passive }
+			remove_ideas = PRO_petrograd_soviet_passive
+		}
+		if = {
+			limit = { has_idea = PRO_petrograd_soviet_domineering }
+			remove_ideas = PRO_petrograd_soviet_domineering
+		}
+		if = {
+			limit = { has_idea = PRO_petrograd_soviet_weakened }
+			remove_ideas = PRO_petrograd_soviet_weakened
+		}
+	}
+}
+
+country_event = {
+	id = provisional.102 # Triumph of Democracy
+	title = provisional.102.t
+	desc = provisional.102.d
+	picture = GFX_report_event_generic_military_parade
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = provisional.102.a
+		add_stability = 0.1
+		add_popularity = {
+			ideology = ROOT
+			popularity = 0.15
+		}
+		custom_effect_tooltip = SEPARATION_LINE
+		remove_ideas = provisional_government_idea
+		drop_cosmetic_tag = yes
+		set_politics = {
+			ruling_party = ROOT
+			last_election = "1917.3.16"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+	}
+}

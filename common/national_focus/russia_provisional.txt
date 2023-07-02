@@ -13,7 +13,7 @@
 
 	### STABILIZATION ###
 	focus = {
-		id = RUS_stabilize_the_country
+		id = PRO_stabilize_the_country
 		icon = GFX_goal_generic_neutrality_focus
 		x = 6
 		y = 0
@@ -25,10 +25,10 @@
 
 	### WAR ISSUES ###
 	focus = {
-		id = RUS_address_the_war
+		id = PRO_address_the_war
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		prerequisite = { focus = RUS_stabilize_the_country }
-		relative_position_id = RUS_stabilize_the_country
+		prerequisite = { focus = PRO_stabilize_the_country }
+		relative_position_id = PRO_stabilize_the_country
 		x = -4
 		y = 1
 		cost = 4
@@ -37,18 +37,18 @@
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_timed_idea = {
-				idea = RUS_improved_supply_temp
+				idea = PRO_improved_supply_temp
 				days = 60
 			}
 		}
 	}
 
 	focus = {
-		id = RUS_propose_a_truce
+		id = PRO_propose_a_truce
 		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = RUS_address_the_war }
-		mutually_exclusive = { focus = RUS_continue_the_war }
-		relative_position_id = RUS_address_the_war
+		prerequisite = { focus = PRO_address_the_war }
+		mutually_exclusive = { focus = PRO_continue_the_war }
+		relative_position_id = PRO_address_the_war
 		x = -2
 		y = 1
 		cost = 2
@@ -57,8 +57,8 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_to_variable = { RUS_war_weariness_ws = 0.05 }
-			custom_effect_tooltip = RUS_war_weariness_ws_5
+			add_to_variable = { war_weariness_ws = 0.05 }
+			custom_effect_tooltip = war_weariness_ws_5
 			GER = {
 				country_event = {
 					id = RCW_treaty.1
@@ -69,11 +69,11 @@
 	}
 
 	focus = {
-		id = RUS_continue_the_war
+		id = PRO_continue_the_war
 		icon = GFX_goal_generic_major_war
-		prerequisite = { focus = RUS_address_the_war }
-		mutually_exclusive = { focus = RUS_propose_a_truce }
-		relative_position_id = RUS_address_the_war
+		prerequisite = { focus = PRO_address_the_war }
+		mutually_exclusive = { focus = PRO_propose_a_truce }
+		relative_position_id = PRO_address_the_war
 		x = 0
 		y = 1
 		cost = 2
@@ -86,17 +86,17 @@
 				ideology = ROOT
 				popularity = -0.1
 			}
-			add_to_variable = { RUS_war_weariness_ws = 0.05 }
-			custom_effect_tooltip = RUS_war_weariness_ws_5
+			add_to_variable = { war_weariness_ws = 0.05 }
+			custom_effect_tooltip = war_weariness_ws_5
 			custom_effect_tooltip = unpopular_option_tt
 		}
 	}
 
 	focus = {
-		id = RUS_problems_in_army
+		id = PRO_problems_in_army
 		icon = GFX_focus_generic_manpower
-		prerequisite = { focus = RUS_address_the_war }
-		relative_position_id = RUS_address_the_war
+		prerequisite = { focus = PRO_address_the_war }
+		relative_position_id = PRO_address_the_war
 		x = 2
 		y = 1
 		cost = 2
@@ -105,16 +105,16 @@
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
-				limit = { has_completed_focus = RUS_address_the_war }
+				limit = { has_completed_focus = PRO_address_the_war }
 				if = {
-					limit = { has_idea = RUS_improved_supply_temp }
+					limit = { has_idea = PRO_improved_supply_temp }
 					modify_timed_idea = {
-						idea = RUS_improved_supply_temp
+						idea = PRO_improved_supply_temp
 						days = 30
 					}
 					else = {
 						add_timed_idea = {
-							idea = RUS_improved_supply_temp
+							idea = PRO_improved_supply_temp
 							days = 30
 						}
 					}
@@ -124,10 +124,10 @@
 	}
 
 	focus = {
-		id = RUS_propose_a_peace_treaty
+		id = PRO_propose_a_peace_treaty
 		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = RUS_propose_a_truce }
-		relative_position_id = RUS_propose_a_truce
+		prerequisite = { focus = PRO_propose_a_truce }
+		relative_position_id = PRO_propose_a_truce
 		x = 0
 		y = 1
 		cost = 4
@@ -146,10 +146,10 @@
 	}
 
 	focus = {
-		id = RUS_republican_military_propaganda
+		id = PRO_republican_military_propaganda
 		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = RUS_continue_the_war }
-		relative_position_id = RUS_continue_the_war
+		prerequisite = { focus = PRO_continue_the_war }
+		relative_position_id = PRO_continue_the_war
 		x = 0
 		y = 1
 		cost = 4
@@ -157,33 +157,33 @@
 		bypass_if_unavailable = yes
 		search_filters = { FOCUS_FILTER_PROPAGANDA FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-			add_to_variable = { RUS_war_weariness_ws = 0.1 }
-			custom_effect_tooltip = RUS_war_weariness_ws_10
+			add_to_variable = { war_weariness_ws = 0.1 }
+			custom_effect_tooltip = war_weariness_ws_10
 		}
 	}
 
 	focus = {
-		id = RUS_streamline_rifle_production
+		id = PRO_streamline_rifle_production
 		icon = GFX_focus_ETH_freedom_at_gunpoint
-		prerequisite = { focus = RUS_problems_in_army }
-		relative_position_id = RUS_problems_in_army
+		prerequisite = { focus = PRO_problems_in_army }
+		relative_position_id = PRO_problems_in_army
 		x = 0
 		y = 1
 		cost = 4
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_timed_idea = {
-				idea = RUS_mass_infantry_eq_temp
+				idea = PRO_mass_infantry_eq_temp
 				days = 90
 			}
 		}
 	}
 
 	focus = {
-		id = RUS_frontline_spies
+		id = PRO_frontline_spies
 		icon = GFX_focus_generic_vatican_agents
-		prerequisite = { focus = RUS_propose_a_truce focus = RUS_continue_the_war }
-		relative_position_id = RUS_propose_a_peace_treaty
+		prerequisite = { focus = PRO_propose_a_truce focus = PRO_continue_the_war }
+		relative_position_id = PRO_propose_a_peace_treaty
 		x = 1
 		y = 1
 		cost = 5
@@ -194,35 +194,35 @@
 				bonus = 1
 				uses = 1
 				category = recon_tech
-				name = RUS_frontline_spies
+				name = PRO_frontline_spies
 			}
 		}
 	}
 
 	focus = {
-		id = RUS_harsher_work_quotas
+		id = PRO_harsher_work_quotas
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = RUS_continue_the_war }
-		prerequisite = { focus = RUS_streamline_rifle_production }
-		mutually_exclusive = { focus = RUS_improve_working_conditions }
-		relative_position_id = RUS_streamline_rifle_production
+		prerequisite = { focus = PRO_continue_the_war }
+		prerequisite = { focus = PRO_streamline_rifle_production }
+		mutually_exclusive = { focus = PRO_improve_working_conditions }
+		relative_position_id = PRO_streamline_rifle_production
 		x = -1
 		y = 1
 		cost = 5
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.1
-			add_ideas = RUS_harsher_work_quotas_idea
+			add_ideas = PRO_harsher_work_quotas_idea
 		}
 	}
 
 	focus = {
-		id = RUS_improve_working_conditions
+		id = PRO_improve_working_conditions
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		prerequisite = { focus = RUS_streamline_rifle_production }
-		prerequisite = { focus = RUS_social_democracy focus = RUS_democratic_socialism focus = RUS_moderate_communism }
-		mutually_exclusive = { focus = RUS_harsher_work_quotas }
-		relative_position_id = RUS_streamline_rifle_production
+		prerequisite = { focus = PRO_streamline_rifle_production }
+		prerequisite = { focus = PRO_social_democracy focus = PRO_democratic_socialism focus = PRO_moderate_communism }
+		mutually_exclusive = { focus = PRO_harsher_work_quotas }
+		relative_position_id = PRO_streamline_rifle_production
 		x = 1
 		y = 1
 		cost = 10
@@ -230,27 +230,27 @@
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = 0.05
-			add_ideas = RUS_improved_working_conditions
+			add_ideas = PRO_improved_working_conditions
 		}
 	}
 
 	focus = {
-		id = RUS_rearmament_plan
+		id = PRO_rearmament_plan
 		icon = GFX_focus_secret_rearmament
-		prerequisite = { focus = RUS_propose_a_peace_treaty }
-		relative_position_id = RUS_propose_a_peace_treaty
+		prerequisite = { focus = PRO_propose_a_peace_treaty }
+		relative_position_id = PRO_propose_a_peace_treaty
 		x = 0
 		y = 2
 		cost = 10
 		ai_will_do = { factor = 1 }
-		completion_reward = { add_ideas = RUS_rearmament_plan_idea }
+		completion_reward = { add_ideas = PRO_rearmament_plan_idea }
 	}
 
 	focus = {
-		id = RUS_emulate_the_black_hundred
+		id = PRO_emulate_the_black_hundred
 		icon = GFX_focus_generic_little_entente
-		prerequisite = { focus = RUS_republican_military_propaganda }
-		relative_position_id = RUS_republican_military_propaganda
+		prerequisite = { focus = PRO_republican_military_propaganda }
+		relative_position_id = PRO_republican_military_propaganda
 		x = 0
 		y = 2
 		cost = 10
@@ -289,10 +289,10 @@
 	}
 
 	focus = {
-		id = RUS_small_arms_innovations
+		id = PRO_small_arms_innovations
 		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = RUS_harsher_work_quotas focus = RUS_improve_working_conditions }
-		relative_position_id = RUS_harsher_work_quotas
+		prerequisite = { focus = PRO_harsher_work_quotas focus = PRO_improve_working_conditions }
+		relative_position_id = PRO_harsher_work_quotas
 		x = 1
 		y = 1
 		cost = 10
@@ -302,13 +302,13 @@
 			if = {
 				limit = {
 					OR = {
-						has_idea = RUS_field_research_teams_1
-						has_idea = RUS_field_research_teams_2
+						has_idea = PRO_field_research_teams_1
+						has_idea = PRO_field_research_teams_2
 					}
 				}
 				swap_ideas = {
-					remove_idea = RUS_field_research_teams_1
-					add_idea = RUS_field_research_teams_2
+					remove_idea = PRO_field_research_teams_1
+					add_idea = PRO_field_research_teams_2
 				}
 				else = { custom_effect_tooltip = improves_field_research_tt }
 			}
@@ -316,29 +316,29 @@
 				bonus = 0.5
 				uses = 1
 				category = infantry_weapons
-				name = RUS_small_arms_innovations
+				name = PRO_small_arms_innovations
 			}
 		}
 	}
 
 	focus = {
-		id = RUS_field_research_teams
+		id = PRO_field_research_teams
 		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = RUS_harsher_work_quotas focus = RUS_improve_working_conditions }
-		relative_position_id = RUS_improve_working_conditions
+		prerequisite = { focus = PRO_harsher_work_quotas focus = PRO_improve_working_conditions }
+		relative_position_id = PRO_improve_working_conditions
 		x = 1
 		y = 1
 		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
-		completion_reward = { add_ideas = RUS_field_research_teams_1 }
+		completion_reward = { add_ideas = PRO_field_research_teams_1 }
 	}
 
 	focus = {
-		id = RUS_renovate_our_doctrine
+		id = PRO_renovate_our_doctrine
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = RUS_rearmament_plan focus = RUS_emulate_the_black_hundred }
-		relative_position_id = RUS_rearmament_plan
+		prerequisite = { focus = PRO_rearmament_plan focus = PRO_emulate_the_black_hundred }
+		relative_position_id = PRO_rearmament_plan
 		x = 1
 		y = 1
 		cost = 10
@@ -350,16 +350,16 @@
 				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
-				name = RUS_renovate_our_doctrine
+				name = PRO_renovate_our_doctrine
 			}
 		}
 	}
 
 	focus = {
-		id = RUS_truck_research
+		id = PRO_truck_research
 		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = RUS_small_arms_innovations }
-		relative_position_id = RUS_small_arms_innovations
+		prerequisite = { focus = PRO_small_arms_innovations }
+		relative_position_id = PRO_small_arms_innovations
 		x = -1
 		y = 1
 		cost = 10
@@ -371,16 +371,16 @@
 				bonus = 1
 				uses = 1
 				technology = motorised_infantry_early
-				name = RUS_truck_research
+				name = PRO_truck_research
 			}
 		}
 	}
 
 	focus = {
-		id = RUS_artillery_innovations
+		id = PRO_artillery_innovations
 		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = RUS_small_arms_innovations }
-		relative_position_id = RUS_small_arms_innovations
+		prerequisite = { focus = PRO_small_arms_innovations }
+		relative_position_id = PRO_small_arms_innovations
 		x = 1
 		y = 1
 		cost = 10
@@ -391,16 +391,16 @@
 				bonus = 0.5
 				uses = 1
 				category = artillery
-				name = RUS_artillery_innovations
+				name = PRO_artillery_innovations
 			}
 		}
 	}
 
 	focus = {
-		id = RUS_tank_research
+		id = PRO_tank_research
 		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = RUS_truck_research }
-		relative_position_id = RUS_truck_research
+		prerequisite = { focus = PRO_truck_research }
+		relative_position_id = PRO_truck_research
 		x = 0
 		y = 1
 		cost = 10
@@ -420,7 +420,7 @@
 					bonus = 1
 					uses = 1
 					technology = gwtank_chassis
-					name = RUS_tank_research
+					name = PRO_tank_research
 				}
 			}
 			else = {
@@ -428,17 +428,17 @@
 					bonus = 1
 					uses = 1
 					technology = gwtank
-					name = RUS_tank_research
+					name = PRO_tank_research
 				}
 			}
 		}
 	}
 
 	#focus = {
-	#	id = RUS_renovate_our_doctrine_2
+	#	id = PRO_renovate_our_doctrine_2
 	#	icon = GFX_goal_generic_army_doctrines
-	#	prerequisite = { focus = RUS_renovate_our_doctrine }
-	#	relative_position_id = RUS_renovate_our_doctrine
+	#	prerequisite = { focus = PRO_renovate_our_doctrine }
+	#	relative_position_id = PRO_renovate_our_doctrine
 	#	x = 0
 	#	y = 1
 	#	cost = 10
@@ -455,10 +455,10 @@
 
 	### INTERNAL ISSUES ###
 	focus = {
-		id = RUS_road_map
+		id = PRO_road_map
 		icon = GFX_goal_generic_position_armies
-		prerequisite = { focus = RUS_stabilize_the_country }
-		relative_position_id = RUS_stabilize_the_country
+		prerequisite = { focus = PRO_stabilize_the_country }
+		relative_position_id = PRO_stabilize_the_country
 		x = 4
 		y = 1
 		cost = 5
@@ -467,11 +467,11 @@
 	}
 
 	focus = {
-		id = RUS_purge_the_soviets
+		id = PRO_purge_the_soviets
 		icon = GFX_focus_SOV_the_last_purge
-		prerequisite = { focus = RUS_road_map }
-		mutually_exclusive = { focus = RUS_cooperate_with_the_soviets }
-		relative_position_id = RUS_road_map
+		prerequisite = { focus = PRO_road_map }
+		mutually_exclusive = { focus = PRO_cooperate_with_the_soviets }
+		relative_position_id = PRO_road_map
 		x = -3
 		y = 1
 		cost = 5
@@ -490,16 +490,16 @@
 				}
 				else = {
 					NOT = {
-						has_idea = RUS_petrograd_soviet_passive
-						has_idea = RUS_petrograd_soviet_domineering
-						has_idea = RUS_petrograd_soviet_weakened
+						has_idea = PRO_petrograd_soviet_passive
+						has_idea = PRO_petrograd_soviet_domineering
+						has_idea = PRO_petrograd_soviet_weakened
 					}
 				}
 			}
 		}
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			unlock_decision_category_tooltip = RUS_purge_the_soviets_category
+			unlock_decision_category_tooltip = PRO_purge_the_soviets_category
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
 				custom_effect_tooltip = decisions_in_bop_tt
@@ -509,11 +509,11 @@
 	}
 
 	focus = {
-		id = RUS_cooperate_with_the_soviets
+		id = PRO_cooperate_with_the_soviets
 		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = RUS_road_map }
-		mutually_exclusive = { focus = RUS_purge_the_soviets }
-		relative_position_id = RUS_road_map
+		prerequisite = { focus = PRO_road_map }
+		mutually_exclusive = { focus = PRO_purge_the_soviets }
+		relative_position_id = PRO_road_map
 		x = -1
 		y = 1
 		cost = 5
@@ -531,9 +531,9 @@
 				}
 				else = {
 					NOT = {
-						has_idea = RUS_petrograd_soviet_passive
-						has_idea = RUS_petrograd_soviet_domineering
-						has_idea = RUS_petrograd_soviet_weakened
+						has_idea = PRO_petrograd_soviet_passive
+						has_idea = PRO_petrograd_soviet_domineering
+						has_idea = PRO_petrograd_soviet_weakened
 					}
 				}
 			}
@@ -541,7 +541,7 @@
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			unlock_decision_category_tooltip = RUS_cooperate_with_the_soviets_category
+			unlock_decision_category_tooltip = PRO_cooperate_with_the_soviets_category
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
 				custom_effect_tooltip = decisions_in_bop_tt
@@ -551,10 +551,10 @@
 	}
 
 	focus = {
-		id = RUS_convene_the_constituent_assembly
+		id = PRO_convene_the_constituent_assembly
 		icon = GFX_focus_POL_complete_april_constitution
-		prerequisite = { focus = RUS_road_map }
-		relative_position_id = RUS_road_map
+		prerequisite = { focus = PRO_road_map }
+		relative_position_id = PRO_road_map
 		x = 1
 		y = 1
 		cost = 15
@@ -575,27 +575,27 @@
 	}
 
 	focus = {
-		id = RUS_plans_of_rebuilding
+		id = PRO_plans_of_rebuilding
 		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = RUS_road_map }
-		relative_position_id = RUS_road_map
+		prerequisite = { focus = PRO_road_map }
+		relative_position_id = PRO_road_map
 		x = 3
 		y = 1
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_to_variable = { RUS_failing_state_cs = 0.1 }
-			custom_effect_tooltip = RUS_failing_state_cs_10
+			add_to_variable = { PRO_failing_state_cs = 0.1 }
+			custom_effect_tooltip = PRO_failing_state_cs_10
 		}
 	}
 
 	focus = {
-		id = RUS_social_democracy
+		id = PRO_social_democracy
 		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = RUS_purge_the_soviets }
-		mutually_exclusive = { focus = RUS_democratic_socialism focus = RUS_moderate_communism }
-		relative_position_id = RUS_purge_the_soviets
+		prerequisite = { focus = PRO_purge_the_soviets }
+		mutually_exclusive = { focus = PRO_democratic_socialism focus = PRO_moderate_communism }
+		relative_position_id = PRO_purge_the_soviets
 		x = -1
 		y = 1
 		cost = 10
@@ -608,8 +608,8 @@
 				}
 				else = {
 					NOT = {
-						has_idea = RUS_petrograd_soviet_passive
-						has_idea = RUS_petrograd_soviet_domineering
+						has_idea = PRO_petrograd_soviet_passive
+						has_idea = PRO_petrograd_soviet_domineering
 					}
 				}
 			}
@@ -617,32 +617,32 @@
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_ideas = RUS_social_democracy_1
+			add_ideas = PRO_social_democracy_1
 			#custom_effect_tooltip = available_political_advisor
 			#show_ideas_tooltip = RUS_pavel_milyukov
 		}
 	}
 
 	focus = {
-		id = RUS_democratic_socialism
+		id = PRO_democratic_socialism
 		icon = GFX_goal_demand_sudetenland
-		prerequisite = { focus = RUS_purge_the_soviets focus = RUS_cooperate_with_the_soviets }
-		mutually_exclusive = { focus = RUS_social_democracy focus = RUS_moderate_communism }
-		relative_position_id = RUS_purge_the_soviets
+		prerequisite = { focus = PRO_purge_the_soviets focus = PRO_cooperate_with_the_soviets }
+		mutually_exclusive = { focus = PRO_social_democracy focus = PRO_moderate_communism }
+		relative_position_id = PRO_purge_the_soviets
 		x = 1
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
 		ai_will_do = { factor = 1 }
-		completion_reward = { add_ideas = RUS_democratic_socialism_1 }
+		completion_reward = { add_ideas = PRO_democratic_socialism_1 }
 	}
 
 	focus = {
-		id = RUS_moderate_communism
+		id = PRO_moderate_communism
 		icon = GFX_focus_prc_agrarian_socialism
-		prerequisite = { focus = RUS_cooperate_with_the_soviets }
-		mutually_exclusive = { focus = RUS_social_democracy focus = RUS_democratic_socialism }
-		relative_position_id = RUS_cooperate_with_the_soviets
+		prerequisite = { focus = PRO_cooperate_with_the_soviets }
+		mutually_exclusive = { focus = PRO_social_democracy focus = PRO_democratic_socialism }
+		relative_position_id = PRO_cooperate_with_the_soviets
 		x = 1
 		y = 1
 		cost = 10
@@ -663,8 +663,8 @@
 				}
 				else = {
 					OR = {
-						has_idea = RUS_petrograd_soviet_passive
-						has_idea = RUS_petrograd_soviet_domineering
+						has_idea = PRO_petrograd_soviet_passive
+						has_idea = PRO_petrograd_soviet_domineering
 					}
 				}
 			}
@@ -678,8 +678,8 @@
 				}
 				else = {
 					NOT = {
-						has_idea = RUS_petrograd_soviet_passive
-						has_idea = RUS_petrograd_soviet_domineering
+						has_idea = PRO_petrograd_soviet_passive
+						has_idea = PRO_petrograd_soviet_domineering
 					}
 				}
 			}
@@ -687,7 +687,7 @@
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_ideas = RUS_moderate_communism_1
+			add_ideas = PRO_moderate_communism_1
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = RUS_irakli_tsereteli
 			hidden_effect = {
@@ -710,10 +710,10 @@
 	}
 
 	focus = {
-		id = RUS_emergency_industry
+		id = PRO_emergency_industry
 		icon = GFX_goal_generic_production2
-		prerequisite = { focus = RUS_plans_of_rebuilding }
-		relative_position_id = RUS_plans_of_rebuilding
+		prerequisite = { focus = PRO_plans_of_rebuilding }
+		relative_position_id = PRO_plans_of_rebuilding
 		x = 0
 		y = 1
 		cost = 5
@@ -721,24 +721,24 @@
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_timed_idea = {
-				idea = RUS_emergency_industry_temp
+				idea = PRO_emergency_industry_temp
 				days = 90
 			}
 		}
 	}
 
 	focus = {
-		id = RUS_preserve_church_power
+		id = PRO_preserve_church_power
 		icon = GFX_focus_SOV_patriarch_of_all_russia
-		prerequisite = { focus = RUS_social_democracy focus = RUS_democratic_socialism }
-		mutually_exclusive = { focus = RUS_full_secularization }
-		relative_position_id = RUS_democratic_socialism
+		prerequisite = { focus = PRO_social_democracy focus = PRO_democratic_socialism }
+		mutually_exclusive = { focus = PRO_full_secularization }
+		relative_position_id = PRO_democratic_socialism
 		x = -1
 		y = 1
 		cost = 10
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_ideas = RUS_approved_by_church
+			add_ideas = PRO_approved_by_church
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = RUS_patriarch_sergy
 			#show_ideas_tooltip = RUS_metropolitan_meletius
@@ -749,27 +749,27 @@
 	}
 
 	focus = {
-		id = RUS_full_secularization
+		id = PRO_full_secularization
 		icon = GFX_focus_mex_triumph_over_the_cristeros
-		prerequisite = { focus = RUS_democratic_socialism focus = RUS_moderate_communism }
-		mutually_exclusive = { focus = RUS_preserve_church_power }
-		relative_position_id = RUS_democratic_socialism
+		prerequisite = { focus = PRO_democratic_socialism focus = PRO_moderate_communism }
+		mutually_exclusive = { focus = PRO_preserve_church_power }
+		relative_position_id = PRO_democratic_socialism
 		x = 1
 		y = 1
 		cost = 10
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.05
-			add_ideas = RUS_full_secularization_idea
+			add_ideas = PRO_full_secularization_idea
 		}
 	}
 
 	focus = {
-		id = RUS_set_the_course
+		id = PRO_set_the_course
 		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = RUS_convene_the_constituent_assembly }
-		prerequisite = { focus = RUS_social_democracy focus = RUS_democratic_socialism focus = RUS_moderate_communism }
-		relative_position_id = RUS_convene_the_constituent_assembly
+		prerequisite = { focus = PRO_convene_the_constituent_assembly }
+		prerequisite = { focus = PRO_social_democracy focus = PRO_democratic_socialism focus = PRO_moderate_communism }
+		relative_position_id = PRO_convene_the_constituent_assembly
 		x = 0
 		y = 2
 		cost = 10
@@ -777,24 +777,24 @@
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
-				limit = { has_idea = RUS_social_democracy_1 }
+				limit = { has_idea = PRO_social_democracy_1 }
 				swap_ideas = {
-					remove_idea = RUS_social_democracy_1
-					add_idea = RUS_social_democracy_2
+					remove_idea = PRO_social_democracy_1
+					add_idea = PRO_social_democracy_2
 				}
 			}
 			else_if = {
-				limit = { has_idea = RUS_democratic_socialism_1 }
+				limit = { has_idea = PRO_democratic_socialism_1 }
 				swap_ideas = {
-					remove_idea = RUS_democratic_socialism_1
-					add_idea = RUS_democratic_socialism_2
+					remove_idea = PRO_democratic_socialism_1
+					add_idea = PRO_democratic_socialism_2
 				}
 			}
 			else_if = {
-				limit = { has_idea = RUS_moderate_communism_1 }
+				limit = { has_idea = PRO_moderate_communism_1 }
 				swap_ideas = {
-					remove_idea = RUS_moderate_communism_1
-					add_idea = RUS_moderate_communism_2
+					remove_idea = PRO_moderate_communism_1
+					add_idea = PRO_moderate_communism_2
 				}
 			}
 			else = { custom_effect_tooltip = setting_the_course_tt }
@@ -802,37 +802,37 @@
 	}
 
 	focus = {
-		id = RUS_grand_infrastructure_projects
+		id = PRO_grand_infrastructure_projects
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = RUS_emergency_industry }
-		relative_position_id = RUS_emergency_industry
+		prerequisite = { focus = PRO_emergency_industry }
+		relative_position_id = PRO_emergency_industry
 		x = 0
 		y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 1 }
-		completion_reward = { add_ideas = RUS_infrastructure_networks }
+		completion_reward = { add_ideas = PRO_infrastructure_networks }
 	}
 
 	focus = {
-		id = RUS_republican_literature
+		id = PRO_republican_literature
 		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = RUS_preserve_church_power focus = RUS_full_secularization }
-		relative_position_id = RUS_preserve_church_power
+		prerequisite = { focus = PRO_preserve_church_power focus = PRO_full_secularization }
+		relative_position_id = PRO_preserve_church_power
 		x = 1
 		y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_PROPAGANDA }
-		completion_reward = { add_ideas = RUS_republican_literature_idea }
+		completion_reward = { add_ideas = PRO_republican_literature_idea }
 	}
 
 	focus = {
-		id = RUS_russias_bright_future
+		id = PRO_russias_bright_future
 		icon = GFX_focus_generic_population_growth
-		prerequisite = { focus = RUS_set_the_course }
-		prerequisite = { focus = RUS_preserve_church_power focus = RUS_full_secularization }
-		#prerequisite = { focus = RUS_grand_infrastructure_projects }
-		relative_position_id = RUS_set_the_course
+		prerequisite = { focus = PRO_set_the_course }
+		prerequisite = { focus = PRO_preserve_church_power focus = PRO_full_secularization }
+		#prerequisite = { focus = PRO_grand_infrastructure_projects }
+		relative_position_id = PRO_set_the_course
 		x = -1
 		y = 1
 		cost = 10
@@ -853,9 +853,9 @@
 				}
 				else = {
 					NOT = {
-						has_idea = RUS_petrograd_soviet_passive
-						has_idea = RUS_petrograd_soviet_domineering
-						has_idea = RUS_petrograd_soviet_weakened
+						has_idea = PRO_petrograd_soviet_passive
+						has_idea = PRO_petrograd_soviet_domineering
+						has_idea = PRO_petrograd_soviet_weakened
 					}
 				}
 			}
@@ -865,66 +865,66 @@
 	}
 
 	focus = {
-		id = RUS_connect_the_industries
+		id = PRO_connect_the_industries
 		icon = GFX_focus_generic_industry_2
-		prerequisite = { focus = RUS_grand_infrastructure_projects }
-		relative_position_id = RUS_grand_infrastructure_projects
+		prerequisite = { focus = PRO_grand_infrastructure_projects }
+		relative_position_id = PRO_grand_infrastructure_projects
 		x = -1
 		y = 1
 		cost = 8
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_to_variable = { RUS_failing_state_fo = 0.10 }
-			add_to_variable = { RUS_failing_state_do = 0.05 }
-			custom_effect_tooltip = RUS_failing_state_fo_10_do_5
+			add_to_variable = { PRO_failing_state_fo = 0.10 }
+			add_to_variable = { PRO_failing_state_do = 0.05 }
+			custom_effect_tooltip = PRO_failing_state_fo_10_do_5
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
 				category = concentrated_industry_category
-				name = RUS_connect_the_industries
+				name = PRO_connect_the_industries
 			}
 		}
 	}
 
 	focus = {
-		id = RUS_reorganize_supply_lines
+		id = PRO_reorganize_supply_lines
 		icon = GFX_focus_SOV_the_road_of_life
-		prerequisite = { focus = RUS_emergency_industry }
-		relative_position_id = RUS_emergency_industry
+		prerequisite = { focus = PRO_emergency_industry }
+		relative_position_id = PRO_emergency_industry
 		x = 1
 		y = 2
 		cost = 8
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_to_variable = { RUS_failing_state_se = 0.15 }
-			custom_effect_tooltip = RUS_failing_state_se_15
+			add_to_variable = { PRO_failing_state_se = 0.15 }
+			custom_effect_tooltip = PRO_failing_state_se_15
 		}
 	}
 
 	focus = {
-		id = RUS_rethink_the_production_process
+		id = PRO_rethink_the_production_process
 		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = RUS_set_the_course }
-		prerequisite = { focus = RUS_connect_the_industries }
-		relative_position_id = RUS_set_the_course
+		prerequisite = { focus = PRO_set_the_course }
+		prerequisite = { focus = PRO_connect_the_industries }
+		relative_position_id = PRO_set_the_course
 		x = 0
 		y = 2
 		cost = 8
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			subtract_from_variable = { RUS_failing_state_cg = 0.05 }
-			add_to_variable = { RUS_failing_state_fo = 0.05 }
-			add_to_variable = { RUS_failing_state_do = 0.05 }
-			custom_effect_tooltip = RUS_failing_state_cg_n5_fo_5_do_5
+			subtract_from_variable = { PRO_failing_state_cg = 0.05 }
+			add_to_variable = { PRO_failing_state_fo = 0.05 }
+			add_to_variable = { PRO_failing_state_do = 0.05 }
+			custom_effect_tooltip = PRO_failing_state_cg_n5_fo_5_do_5
 		}
 	}
 
 	focus = {
-		id = RUS_autonomy_for_poland
+		id = PRO_autonomy_for_poland
 		icon = GFX_focus_generic_polish_deal
-		prerequisite = { focus = RUS_russias_bright_future }
-		relative_position_id = RUS_russias_bright_future
+		prerequisite = { focus = PRO_russias_bright_future }
+		relative_position_id = PRO_russias_bright_future
 		x = 0
 		y = 2
 		cost = 10
@@ -935,7 +935,7 @@
 
 	### AFTER THE BREST-LITOVSK ###
 	focus = {
-		id = RUS_restoration
+		id = PRO_restoration
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 14
 		y = 0
@@ -947,10 +947,10 @@
 	}
 
 	focus = {
-		id = RUS_reclaim_southwest
+		id = PRO_reclaim_southwest
 		icon = GFX_focus_POL_ukrainian_army
-		prerequisite = { focus = RUS_restoration }
-		relative_position_id = RUS_restoration
+		prerequisite = { focus = PRO_restoration }
+		relative_position_id = PRO_restoration
 		x = -2
 		y = 1
 		cost = 10
@@ -969,10 +969,10 @@
 	}
 
 	focus = {
-		id = RUS_reclaim_northwest
+		id = PRO_reclaim_northwest
 		icon = GFX_focus_SOV_baltic_security
-		prerequisite = { focus = RUS_restoration }
-		relative_position_id = RUS_restoration
+		prerequisite = { focus = PRO_restoration }
+		relative_position_id = PRO_restoration
 		x = 0
 		y = 1
 		cost = 10
@@ -990,10 +990,10 @@
 	}
 
 	focus = {
-		id = RUS_reclaim_caucasus
+		id = PRO_reclaim_caucasus
 		icon = GFX_focus_GRE_a_land_of_mountains
-		prerequisite = { focus = RUS_restoration }
-		relative_position_id = RUS_restoration
+		prerequisite = { focus = PRO_restoration }
+		relative_position_id = PRO_restoration
 		x = 2
 		y = 1
 		cost = 10
@@ -1016,10 +1016,10 @@
 	}
 
 	focus = {
-		id = RUS_reclaim_poland
+		id = PRO_reclaim_poland
 		icon = GFX_focus_generic_polish_deal
-		prerequisite = { focus = RUS_reclaim_southwest }
-		relative_position_id = RUS_reclaim_southwest
+		prerequisite = { focus = PRO_reclaim_southwest }
+		relative_position_id = PRO_reclaim_southwest
 		x = 0
 		y = 1
 		cost = 10
@@ -1034,10 +1034,10 @@
 	}
 
 	focus = {
-		id = RUS_reclaim_east
+		id = PRO_reclaim_east
 		icon = GFX_focus_RAJ_lions_of_the_great_war
-		prerequisite = { focus = RUS_reclaim_caucasus }
-		relative_position_id = RUS_reclaim_caucasus
+		prerequisite = { focus = PRO_reclaim_caucasus }
+		relative_position_id = PRO_reclaim_caucasus
 		x = 0
 		y = 1
 		cost = 10

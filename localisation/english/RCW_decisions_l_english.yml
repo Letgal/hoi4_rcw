@@ -1,10 +1,10 @@
 ﻿l_english:
  RUS_kornilov_putsch_mission:0 "Kornilov's Putsch"
 
- RUS_purge_the_soviets_category:2 "Purging the Soviets"
- RUS_cooperate_with_the_soviets_category:0 "Cooperation with the Soviets"
- RUS_balance_of_power_category:0 "[ROOT.GetBopDecisionCatName]"
- RUS_balance_of_power_category_desc:0 "The Provisional Government's rule was established in no small part thanks to "help" from the Petrograd Soviet. However, the Soviet demanded representation in the government in exchange. Having no other choice, we had to accept. Ever since then, the Soviet has been trying to destabilize our administration and woo our supporters to their side.\nThis creates a very dangerous situation. If the Soviets get enough power, they will swiftly overthrow the Provisional Government."
+ PRO_purge_the_soviets_category:2 "Purging the Soviets"
+ PRO_cooperate_with_the_soviets_category:0 "Cooperation with the Soviets"
+ PRO_balance_of_power_category:0 "[ROOT.GetBopDecisionCatName]"
+ PRO_balance_of_power_category_desc:0 "The Provisional Government's rule was established in no small part thanks to "help" from the Petrograd Soviet. However, the Soviet demanded representation in the government in exchange. Having no other choice, we had to accept. Ever since then, the Soviet has been trying to destabilize our administration and woo our supporters to their side.\nThis creates a very dangerous situation. If the Soviets get enough power, they will swiftly overthrow the Provisional Government."
  # Shared
  RUS_limit_the_soviets_influence:0 "Limit the Soviet's Influence"
  # Purge
@@ -23,10 +23,10 @@
 
  # BBA Workaround
  RUS_kornilov_putsch_mission_bba:0 "$RUS_kornilov_putsch_mission$"
- RUS_purge_the_soviets_category_bba:0 "$RUS_purge_the_soviets_category$"
- RUS_cooperate_with_the_soviets_category_bba:0 "$RUS_cooperate_with_the_soviets_category$"
- RUS_balance_of_power_category_bba:0 "$RUS_balance_of_power_category$"
- RUS_balance_of_power_category_desc_bba:0 "$RUS_balance_of_power_category_desc$"
+ PRO_purge_the_soviets_category_bba:0 "$PRO_purge_the_soviets_category$"
+ PRO_cooperate_with_the_soviets_category_bba:0 "$PRO_cooperate_with_the_soviets_category$"
+ PRO_balance_of_power_category_bba:0 "$PRO_balance_of_power_category$"
+ PRO_balance_of_power_category_desc_bba:0 "$PRO_balance_of_power_category_desc$"
  RUS_limit_the_soviets_influence_bba:0 "$RUS_limit_the_soviets_influence$"
  RUS_abolish_the_soviet_bba:0 "$RUS_abolish_the_soviet$"
  RUS_abolish_the_soviet_desc_bba:0 "$RUS_abolish_the_soviet_desc$"
@@ -38,6 +38,17 @@
  RUS_deepen_the_rsdlp_divide_desc_bba:0 "$RUS_deepen_the_rsdlp_divide_desc$"
  RUS_dissolve_the_soviet_bba:0 "$RUS_dissolve_the_soviet$"
  RUS_dissolve_the_soviet_desc_bba:0 "$RUS_dissolve_the_soviet_desc$"
+
+ ### WHITE RUSSIA ###
+ # Factionalism
+  WHI_power_struggle:0 "Power Struggle in the White Movement"
+  WHI_power_struggle_desc:0 "$WHI_factionalism_desc$"
+
+ ### THE ROYAL FAMILY ###
+ RCW_royal_family_category:0 "The Royal Family"
+ RCW_royal_family_category_desc: "\n\nRoyal family's current location: §H[?global.tsars_location.GetName]§!"
+ RCW_evacuate_the_royal_family:0 "Evacuate the Royal Family"
+ RCW_assassinate_the_royal_family:0 "Assassinate the Royal Family"
 
  ### PEACE NEGOTIATIONS ###
  #RCW_peace_treaty_category:0 "Peace Treaty with [SOV.GetNonIdeologyName]"

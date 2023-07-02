@@ -6,9 +6,9 @@ set_major = yes
 
 set_research_slots = 3
 
-add_dynamic_modifier = { modifier = RUS_war_weariness }
-set_variable = { RUS_war_weariness_ws = -0.5 }
-set_variable = { RUS_war_weariness_pc = 0.003 }
+add_dynamic_modifier = { modifier = war_weariness }
+set_variable = { war_weariness_ws = -0.5 }
+set_variable = { war_weariness_pc = 0.003 }
 
 set_technology = {
 	infantry_weapons = 1

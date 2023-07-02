@@ -2,7 +2,7 @@ RUS_provisional_bop = {
 	initial_value = 0
 	left_side = RUS_soviet_side	
 	right_side = RUS_government_side	
-	decision_category = RUS_balance_of_power_category_bba
+	decision_category = PRO_balance_of_power_category_bba
 
 	### Neutral status
 	range = {

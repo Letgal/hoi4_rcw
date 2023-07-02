@@ -33,7 +33,7 @@
 		ai_will_do = { factor = 2 }
 		completion_reward = {
 			add_timed_idea = {
-				idea = RUS_improved_supply_temp
+				idea = PRO_improved_supply_temp
 				days = 60
 			}
 		}
@@ -53,8 +53,8 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		ai_will_do = { factor = 2 }
 		completion_reward = {
-			add_to_variable = { RUS_war_weariness_ws = 0.05 }
-			custom_effect_tooltip = RUS_war_weariness_ws_5
+			add_to_variable = { war_weariness_ws = 0.05 }
+			custom_effect_tooltip = war_weariness_ws_5
 			GER = {
 				country_event = {
 					id = RCW_treaty.1
@@ -82,8 +82,8 @@
 				ideology = ROOT
 				popularity = -0.1
 			}
-			add_to_variable = { RUS_war_weariness_ws = 0.05 }
-			custom_effect_tooltip = RUS_war_weariness_ws_5
+			add_to_variable = { war_weariness_ws = 0.05 }
+			custom_effect_tooltip = war_weariness_ws_5
 			custom_effect_tooltip = unpopular_option_tt
 		}
 	}
@@ -123,8 +123,8 @@
 		bypass_if_unavailable = yes
 		search_filters = { FOCUS_FILTER_PROPAGANDA FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-			add_to_variable = { RUS_war_weariness_ws = 0.1 }
-			custom_effect_tooltip = RUS_war_weariness_ws_10
+			add_to_variable = { war_weariness_ws = 0.1 }
+			custom_effect_tooltip = war_weariness_ws_10
 		}
 	}
 
@@ -170,6 +170,11 @@
 		x = -2
 		y = 1
 		cost = 5
+		available = {
+			RUS = {
+				NOT = { has_completed_focus = PRO_purge_the_soviets }
+			}
+		}
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		ai_will_do = { factor = 1 }
 	}
@@ -183,6 +188,11 @@
 		x = 0
 		y = 1
 		cost = 5
+		available = {
+			RUS = {
+				NOT = { has_completed_focus = PRO_cooperate_with_the_soviets }
+			}
+		}
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 		ai_will_do = { factor = 1 }
 	}
@@ -198,8 +208,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_to_variable = { RUS_failing_state_cs = 0.1 }
-			custom_effect_tooltip = RUS_failing_state_cs_10
+			add_to_variable = { PRO_failing_state_cs = 0.1 }
+			custom_effect_tooltip = PRO_failing_state_cs_10
 		}
 	}
 
@@ -261,7 +271,7 @@
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_timed_idea = {
-				idea = RUS_emergency_industry_temp
+				idea = PRO_emergency_industry_temp
 				days = 60
 			}
 		}
@@ -280,7 +290,7 @@
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_stability = -0.1
-			add_ideas = RUS_harsher_work_quotas_idea
+			add_ideas = PRO_harsher_work_quotas_idea
 		}
 	}
 
@@ -335,7 +345,7 @@
 		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		ai_will_do = { factor = 1 }
-		completion_reward = { add_ideas = RUS_field_research_teams_1 }
+		completion_reward = { add_ideas = PRO_field_research_teams_1 }
 	}
 
 	focus = {
@@ -350,10 +360,10 @@
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			if = {
-				limit = { has_idea = RUS_field_research_teams_1 }
+				limit = { has_idea = PRO_field_research_teams_1 }
 				swap_ideas = {
-					remove_idea = RUS_field_research_teams_1
-					add_idea = RUS_field_research_teams_2
+					remove_idea = PRO_field_research_teams_1
+					add_idea = PRO_field_research_teams_2
 				}
 				else = { custom_effect_tooltip = improves_field_research_tt }
 			}
@@ -367,7 +377,7 @@
 	}
 
 	focus = {
-		id = SOV_revoltion_triumphant
+		id = SOV_revolution_triumphant
 		icon = GFX_focus_generic_population_growth
 		prerequisite = { focus = SOV_abolish_the_church }
 		prerequisite = { focus = SOV_grand_infrastructure_projects }

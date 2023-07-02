@@ -38,6 +38,9 @@ set_popularities = {
 	}
 }
 
+recruit_character = POL_provisional_council
+recruit_character = POL_sejmik_regency
+
 recruit_character = POL_ignacy_moscicki
 recruit_character = POL_wladyslaw_sikorski
 recruit_character = POL_boleslaw_wieniawa_glugoszowski
@@ -106,12 +109,7 @@ if = {
 	recruit_character = POL_tadeusz_bielecki
 	recruit_character = POL_joachim_stefan_bartoszewicz
 	recruit_character = POL_stanislaw_wojciechowski
+	recruit_character = POL_henryk_floyar_rajchman
 }
 
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	recruit_character = POL_henryk_floyar_rajchman
-	recruit_character = POL_sejmik_regency
-}
+1917.9.1 = { retire_character = POL_provisional_council }

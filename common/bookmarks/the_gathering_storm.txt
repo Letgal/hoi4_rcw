@@ -13,13 +13,13 @@ bookmarks = {
 			available = { has_dlc = "By Blood Alone" } 
 			ideas = {
 				provisional_government_idea
-				RUS_bop_dummy
-				RUS_failing_state_dummy
+				PRO_bop_dummy
+				PRO_failing_state_dummy
 			}
 			focuses = {
-				RUS_address_the_war
-				RUS_convene_the_constituent_assembly
-				RUS_russias_bright_future
+				PRO_address_the_war
+				PRO_convene_the_constituent_assembly
+				PRO_russias_bright_future
 			}
 		}
 		"RUS"={
@@ -28,13 +28,13 @@ bookmarks = {
 			available = { NOT = { has_dlc = "By Blood Alone" } } 
 			ideas = {
 				provisional_government_idea
-				RUS_petrograd_soviet_passive
-				RUS_failing_state_dummy
+				PRO_petrograd_soviet_passive
+				PRO_failing_state_dummy
 			}
 			focuses = {
-				RUS_address_the_war
-				RUS_convene_the_constituent_assembly
-				RUS_russias_bright_future
+				PRO_address_the_war
+				PRO_convene_the_constituent_assembly
+				PRO_russias_bright_future
 			}
 		}
 	}

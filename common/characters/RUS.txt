@@ -57,7 +57,7 @@ characters = {
 				}
 				is_country_leader = no
 				has_government = democratic
-				has_completed_focus = RUS_moderate_communism
+				has_completed_focus = PRO_moderate_communism
 				#NOT = { has_character_flag = RUS_exiled_flag }
 			}
 			traits = { patriotic_socialist }
@@ -110,7 +110,7 @@ characters = {
 			available = {
 				has_government = democratic
 				NOT = {
-					has_completed_focus = RUS_moderate_communism
+					has_completed_focus = PRO_moderate_communism
 					#has_character_flag = RUS_exiled_flag
 				}
 			}
@@ -132,7 +132,7 @@ characters = {
 			available = {
 				has_government = democratic
 				NOT = {
-					has_completed_focus = RUS_moderate_communism
+					has_completed_focus = PRO_moderate_communism
 					#has_character_flag = RUS_exiled_flag
 				}
 			}
@@ -152,7 +152,7 @@ characters = {
 			available = {
 				has_government = democratic
 				NOT = {
-					has_completed_focus = RUS_moderate_communism
+					has_completed_focus = PRO_moderate_communism
 					#has_character_flag = RUS_exiled_flag
 				}
 			}
@@ -169,8 +169,8 @@ characters = {
 			slot = political_advisor
 			idea_token = RUS_patriarch_sergy
 			allowed = { original_tag = RUS }
-			visible = { has_completed_focus = RUS_preserve_church_power }
-			available = { has_completed_focus = RUS_preserve_church_power }
+			visible = { has_completed_focus = PRO_preserve_church_power }
+			available = { has_completed_focus = PRO_preserve_church_power }
 			traits = { patriarch_of_moscow_and_all_russia }
 		}
 	}
@@ -194,8 +194,8 @@ characters = {
 			slot = political_advisor
 			idea_token = RUS_patriarch_meletius
 			#allowed = { original_tag = RUS }
-			visible = { has_completed_focus = RUS_preserve_church_power }
-			available = { has_completed_focus = RUS_preserve_church_power }
+			visible = { has_completed_focus = PRO_preserve_church_power }
+			available = { has_completed_focus = PRO_preserve_church_power }
 			traits = { the_masses_opium }
 		}
 	}
@@ -209,8 +209,8 @@ characters = {
 			slot = political_advisor
 			idea_token = RUS_metropolitan_anastasy
 			#allowed = { original_tag = RUS }
-			visible = { has_completed_focus = RUS_preserve_church_power }
-			available = { has_completed_focus = RUS_preserve_church_power }
+			visible = { has_completed_focus = PRO_preserve_church_power }
+			available = { has_completed_focus = PRO_preserve_church_power }
 			traits = { orthodox_rabblerouser }
 		}
 	}
@@ -224,8 +224,8 @@ characters = {
 			slot = political_advisor
 			idea_token = RUS_metropolitan_nikolay
 			#allowed = { original_tag = RUS }
-			visible = { has_completed_focus = RUS_preserve_church_power }
-			available = { has_completed_focus = RUS_preserve_church_power }
+			visible = { has_completed_focus = PRO_preserve_church_power }
+			available = { has_completed_focus = PRO_preserve_church_power }
 			traits = { theocratic_diplomat }
 		}
 	}
@@ -239,8 +239,8 @@ characters = {
 			slot = political_advisor
 			idea_token = RUS_metropolitan_aleksy
 			#allowed = { original_tag = RUS }
-			visible = { has_completed_focus = RUS_preserve_church_power }
-			available = { has_completed_focus = RUS_preserve_church_power }
+			visible = { has_completed_focus = PRO_preserve_church_power }
+			available = { has_completed_focus = PRO_preserve_church_power }
 			traits = { driver_of_the_faithful }
 		}
 	}

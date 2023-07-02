@@ -37,7 +37,7 @@
  unlock_hundreds_and_give_one_tt:1 "Unlocks the §CBlue-Hundredists§! and creates §Yone§! unit in §H[ROOT.Capital.GetCapitalVictoryPointName]§!."
  #continuation_boost_tt:0 "§TCompletion time will be halved if the §HContinue the War§! focus is completed.§!"
  will_lose_territory_tt:0 "§RThe Central Powers will sign a treaty only if you agree to give up some of your territory!§!"
- improves_field_research_tt:2 "Modify §H$RUS_field_research_teams_1$§!, if one has it, by\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+2.50%§!\n\n"
+ improves_field_research_tt:2 "Modify §H$PRO_field_research_teams_1$§!, if one has it, by\n$MODIFIER_RESEARCH_SPEED_FACTOR$: §G+2.50%§!\n\n"
  decisions_in_bop_tt:2 "§T(Those can be found in your §HBalance of Power§!)§!"
  can_destabilize_the_country_tt:1 "§RPurging the communists can destabilize the country if they are not weakened!§!"
  can_lead_to_a_coup_tt:1 "§RCooperation with the communists can lead to a coup if they are not weakened!§!"
@@ -45,14 +45,18 @@
  if_drafting_failed:2 "§HEffect if the focus ends before the Constitution is drafted:§!"
  mensheviks_are_amicable:4 "The Mensheviks are at least $menshevik_attitude_amicable$ (they are [GetMenshevikOpinionRange] as of now)"
  rsdlp_divide_is_3:0 "RSDLP Divide is at least §Y3§! (currently [?rsdlp_divide|0Y])"
- setting_the_course_tt:1 "Improves the idea one gets by completing either §H$RUS_social_democracy$§!, §H$RUS_democratic_socialism$§! or §H$RUS_moderate_communism$§!." # by\n$MODIFIER_DRIFT_DEFENCE_FACTOR$: §G+30.0%§!\n$democratic_drift$: §G+0.02§!
+ setting_the_course_tt:1 "Improves the idea one gets by completing either §H$PRO_social_democracy$§!, §H$PRO_democratic_socialism$§! or §H$PRO_moderate_communism$§!." # by\n$MODIFIER_DRIFT_DEFENCE_FACTOR$: §G+30.0%§!\n$democratic_drift$: §G+0.02§!
 
  # Decisions: Power Struggle
  menshevik_attitude_improve:1 "Menshevik Attitude: §G+1§! (currently $LEFT|0Y$: [GetMenshevikOpinionRange])"
  rsdlp_divide_plus_1:0 "RSDLP Divide: §G+1§! (currently $LEFT|0Y$)"
  mensheviks_are_cooperative:4 "The Mensheviks are $menshevik_attitude_cooperative$ (they are [GetMenshevikOpinionRange] as of now)"
  rsdlp_divide_is_6:1 "RSDLP Divide is at least §Y6§! (currently [?rsdlp_divide|0Y])"
- RUS_petrograd_soviet_crippled:0 "The §YPetrograd Soviet§! is neither §YPassive§! nor §YDomineering§!"
+ PRO_petrograd_soviet_crippled:0 "The §YPetrograd Soviet§! is neither §YPassive§! nor §YDomineering§!"
+
+ # Decisions: The Royal Family
+ tsar_is_evacuating:0 "The Royal Family is evacuating"
+ move_the_tsar_tt:0 "The Royal Family is moved into the §H[FROM.GetName] Oblast§!."
 
  # Decisions: Peace Treaty Negotiations (GER only)
  is_sending_demands:0 "Is Sending Demands"
@@ -72,15 +76,15 @@
  menshevik_attitude_indifferent:0 "§gIndifferent§!"
 
  ### MODIFIERS FOR "A FAILING STATE" ###
- RUS_failing_state_pre:0 "Modify §H$RUS_failing_state$§! by"
- RUS_failing_state_cs_10:0 "$RUS_failing_state_pre$\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+10.00%§!"
- RUS_failing_state_fo_10_do_5:0 "$RUS_failing_state_pre$\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+10.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+5.00%§!"
- RUS_failing_state_se_15:0 "$RUS_failing_state_pre$\n$MODIFIER_SUPPLY_FACTOR$: §G+15.00%§!"
- RUS_failing_state_cg_n5_fo_5_do_5:0 "$RUS_failing_state_pre$\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-5.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+5.00%§!"
+ PRO_failing_state_pre:0 "Modify §H$PRO_failing_state$§! by"
+ PRO_failing_state_cs_10:0 "$PRO_failing_state_pre$\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+10.00%§!"
+ PRO_failing_state_fo_10_do_5:0 "$PRO_failing_state_pre$\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+10.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+5.00%§!"
+ PRO_failing_state_se_15:0 "$PRO_failing_state_pre$\n$MODIFIER_SUPPLY_FACTOR$: §G+15.00%§!"
+ PRO_failing_state_cg_n5_fo_5_do_5:0 "$PRO_failing_state_pre$\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y-5.0%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: §G+5.00%§!\n$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: §G+5.00%§!"
 
  ### MODIFIERS FOR "WAR WEARINESS" ###
- RUS_war_weariness_pc_tt:2 "(Passive Change: [?RUS_war_weariness_pc|+=%]/week)"
- RUS_war_weariness_pre:0 "Modify §H$RUS_war_weariness$§! by"
- RUS_war_weariness_ws_5:0 "$RUS_war_weariness_pre$\n$MODIFIER_WAR_SUPPORT_FACTOR$: §G+5.00%§!"
- RUS_war_weariness_ws_10:0 "$RUS_war_weariness_pre$\n$MODIFIER_WAR_SUPPORT_FACTOR$: §G+10.00%§!"
- RUS_war_weariness_ws_15:0 "$RUS_war_weariness_pre$\n$MODIFIER_WAR_SUPPORT_FACTOR$: §G+15.00%§!"
+ war_weariness_pc_tt:2 "(Passive Change: [?war_weariness_pc|+=%]/week)"
+ war_weariness_pre:0 "Modify §H$war_weariness$§! by"
+ war_weariness_ws_5:0 "$war_weariness_pre$\n$MODIFIER_WAR_SUPPORT_FACTOR$: §G+5.00%§!"
+ war_weariness_ws_10:0 "$war_weariness_pre$\n$MODIFIER_WAR_SUPPORT_FACTOR$: §G+10.00%§!"
+ war_weariness_ws_15:0 "$war_weariness_pre$\n$MODIFIER_WAR_SUPPORT_FACTOR$: §G+15.00%§!"

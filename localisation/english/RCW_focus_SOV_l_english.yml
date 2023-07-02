@@ -15,6 +15,9 @@
  SOV_frontline_spies:0 "Frontline Spies"
  # Research
  SOV_field_research_teams:0 "Field Research Teams"
+ SOV_small_arms_innovations:0 "Small Arms Innovations"
+ SOV_truck_research:0 "Truck Research"
+ SOV_artillery_innovations:0 "Artillery Innovations"
 
  ### INTERNAL ISSUES ###
  SOV_road_map:0 "Road Map"
@@ -23,10 +26,16 @@
  # Pro-Menshevik Branch
  SOV_cooperate_with_the_mensheviks:0 "Cooperate with the Mensheviks"
  # Industry
- SOV_rebuilding_plans:0 "Rebuilding Plans"
+ SOV_plans_of_rebuilding:1 "Plans of Rebuilding"
+ SOV_emergency_industry:0 "Emergency Industry"
+ SOV_grand_infrastructure_projects:1 "Grand Infrastructure Projects"
 
  ### SOVIET SUCCESS ###
  SOV_marxism_leninism:0 "Marxism–Leninism"
+ SOV_military_communism:0 "Military Communism"
+ SOV_organize_the_trade_unions:0 "Organize the Trade Unions"
+ SOV_abolish_the_church:0 "Abolish the Church"
+ SOV_revolution_triumphant:0 "Revolution Triumphant"
 
  ### SOVIET SPHERE ###
  SOV_comintern:0 "The Comintern"

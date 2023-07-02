@@ -1,8 +1,8 @@
 # BBA
-RUS_balance_of_power_category_bba = {
+PRO_balance_of_power_category_bba = {
 	RUS_hire_soviet_commanders_bba = {
 		icon = generic_army_support
-		visible = { has_completed_focus = RUS_cooperate_with_the_soviets }
+		visible = { has_completed_focus = PRO_cooperate_with_the_soviets }
 		fire_only_once = yes
 		complete_effect = {
 			add_popularity = {
@@ -40,7 +40,7 @@ RUS_balance_of_power_category_bba = {
 	RUS_sway_the_mensheviks_bba = {
 		icon = generic_political_discourse
 		visible = {
-			has_completed_focus = RUS_cooperate_with_the_soviets
+			has_completed_focus = PRO_cooperate_with_the_soviets
 			check_variable = { menshevik_attitude < 10 }
 		}
 		cost = 20
@@ -63,11 +63,11 @@ RUS_balance_of_power_category_bba = {
 	RUS_dissolve_the_soviet_bba = {
 		priority = -1
 		icon = generic_break_treaty
-		visible = { has_completed_focus = RUS_cooperate_with_the_soviets }
+		visible = { has_completed_focus = PRO_cooperate_with_the_soviets }
 		available = {
 			OR = {
 				AND = {
-					has_completed_focus = RUS_moderate_communism
+					has_completed_focus = PRO_moderate_communism
 					power_balance_value = {
 						id = RUS_provisional_bop
 						value > 0.75
@@ -100,10 +100,10 @@ RUS_balance_of_power_category_bba = {
 }
 
 # No BBA
-RUS_balance_of_power_category = {
+PRO_balance_of_power_category = {
 	RUS_hire_soviet_commanders = {
 		icon = generic_army_support
-		visible = { has_completed_focus = RUS_cooperate_with_the_soviets }
+		visible = { has_completed_focus = PRO_cooperate_with_the_soviets }
 		fire_only_once = yes
 		complete_effect = {
 			add_popularity = {
@@ -111,17 +111,17 @@ RUS_balance_of_power_category = {
 				popularity = 0.1
 			}
 			if = {
-				limit = { has_idea = RUS_petrograd_soviet_passive }
+				limit = { has_idea = PRO_petrograd_soviet_passive }
 				swap_ideas = {
-					add_idea = RUS_petrograd_soviet_domineering
-					remove_idea = RUS_petrograd_soviet_passive
+					add_idea = PRO_petrograd_soviet_domineering
+					remove_idea = PRO_petrograd_soviet_passive
 				}
 			}
 			if = {
-				limit = { has_idea = RUS_petrograd_soviet_weakened }
+				limit = { has_idea = PRO_petrograd_soviet_weakened }
 				swap_ideas = {
-					add_idea = RUS_petrograd_soviet_domineering
-					remove_idea = RUS_petrograd_soviet_weakened
+					add_idea = PRO_petrograd_soviet_domineering
+					remove_idea = PRO_petrograd_soviet_weakened
 				}
 			}
 			add_corps_commander_role = {
@@ -151,7 +151,7 @@ RUS_balance_of_power_category = {
 	RUS_sway_the_mensheviks = {
 		icon = generic_political_discourse
 		visible = {
-			has_completed_focus = RUS_cooperate_with_the_soviets
+			has_completed_focus = PRO_cooperate_with_the_soviets
 			check_variable = { menshevik_attitude < 10 }
 		}
 		cost = 20
@@ -170,13 +170,13 @@ RUS_balance_of_power_category = {
 	RUS_dissolve_the_soviet = {
 		priority = -1
 		icon = generic_break_treaty
-		visible = { has_completed_focus = RUS_cooperate_with_the_soviets }
+		visible = { has_completed_focus = PRO_cooperate_with_the_soviets }
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = RUS_petrograd_soviet_crippled
+				tooltip = PRO_petrograd_soviet_crippled
 				NOT = {
-					has_idea = RUS_petrograd_soviet_passive
-					has_idea = RUS_petrograd_soviet_domineering
+					has_idea = PRO_petrograd_soviet_passive
+					has_idea = PRO_petrograd_soviet_domineering
 				}
 			}
 			custom_trigger_tooltip = {
@@ -196,8 +196,8 @@ RUS_balance_of_power_category = {
 				popularity = -0.1
 			}
 			if = {
-				limit = { has_idea = RUS_petrograd_soviet_weakened }
-				remove_ideas = RUS_petrograd_soviet_weakened
+				limit = { has_idea = PRO_petrograd_soviet_weakened }
+				remove_ideas = PRO_petrograd_soviet_weakened
 			}
 		}
 	}

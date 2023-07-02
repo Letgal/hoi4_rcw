@@ -79,7 +79,7 @@ debug_decisions = {
 	}
 }
 
-RUS_balance_of_power_category = {
+PRO_balance_of_power_category = {
 	DEBUG_RUS_bop_set_max = {
 		priority = -2
 		allowed = { has_dlc = "By Blood Alone" }

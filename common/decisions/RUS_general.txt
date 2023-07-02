@@ -14,8 +14,8 @@ crisis = {
 		visible = { has_active_mission = RUS_kornilov_putsch_mission }
 		available = {
 			OR = {
-				has_completed_focus = RUS_purge_the_soviets
-				has_completed_focus = RUS_cooperate_with_the_soviets
+				has_completed_focus = PRO_purge_the_soviets
+				has_completed_focus = PRO_cooperate_with_the_soviets
 			}
 		}
 		complete_effect = { country_event = provisional.4 }

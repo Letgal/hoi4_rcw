@@ -2,15 +2,15 @@ defined_text = {
 	name = GetBopDecisionCatName
 	text = {
 		trigger = {
-			THIS = { has_completed_focus = RUS_purge_the_soviets }
+			THIS = { has_completed_focus = PRO_purge_the_soviets }
 		}
-		localization_key = RUS_purge_the_soviets_category
+		localization_key = PRO_purge_the_soviets_category
 	}
 	text = {
 		trigger = {
-			THIS = { has_completed_focus = RUS_cooperate_with_the_soviets }
+			THIS = { has_completed_focus = PRO_cooperate_with_the_soviets }
 		}
-		localization_key = RUS_cooperate_with_the_soviets_category
+		localization_key = PRO_cooperate_with_the_soviets_category
 	}
 	text = { localization_key = RUS_provisional_bop }
 }
@@ -41,4 +41,16 @@ defined_text = {
 		localization_key = menshevik_attitude_lukewarm
 	}
 	text = { localization_key = menshevik_attitude_indifferent }
+}
+defined_text = {
+	name = CheckIfTsarWasEvacuated
+	text = {
+		trigger = {
+			NOT = {
+				check_variable = { tsars_location = 570 }
+			}
+		}
+		localization_key = rcw_news.101.evac
+	}
+	text = { localization_key = rcw_news.101.noevac }
 }

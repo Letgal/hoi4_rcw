@@ -1,12 +1,12 @@
 # BBA
-RUS_balance_of_power_category_bba = {
+PRO_balance_of_power_category_bba = {
 	RUS_limit_the_soviets_influence_bba = {
 		priority = 1
 		icon = oppression
 		visible = {
 			OR = {
-				has_completed_focus = RUS_purge_the_soviets
-				has_completed_focus = RUS_cooperate_with_the_soviets
+				has_completed_focus = PRO_purge_the_soviets
+				has_completed_focus = PRO_cooperate_with_the_soviets
 			}
 		}
 		cost = 30
@@ -24,8 +24,8 @@ RUS_balance_of_power_category_bba = {
 		icon = generic_wreckers
 		visible = {
 			OR = {
-				has_completed_focus = RUS_purge_the_soviets
-				has_completed_focus = RUS_cooperate_with_the_soviets
+				has_completed_focus = PRO_purge_the_soviets
+				has_completed_focus = PRO_cooperate_with_the_soviets
 			}
 			check_variable = { rsdlp_divide < 6 }
 		}
@@ -49,14 +49,14 @@ RUS_balance_of_power_category_bba = {
 }
 
 # No BBA
-RUS_balance_of_power_category = {
+PRO_balance_of_power_category = {
 	RUS_deepen_the_rsdlp_divide = {
 		priority = 1
 		icon = generic_wreckers
 		visible = {
 			OR = {
-				has_completed_focus = RUS_purge_the_soviets
-				has_completed_focus = RUS_cooperate_with_the_soviets
+				has_completed_focus = PRO_purge_the_soviets
+				has_completed_focus = PRO_cooperate_with_the_soviets
 			}
 			check_variable = { rsdlp_divide < 6 }
 		}

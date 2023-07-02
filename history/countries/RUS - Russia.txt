@@ -20,21 +20,21 @@ if = {
 		id = RUS_provisional_bop
 		set_default = yes
 	}
-	else = { add_ideas = RUS_petrograd_soviet_passive }
+	else = { add_ideas = PRO_petrograd_soviet_passive }
 }
 
 add_ideas = RUS_undersupplied_army
 
-add_dynamic_modifier = { modifier = RUS_failing_state }
-set_variable = { RUS_failing_state_cg = 0.1 }
-set_variable = { RUS_failing_state_cs = -0.3 }
-set_variable = { RUS_failing_state_fo = -0.15 }
-set_variable = { RUS_failing_state_do = -0.1 }
-set_variable = { RUS_failing_state_se = -0.15 }
+add_dynamic_modifier = { modifier = PRO_failing_state }
+set_variable = { PRO_failing_state_cg = 0.1 }
+set_variable = { PRO_failing_state_cs = -0.3 }
+set_variable = { PRO_failing_state_fo = -0.15 }
+set_variable = { PRO_failing_state_do = -0.1 }
+set_variable = { PRO_failing_state_se = -0.15 }
 
-add_dynamic_modifier = { modifier = RUS_war_weariness }
-set_variable = { RUS_war_weariness_ws = -0.75 }
-set_variable = { RUS_war_weariness_pc = 0.003 }
+add_dynamic_modifier = { modifier = war_weariness }
+set_variable = { war_weariness_ws = -0.75 }
+set_variable = { war_weariness_pc = 0.003 }
 
 ### PARTIES ###
 set_party_name = {
@@ -162,17 +162,20 @@ set_popularities = {
 		fascism = 7
 		communism = 2
 	}
-	remove_dynamic_modifier = { modifier = RUS_failing_state }
+	remove_dynamic_modifier = { modifier = PRO_failing_state }
 	if = {
 		limit = { has_dlc = "By Blood Alone" }
 		remove_power_balance = { id = RUS_provisional_bop }
 		else = {
-			remove_ideas = RUS_petrograd_soviet_passive
-			remove_ideas = RUS_petrograd_soviet_domineering
-			remove_ideas = RUS_petrograd_soviet_weakened
+			remove_ideas = PRO_petrograd_soviet_passive
+			remove_ideas = PRO_petrograd_soviet_domineering
+			remove_ideas = PRO_petrograd_soviet_weakened
 		}
 	}
-	add_ideas = WHI_factionalism
+	add_ideas = {
+		WHI_factionalism
+		communism_banned
+	}
 
 	retire_character = RUS_irakli_tsereteli
 	retire_character = RUS_lavr_kornilov

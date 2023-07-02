@@ -147,9 +147,9 @@ set_variable = { var = ss_anger value = 0 }
 set_research_slots = 4
 set_convoys = 200
 
-add_dynamic_modifier = { modifier = RUS_war_weariness }
-set_variable = { RUS_war_weariness_ws = -0.5 }
-set_variable = { RUS_war_weariness_pc = 0.003 }
+add_dynamic_modifier = { modifier = war_weariness }
+set_variable = { war_weariness_ws = -0.5 }
+set_variable = { war_weariness_pc = 0.003 }
 
 #Trade
 create_import = {
