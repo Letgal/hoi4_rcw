@@ -1,0 +1,18 @@
+ideas = {
+	country = {
+		WHI_factionalism = {
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.1
+				political_advisor_cost_factor = 0.25
+				economy_cost_factor = 0.5
+				mobilization_laws_cost_factor = 0.5
+			}
+		}
+	}
+}

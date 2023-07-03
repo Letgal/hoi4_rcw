@@ -130,7 +130,7 @@ guiTypes = {
 		iconType = {
 			name = "country_flag"
 			quadTextureSprite ="GFX_shield_medium"
-			position = { x = 28 y = 23 }
+			position = { x = 28 y = 22 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -146,12 +146,12 @@ guiTypes = {
 	### country entry
 	containerWindowType = {
 		name = "country_entry_medium"
-
+		position = { x = 0 y = -200 }
 
 		iconType = {
 			name = "country_flag"
 			quadTextureSprite ="GFX_shield_medium"
-			position = { x = 26 y = 22 }
+			position = { x = 28 y = 22 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}

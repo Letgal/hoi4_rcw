@@ -1,6 +1,6 @@
 WHI_power_struggle = {
 	icon = GFX_decision_category_power_struggle
-	allowed = { original_tag = RUS }
+	allowed = { tag = WHI }
 	visible = { has_idea = WHI_factionalism }
 	priority = 60
 }

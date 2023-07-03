@@ -8,6 +8,7 @@ set_convoys = 50
 ### IDEAS AND WHATNOT ###
 add_ideas = {
 	unrecognized_state
+	SOV_empty_government
 	communist_fervor
 }
 

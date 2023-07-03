@@ -30,7 +30,7 @@
  provisional.7.a:0 "A glorious day."
 
  provisional.101.t:0 "Soviet Coup!"
- provisional.101.d:0 ""
+ provisional.101.d: ""
  provisional.101.a:0 "Curse them!"
  provisional.102.t:0 "Triumph of Democracy"
  provisional.102.d:0 "Russia grew noticeably in the last months, surpassing even pre-war levels back when our country was an autocracy. All thanks to the Provisional Government.\nOur success has proven once again that a revolutionary state CAN achieve greatness. The Russian Revolution of 1917 will be an inspiration for republicans worldwide, on par with the French Revolution in some aspects and even surpassing it in others."
@@ -55,7 +55,7 @@
  russian_civil_war.3.d: ""
  russian_civil_war.3.b:0 "Long live the [KAZ.GetAdjective] state!"
 
- russian_civil_war.101.t:0 "Reclamation of Warsaw"
+ russian_civil_war.101.t:0 "Reclamation of Warszawa"
  russian_civil_war.101.d: ""
  russian_civil_war.101.a:0 "Vperyod!"
  russian_civil_war.102.t:0 "Capture of Königsberg"

@@ -1,7 +1,5 @@
 ﻿### GENERAL INFO ###
 capital = 195 # Petrograd; originally 219 - Moscow
-set_stability = 0.5
-set_war_support = 0.5
 set_research_slots = 3
 set_convoys = 50
 
@@ -193,7 +191,16 @@ set_popularities = {
 		}
 		else = { release = FIN }
 	}
-	release = MOL
+	78 = {
+		transfer_state_to = MOL
+		add_claim_by = RUS
+		add_claim_by = SOV
+	}
+	766 = {
+		transfer_state_to = MOL
+		add_claim_by = RUS
+		add_claim_by = SOV
+	}
 
 	set_global_flag = RCW_ongoing
 

@@ -54,6 +54,8 @@
  PRO_infrastructure_networks:0 "Infrastructure Networks of [SOV.GetNonIdeologyName]"
 
  ### SOVIET REPUBLIC ###
+ SOV_empty_government:0 "Empty Government"
+ SOV_empty_government_desc:0 "The revolution was organized exclusively by the Bolsheviks, without any other help. Despite this, we alone managed to topple the Provisional Government.\n\nNow that's where an issue arises: we barely have any people to fill our army, much less our new government. The army issue might be solved through popular propaganda, but what do we do with the government?\n\nMensheviks are highly unlikely to cooperate us at this point. But what if we change that..?"
  SOV_red_army:0 "The Red Army"
  SOV_home_of_revolution:0 "$home_of_revolution$"
 

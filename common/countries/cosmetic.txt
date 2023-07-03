@@ -964,10 +964,10 @@ SWI_helvetic_republic = {
 }
 
 ### RCW ###
-#RUS_soviet = {
-#	color = rgb { 125 13 24 }
-#	color_ui = rgb { 163 17 31 }
-#}
+RUS_soviet = { # Color for event-started RCW
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
 RUS_white = {
 	color = rgb { 130 200 229 }
 	color_ui = rgb { 130 200 229 }

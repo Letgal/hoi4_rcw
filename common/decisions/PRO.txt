@@ -21,3 +21,23 @@ crisis = {
 		complete_effect = { country_event = provisional.4 }
 	}
 }
+
+political_actions = {
+	PRO_fundraising_campaign = {
+		icon = generic_fundraising
+		visible = { tag = PRO }
+		available = { political_power_growth < 0.5 }
+		days_remove = 30
+		days_re_enable = 60
+		modifier = {
+			political_power_gain = 0.5
+			consumer_goods_factor = 0.05
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.025
+			}
+		}
+	}
+}

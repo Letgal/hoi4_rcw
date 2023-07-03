@@ -1,5 +1,22 @@
 # BBA
 PRO_balance_of_power_category_bba = {
+	PRO_arrest_soviet_leaders_bba = {
+		icon = generic_arrest
+		visible = { has_idea = PRO_petrograd_soviet_domineering }
+		available = { has_idea = PRO_petrograd_soviet_domineering }
+		cost = 150
+		complete_effect = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_power_balance_value = {
+				id = PRO_balance_of_power
+				value = 0.2
+			}
+		}
+	}
 	PRO_limit_the_soviets_influence_bba = {
 		priority = 1
 		icon = oppression
@@ -50,6 +67,23 @@ PRO_balance_of_power_category_bba = {
 
 # No BBA
 PRO_balance_of_power_category = {
+	PRO_arrest_soviet_leaders = {
+		icon = generic_arrest
+		visible = { has_idea = PRO_petrograd_soviet_domineering }
+		available = { has_idea = PRO_petrograd_soviet_domineering }
+		cost = 150
+		complete_effect = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			swap_ideas = {
+				add_idea = PRO_petrograd_soviet_weakened
+				remove_idea = PRO_petrograd_soviet_domineering
+			}
+		}
+	}
 	PRO_deepen_the_rsdlp_divide = {
 		priority = 1
 		icon = generic_wreckers

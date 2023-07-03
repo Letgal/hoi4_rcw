@@ -1,6 +1,7 @@
 ﻿l_english:
  PRO_kornilov_putsch_mission:0 "Kornilov's Putsch"
  PRO_handle_kornilov:0 "Handle Kornilov"
+ PRO_fundraising_campaign:0 "Fundraising Campaign"
 
  PRO_purge_the_soviets_category:2 "Purging the Soviets"
  PRO_cooperate_with_the_soviets_category:0 "Cooperation with the Soviets"
@@ -8,6 +9,7 @@
  PRO_balance_of_power_category_desc:0 "The Provisional Government's rule was established in no small part thanks to "help" from the Petrograd Soviet. However, the Soviet demanded representation in the government in exchange. Having no other choice, we had to accept. Ever since then, the Soviet has been trying to destabilize our administration and woo our supporters to their side.\nThis creates a very dangerous situation. If the Soviets get enough power, they will swiftly overthrow the Provisional Government."
  # Shared
  PRO_limit_the_soviets_influence:0 "Limit the Soviet's Influence"
+ PRO_arrest_soviet_leaders:0 "Arrest the Soviet Leaders"
  # Purge
  PRO_abolish_the_soviet:0 "Abolish the Soviet" # Final Solution
  PRO_abolish_the_soviet_desc:0 "After months of causing trouble the Petrograd Soviet has finally been weakened so much that we can just abolish this nuisance of an organization without much risk."
@@ -22,31 +24,32 @@
  PRO_dissolve_the_soviet_desc:0 "The Mensheviks are now officially part of our government, and the only ones who remain in the Soviet are the Bolsheviks and the ‘left Esers’, who have been weakened so much as to become inconsequential. Now we can just dissolve this nuisance of an organization without much risk."
 
  # BBA Workaround
-  PRO_kornilov_putsch_mission_bba:0 "$PRO_kornilov_putsch_mission$"
-  PRO_purge_the_soviets_category_bba:0 "$PRO_purge_the_soviets_category$"
-  PRO_cooperate_with_the_soviets_category_bba:0 "$PRO_cooperate_with_the_soviets_category$"
-  PRO_balance_of_power_category_bba:0 "$PRO_balance_of_power_category$"
-  PRO_balance_of_power_category_desc_bba:0 "$PRO_balance_of_power_category_desc$"
-  PRO_limit_the_soviets_influence_bba:0 "$PRO_limit_the_soviets_influence$"
-  PRO_abolish_the_soviet_bba:0 "$PRO_abolish_the_soviet$"
-  PRO_abolish_the_soviet_desc_bba:0 "$PRO_abolish_the_soviet_desc$"
-  PRO_hire_soviet_commanders_bba:0 "$PRO_hire_soviet_commanders$"
-  PRO_hire_soviet_commanders_desc_bba:0 "$PRO_hire_soviet_commanders_desc$"
-  PRO_sway_the_mensheviks_bba:0 "$PRO_sway_the_mensheviks$"
-  PRO_sway_the_mensheviks_desc_bba:0 "$PRO_sway_the_mensheviks_desc$"
-  PRO_deepen_the_rsdlp_divide_bba:0 "$PRO_deepen_the_rsdlp_divide$"
-  PRO_deepen_the_rsdlp_divide_desc_bba:0 "$PRO_deepen_the_rsdlp_divide_desc$"
-  PRO_dissolve_the_soviet_bba:0 "$PRO_dissolve_the_soviet$"
-  PRO_dissolve_the_soviet_desc_bba:0 "$PRO_dissolve_the_soviet_desc$"
+ PRO_kornilov_putsch_mission_bba:0 "$PRO_kornilov_putsch_mission$"
+ PRO_purge_the_soviets_category_bba:0 "$PRO_purge_the_soviets_category$"
+ PRO_cooperate_with_the_soviets_category_bba:0 "$PRO_cooperate_with_the_soviets_category$"
+ PRO_balance_of_power_category_bba:0 "$PRO_balance_of_power_category$"
+ PRO_balance_of_power_category_desc_bba:0 "$PRO_balance_of_power_category_desc$"
+ PRO_limit_the_soviets_influence_bba:0 "$PRO_limit_the_soviets_influence$"
+ PRO_arrest_soviet_leaders_bba:0 "$PRO_arrest_soviet_leaders$"
+ PRO_abolish_the_soviet_bba:0 "$PRO_abolish_the_soviet$"
+ PRO_abolish_the_soviet_desc_bba:0 "$PRO_abolish_the_soviet_desc$"
+ PRO_hire_soviet_commanders_bba:0 "$PRO_hire_soviet_commanders$"
+ PRO_hire_soviet_commanders_desc_bba:0 "$PRO_hire_soviet_commanders_desc$"
+ PRO_sway_the_mensheviks_bba:0 "$PRO_sway_the_mensheviks$"
+ PRO_sway_the_mensheviks_desc_bba:0 "$PRO_sway_the_mensheviks_desc$"
+ PRO_deepen_the_rsdlp_divide_bba:0 "$PRO_deepen_the_rsdlp_divide$"
+ PRO_deepen_the_rsdlp_divide_desc_bba:0 "$PRO_deepen_the_rsdlp_divide_desc$"
+ PRO_dissolve_the_soviet_bba:0 "$PRO_dissolve_the_soviet$"
+ PRO_dissolve_the_soviet_desc_bba:0 "$PRO_dissolve_the_soviet_desc$"
 
  ### WHITE RUSSIA ###
  # Factionalism
-  WHI_power_struggle:0 "Power Struggle in the White Movement"
-  WHI_power_struggle_desc:0 "$WHI_factionalism_desc$"
+ WHI_power_struggle:0 "Power Struggle in the White Movement"
+ WHI_power_struggle_desc:0 "$WHI_factionalism_desc$"
 
  ### THE ROYAL FAMILY ###
  RCW_royal_family_category:0 "The Royal Family"
- RCW_royal_family_category_desc: "\n\nRoyal family's current location: §H[?global.tsars_location.GetName]§!"
+ RCW_royal_family_category_desc:0 "After Tsar Nikolay II was forced to abdicate his throne in February 1917, he and his family were put under house arrest.\n\nNow that a civil war broke out in our country, we must monitor the situation and not let the enemy realize their plans on them.\n\nRoyal family's current location: §H[?global.tsars_location.GetName]§!"
  RCW_evacuate_the_royal_family:0 "Evacuate the Royal Family"
  RCW_assassinate_the_royal_family:0 "Assassinate the Royal Family"
 

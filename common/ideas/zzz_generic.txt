@@ -822,7 +822,7 @@ ideas = {
 		}
 
 		communism_banned = {
-			picture = anti_soviet_pact
+			picture = generic_communism_banned
 			allowed = {
 				always = no
 			}
@@ -832,6 +832,8 @@ ideas = {
 					has_government = communism
 				}
 			}
+
+			cancel = { has_government = communism }
 
 			modifier = {
 				communism_drift = -0.05
@@ -851,6 +853,8 @@ ideas = {
 					has_government = fascism
 				}
 			}
+
+			cancel = { has_government = fascism }
 
 			modifier = {
 				fascism_drift = -0.05

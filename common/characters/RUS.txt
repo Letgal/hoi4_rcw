@@ -3,7 +3,7 @@ characters = {
 	RUS_aleksandr_kerensky = {
 		name = SOV_aleksandr_kerensky
 		portraits = {
-			civilian = { large = GFX_portrait_RUS_aleksandr_kerensky_updated }
+			civilian = { large = GFX_portrait_SOV_aleksandr_kerensky_updated }
 			army = { small = GFX_idea_alexander_kerensky }
 		}
 		country_leader = {
@@ -54,7 +54,10 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = konstantin_rodzaevsky
-			visible = { is_country_leader = no }
+			visible = {
+				NOT = { has_government = democratic }
+				is_country_leader = no
+			}
 			available = {
 				if = {
 					limit = { has_dlc = "Man the Guns" }
@@ -80,11 +83,11 @@ characters = {
 
 	### LATER COUNTRY LEADERS ###
 	RUS_lavr_kornilov = {
-		name = RUS_lavr_kornilov
+		name = SOV_lavr_kornilov
 		portraits = {
-			civilian = { large = GFX_portrait_RUS_lavr_kornilov }
+			civilian = { large = GFX_portrait_SOV_lavr_kornilov }
 			army = {
-				large = GFX_portrait_RUS_lavr_kornilov
+				large = GFX_portrait_SOV_lavr_kornilov
 				small = GFX_idea_SOV_pyotr_krasnov # Temp
 			}
 		}
@@ -107,7 +110,6 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = RUS_irakli_tsereteli
-			allowed = { original_tag = RUS }
 			visible = { is_country_leader = no }
 			available = {
 				if = {
@@ -127,19 +129,6 @@ characters = {
 			civilian = { large = GFX_portrait_SOV_lev_trotsky }
 			army = { small = GFX_idea_SOV_lev_trotsky }
 		}
-		#advisor = {
-		#	slot = political_advisor
-		#	idea_token = RUS_lev_trotsky
-		#	allowed = {
-		#		OR = {
-		#			original_tag = RUS
-		#			original_tag = SOV
-		#		}
-		#	}
-		#	visible = { is_country_leader = no }
-		#	available = { is_country_leader = no }
-		#	traits = { pc_military_naval_affairs }
-		#}
 	}
 
 	### ADVISORS ###
@@ -151,7 +140,6 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = RUS_pavel_milyukov
-			allowed = { original_tag = RUS }
 			available = {
 				has_government = democratic
 				NOT = { has_completed_focus = PRO_moderate_communism }
@@ -170,7 +158,6 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = RUS_georgi_lvov
-			allowed = { original_tag = RUS }
 			available = {
 				has_government = democratic
 				NOT = { has_completed_focus = PRO_moderate_communism }
@@ -187,7 +174,6 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = RUS_mikhail_rodzyanko
-			allowed = { original_tag = RUS }
 			available = {
 				has_government = democratic
 				NOT = { has_completed_focus = PRO_moderate_communism }
@@ -204,6 +190,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = RUS_patriarch_sergy
+			visible = { has_completed_focus = PRO_preserve_church_power }
 			available = { has_completed_focus = PRO_preserve_church_power }
 			traits = { patriarch_of_moscow_and_all_russia }
 		}

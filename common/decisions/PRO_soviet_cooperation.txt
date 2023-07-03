@@ -5,6 +5,7 @@ PRO_balance_of_power_category_bba = {
 		visible = { has_completed_focus = PRO_cooperate_with_the_soviets }
 		fire_only_once = yes
 		complete_effect = {
+			add_stability = -0.05
 			add_popularity = {
 				ideology = communism
 				popularity = 0.1
@@ -13,10 +14,19 @@ PRO_balance_of_power_category_bba = {
 				id = PRO_balance_of_power
 				value = -0.2
 			}
-			#remove_advisor_role = {
-			#	character = RUS_lev_trotsky
-			#	slot = political_advisor
-			#}
+			add_advisor_role = {
+				character = RUS_lev_trotsky
+				advisor = {
+					slot = political_advisor
+					idea_token = RUS_lev_trotsky
+					visible = { is_country_leader = no }
+					available = {
+						is_country_leader = no
+						has_completed_focus = PRO_moderate_communism
+					}
+					traits = { communist_orator }
+				}
+			}
 			add_corps_commander_role = {
 				character = RUS_lev_trotsky
 				traits = { trait_trotsky_commander }
@@ -25,15 +35,6 @@ PRO_balance_of_power_category_bba = {
 				defense_skill = 1
 				planning_skill = 2
 				logistics_skill = 2
-			}
-			add_advisor_role = {
-				character = RUS_lev_trotsky
-				advisor = {
-					slot = army_chief
-					cost = 100
-					idea_token = RUS_lev_trotsky
-					traits = { infantry_officer }
-				}
 			}
 		}
 	}
@@ -106,6 +107,7 @@ PRO_balance_of_power_category = {
 		visible = { has_completed_focus = PRO_cooperate_with_the_soviets }
 		fire_only_once = yes
 		complete_effect = {
+			add_stability = -0.05
 			add_popularity = {
 				ideology = communism
 				popularity = 0.1
@@ -124,28 +126,28 @@ PRO_balance_of_power_category = {
 					remove_idea = PRO_petrograd_soviet_weakened
 				}
 			}
+			add_advisor_role = {
+				character = RUS_lev_trotsky
+				advisor = {
+					slot = army_chief
+					idea_token = RUS_lev_trotsky
+					visible = { is_country_leader = no }
+					available = {
+						is_country_leader = no
+						has_completed_focus = PRO_moderate_communism
+					}
+					traits = { army_chief_organizational_3 }
+				}
+			}
 			add_corps_commander_role = {
 				character = RUS_lev_trotsky
-				traits = { trait_trotsky_commander }
+				traits = { trickster }
 				skill = 3
 				attack_skill = 3
 				defense_skill = 1
 				planning_skill = 2
 				logistics_skill = 2
 			}
-			add_advisor_role = {
-				character = RUS_lev_trotsky
-				advisor = {
-					slot = army_chief
-					cost = 100
-					idea_token = RUS_lev_trotsky
-					traits = { infantry_officer }
-				}
-			}
-			#remove_advisor_role = {
-			#	character = RUS_lev_trotsky
-			#	slot = political_advisor
-			#}
 		}
 	}
 	PRO_sway_the_mensheviks = {

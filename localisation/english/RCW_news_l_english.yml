@@ -4,7 +4,7 @@
  rcw_news.1.a:0 "A fine day it is!"
 
  rcw_news.101.t:0 "The Romanovs were Assassinated!"
- rcw_news.101.d:0 "Today, on [?global.date.GetDateStringNoHourLong], the former Tsar of Russia, Nicholas II, and his family were assassinated at the order of a local Bolshevik command. The Romanov royal family were held under house arrest not far from [570.GetCapitalVictoryPointName] ever since the tsar was forced to abdicate as a result of the February Revolution. [CheckIfTsarWasEvacuated] Fate of the royal family was now in the hands of the communists.\n\nThe Red Army was yet unsure what to do with the Romanovs, until a local Bolshevik unit ordered to shoot every last one of them."
+ rcw_news.101.d:0 "Today, on [?global.date.GetDateStringNoHourLong], the former Tsar of Russia, Nikolay II, and his family were assassinated at the order of a local Bolshevik command. The Romanov royal family were held under house arrest not far from [570.GetCapitalVictoryPointName] ever since the tsar was forced to abdicate as a result of the February Revolution. [CheckIfTsarWasEvacuated] Fate of the royal family was now in the hands of the communists.\n\nThe Red Army was yet unsure what to do with the Romanovs, until a local Bolshevik unit ordered to shoot every last one of them."
  rcw_news.101.evac:1 "Recently though, they had to be evacuated to [?global.tsars_location.GetCapitalVictoryPointName] to not get caught by the advancing Bolsheviks, ehich didn't really help them. The Bolsheviks have captured the [?global.tsars_location.GetName] Oblast."
  rcw_news.101.noevac:0 "The Whites have failed to organize their relocation, and the Bolsheviks have captured the [?global.tsars_location.GetName] Oblast. Fate"
  rcw_news.101.a:0 "Good riddance."

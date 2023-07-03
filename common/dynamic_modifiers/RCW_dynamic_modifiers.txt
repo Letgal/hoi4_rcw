@@ -26,15 +26,6 @@
 #	can be added to countries, states or unit leaders
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
 
-PRO_failing_state = {
-	icon = GFX_idea_great_depression
-	enable = { always = yes }
-	consumer_goods_factor = PRO_failing_state_cg
-	production_speed_buildings_factor = PRO_failing_state_cs
-	industrial_capacity_factory = PRO_failing_state_fo
-	industrial_capacity_dockyard = PRO_failing_state_do
-	supply_factor = PRO_failing_state_se
-}
 war_weariness = {
 	icon = GFX_idea_ENG_the_war_to_end_all_wars
 	enable = { always = yes }
@@ -43,4 +34,14 @@ war_weariness = {
 	}
 	war_support_factor = war_weariness_ws
 	custom_modifier_tooltip = war_weariness_pc_tt
+}
+
+PRO_failing_state = {
+	icon = GFX_idea_great_depression
+	enable = { always = yes }
+	consumer_goods_factor = PRO_failing_state_cg
+	production_speed_buildings_factor = PRO_failing_state_cs
+	industrial_capacity_factory = PRO_failing_state_fo
+	industrial_capacity_dockyard = PRO_failing_state_do
+	supply_factor = PRO_failing_state_se
 }

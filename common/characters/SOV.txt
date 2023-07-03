@@ -85,11 +85,19 @@ characters = {
 			army = { small = GFX_idea_SOV_lev_trotsky }
 		}
 		advisor = {
-			slot = political_advisor
+			slot = army_chief
 			idea_token = SOV_lev_trotsky
 			visible = { is_country_leader = no }
 			available = { is_country_leader = no }
-			traits = { pc_military_naval_affairs }
+			traits = { army_chief_organizational_3 }
+		}
+		field_marshal = {
+			traits = { inspirational_leader trickster }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
 		}
 	}
 

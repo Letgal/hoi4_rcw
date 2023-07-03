@@ -30,6 +30,7 @@ ideas = {
 			picture = home_of_revolution
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
+			cancel = { NOT = { has_government = communism } }
 
 			removal_cost = -1
 
