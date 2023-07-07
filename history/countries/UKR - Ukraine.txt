@@ -10,6 +10,8 @@ set_technology = {
 	gw_artillery = 1
 }
 
+add_ideas = provisional_government_idea
+
 1917.11.11 = {
 	UKR = {
 		declare_war_on = {

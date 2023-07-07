@@ -2,37 +2,22 @@ bookmarks = {
 	bookmark = {
 		name = "BLITZKRIEG_NAME"
 		desc = "BLITZKRIEG_DESC"
-		date = 1917.11.11.1
+		date = 1917.11.8.1
 		picture = "GFX_select_date_1939"
 		default_country = "SOV"
 
 		"SOV" = {
 			history = "SOV_BLITZKRIEG_DESC"
-			ideology = communism
-			ideas = {
-				unrecognized_state
-				SOV_empty_government
-				communist_fervor
-			}
-			focuses = {
-				SOV_stabilize_the_country
-				SOV_marxism_leninism
-			}
-		}
-
-		"RUS" = {
-			minor = yes
-			history = "RUS_BLITZKRIEG_DESC"
-			ideology = neutrality
+			ideology = democratic
 			ideas = {
 				provisional_government_idea
 				WHI_factionalism
-				RUS_undersupplied_army
+				PRO_undersupplied_army
 			}
 			focuses = {
 				WHI_our_movement
 				WHI_restore_the_civilian_government
-				WHI_russia_reunited
+				#WHI_russia_reunited
 			}
 		}
 	}

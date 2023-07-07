@@ -3201,6 +3201,10 @@ focus_tree = {
 				}
 				
 				#Hidden National Spirits handle the equipment bonus that's not supported by dynamic modifiers
+				swap_ideas = {
+					remove_idea = SOV_red_fleet_surface_bonus_1
+					add_idea = SOV_red_fleet_surface_bonus_2
+				}
 			}
 			custom_effect_tooltip = SOV_offensive_maritime_strategy_ns_tt
 
@@ -3451,6 +3455,10 @@ focus_tree = {
 				}
 				
 				#Hidden National Spirits handle the equipment bonus that's not supported by dynamic modifiers
+				swap_ideas = {
+					remove_idea = SOV_red_fleet_submarine_bonus_1
+					add_idea = SOV_red_fleet_submarine_bonus_2
+				}
 			}
 			custom_effect_tooltip = SOV_submarine_warfare_ns_tt
 
@@ -4285,6 +4293,7 @@ focus_tree = {
 				}
 			}
 
+			add_ideas = SOV_defense_industry_artillery_bonus
 
 			if = {
 				limit = {
@@ -6047,6 +6056,7 @@ focus_tree = {
 			#(Complete Effect)
 			custom_effect_tooltip = SOV_focus_complete_effect_tt
 			hidden_effect = {
+				remove_ideas = SOV_military_reorganization_ns
 			}
 
 			add_to_variable = { SOV_the_red_army_unit_infantry_design_cost_factor = -0.1 }
@@ -6395,10 +6405,18 @@ focus_tree = {
 				limit = {
 					has_idea = SOV_politicized_military
 				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military
+					add_idea = SOV_politicized_military_keep
+				}
 			}
 			else_if = {
 				limit = {
 					has_idea = SOV_politicized_military_humanism
+				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military_humanism
+					add_idea = SOV_politicized_military_keep_humanism
 				}
 			}
 		}
@@ -6439,10 +6457,18 @@ focus_tree = {
 				limit = {
 					has_idea = SOV_politicized_military
 				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military
+					add_idea = SOV_politicized_military_battle_priests
+				}
 			}
 			else_if = { #Just in case weird shit happens
 				limit = {
 					has_idea = SOV_politicized_military_humanism
+				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military_humanism
+					add_idea = SOV_politicized_military_battle_priests
 				}
 			}
 		}
@@ -6475,14 +6501,26 @@ focus_tree = {
 				limit = {
 					has_idea = SOV_politicized_military
 				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military
+					add_idea = SOV_politicized_military_swap
+				}
 			}
 			else_if = {
 				limit = {
 					has_idea = SOV_politicized_military_humanism
 				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military_humanism
+					add_idea = SOV_politicized_military_swap_humanism
+				}
 			}
 			else = { #To prevent the ugly "No current effects" tooltip if other focus taken
 				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = SOV_politicized_military
+						add_idea = SOV_politicized_military_swap
+					}
 				}
 			}
 		}
@@ -6626,8 +6664,14 @@ focus_tree = {
 			add_political_power = 25
 
 			SOV_paranoia_low_decrease_effect = yes	
-			IF = {
-				limit = { has_dlc = "No Step Back"}
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
 				mark_focus_tree_layout_dirty = yes
 			}
 		}
@@ -6701,7 +6745,15 @@ focus_tree = {
 			}
 
 			SOV_paranoia_low_decrease_effect = yes
-			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 
@@ -8628,9 +8680,18 @@ focus_tree = {
 			IF = {
 				limit = { has_idea = trotskyite_plot_nsb }
 				effect_tooltip = { 
+					remove_ideas = trotskyite_plot_nsb
 				}
 			}
-			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 
@@ -8889,16 +8950,19 @@ focus_tree = {
 				limit = {
 					has_idea = SOV_politicized_military
 				}
+				remove_ideas = SOV_politicized_military
 			}
 			else_if = {
 				limit = {
 					has_idea = SOV_politicized_military_keep
 				}
+				remove_ideas = SOV_politicized_military_keep
 			}
 			else_if = {
 				limit = {
 					has_idea = SOV_politicized_military_swap
 				}
+				remove_ideas = SOV_politicized_military_swap
 			}			
 		}
 	}
@@ -9826,7 +9890,15 @@ focus_tree = {
 			}
 			custom_effect_tooltip = SOV_exiled_advisors_available_tt
 
-			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 
@@ -9856,6 +9928,7 @@ focus_tree = {
 
 			IF = { 
 				limit = { has_idea = trotskyite_plot_nsb}
+				remove_ideas = trotskyite_plot_nsb
 			}
 		}
 	}
@@ -10247,15 +10320,27 @@ focus_tree = {
 				limit = {
 					has_idea = SOV_politicized_military
 				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military
+					add_idea = SOV_politicized_military_humanism
+				}
 			}
 			else_if = {
 				limit = {
 					has_idea = SOV_politicized_military_keep
 				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military_keep
+					add_idea = SOV_politicized_military_keep_humanism
+				}
 			}
 			else_if = {
 				limit = {
 					has_idea = SOV_politicized_military_swap
+				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military_swap
+					add_idea = SOV_politicized_military_swap_humanism
 				}
 			}
 		}
@@ -10334,6 +10419,7 @@ focus_tree = {
 						NOT = { has_country_leader_ideology = stalinism }
 						is_in_faction = no
 						NOT = { has_war_with = ROOT }
+						is_subject = no
 					}
 					add_opinion_modifier = { modifier = SOV_international_socialist_association target = ROOT }
 					country_event = { id = generic.5 hours = 8 random_hours = 8 }
@@ -10348,6 +10434,7 @@ focus_tree = {
 							NOT = { has_country_leader_ideology = stalinism }
 							is_in_faction = no
 							NOT = { has_war_with = ROOT }
+							is_subject = no
 						}
 						add_opinion_modifier = { modifier = SOV_international_socialist_association target = ROOT }
 						country_event = { id = generic.5 hours = 8 random_hours = 8 }
@@ -10397,6 +10484,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = new_economic_policy
+				add_idea = new_economic_policy_2
+			}
 		}
 	}
 
@@ -10920,6 +11011,7 @@ focus_tree = {
 			}
 			IF = { 
 				limit = { has_idea = trotskyite_plot_nsb}
+				remove_ideas = trotskyite_plot_nsb 
 			}
 			if = {
 				limit = {
@@ -11466,6 +11558,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = SOV_socialist_emulation_1_ns
+				add_idea = SOV_socialist_emulation_2_ns
+			}
 		}
 	}
 
@@ -11623,6 +11719,7 @@ focus_tree = {
 				custom_effect_tooltip = SOV_development_aid_for_eastern_allies_tt
 			}
 			hidden_effect = {
+				remove_ideas = SOV_development_of_eastern_allies
 			}
 		}
 	}
@@ -14660,11 +14757,13 @@ ai_will_do = {
 				limit = {
 					has_idea = SOV_preparations_for_soviet_japanese_war
 				}
+				remove_ideas = SOV_preparations_for_soviet_japanese_war
 				every_country = {
 					limit = {
 						is_in_faction_with = ROOT
 						has_idea = SOV_preparations_for_soviet_japanese_war_china
 					}
+					remove_ideas = SOV_preparations_for_soviet_japanese_war_china
 				}
 			}
 			add_timed_idea = {
@@ -14754,11 +14853,13 @@ ai_will_do = {
 				limit = {
 					has_idea = SOV_preparations_for_soviet_japanese_war
 				}
+				remove_ideas = SOV_preparations_for_soviet_japanese_war
 				every_country = {
 					limit = {
 						is_in_faction_with = ROOT
 						has_idea = SOV_preparations_for_soviet_japanese_war_china
 					}
+					remove_ideas = SOV_preparations_for_soviet_japanese_war_china
 				}
 			}
 			add_timed_idea = {
@@ -15060,7 +15161,15 @@ ai_will_do = {
 				SOV_launch_stalinist_counter_measure = yes 
 				SOV_get_centre_military_support = yes
 			}
-			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 
@@ -15573,7 +15682,15 @@ ai_will_do = {
 			SOV_increase_opposition_army_support = yes
 			custom_effect_tooltip = SOV_the_hands_do_tt
 
-			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 	focus = {
@@ -16256,6 +16373,7 @@ ai_will_do = {
 			news_event = { id = nsb_news.401 hours = 12 }
 			IF = { 
 				limit = { has_idea = SOV_uncertain_counter_revolution_idea }
+				remove_ideas = SOV_uncertain_counter_revolution_idea
 			}
 		}
 	}
@@ -16351,6 +16469,7 @@ ai_will_do = {
 			}
 			IF = { 
 				limit = { has_idea = SOV_uncertain_counter_revolution_idea }
+				remove_ideas = SOV_uncertain_counter_revolution_idea
 			}
 		}
 	}
@@ -16722,6 +16841,7 @@ ai_will_do = {
 				    elections_allowed = no
 				}
    			}
+   			remove_ideas = SOV_tsar_vladimir_i
    			custom_effect_tooltip = SOV_the_third_rome_tt
    			promote_character = SOV_metropolitan_meletius
    			set_country_leader_name = {

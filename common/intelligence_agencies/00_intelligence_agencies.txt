@@ -37,11 +37,11 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_generic_7
 	names = { "GBR VPR" } # Gos. Byuro Razv. (Vrem. Pravit. Ros.)
 	default = {
-		tag = RUS
+		tag = SOV
 		has_government = democratic
 	}
 	available = {
-		original_tag = RUS
+		original_tag = SOV
 		has_government = democratic
 	}
 }
@@ -49,11 +49,11 @@ intelligence_agency = {
 	picture = GFX_intelligence_agency_logo_generic_7
 	names = { "GBR DZVR" } # Gos. Byuro Razv. (Dvizh. za Vosstan. Ros.)
 	default = {
-		tag = RUS
+		tag = SOV
 		has_government = neutrality
 	}
 	available = {
-		original_tag = RUS
+		original_tag = SOV
 		has_government = neutrality
 	}
 }

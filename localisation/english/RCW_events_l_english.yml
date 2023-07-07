@@ -42,9 +42,10 @@
  #soviet_russia.1.a:0 "Damn counter-revolutionaries!"
 
  ### CIVIL WAR ###
- russian_civil_war.1.t:0 "[ROOT.GetAdjective] Civil War!"
+ russian_civil_war.1.t:1 "Soviets Launch a Coup!"
  russian_civil_war.1.d: ""
- russian_civil_war.1.a: ""
+ russian_civil_war.1.a:0 "Destroy them!"
+ russian_civil_war.1.b:0 "Da zdravstvuyet revolyutsiya!"
 
  russian_civil_war.2.t:0 "[UKR.GetName] Rebels!"
  russian_civil_war.2.d: ""

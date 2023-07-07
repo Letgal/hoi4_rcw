@@ -12,7 +12,7 @@ country_event = {
 
 	option = {
 		name = RCW_treaty.1.a
-		RUS = {
+		SOV = {
 			country_event = {
 				id = RCW_treaty.2
 				days = 3
@@ -21,7 +21,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = RCW_treaty.2 # Response: Rejected (RUS)
+	id = RCW_treaty.2 # Response: Rejected (SOV)
 	title = RCW_treaty.2.t
 	desc = RCW_treaty.2.d
 	picture = GFX_report_event_generic_sign_treaty1
@@ -44,7 +44,7 @@ country_event = {
 
 	option = {
 		name = RCW_treaty.3.a
-		RUS = {
+		SOV = {
 			country_event = {
 				id = RCW_treaty.4
 				days = 6
@@ -53,7 +53,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = RCW_treaty.4 # Response: Accepted (RUS)
+	id = RCW_treaty.4 # Response: Accepted (SOV)
 	title = RCW_treaty.4.t
 	desc = RCW_treaty.4.d
 	picture = GFX_report_event_generic_sign_treaty1
@@ -70,7 +70,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = RCW_treaty.5 # German Demand: Poland (RUS)
+	id = RCW_treaty.5 # German Demand: Poland (SOV)
 	title = RCW_treaty.5.t
 	desc = RCW_treaty.5.d
 	picture = GFX_report_event_german_polish_border
@@ -90,7 +90,7 @@ country_event = {
 	#}
 }
 country_event = {
-	id = RCW_treaty.6 # German Demand: Ruthenia (RUS)
+	id = RCW_treaty.6 # German Demand: Ruthenia (SOV)
 	title = RCW_treaty.6.t
 	desc = RCW_treaty.6.d
 	picture = GFX_report_event_german_polish_border
@@ -109,7 +109,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = RCW_treaty.7 # German Demand: Baltic (RUS)
+	id = RCW_treaty.7 # German Demand: Baltic (SOV)
 	title = RCW_treaty.7.t
 	desc = RCW_treaty.7.d
 	picture = GFX_report_event_german_polish_border
@@ -128,7 +128,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = RCW_treaty.8 # German Demand: Finland (RUS)
+	id = RCW_treaty.8 # German Demand: Finland (SOV)
 	title = RCW_treaty.8.t
 	desc = RCW_treaty.8.d
 	picture = GFX_report_event_german_polish_border
@@ -147,7 +147,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = RCW_treaty.9 # Germany Quits (RUS)
+	id = RCW_treaty.9 # Germany Quits (SOV)
 	title = RCW_treaty.9.t
 	desc = RCW_treaty.9.d
 	picture = GFX_report_event_generic_sign_treaty1

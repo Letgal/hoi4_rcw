@@ -1,16 +1,38 @@
 ﻿### GENERAL INFO ###
 capital = 195 # Petrograd; originally 219 - Moscow
-set_stability = 0.5
-set_war_support = 0.5
 set_research_slots = 3
 set_convoys = 50
 
+set_cosmetic_tag = SOV_provisional
+
 ### IDEAS AND WHATNOT ###
 add_ideas = {
-	unrecognized_state
-	SOV_empty_government
-	communist_fervor
+	limited_conscription
+	war_economy
+	provisional_government_idea
 }
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_power_balance = {
+		id = PRO_balance_of_power
+		set_default = yes
+	}
+	else = { add_ideas = PRO_petrograd_soviet_passive }
+}
+
+add_ideas = PRO_undersupplied_army
+
+add_dynamic_modifier = { modifier = PRO_failing_state }
+set_variable = { PRO_failing_state_cg = 0.1 }
+set_variable = { PRO_failing_state_cs = -0.3 }
+set_variable = { PRO_failing_state_fo = -0.15 }
+set_variable = { PRO_failing_state_do = -0.1 }
+set_variable = { PRO_failing_state_se = -0.15 }
+
+add_dynamic_modifier = { modifier = war_weariness }
+set_variable = { war_weariness_ws = -0.75 }
+set_variable = { war_weariness_pc = 0.003 }
 
 ### TECHNOLOGIES ###
 set_technology = {
@@ -21,148 +43,92 @@ set_technology = {
 }
 
 ### CHARACTERS ###
+# Leaders
+recruit_character = SOV_aleksandr_kerensky # He will ruin your country
 recruit_character = SOV_vladimir_lenin
-recruit_character = SOV_aleksandr_kerensky
 recruit_character = SOV_konstantin_rodzayevsky
+recruit_character = SOV_provisional_government
 
-1917.11.11 = {
-	declare_war_on = {
-		target = RUS
-		type = civil_war
-	}
-	add_civil_war_target = RUS
-	RUS = {
-		transfer_units_fraction = {
-			target = ROOT
-			size = 0.4
-			stockpile_ratio = 0.6
-		}
-	}
-}
+# Later Leaders
+recruit_character = SOV_lavr_kornilov
+recruit_character = SOV_irakli_tsereteli
 
-
-####
-#### NO STEP BACK
-####
-
-recruit_character = SOV_iosif_stalin
-recruit_character = SOV_supreme_soviet #This is a fake character! Proper country leader role is added via focus
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	recruit_character = SOV_provisional_government # United Exiles
-	set_country_flag = vlasov_owner_flag
-}
-
-#POLITICAL ADVISORS
-recruit_character = SOV_mikhail_kalinin
-recruit_character = SOV_nikita_khrushchyov
-recruit_character = SOV_nikolay_voznesensky
-recruit_character = SOV_lazar_kaganovich
-recruit_character = SOV_genrikh_yagoda
-recruit_character = SOV_nikolay_yezhov
-recruit_character = SOV_lavrenty_beriya
-recruit_character = SOV_vsevolod_merkulov
-recruit_character = SOV_vyacheslav_molotov
-recruit_character = SOV_maksim_litvinov
-
+# Advisors
+recruit_character = SOV_pavel_milyukov
+activate_advisor = SOV_pavel_milyukov # He will ruin your country as well and he cannot even be fired
+recruit_character = SOV_georgi_lvov
+recruit_character = SOV_mikhail_rodzyanko
 recruit_character = SOV_lev_trotsky
-recruit_character = SOV_ivan_smirnov
-recruit_character = SOV_ivar_smilga
-recruit_character = SOV_karl_radek
-recruit_character = SOV_yevgeny_preobrazhensky
-recruit_character = SOV_aleksandr_shlyapnikov
-recruit_character = SOV_nikolay_bukharin
-recruit_character = SOV_aleksey_rykov
-recruit_character = SOV_mikhail_tomsky
-recruit_character = SOV_grigory_sokolnikov
-recruit_character = SOV_grigory_zinovyev
-recruit_character = SOV_lev_kamenev
-recruit_character = SOV_martemyan_ryutin
+recruit_character = SOV_patriarch_sergy
 
+# Army Advisors (incl. commanders)
+recruit_character = SOV_anton_denikin
 
-recruit_character = SOV_aleksandr_vasilevsky
-recruit_character = SOV_aleksandr_golovanov
-recruit_character = SOV_aleksandr_gorbatov
-recruit_character = SOV_aleksandr_novikov
-recruit_character = SOV_aleksandr_yegorov
-recruit_character = SOV_andrey_grechko
-recruit_character = SOV_andrey_vlasov
-recruit_character = SOV_andrey_yeryomenko
-recruit_character = SOV_arseny_golovko
-recruit_character = SOV_boris_shaposhnikov
-recruit_character = SOV_dmitry_lelyushenko
-recruit_character = SOV_filipp_golikov
-recruit_character = SOV_filipp_oktyabrsky
+# Army Commanders
+recruit_character = SOV_pyotr_krasnov
+recruit_character = SOV_konstantin_nechayev
+recruit_character = SOV_vladimir_kosmin
+recruit_character = SOV_aleksandr_rodzyanko
+recruit_character = SOV_andrey_shkuro
+recruit_character = SOV_aleksey_polivanov
 
-recruit_character = SOV_georgy_zakharov
-recruit_character = SOV_georgy_zhukov
-recruit_character = SOV_gordey_levchenko
-recruit_character = SOV_grigory_kulik
-recruit_character = SOV_igor_kurchatov
-recruit_character = SOV_issa_pliyev
-recruit_character = SOV_ivan_chernyakhovsky
-recruit_character = SOV_ivan_fedyuninsky
-recruit_character = SOV_ivan_konev
-recruit_character = SOV_ivan_yumashev
-recruit_character = SOV_kirill_meretskov
-recruit_character = SOV_kirill_moskalenko
-recruit_character = SOV_kliment_voroshilov
-recruit_character = SOV_konstantin_rokossovsky
-recruit_character = SOV_konstantin_vershinin
-recruit_character = SOV_kuzma_galitsky
-recruit_character = SOV_leonid_govorov
-recruit_character = SOV_maksim_purkayev
-recruit_character = SOV_markian_popov
-recruit_character = SOV_maks_reyter
-recruit_character = SOV_mikhail_frinovsky
+starting_train_buffer = 3.0
 
-recruit_character = SOV_mikhail_tukhachevsky
-recruit_character = SOV_nikandr_chibisov
+set_oob = "SOV_1917"
 
-recruit_character = SOV_nikolay_berzarin
-recruit_character = SOV_nikolay_vatutin
-
-recruit_character = SOV_nikolay_kuznetsov
-
-recruit_character = SOV_pavel_rychagov
-recruit_character = SOV_pavel_zhigarev
-recruit_character = SOV_pyotr_smirnov
-recruit_character = SOV_rodion_malinovsky
-recruit_character = SOV_semyon_budyonny
-recruit_character = SOV_semyon_timoshenko
-recruit_character = SOV_sergey_khudyakov
-recruit_character = SOV_sergey_korolyov
-recruit_character = SOV_sergey_rudenko
-recruit_character = SOV_sergey_gorshkov
-recruit_character = SOV_stepan_krasovsky
-recruit_character = SOV_vasily_blyukher
-recruit_character = SOV_vasily_chuykov
-recruit_character = SOV_vasily_kuznetsov
-recruit_character = SOV_vladimir_kasatonov
-recruit_character = SOV_vladimir_tributs
-
-recruit_character = SOV_yakov_cherevichenko
-recruit_character = SOV_yakov_smushkevich
-
-recruit_character = SOV_vitaly_primakov
-#Not available at game start
-recruit_character = SOV_vasily_korzh
-recruit_character = SOV_sidor_kovpak
-recruit_character = SOV_lev_dovator
-recruit_character = SOV_pavel_rybalko
+### SUBJECT SETUP ###
+if = {
+	limit = { has_dlc = "Together for Victory" }
+	set_autonomy = {
+		target = FIN
+		autonomy_state = autonomy_integrated_puppet
+	}
+	FIN = {
+		set_popularities = { neutrality = 100 }
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+			last_election = "1910.1.1"
+		} 
+	}
+	set_autonomy = {
+		target = KHI
+		autonomy_state = autonomy_integrated_puppet
+	}
+	set_autonomy = {
+		target = BUK
+		autonomy_state = autonomy_integrated_puppet
+	}
+	set_autonomy = {
+		target = TAN
+		autonomy_state = autonomy_colony
+	}
+	else = {
+		annex_country = {
+			target = FIN
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = KHI
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = BUK
+			transfer_troops = yes
+		}
+		puppet = TAN
+	}
+}
 
 set_politics = {
-	ruling_party = communism
-	last_election = "1933.7.1"
+	ruling_party = democratic
+	last_election = "1917.3.16"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 10
-	fascism = 2
-	communism = 88
+	democratic = 70
+	communism = 17
+	neutrality = 10
+	fascism = 3
 }
-
-create_faction = Comintern

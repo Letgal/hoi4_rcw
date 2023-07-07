@@ -8,8 +8,8 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		original_tag = RUS
-		has_idea = RUS_pavel_milyukov
+		original_tag = SOV
+		has_idea = SOV_pavel_milyukov
 		focus_progress = {
 			focus = PRO_stabilize_the_country
 			progress > 0
@@ -48,7 +48,7 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		original_tag = RUS
+		original_tag = SOV
 		has_stability < 0.3
 		has_completed_focus = PRO_continue_the_war
 	}
@@ -88,12 +88,12 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		original_tag = RUS
+		original_tag = SOV
 		has_civil_war = no
 		#has_stability < 0.2
-		has_character = RUS_lavr_kornilov
+		has_character = SOV_lavr_kornilov
 		has_country_leader = {
-			character = RUS_aleksandr_kerensky
+			character = SOV_aleksandr_kerensky
 			ruling_only = yes
 		}
 		has_completed_focus = PRO_continue_the_war
@@ -118,7 +118,7 @@ country_event = {
 	option = {
 		name = provisional.4.a
 		trigger = { has_political_power > 199 }
-		retire_character = RUS_lavr_kornilov
+		retire_character = SOV_lavr_kornilov
 		add_political_power = -200
 	}
 	option = {
@@ -127,7 +127,7 @@ country_event = {
 			has_political_power > 49
 			has_completed_focus = PRO_cooperate_with_the_soviets
 		}
-		retire_character = RUS_lavr_kornilov
+		retire_character = SOV_lavr_kornilov
 		add_political_power = -50
 		add_popularity = {
 			ideology = communism
@@ -185,18 +185,18 @@ country_event = {
 			}
 			keep_all_characters = yes
 			PREV = {
-				RUS_lavr_kornilov = { set_nationality = PREV.PREV }
+				SOV_lavr_kornilov = { set_nationality = PREV.PREV }
 			}
 			hidden_effect = {
-				set_cosmetic_tag = RUS_kornilov
+				set_cosmetic_tag = SOV_kornilov
 				set_party_name = {
 					ideology = neutrality
-					name = RUS_kornilov_gvt
-					long_name = RUS_kornilov_gvt_long
+					name = SOV_kornilov_gvt
+					long_name = SOV_kornilov_gvt_long
 				}
 			}
 			add_country_leader_role = {
-				character = RUS_lavr_kornilov
+				character = SOV_lavr_kornilov
 				promote_leader = yes
 				country_leader = {
 					ideology = despotism
@@ -221,18 +221,18 @@ country_event = {
 			}
 			keep_all_characters = yes
 			PREV = {
-				RUS_lavr_kornilov = { set_nationality = PREV.PREV }
+				SOV_lavr_kornilov = { set_nationality = PREV.PREV }
 			}
 			hidden_effect = {
-				set_cosmetic_tag = RUS_kornilov
+				set_cosmetic_tag = SOV_kornilov
 				set_party_name = {
 					ideology = neutrality
-					name = RUS_kornilov_gvt
-					long_name = RUS_kornilov_gvt_long
+					name = SOV_kornilov_gvt
+					long_name = SOV_kornilov_gvt_long
 				}
 			}
 			add_country_leader_role = {
-				character = RUS_lavr_kornilov
+				character = SOV_lavr_kornilov
 				promote_leader = yes
 				country_leader = {
 					ideology = despotism

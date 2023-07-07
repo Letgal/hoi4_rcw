@@ -22,13 +22,13 @@ focus_tree = {
 	country = {
 		factor = 0
 		
-		modifier = {
-			add = 10
-			OR = {
-				tag = ITA
-				tag = AUS
-			}
-		}
+		#modifier = {
+		#	add = 10
+		#	OR = {
+		#		tag = ITA
+		#		tag = AUS
+		#	}
+		#}
 	}
 	
 	default = no

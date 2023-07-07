@@ -4,8 +4,6 @@ oob = "GEO_1936"
 
 set_research_slots = 3
 
-1917.11.11 = { activate_decision = form_transcaucasian_republic }
-
 set_technology = {
 	infantry_weapons = 1
 	tech_support = 1

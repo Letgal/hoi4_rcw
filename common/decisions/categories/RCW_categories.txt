@@ -4,7 +4,6 @@ RCW_peace_treaty_category = {
 	allowed = {
 		original_tag = GER
 		#OR = {
-		#	original_tag = RUS
 		#	original_tag = SOV
 		#	original_tag = GER
 		#	original_tag = AUS
@@ -21,10 +20,7 @@ RCW_royal_family_category = {
 	icon = GFX_decision_category_generic_monarchism
 	allowed = {
 		has_global_flag = RCW_ongoing
-		OR = {
-			tag = RUS
-			tag = SOV
-		}
+		original_tag = SOV
 	}
 	visible = { has_variable = global.tsars_location }
 	highlight_states = {

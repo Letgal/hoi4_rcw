@@ -7,15 +7,16 @@ country_event = {
 	picture = GFX_report_event_generic_riot
 
 	fire_only_once = yes
-
 	trigger = {
 		NOT = { has_global_flag = RCW_ongoing }
-		tag = RUS
+		tag = SOV
 		has_government = communism
 	}
 	mean_time_to_happen = { days = 3 }
 
-	immediate = {
+	option = {
+		name = russian_civil_war.1.a
+		set_global_flag = RCW_ongoing
 		hidden_effect = {
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
@@ -29,205 +30,148 @@ country_event = {
 				}
 			}
 			remove_dynamic_modifier = { modifier = PRO_failing_state }
-			remove_dynamic_modifier = { modifier = war_weariness }
-			release = FIN
-			78 = {
-				transfer_state_to = MOL
-				add_claim_by = RUS
-			}
-			766 = {
-				transfer_state_to = MOL
-				add_claim_by = RUS
-			}
-		}
-	}
 
-	option = {
-		name = russian_civil_war.1.a
+			retire_character = SOV_aleksandr_kerensky
+			retire_character = SOV_lavr_kornilov
+			retire_character = SOV_pavel_milyukov
+			retire_character = SOV_georgi_lvov
+			retire_character = SOV_mikhail_rodzyanko
+
+			leave_faction = yes
+		}
 		start_civil_war = {
-			ruling_party = neutrality
+			ruling_party = ROOT
 			ideology = communism
-			size = 0.4
+			size = 0.1
 			capital = 195
-			states = all
-			states_filter = { region = 132 }
+			states = { 195 }
 			hidden_effect = {
 				PREV = {
 					#set_capital = 219
-					RUS_vladimir_lenin = { set_nationality = PREV.PREV }
-					set_cosmetic_tag = RUS_white
+					SOV_vladimir_lenin = { set_nationality = PREV.PREV }
+					set_cosmetic_tag = SOV_white
+					create_faction = white_movement
 					load_focus_tree = white_russia_focus
 					set_party_name = {
 						ideology = neutrality
-						name = RUS_white_movement
-						long_name = RUS_white_movement
+						name = SOV_white_movement
+						long_name = SOV_white_movement
+					}
+					set_party_name = {
+						ideology = communism
+						name = SOV_menshevik_party
+						long_name = SOV_menshevik_party_long
 					}
 					add_ideas = {
 						WHI_factionalism
 						communism_banned
 					}
 				}
-				set_cosmetic_tag = RUS_soviet
+				set_cosmetic_tag = SOV_soviet
+				create_faction = Comintern
 				remove_ideas = provisional_government_idea
+				remove_dynamic_modifier = { modifier = war_weariness }
 				load_focus_tree = soviet_russia_focus
 				add_ideas = {
 					unrecognized_state
 					SOV_empty_government
 					communist_fervor
 				}
-				if = {
-					limit = { has_war_with = GER }
-					set_truce = {
-						target = GER
-						days = 60
+			}
+		}
+	}
+	option = {
+		name = russian_civil_war.1.b
+		set_global_flag = RCW_ongoing
+		hidden_effect = {
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				remove_power_balance = { id = PRO_balance_of_power }
+			}
+			else = {
+				remove_ideas = {
+					PRO_petrograd_soviet_passive
+					PRO_petrograd_soviet_domineering
+					PRO_petrograd_soviet_weakened
+				}
+			}
+			remove_dynamic_modifier = { modifier = PRO_failing_state }
+
+			retire_character = SOV_aleksandr_kerensky
+			retire_character = SOV_lavr_kornilov
+			retire_character = SOV_pavel_milyukov
+			retire_character = SOV_georgi_lvov
+			retire_character = SOV_mikhail_rodzyanko
+		}
+		start_civil_war = {
+			ruling_party = ROOT
+			ideology = communism
+			size = 0.1
+			capital = 195
+			states = { 195 }
+			hidden_effect = {
+				PREV = {
+					#set_capital = 219
+					SOV_vladimir_lenin = { set_nationality = PREV.PREV }
+					set_cosmetic_tag = SOV_white
+					load_focus_tree = white_russia_focus
+					set_party_name = {
+						ideology = neutrality
+						name = SOV_white_movement
+						long_name = SOV_white_movement
+					}
+					set_party_name = {
+						ideology = communism
+						name = SOV_menshevik_party
+						long_name = SOV_menshevik_party_long
+					}
+					add_ideas = {
+						WHI_factionalism
+						communism_banned
 					}
 				}
-			}
-		}
-	}
-}
-
-country_event = {
-	id = russian_civil_war.2
-	title = russian_civil_war.2.t
-	desc = russian_civil_war.2.d
-	picture = GFX_report_event_generic_riot
-
-	fire_only_once = yes
-
-	trigger = {
-		has_global_flag = RCW_ongoing
-		OR = {
-			original_tag = RUS
-			original_tag = SOV
-		}
-		UKR = {
-			exists = no
-			NOT = {
-				has_war_with_wargoal_against = {
-					target = RUS
-					type = independence_wargoal
+				set_cosmetic_tag = SOV_soviet
+				remove_ideas = provisional_government_idea
+				remove_dynamic_modifier = { modifier = war_weariness }
+				load_focus_tree = soviet_russia_focus
+				add_ideas = {
+					unrecognized_state
+					SOV_empty_government
+					communist_fervor
 				}
 			}
-		}
-	}
-
-	mean_time_to_happen = { days = 60 }
-
-	immediate = {
-		hidden_effect = {
-			202 = { transfer_state_to = UKR }
-			203 = { transfer_state_to = UKR }
-		}
-	}
-
-	option = {
-		name = russian_civil_war.2.a
-		hidden_effect = {
-			UKR = {
-				declare_war_on = {
-					target = RUS
-					type = independence_wargoal
-				}
-				declare_war_on = {
-					target = SOV
-					type = independence_wargoal
-				}
-			}
-		}
-		UKR = { custom_effect_tooltip = country_declares_independence_capital }
-	}
-	option = {
-		name = russian_civil_war.2.b
-		hidden_effect = {
-			UKR = {
-				declare_war_on = {
-					target = RUS
-					type = independence_wargoal
-				}
-				declare_war_on = {
-					target = SOV
-					type = independence_wargoal
-				}
-			}
-		}
-		UKR = {
-			custom_effect_tooltip = country_declares_independence_capital
 			change_tag_from = ROOT
 		}
 	}
 }
-
-country_event = {
-	id = russian_civil_war.3
-	title = russian_civil_war.3.t
-	desc = russian_civil_war.3.d
-	picture = GFX_report_event_generic_riot
-
-	fire_only_once = yes
-
-	trigger = {
-		has_global_flag = RCW_ongoing
-		OR = {
-			original_tag = RUS
-			original_tag = SOV
-		}
-		KAZ = {
-			exists = no
-			NOT = {
-				has_war_with_wargoal_against = {
-					target = RUS
-					type = independence_wargoal
-				}
-			}
-		}
-	}
-
-	mean_time_to_happen = { days = 60 }
-
-	immediate = {
-		hidden_effect = {
-			588 = { transfer_state_to = KAZ }
-			882 = { transfer_state_to = KAZ }
-		}
-	}
-
-	option = {
-		name = russian_civil_war.2.a
-		hidden_effect = {
-			KAZ = {
-				declare_war_on = {
-					target = RUS
-					type = independence_wargoal
-				}
-				declare_war_on = {
-					target = SOV
-					type = independence_wargoal
-				}
-			}
-		}
-		KAZ = { custom_effect_tooltip = country_declares_independence_capital }
-	}
-	option = {
-		name = russian_civil_war.3.b
-		hidden_effect = {
-			KAZ = {
-				declare_war_on = {
-					target = RUS
-					type = independence_wargoal
-				}
-				declare_war_on = {
-					target = SOV
-					type = independence_wargoal
-				}
-			}
-		}
-		KAZ = {
-			custom_effect_tooltip = country_declares_independence_capital
-			change_tag_from = ROOT
-		}
-	}
-}
+#country_event = {
+#	id = russian_civil_war.2
+#	title = russian_civil_war.2.t
+#	desc = russian_civil_war.2.d
+#	picture = GFX_report_event_generic_riot
+#
+#	minor_flavor = yes
+#	trigger = {
+#		has_global_flag = RCW_ongoing
+#		tag = WHI
+#		SOV = {
+#			OR = {
+#				controls_state = 202 # Kiev
+#				controls_state = 206 # Minsk
+#				controls_state = 213 # Murmansk
+#				controls_state = 405 # Tashkent
+#				controls_state = 566 # Irkutsk
+#			}
+#		}
+#	}
+#	mean_time_to_happen = { days = 3 }
+#
+#	immediate = {}
+#
+#	option = {
+#		name = russian_civil_war.2.a
+#	}
+#}
 
 ### WAR CONQUESTS ###
 country_event = {

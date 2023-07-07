@@ -4,7 +4,7 @@ state={
 	name="STATE_11"
 
 	history={
-		owner = RUS # LIT
+		owner = SOV # LIT
 		victory_points = {
 			6296 5
 		}
@@ -18,7 +18,7 @@ state={
 
 		}
 		add_core_of = LIT
-		1917.11.11 = { controller = GER }
+		1917.11.8 = { controller = GER }
 	}
 
 	provinces={

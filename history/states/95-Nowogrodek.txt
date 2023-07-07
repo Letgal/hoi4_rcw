@@ -6,15 +6,18 @@ state={
 		victory_points = {
 			9304 1
 		}
-		owner = RUS # POL
+		owner = SOV # POL
 		buildings = {
 			infrastructure = 3
 			air_base = 3
 
 		}
-		add_core_of = RUS
+		add_core_of = SOV
 		add_core_of = BLR
-		1917.11.11 = { controller = GER }
+		1917.11.8 = {
+			controller = GER
+			SOV = { set_province_controller = 9236 }
+		}
 	}
 
 	provinces={

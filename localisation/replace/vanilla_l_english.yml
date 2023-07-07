@@ -4,14 +4,42 @@
  FE_INTERESTING_COUNTRIES: "Russia Overview"
  FE_COUNTRY_INFO_TITLE: "Country Overview"
 
+ #neutrality: "Centrist"
+ #neutrality_noun: "Centrism"
+
+ POLITICS_POPULARITY: "§TParty Power: §H$VALUE|2$%§!§!"
+ STABILITY_POPULARITY_FACTOR: "Ruling party power: $VALUE|=+2%$"
+ DIMININSHING_RETURNS: "At this level of power, effects are scaled to $SCALE|Y2%$"
+
+ DIPLOMACY_BOOST_PARTY_POPULARITY_TITLE: "Boost party power"
+ alert_external_influences_boost_party_popularity: "§YBoosting power of a party§!"
+ boost_party_popularity_active: "boosting a party in"
+ ETH_risk_of_rebellion_tt: "Risk of Rebellion\n A rebellion will trigger if stability less than §Y15%§! or ruling party power is less than §Y40%§!."
+ RULE_ALLOW_PARTY_BOOSTING_FREE_DESC: "Countries may boost a party in any other country."
+ RULE_ALLOW_PARTY_BOOSTING_AI_ONLY_DESC: "Countries may only boost a party in countries not played by a human."
+ RULE_ALLOW_PARTY_BOOSTING_PLAYER_ONLY_DESC: "Countries may only boost a party in countries with a human player."
+ RULE_ALLOW_PARTY_BOOSTING_BLOCKED_DESC: "Countries may not boost a party in any country."
+ RULE_BOOST_PARTY_BLOCKED_TT: "Game Rule: §RCountries may not boost a party in any country.§!"
+ RULE_BOOST_PARTY_PLAYER_ONLY_TT: "Game Rule: §RCountries may only boost a party in countries with a human player.§!"
+ RULE_BOOST_PARTY_AI_ONLY_TT: "Game Rule: §RCountries may only boost a party in countries not played by a human.§!"
+ CAN_BOOST_OWN_IDEOLOGY: "Can boost same-ideology parties in other countries"
+
+ communism_drift: "Daily Power Change for $communism_noun$"
+ democratic_drift: "Daily Power Change for $democratic_noun$"
+ fascism_drift: "Daily Power Change for $fascism_noun$"
+ neutrality_drift: "Daily Power Change for $neutrality_noun$"
+
  #BOP_TOOLTIP: "The §Y[ROOT.GetPowerBalanceName]§! is currently [?.ROOT.power_balance_value|0%H] on the side of the §Y[ROOT.GetActiveSideName]§!."
  #EFFECT_ADD_POWER_BALANCE: "$POWER_BALANCE|Y$ begins in §Y[ROOT.GetNameDef]§! with the $SIDE1|Y$ and the $SIDE2|Y$ sides. It starts with $VALUE|%0Y$ progress towards the $TRENDING_SIDE|Y$."
  #EFFECT_REMOVE_POWER_BALANCE: "$POWER_BALANCE|Y$ ends in §Y[ROOT.GetNameDef]§!."
  #EFFECT_SET_POWER_BALANCE_VALUE: "The $POWER_BALANCE|Y$ is set to $VALUE|Y$ on the $TRENDING_SIDE|Y$."
  #EFFECT_ADD_POWER_BALANCE_VALUE: "The $POWER_BALANCE|Y$ moves $TREND$$PERCENT|%1Y$ towards the side of the $SIDE|Y$."
 
- SOV_democratic: "$RUS_democratic$"
- SOV_democratic_DEF: "$RUS_democratic_DEF$"
+ Allies: "Entente"
+ Comintern: "Red Movement"
+
+ SOV_democratic: "Russian Republic"
+ SOV_democratic_DEF: "the Russian Republic"
  SOV_neutrality: "Russian Empire"
  SOV_neutrality_DEF: "the Russian Empire"
  SOV_communism: "$SOV_russia_communism$"
@@ -24,6 +52,8 @@
  FRA: "Allied Powers"
  FRA_DEF: "the Allied Powers"
  FRA_ADJ: "Allied"
+
+ autonomy_colony: "Autonomous Puppet"
 
  SOV_democratic_party: "Trudovaya gruppa"
  SOV_democratic_party_long: "Fraktsiya trudovikov PSR"

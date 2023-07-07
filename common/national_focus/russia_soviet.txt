@@ -5,6 +5,8 @@
 		modifier = {
 			add = 10
 			tag = SOV
+			has_government = communism
+			has_cosmetic_tag = SOV_soviet
 		}
 	}
 	default = no

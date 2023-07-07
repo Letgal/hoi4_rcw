@@ -1,16 +1,25 @@
-PRO_balance_of_power_category_bba = {
+PRO_balance_of_power_category_bba = { # Workaround, since the category is tied to the BOP no matter what
 	icon = GFX_decision_category_power_struggle
 	allowed = {
 		has_dlc = "By Blood Alone"
-		original_tag = RUS
+		tag = SOV
 	}
+	visible = { has_cosmetic_tag = SOV_provisional }
 	priority = 60
 }
-PRO_balance_of_power_category = { # Workaround, since the category is tied to the BOP no matter what
+PRO_balance_of_power_category = {
 	icon = GFX_decision_category_power_struggle
 	allowed = {
 		NOT = { has_dlc = "By Blood Alone" }
-		original_tag = RUS
+		tag = SOV
+	}
+	visible = {
+		has_cosmetic_tag = SOV_provisional
+		OR = {
+			has_idea = PRO_petrograd_soviet_passive
+			has_idea = PRO_petrograd_soviet_domineering
+			has_idea = PRO_petrograd_soviet_weakened
+		}
 	}
 	priority = 60
 }

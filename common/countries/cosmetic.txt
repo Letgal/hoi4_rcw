@@ -281,11 +281,6 @@ USA_CSA = {
 	color_ui = rgb { 186 205 219 }
 }
 
-SOV_russia = {
-	color = rgb { 72 143 68 }
-	color_ui = rgb { 72 143 68 }
-}
-
 HOL_benelux_unified = {
 	color = rgb { 255 128 0 }
 	color_ui = rgb { 255 128 0 }
@@ -963,16 +958,21 @@ SWI_helvetic_republic = {
 	color_ui = rgb { 140 140 140 }
 }
 
+SOV_russia = {
+	color = rgb { 72 143 68 }
+	color_ui = rgb { 72 143 68 }
+}
+
 ### RCW ###
-RUS_soviet = { # Color for event-started RCW
+SOV_soviet = {
 	color = rgb { 125 13 24 }
 	color_ui = rgb { 163 17 31 }
 }
-RUS_white = {
+SOV_white = {
 	color = rgb { 130 200 229 }
 	color_ui = rgb { 130 200 229 }
 }
-RUS_anarchist = {
+SOV_anarchist = {
 	color = rgb { 21 38 66 }
 	color_ui = rgb { 21 38 66 }
 }

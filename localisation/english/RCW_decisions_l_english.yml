@@ -8,7 +8,7 @@
  PRO_balance_of_power_category:0 "[GetBopDecisionCatName]"
  PRO_balance_of_power_category_desc:0 "The Provisional Government's rule was established in no small part thanks to "help" from the Petrograd Soviet. However, the Soviet demanded representation in the government in exchange. Having no other choice, we had to accept. Ever since then, the Soviet has been trying to destabilize our administration and woo our supporters to their side.\nThis creates a very dangerous situation. If the Soviets get enough power, they will swiftly overthrow the Provisional Government."
  # Shared
- PRO_limit_the_soviets_influence:0 "Limit the Soviet's Influence"
+ PRO_limit_the_soviets_influence_bba:0 "Limit the Soviet's Influence" # BBA-exclusive
  PRO_arrest_soviet_leaders:0 "Arrest the Soviet Leaders"
  # Purge
  PRO_abolish_the_soviet:0 "Abolish the Soviet" # Final Solution
@@ -29,7 +29,6 @@
  PRO_cooperate_with_the_soviets_category_bba:0 "$PRO_cooperate_with_the_soviets_category$"
  PRO_balance_of_power_category_bba:0 "$PRO_balance_of_power_category$"
  PRO_balance_of_power_category_desc_bba:0 "$PRO_balance_of_power_category_desc$"
- PRO_limit_the_soviets_influence_bba:0 "$PRO_limit_the_soviets_influence$"
  PRO_arrest_soviet_leaders_bba:0 "$PRO_arrest_soviet_leaders$"
  PRO_abolish_the_soviet_bba:0 "$PRO_abolish_the_soviet$"
  PRO_abolish_the_soviet_desc_bba:0 "$PRO_abolish_the_soviet_desc$"
@@ -50,7 +49,7 @@
  ### THE ROYAL FAMILY ###
  RCW_royal_family_category:0 "The Royal Family"
  RCW_royal_family_category_desc:0 "After Tsar Nikolay II was forced to abdicate his throne in February 1917, he and his family were put under house arrest.\n\nNow that a civil war broke out in our country, we must monitor the situation and not let the enemy realize their plans on them.\n\nRoyal family's current location: §H[?global.tsars_location.GetName]§!"
- RCW_evacuate_the_royal_family:0 "Evacuate the Royal Family"
+ RCW_relocate_the_royal_family:1 "Relocate the Royal Family"
  RCW_assassinate_the_royal_family:0 "Assassinate the Royal Family"
 
  ### PEACE NEGOTIATIONS ###

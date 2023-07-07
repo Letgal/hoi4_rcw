@@ -19,11 +19,11 @@ PRO_balance_of_power_category_bba = {
 				advisor = {
 					slot = political_advisor
 					idea_token = RUS_lev_trotsky
-					visible = { is_country_leader = no }
-					available = {
-						is_country_leader = no
-						has_completed_focus = PRO_moderate_communism
-					}
+					#visible = { is_country_leader = no }
+					#available = {
+					#	is_country_leader = no
+					#	has_completed_focus = PRO_moderate_communism
+					#}
 					traits = { communist_orator }
 				}
 			}
@@ -131,11 +131,11 @@ PRO_balance_of_power_category = {
 				advisor = {
 					slot = army_chief
 					idea_token = RUS_lev_trotsky
-					visible = { is_country_leader = no }
-					available = {
-						is_country_leader = no
-						has_completed_focus = PRO_moderate_communism
-					}
+					#visible = { is_country_leader = no }
+					#available = {
+					#	is_country_leader = no
+					#	has_completed_focus = PRO_moderate_communism
+					#}
 					traits = { army_chief_organizational_3 }
 				}
 			}

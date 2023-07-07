@@ -1,4 +1,37 @@
 characters={
+	GER_wilhelm_ii={
+		name=GER_wilhelm_ii
+		portraits={
+			civilian={
+				large="GFX_portrait_ger_wilhelm_ii"
+			}	
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	GER_wilhelm_iii={ #Empty Wilhelm III so he doesn't become ruler automatically if the neutrals are in power
+		name=GER_wilhelm_iii
+		portraits={
+			civilian={
+				large="GFX_portrait_ger_wilhelm_iii"
+			}	
+		}
+	}
+
+	GER_victoria={ #Empty Vicky3 
+		name=GER_victoria
+		gender = female 
+		portraits={
+			civilian={
+				large="GFX_portrait_ger_victoria_louise"
+			}
+		}
+	}
+
 	GER_adolf_hitler={
 		name=GER_adolf_hitler
 		portraits={
@@ -40,39 +73,6 @@ characters={
 			traits={ exiled }
 			expire="1965.1.1.1"
 			id=-1
-		}
-	}
-
-	GER_wilhelm_ii={
-		name=GER_wilhelm_ii
-		portraits={
-			civilian={
-				large="GFX_portrait_ger_wilhelm_ii"
-			}	
-		}
-		country_leader={
-			ideology=despotism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
-	GER_wilhelm_iii={ #Empty Wilhelm III so he doesn't become ruler automatically if the neutrals are in power
-		name=GER_wilhelm_iii
-		portraits={
-			civilian={
-				large="GFX_portrait_ger_wilhelm_iii"
-			}	
-		}
-	}
-
-	GER_victoria={ #Empty Vicky3 
-		name=GER_victoria
-		gender = female 
-		portraits={
-			civilian={
-				large="GFX_portrait_ger_victoria_louise"
-			}
 		}
 	}
 

@@ -1,5 +1,5 @@
 RCW_royal_family_category = {
-	RCW_evacuate_the_royal_family = {
+	RCW_relocate_the_royal_family = {
 		icon = infiltrate_state
 		visible = {
 			tag = WHI
@@ -9,7 +9,7 @@ RCW_royal_family_category = {
 			controls_state = global.tsars_location
 			var:global.tsars_location = { any_neighbor_state = { is_controlled_by = SOV } }
 			controls_state = FROM
-			NOT = { has_country_flag = tsar_is_evacuating }
+			NOT = { has_country_flag = tsar_is_relocating }
 		}
 		state_target = yes
 		on_map_mode = map_only
@@ -25,11 +25,9 @@ RCW_royal_family_category = {
 		cost = 50
 		days_remove = 30
 		days_re_enable = 15
-		complete_effect = {
-			set_country_flag = tsar_is_evacuating
-		}
+		complete_effect = { set_country_flag = tsar_is_relocating }
 		remove_effect = {
-			clr_country_flag = tsar_is_evacuating
+			clr_country_flag = tsar_is_relocating
 			set_variable = { global.tsars_location = FROM }
 			custom_effect_tooltip = move_the_tsar_tt
 		}

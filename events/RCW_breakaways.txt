@@ -1,0 +1,113 @@
+﻿add_namespace = rcw_breakaways
+
+country_event = {
+	id = rcw_breakaways.1
+	title = rcw_breakaways.1.t
+	desc = rcw_breakaways.1.d
+	picture = GFX_report_event_generic_riot
+
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = RCW_ongoing
+		original_tag = SOV
+		UKR = {
+			exists = no
+			NOT = {
+				has_war_with_wargoal_against = {
+					target = SOV
+					type = independence_wargoal
+				}
+			}
+		}
+	}
+	mean_time_to_happen = { days = 30 }
+
+	option = {
+		name = rcw_breakaways.1.a
+		hidden_effect = {
+			UKR = {
+				transfer_state = 202
+				transfer_state = 203
+				declare_war_on = {
+					target = SOV
+					type = independence_wargoal
+				}
+			}
+		}
+		UKR = { custom_effect_tooltip = country_declares_independence_capital }
+	}
+	option = {
+		name = rcw_breakaways.1.b
+		hidden_effect = {
+			UKR = {
+				transfer_state = 202
+				transfer_state = 203
+				declare_war_on = {
+					target = SOV
+					type = independence_wargoal
+				}
+			}
+		}
+		UKR = {
+			custom_effect_tooltip = country_declares_independence_capital
+			change_tag_from = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = rcw_breakaways.2
+	title = rcw_breakaways.2.t
+	desc = rcw_breakaways.2.d
+	picture = GFX_report_event_generic_riot
+
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = RCW_ongoing
+		original_tag = SOV
+		KAZ = {
+			exists = no
+			NOT = {
+				has_war_with_wargoal_against = {
+					target = SOV
+					type = independence_wargoal
+				}
+			}
+		}
+	}
+	mean_time_to_happen = { days = 30 }
+
+	immediate = { KAZ = { set_cosmetic_tag = KAZ_alash } }
+
+	option = {
+		name = rcw_breakaways.1.a
+		hidden_effect = {
+			KAZ = {
+				transfer_state = 588
+				transfer_state = 882
+				declare_war_on = {
+					target = SOV
+					type = independence_wargoal
+				}
+			}
+		}
+		KAZ = { custom_effect_tooltip = country_declares_independence_capital }
+	}
+	option = {
+		name = rcw_breakaways.2.b
+		hidden_effect = {
+			KAZ = {
+				transfer_state = 588
+				transfer_state = 882
+				declare_war_on = {
+					target = SOV
+					type = independence_wargoal
+				}
+			}
+		}
+		KAZ = {
+			custom_effect_tooltip = country_declares_independence_capital
+			change_tag_from = ROOT
+		}
+	}
+}

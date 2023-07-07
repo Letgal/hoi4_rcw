@@ -1,15 +1,22 @@
+RUS = {
+	original_tag = SOV
+	NOT = {
+		has_government = communism
+		has_cosmetic_tag = SOV_soviet
+	}
+}
 PRO = {
-	original_tag = RUS
+	original_tag = SOV
 	has_government = democratic
-	has_cosmetic_tag = RUS_provisional
+	has_cosmetic_tag = SOV_provisional
 }
 KRN = {
-	original_tag = RUS
+	original_tag = SOV
 	has_government = neutrality
-	has_cosmetic_tag = RUS_kornilov
+	has_cosmetic_tag = SOV_kornilov
 }
 WHI = {
-	original_tag = RUS
+	original_tag = SOV
 	has_government = neutrality
-	has_cosmetic_tag = RUS_white
+	has_cosmetic_tag = SOV_white
 }

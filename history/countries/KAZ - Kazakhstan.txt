@@ -1,7 +1,5 @@
 ﻿capital = 588 # Alash-Qala (Semipalatinsk); originally 586: Almaty
 
-set_cosmetic_tag = KAZ_alash
-
 oob = "KAZ_1917"
 
 set_research_slots = 3

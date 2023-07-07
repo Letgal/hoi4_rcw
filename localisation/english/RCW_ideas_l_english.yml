@@ -25,11 +25,11 @@
  # Starting Ideas
  PRO_failing_state:0 "A Failing State"
  PRO_failing_state_desc: ""
- RUS_undersupplied_army:0 "Undersupplied Army"
+ PRO_undersupplied_army:0 "Undersupplied Army"
  # Add [GetRussiasState] into desc?
- RUS_undersupplied_army_desc:0 "The Great War has rocked our military hard.\nNobody could anticipate that the war would go this bad for us. The army desperately needs equipment."
- #RUS_undersupplied_army_war:0 "And if that wasn't enough, we are still at war with the Central Powers!"
- #RUS_undersupplied_army_peace:0 "Thankfully, the Central Powers agreed for a truce with us, which gives us some time to reorganize. But so will do our enemies."
+ PRO_undersupplied_army_desc:0 "The Great War has rocked our military hard.\nNobody could anticipate that the war would go this bad for us. The army desperately needs equipment."
+ #PRO_undersupplied_army_war:0 "And if that wasn't enough, we are still at war with the Central Powers!"
+ #PRO_undersupplied_army_peace:0 "Thankfully, the Central Powers agreed for a truce with us, which gives us some time to reorganize. But so will do our enemies."
 
  # From Focuses
  PRO_improved_supply_temp:0 "Revised Supply Management"

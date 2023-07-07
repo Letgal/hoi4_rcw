@@ -1,48 +1,24 @@
 debug_decisions = {
 	DEBUG_SOV_load_RUS_focus = {
-		allowed = {
-			OR = {
-				original_tag = RUS
-				original_tag = SOV
-			}
-		}
+		allowed = { original_tag = SOV }
 		available = {
-			OR = {
-				original_tag = RUS
-				original_tag = SOV
-			}
+			original_tag = SOV
 			NOT = { has_focus_tree = provisional_russia_focus }
 		}
 		complete_effect = { load_focus_tree = provisional_russia_focus }
 	}
 	DEBUG_SOV_load_SOV_focus = {
-		allowed = {
-			OR = {
-				original_tag = RUS
-				original_tag = SOV
-			}
-		}
+		allowed = { original_tag = SOV }
 		available = {
-			OR = {
-				original_tag = RUS
-				original_tag = SOV
-			}
+			original_tag = SOV
 			NOT = { has_focus_tree = soviet_russia_focus }
 		}
 		complete_effect = { load_focus_tree = soviet_russia_focus }
 	}
 	DEBUG_SOV_load_WHI_focus = {
-		allowed = {
-			OR = {
-				original_tag = RUS
-				original_tag = SOV
-			}
-		}
+		allowed = { original_tag = SOV }
 		available = {
-			OR = {
-				original_tag = RUS
-				original_tag = SOV
-			}
+			original_tag = SOV
 			NOT = { has_focus_tree = white_russia_focus }
 		}
 		complete_effect = { load_focus_tree = white_russia_focus }

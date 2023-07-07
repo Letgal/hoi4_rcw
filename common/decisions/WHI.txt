@@ -1,11 +1,11 @@
 WHI_power_struggle = {
 	# Kadets
 	WHI_kadet_stuff = {
-		visible = { has_completed_focus = WHI_kadet_supremacy }
+		#visible = { has_completed_focus = WHI_kadet_supremacy }
 	}
 	WHI_kadet_propaganda = {
 		icon = eng_propaganda_campaigns
-		visible = { has_completed_focus = WHI_kadet_supremacy }
+		#visible = { has_completed_focus = WHI_kadet_supremacy }
 		cost = 100
 		days_remove = 90
 		days_re_enable = 45
@@ -14,11 +14,11 @@ WHI_power_struggle = {
 
 	# Nationalists
 	WHI_nationalist_stuff = {
-		visible = { has_completed_focus = WHI_nationalist_supremacy }
+		#visible = { has_completed_focus = WHI_nationalist_supremacy }
 	}
 	WHI_nationalist_propaganda = {
 		icon = eng_propaganda_campaigns
-		visible = { has_completed_focus = WHI_nationalist_supremacy }
+		#visible = { has_completed_focus = WHI_nationalist_supremacy }
 		cost = 100
 		days_remove = 90
 		days_re_enable = 45
@@ -27,14 +27,70 @@ WHI_power_struggle = {
 
 	# Tsarists
 	WHI_tsarist_stuff = {
-		visible = { has_completed_focus = WHI_tsarist_supremacy }
+		#visible = { has_completed_focus = WHI_tsarist_supremacy }
 	}
 	WHI_tsarist_propaganda = {
 		icon = eng_propaganda_campaigns
-		visible = { has_completed_focus = WHI_tsarist_supremacy }
+		#visible = { has_completed_focus = WHI_tsarist_supremacy }
 		cost = 100
 		days_remove = 90
 		days_re_enable = 45
 		modifier = { neutrality_drift = 0.05 }
 	}
+
+	### MONARCHY SCOPE ###
+	WHI_monarchy_assemble_regency = {
+		icon = generic_monarchy
+		visible = {
+			OR = {
+				has_country_flag = chose_constitutional_monarchy
+				has_country_flag = chose_absolute_monarchy
+			}
+		}
+		available = {
+			OR = {
+				has_country_flag = chose_constitutional_monarchy
+				has_country_flag = chose_absolute_monarchy
+			}
+		}
+		cost = 70
+		days_remove = 70
+		remove_effect = {
+			#add_ideas = WHI_regency_council
+			add_to_variable = {
+				tsarist_opinion = 2
+				tooltip = tsarist_opinion_2
+			}
+		}
+	}
+
+	### ARMY SCOPE ###
+	# generic_army_support
+
+	### FAITH SCOPE ###
+	WHI_faith_restore_the_synod = {
+		#icon = generic_monarchy
+		#visible = { has_completed_focus = WHI_orthodox_state }
+		#available = { has_completed_focus = WHI_orthodox_state }
+		cost = 70
+		days_remove = 70
+		remove_effect = {
+			#add_ideas = WHI_synod_restored
+			add_to_variable = {
+				tsarist_opinion = 2
+				tooltip = tsarist_opinion_2
+			}
+			add_to_variable = {
+				nationalist_opinion = 1
+				tooltip = nationalist_opinion_1
+			}
+			add_to_variable = {
+				republican_opinion = 1
+				tooltip = republican_opinion_1
+			}
+		}
+	}
+
+	### PEOPLE SCOPE ###
+	# POL_looming_peasants_strike
 }

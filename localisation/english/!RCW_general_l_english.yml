@@ -1,0 +1,27 @@
+﻿l_english:
+ ### ADDITIONAL STUFF ###
+ FOCUS_FILTER_DOCTRINE:0 "Military Doctrine"
+ FOCUS_FILTER_NO_EFFECTS:0 "No Effects"
+
+ WAR_NAME_AUS_RUS:0 "The Great War"
+ WAR_NAME_GER_RUS:0 "The Great War"
+
+ white_movement:0 "White Movement"
+
+ SOV_menshevik_party:0 "RSDRP(m)"
+ SOV_menshevik_party_long:0 "Rossiyskaya sotsial-demokraticheskaya rabochaya partiya (men'shevikov)"
+
+ SOV_kornilov_gvt:1 "Pravityel'stvo Kornilova"
+ SOV_kornilov_gvt_long:1 "Vryemyennoye pravityel'stvo gyenyerala Kornilova"
+ SOV_white_movement:1 "Byeloye dvizheniye"
+
+ RULE_FACTION_BLOCKED_TT:0 "§R(Game Rule) Cannot join or invite others into factions§!"
+
+ motorized_equipment_0:0 "Early Truck"
+ motorized_equipment_0_desc:0 "Placeholder"
+
+ country_declares_independence:2 "§H[THIS.GetName]§! declares war of independence from §H[ROOT.GetNonIdeologyName]§!.\n"
+ country_declares_independence_capital:0 "§H[THIS.GetName]§! declares war of independence from §H[ROOT.GetNonIdeologyName]§! with its capital in §H[THIS.Capital.GetName]§!.\n"
+
+ ### IDEOLOGIES ###
+ #

@@ -54,7 +54,10 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = konstantin_rodzaevsky
-			visible = { is_country_leader = no }
+			visible = {
+				NOT = { has_government = democratic }
+				is_country_leader = no
+			}
 			available = {
 				if = {
 					limit = { has_dlc = "Man the Guns" }
@@ -87,17 +90,267 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = SOV_lev_trotsky
-			visible = { is_country_leader = no }
+			visible = {
+				is_country_leader = no
+				has_decision = PRO_hire_soviet_commanders
+			}
 			available = { is_country_leader = no }
 			traits = { army_chief_organizational_3 }
 		}
-		field_marshal = {
-			traits = { inspirational_leader trickster }
-			skill = 3
-			attack_skill = 3
+		#field_marshal = {
+		#	traits = { inspirational_leader trickster }
+		#	skill = 3
+		#	attack_skill = 3
+		#	defense_skill = 1
+		#	planning_skill = 2
+		#	logistics_skill = 2
+		#}
+	}
+
+	### LATER COUNTRY LEADERS ###
+	SOV_lavr_kornilov = {
+		name = SOV_lavr_kornilov
+		portraits = {
+			civilian = { large = GFX_portrait_SOV_lavr_kornilov }
+			army = {
+				large = GFX_portrait_SOV_lavr_kornilov
+				small = GFX_idea_SOV_pyotr_krasnov # Temp
+			}
+		}
+		corps_commander = {
+			traits = { old_guard }
+			skill = 2
+			attack_skill = 2
 			defense_skill = 1
 			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	SOV_irakli_tsereteli = {
+		name = SOV_irakli_tsereteli
+		portraits = {
+			civilian = { large = GFX_portrait_SOV_irakli_tsereteli }
+			army = { small = GFX_idea_europe_generic_4 }
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1953.3.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_irakli_tsereteli
+			visible = { is_country_leader = no }
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+				is_country_leader = no
+				has_completed_focus = PRO_moderate_communism
+			}
+			traits = { patriotic_socialist }
+		}
+	}
+
+	### ADVISORS ###
+	SOV_pavel_milyukov = {
+		name = SOV_pavel_milyukov
+		portraits = {
+			army = { small = GFX_idea_europe_generic_2 }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_pavel_milyukov
+			available = {
+				has_government = democratic
+				NOT = { has_completed_focus = PRO_moderate_communism }
+			}
+			removal_cost = -1 # Pre-1.12.8
+			can_be_fired = no
+			traits = { liberal_professor }
+		}
+	}
+
+	SOV_georgi_lvov = {
+		name = SOV_georgi_lvov
+		portraits = {
+			army = { small = GFX_idea_south_america_generic_8 }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_georgi_lvov
+			available = {
+				has_government = democratic
+				NOT = { has_completed_focus = PRO_moderate_communism }
+			}
+			traits = { noble_beurocrat }
+		}
+	}
+
+	SOV_mikhail_rodzyanko = {
+		name = SOV_mikhail_rodzyanko
+		portraits = {
+			army = { small = GFX_idea_europe_generic_4 }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_mikhail_rodzyanko
+			available = {
+				has_government = democratic
+				NOT = { has_completed_focus = PRO_moderate_communism }
+			}
+			traits = { SWI_conservative_democrat }
+		}
+	}
+
+	SOV_patriarch_sergy = {
+		name = SOV_patriarch_sergy
+		portraits = {
+			army = { small = GFX_idea_SOV_patriarch_sergy }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_patriarch_sergy
+			visible = { has_completed_focus = PRO_preserve_church_power }
+			available = { has_completed_focus = PRO_preserve_church_power }
+			traits = { patriarch_of_moscow_and_all_russia }
+		}
+	}
+
+	### ARMY ADVISORS (incl. commanders) ###
+	SOV_anton_denikin = {
+		name = SOV_anton_denikin
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_anton_denikin
+				small = GFX_idea_SOV_anton_denikin
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = anton_denikin
+			traits = { army_chief_drill_1 }
+			cost = 50
+		}
+		
+		field_marshal = {
+			traits = { old_guard inflexible_strategist }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	### NON-ADVISOR ARMY LEADERS ###
+	SOV_konstantin_nechayev = {
+		name = SOV_konstantin_nechayev
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_konstantin_nechayev
+				small = GFX_idea_SOV_konstantin_nechayev
+			}
+		}
+		field_marshal = {
+			traits = { infantry_officer war_hero }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	SOV_aleksandr_rodzyanko = {
+		name = SOV_aleksandr_rodzyanko
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_aleksandr_rodzyanko
+				small = GFX_idea_SOV_aleksandr_rodzyanko
+			}
+		}
+		field_marshal = {
+			traits = { cavalry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
 			logistics_skill = 2
+		}
+	}
+
+	SOV_andrey_shkuro = {
+		name = SOV_andrey_shkuro
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_andrey_shkuro
+				small = GFX_idea_SOV_andrey_shkuro
+			}
+		}
+		field_marshal = {
+			traits = { trait_reckless cavalry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+
+	SOV_pyotr_krasnov = {
+		name = SOV_pyotr_krasnov
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_pyotr_krasnov
+				small = GFX_idea_SOV_pyotr_krasnov
+			}
+		}
+		field_marshal = {
+			traits = { cavalry_leader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	SOV_vladimir_kosmin = {
+		name = SOV_vladimir_kosmin
+		portraits = {
+			army = {
+				large = GFX_portrait_SOV_vladimir_kosmin
+				small = GFX_idea_SOV_vladimir_kosmin
+			}
+		}
+		field_marshal = {
+			traits = { winter_expert trait_mountaineer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	SOV_aleksey_polivanov = {
+		name = SOV_aleksey_polivanov
+		portraits = {
+			army = {
+				large = GFX_portrait_south_america_generic_8
+				small = GFX_idea_south_america_generic_8
+			}
+		}
+		corps_commander = {
+			traits = { } # INF
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 		}
 	}
 

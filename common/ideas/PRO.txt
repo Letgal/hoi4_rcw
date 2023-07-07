@@ -13,7 +13,7 @@ ideas = {
 				supply_factor = -0.15
 			}
 		}
-		RUS_undersupplied_army = {
+		PRO_undersupplied_army = {
 			picture = generic_army_problems
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }

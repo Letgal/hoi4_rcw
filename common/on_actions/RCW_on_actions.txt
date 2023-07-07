@@ -2,78 +2,59 @@ on_actions = {
 	on_startup = {
 		effect = {
 			if = {
-				limit = { has_start_date > 1917.11.10 }
-				every_state = {
-					limit = { is_core_of = RUS }
-					add_core_of = SOV
-				}
-				every_state = {
-					limit = { is_claimed_by = RUS }
-					add_claim_by = SOV
-				}
-				SOV = {
-					set_province_controller = 36
-					set_province_controller = 86
-					set_province_controller = 94
-					set_province_controller = 134
-					set_province_controller = 170
-					set_province_controller = 176
-					set_province_controller = 535
-					set_province_controller = 3008
-					set_province_controller = 3067
-					set_province_controller = 3189
-					set_province_controller = 6029
-					set_province_controller = 6175
-					set_province_controller = 6579
-					set_province_controller = 9074
-					set_province_controller = 9119
-					set_province_controller = 9195
-					set_province_controller = 9198
-					set_province_controller = 9236
-					set_province_controller = 11045
-					set_province_controller = 11096
-					set_province_controller = 11181
-					set_province_controller = 11285
-				}
-				set_variable = { global.tsars_location = 570 }
+				limit = { has_start_date > 1917.11.7 }
+				RUS = { country_event = russian_civil_war.1 }
+				set_variable = { global.tsars_location = 580 }
 			}
 		}
 	}
 	on_weekly = {
 		effect = {
 			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = war_weariness }
-				}
+				limit = { has_dynamic_modifier = { modifier = war_weariness } }
 				add_to_variable = { war_weariness_ws = war_weariness_pc }
+			}
+		}
+	}
+	on_government_change = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = SOV
+					has_government = communism
+					OR = {
+						has_country_leader = {
+							character = SOV_vladimir_lenin
+							ruling_only = yes
+						}
+						has_country_leader = {
+							character = SOV_lev_trotsky
+							ruling_only = yes
+						}
+					}
+				}
+				set_cosmetic_tag = SOV_soviet
+				else = { drop_cosmetic_tag = yes } # Sadly, there is no way known to me to restore the previous cosmetic tag
 			}
 		}
 	}
 	on_state_control_changed = {
 		effect = {
 			if = {
-				limit = {
-					FROM.FROM = { state = 10 }
-				}
-				ROOT = { country_event = rcw.101 }
+				limit = { FROM.FROM = { state = 10 } }
+				ROOT = { country_event = russian_civil_war.101 }
 			}
 			if = {
-				limit = {
-					FROM.FROM = { state = 763 }
-				}
-				ROOT = { country_event = rcw.102 }
+				limit = { FROM.FROM = { state = 763 } }
+				ROOT = { country_event = russian_civil_war.102 }
 			}
 			if = {
-				limit = {
-					FROM.FROM = { state = 91 }
-				}
-				ROOT = { country_event = rcw.103 }
+				limit = { FROM.FROM = { state = 91 } }
+				ROOT = { country_event = russian_civil_war.103 }
 			}
 			if = {
-				limit = {
-					FROM.FROM = { state = 88 }
-				}
-				ROOT = { country_event = rcw.104 }
+				limit = { FROM.FROM = { state = 88 } }
+				ROOT = { country_event = russian_civil_war.104 }
 			}
 		}
 	}

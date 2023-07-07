@@ -1,4 +1,23 @@
 crisis = {
+	PRO_upcoming_soviet_coup = {
+		priority = 1
+		icon = generic_speech
+		activation = {
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				power_balance_value = {
+					id = PRO_balance_of_power
+					value < -0.9
+				}
+				else = {
+					has_idea = PRO_petrograd_soviet_domineering
+					has_stability < 0.1
+				}
+			}
+		}
+		days_mission_timeout = 30
+		timeout_effect = { country_event = russian_civil_war.1 }
+	}
 	PRO_kornilov_putsch_mission = {
 		priority = 1
 		icon = generic_speech

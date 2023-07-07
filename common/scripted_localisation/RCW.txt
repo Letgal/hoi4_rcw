@@ -13,27 +13,19 @@ defined_text = {
 defined_text = {
 	name = GetMenshevikOpinionRange
 	text = {
-		trigger = {
-			check_variable = { menshevik_attitude > 9 }
-		}
+		trigger = { check_variable = { menshevik_attitude > 9 } }
 		localization_key = menshevik_attitude_cooperative
 	}
 	text = {
-		trigger = {
-			check_variable = { menshevik_attitude > 7 }
-		}
+		trigger = { check_variable = { menshevik_attitude > 7 } }
 		localization_key = menshevik_attitude_friendly
 	}
 	text = {
-		trigger = {
-			check_variable = { menshevik_attitude > 5 }
-		}
+		trigger = { check_variable = { menshevik_attitude > 5 } }
 		localization_key = menshevik_attitude_amicable
 	}
 	text = {
-		trigger = {
-			check_variable = { menshevik_attitude > 2 }
-		}
+		trigger = { check_variable = { menshevik_attitude > 2 } }
 		localization_key = menshevik_attitude_lukewarm
 	}
 	text = { localization_key = menshevik_attitude_indifferent }
@@ -41,11 +33,7 @@ defined_text = {
 defined_text = {
 	name = CheckIfTsarWasEvacuated
 	text = {
-		trigger = {
-			NOT = {
-				check_variable = { tsars_location = 570 }
-			}
-		}
+		trigger = { NOT = { check_variable = { tsars_location = 580 } } }
 		localization_key = rcw_news.101.evac
 	}
 	text = { localization_key = rcw_news.101.noevac }

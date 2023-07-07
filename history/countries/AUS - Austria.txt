@@ -24,7 +24,7 @@ set_cosmetic_tag = HUN_EMPIRE
 		threat = 30
 		name = WAR_NAME_GER_SOV
 	}
-	RUS = {
+	SOV = {
 		add_named_threat = {
 			threat = 15
 			name = WAR_NAME_GER_SOV
@@ -37,30 +37,30 @@ set_cosmetic_tag = HUN_EMPIRE
 		}
 	}
 	declare_war_on = {
-		target = RUS
+		target = SOV
 		type = annex_everything
 	}
 	GER = {
 		add_to_war = {
 			targeted_alliance = AUS
-			enemy = RUS
+			enemy = SOV
 		}
 	}
 	POL = {
 		add_to_war = {
 			targeted_alliance = AUS
-			enemy = RUS
+			enemy = SOV
 		}
 	}
 	ENG = {
 		add_to_war = {
-			targeted_alliance = RUS
+			targeted_alliance = SOV
 			enemy = AUS
 		}
 	}
-	FIN = {
+	ROM = {
 		add_to_war = {
-			targeted_alliance = RUS
+			targeted_alliance = SOV
 			enemy = AUS
 		}
 	}
@@ -101,6 +101,4 @@ set_politics = {
 set_popularities = {
 	neutrality = 70
 	democratic = 30
-	fascism = 0
-	communism = 0
 }

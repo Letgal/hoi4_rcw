@@ -23,7 +23,7 @@ state = {
 
 		add_core_of = UZB
 		add_core_of = BUK
-		add_claim_by = RUS
+		add_claim_by = SOV
 	}
 
 	provinces={

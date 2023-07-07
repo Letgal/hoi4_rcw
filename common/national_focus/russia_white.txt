@@ -3,10 +3,10 @@
 	country = {
 		factor = 0
 		modifier = {
-			add = 20
-			tag = RUS
+			add = 10
+			tag = SOV
 			has_government = neutrality
-			has_cosmetic_tag = RUS_white
+			has_cosmetic_tag = SOV_white
 		}
 	}
 	default = no
@@ -18,11 +18,15 @@
 		y = 0
 		cost = 10
 		available = {
-			country_exists = SOV
-			#SOV = {
-			#	exists = yes
-			#	has_government = communism
-			#}
+			has_global_flag = RCW_ongoing
+			OR = {
+				country_exists = SOV
+				any_country_with_original_tag = {
+					original_tag_to_check = RUS
+					has_government = communism
+					has_war_with = ROOT
+				}
+			}
 		}
 		bypass_if_unavailable = yes
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
@@ -37,6 +41,7 @@
 		y = 1
 		cost = 10
 		available = {
+			has_global_flag = RCW_ongoing
 			OR = {
 				UKR = {
 					exists = yes
@@ -81,6 +86,7 @@
 		y = 1
 		cost = 10
 		available = {
+			has_global_flag = RCW_ongoing
 			OR = {
 				LIT = {
 					exists = yes
@@ -150,6 +156,7 @@
 		y = 1
 		cost = 10
 		available = {
+			has_global_flag = RCW_ongoing
 			POL = {
 				exists = yes
 				NOT = {
@@ -182,6 +189,7 @@
 		y = 1
 		cost = 10
 		available = {
+			has_global_flag = RCW_ongoing
 			FIN = {
 				exists = yes
 				NOT = {
@@ -240,83 +248,11 @@
 	}
 
 	focus = {
-		id = WHI_kadet_supremacy
+		id = WHI_prioritize_the_people
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = WHI_our_movement }
-		mutually_exclusive = { focus = WHI_nationalist_supremacy }
-		mutually_exclusive = { focus = WHI_tsarist_supremacy }
+		mutually_exclusive = { focus = WHI_prioritize_the_army }
 		relative_position_id = WHI_our_movement
-		x = -3
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
-
-	focus = {
-		id = WHI_nationalist_supremacy
-		icon = GFX_focus_generic_fascist_troops
-		prerequisite = { focus = WHI_our_movement }
-		mutually_exclusive = { focus = WHI_kadet_supremacy }
-		mutually_exclusive = { focus = WHI_tsarist_supremacy }
-		relative_position_id = WHI_our_movement
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
-
-	focus = {
-		id = WHI_tsarist_supremacy
-		icon = GFX_focus_generic_strike_at_democracy1
-		prerequisite = { focus = WHI_our_movement }
-		mutually_exclusive = { focus = WHI_kadet_supremacy }
-		mutually_exclusive = { focus = WHI_nationalist_supremacy }
-		relative_position_id = WHI_our_movement
-		x = 3
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
-
-	focus = {
-		id = WHI_bring_back_the_right_esers
-		icon = GFX_focus_prc_agrarian_socialism
-		prerequisite = { focus = WHI_kadet_supremacy }
-		relative_position_id = WHI_kadet_supremacy
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
-
-	focus = {
-		id = WHI_restore_the_black_hundred
-		icon = GFX_focus_generic_little_entente
-		prerequisite = { focus = WHI_nationalist_supremacy }
-		relative_position_id = WHI_nationalist_supremacy
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
-
-	focus = {
-		id = WHI_white_terror
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = WHI_nationalist_supremacy focus = WHI_tsarist_supremacy }
-		relative_position_id = WHI_nationalist_supremacy
-		x = 2
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
-
-	focus = {
-		id = WHI_path_to_the_republic
-		icon = GFX_goal_support_democracy
-		prerequisite = { focus = WHI_bring_back_the_right_esers }
-		mutually_exclusive = { focus = WHI_constitutional_monarchy }
-		relative_position_id = WHI_bring_back_the_right_esers
 		x = -1
 		y = 1
 		cost = 10
@@ -324,74 +260,170 @@
 	}
 
 	focus = {
-		id = WHI_constitutional_monarchy
-		icon = GFX_focus_rom_handle_king
-		prerequisite = { focus = WHI_bring_back_the_right_esers }
-		mutually_exclusive = { focus = WHI_path_to_the_republic }
-		relative_position_id = WHI_bring_back_the_right_esers
+		id = WHI_prioritize_the_army
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = WHI_our_movement }
+		mutually_exclusive = { focus = WHI_prioritize_the_people }
+		relative_position_id = WHI_our_movement
 		x = 1
 		y = 1
 		cost = 10
 		search_filters = { FOCUS_FILTER_NO_EFFECTS }
 	}
 
-	focus = {
-		id = WHI_undivisible_empire
-		icon = GFX_focus_SOV_panslavic_nationalism
-		prerequisite = { focus = WHI_restore_the_black_hundred }
-		relative_position_id = WHI_restore_the_black_hundred
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
+	#focus = {
+	#	id = WHI_kadet_supremacy
+	#	icon = GFX_goal_support_democracy
+	#	prerequisite = { focus = WHI_our_movement }
+	#	mutually_exclusive = { focus = WHI_nationalist_supremacy }
+	#	mutually_exclusive = { focus = WHI_tsarist_supremacy }
+	#	relative_position_id = WHI_our_movement
+	#	x = -3
+	#	y = 1
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
 
-	focus = {
-		id = WHI_coronate_a_new_tsar
-		icon = GFX_focus_generic_monarchy_2
-		prerequisite = { focus = WHI_tsarist_supremacy }
-		relative_position_id = WHI_tsarist_supremacy
-		x = 0
-		y = 2
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
+	#focus = {
+	#	id = WHI_nationalist_supremacy
+	#	icon = GFX_focus_generic_fascist_troops
+	#	prerequisite = { focus = WHI_our_movement }
+	#	mutually_exclusive = { focus = WHI_kadet_supremacy }
+	#	mutually_exclusive = { focus = WHI_tsarist_supremacy }
+	#	relative_position_id = WHI_our_movement
+	#	x = 0
+	#	y = 1
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
 
-	focus = {
-		id = WHI_confederation_project
-		icon = GFX_focus_SWI_dissolve_the_federal_council
-		prerequisite = { focus = WHI_path_to_the_republic focus = WHI_constitutional_monarchy }
-		mutually_exclusive = { focus = WHI_russian_federation }
-		relative_position_id = WHI_path_to_the_republic
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
+	#focus = {
+	#	id = WHI_tsarist_supremacy
+	#	icon = GFX_focus_generic_strike_at_democracy1
+	#	prerequisite = { focus = WHI_our_movement }
+	#	mutually_exclusive = { focus = WHI_kadet_supremacy }
+	#	mutually_exclusive = { focus = WHI_nationalist_supremacy }
+	#	relative_position_id = WHI_our_movement
+	#	x = 3
+	#	y = 1
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
 
-	focus = {
-		id = WHI_russian_federation
-		icon = GFX_goal_generic_national_unity
-		prerequisite = { focus = WHI_path_to_the_republic focus = WHI_constitutional_monarchy }
-		mutually_exclusive = { focus = WHI_confederation_project }
-		relative_position_id = WHI_constitutional_monarchy
-		x = 0
-		y = 1
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
+	#focus = {
+	#	id = WHI_bring_back_the_right_esers
+	#	icon = GFX_focus_prc_agrarian_socialism
+	#	prerequisite = { focus = WHI_kadet_supremacy }
+	#	relative_position_id = WHI_kadet_supremacy
+	#	x = 0
+	#	y = 1
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
 
-	focus = {
-		id = WHI_russia_reunited
-		icon = GFX_focus_generic_population_growth
-		prerequisite = { focus = WHI_restore_the_civilian_government }
-		prerequisite = { focus = WHI_path_to_the_republic focus = WHI_constitutional_monarchy }
-		prerequisite = { focus = WHI_undivisible_empire }
-		prerequisite = { focus = WHI_coronate_a_new_tsar }
-		relative_position_id = WHI_our_movement
-		x = 0
-		y = 5
-		cost = 10
-		search_filters = { FOCUS_FILTER_NO_EFFECTS }
-	}
+	#focus = {
+	#	id = WHI_restore_the_black_hundred
+	#	icon = GFX_focus_generic_little_entente
+	#	prerequisite = { focus = WHI_nationalist_supremacy }
+	#	relative_position_id = WHI_nationalist_supremacy
+	#	x = 0
+	#	y = 1
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
+
+	#focus = {
+	#	id = WHI_white_terror
+	#	icon = GFX_goal_generic_political_pressure
+	#	prerequisite = { focus = WHI_nationalist_supremacy focus = WHI_tsarist_supremacy }
+	#	relative_position_id = WHI_nationalist_supremacy
+	#	x = 2
+	#	y = 1
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
+
+	#focus = {
+	#	id = WHI_path_to_the_republic
+	#	icon = GFX_goal_support_democracy
+	#	prerequisite = { focus = WHI_bring_back_the_right_esers }
+	#	mutually_exclusive = { focus = WHI_constitutional_monarchy }
+	#	relative_position_id = WHI_bring_back_the_right_esers
+	#	x = -1
+	#	y = 1
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
+
+	#focus = {
+	#	id = WHI_constitutional_monarchy
+	#	icon = GFX_focus_rom_handle_king
+	#	prerequisite = { focus = WHI_bring_back_the_right_esers }
+	#	mutually_exclusive = { focus = WHI_path_to_the_republic }
+	#	relative_position_id = WHI_bring_back_the_right_esers
+	#	x = 1
+	#	y = 1
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
+
+	#focus = {
+	#	id = WHI_undivisible_empire
+	#	icon = GFX_focus_SOV_panslavic_nationalism
+	#	prerequisite = { focus = WHI_restore_the_black_hundred }
+	#	relative_position_id = WHI_restore_the_black_hundred
+	#	x = 0
+	#	y = 1
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
+
+	#focus = {
+	#	id = WHI_coronate_a_new_tsar
+	#	icon = GFX_focus_generic_monarchy_2
+	#	prerequisite = { focus = WHI_tsarist_supremacy }
+	#	relative_position_id = WHI_tsarist_supremacy
+	#	x = 0
+	#	y = 2
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
+
+	#focus = {
+	#	id = WHI_confederation_project
+	#	icon = GFX_focus_SWI_dissolve_the_federal_council
+	#	prerequisite = { focus = WHI_path_to_the_republic focus = WHI_constitutional_monarchy }
+	#	mutually_exclusive = { focus = WHI_russian_federation }
+	#	relative_position_id = WHI_path_to_the_republic
+	#	x = 0
+	#	y = 1
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
+
+	#focus = {
+	#	id = WHI_russian_federation
+	#	icon = GFX_goal_generic_national_unity
+	#	prerequisite = { focus = WHI_path_to_the_republic focus = WHI_constitutional_monarchy }
+	#	mutually_exclusive = { focus = WHI_confederation_project }
+	#	relative_position_id = WHI_constitutional_monarchy
+	#	x = 0
+	#	y = 1
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
+
+	#focus = {
+	#	id = WHI_russia_reunited
+	#	icon = GFX_focus_generic_population_growth
+	#	prerequisite = { focus = WHI_restore_the_civilian_government }
+	#	prerequisite = { focus = WHI_path_to_the_republic focus = WHI_constitutional_monarchy }
+	#	prerequisite = { focus = WHI_undivisible_empire }
+	#	prerequisite = { focus = WHI_coronate_a_new_tsar }
+	#	relative_position_id = WHI_our_movement
+	#	x = 0
+	#	y = 5
+	#	cost = 10
+	#	search_filters = { FOCUS_FILTER_NO_EFFECTS }
+	#}
 }

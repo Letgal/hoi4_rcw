@@ -9,7 +9,7 @@ state={
 	}
 
 	history={
-		owner = RUS
+		owner = SOV
 		victory_points = {
 			4797 3 
 		}
@@ -19,8 +19,7 @@ state={
 			air_base = 1
 
 		}
-		add_core_of = RUS
-		1917.11.11 = { owner = SOV }
+		add_core_of = SOV
 	}
 
 	provinces={

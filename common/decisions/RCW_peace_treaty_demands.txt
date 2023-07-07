@@ -3,11 +3,9 @@ RCW_peace_treaty_category = {
 		icon = eng_trade_unions_demand
 		visible = {
 			has_global_flag = peace_negotiations_ongoing
-			NOT = { has_variable = RUS.POL_concession }
+			NOT = { has_variable = SOV.POL_concession }
 		}
-		available = {
-			NOT = { has_country_flag = is_sending_demands }
-		}
+		available = { NOT = { has_country_flag = is_sending_demands } }
 		fire_only_once = yes
 		state_target = yes
 		targets = { 10 }
@@ -26,7 +24,7 @@ RCW_peace_treaty_category = {
 		complete_effect = {
 			set_country_flag = is_sending_demands
 			hidden_effect = {
-				RUS = {
+				SOV = {
 					country_event = {
 						id = RCW_treaty.5
 						days = 2
@@ -43,7 +41,7 @@ RCW_peace_treaty_category = {
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = concession_denied_tt
-				check_variable = { RUS.POL_concession = 2 }
+				check_variable = { SOV.POL_concession = 2 }
 			}
 		}
 		cancel_effect = { clr_country_flag = is_sending_demands }
@@ -52,11 +50,9 @@ RCW_peace_treaty_category = {
 		icon = eng_trade_unions_demand
 		visible = {
 			has_global_flag = peace_negotiations_ongoing
-			NOT = { has_variable = RUS.RUT_concession }
+			NOT = { has_variable = SOV.RUT_concession }
 		}
-		available = {
-			NOT = { has_country_flag = is_sending_demands }
-		}
+		available = { NOT = { has_country_flag = is_sending_demands } }
 		fire_only_once = yes
 		state_target = yes
 		targets = { 202 }
@@ -65,7 +61,7 @@ RCW_peace_treaty_category = {
 		complete_effect = {
 			set_country_flag = is_sending_demands
 			hidden_effect = {
-				RUS = {
+				SOV = {
 					country_event = {
 						id = RCW_treaty.6
 						days = 2
@@ -82,7 +78,7 @@ RCW_peace_treaty_category = {
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = concession_denied_tt
-				check_variable = { RUS.RUT_concession = 2 }
+				check_variable = { SOV.RUT_concession = 2 }
 			}
 		}
 		cancel_effect = { clr_country_flag = is_sending_demands }
@@ -91,11 +87,9 @@ RCW_peace_treaty_category = {
 		icon = eng_trade_unions_demand
 		visible = {
 			has_global_flag = peace_negotiations_ongoing
-			NOT = { has_variable = RUS.BAL_concession }
+			NOT = { has_variable = SOV.BAL_concession }
 		}
-		available = {
-			NOT = { has_country_flag = is_sending_demands }
-		}
+		available = { NOT = { has_country_flag = is_sending_demands } }
 		fire_only_once = yes
 		state_target = yes
 		targets = { 808 }
@@ -104,7 +98,7 @@ RCW_peace_treaty_category = {
 		complete_effect = {
 			set_country_flag = is_sending_demands
 			hidden_effect = {
-				RUS = {
+				SOV = {
 					country_event = {
 						id = RCW_treaty.7
 						days = 2
@@ -121,7 +115,7 @@ RCW_peace_treaty_category = {
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = concession_denied_tt
-				check_variable = { RUS.BAL_concession = 2 }
+				check_variable = { SOV.BAL_concession = 2 }
 			}
 		}
 		cancel_effect = { clr_country_flag = is_sending_demands }
@@ -130,11 +124,9 @@ RCW_peace_treaty_category = {
 		icon = eng_trade_unions_demand
 		visible = {
 			has_global_flag = peace_negotiations_ongoing
-			NOT = { has_variable = RUS.FIN_concession }
+			NOT = { has_variable = SOV.FIN_concession }
 		}
-		available = {
-			NOT = { has_country_flag = is_sending_demands }
-		}
+		available = { NOT = { has_country_flag = is_sending_demands } }
 		fire_only_once = yes
 		state_target = yes
 		targets = { 111 }
@@ -143,7 +135,7 @@ RCW_peace_treaty_category = {
 		complete_effect = {
 			set_country_flag = is_sending_demands
 			hidden_effect = {
-				RUS = {
+				SOV = {
 					country_event = {
 						id = RCW_treaty.8
 						days = 2
@@ -160,7 +152,7 @@ RCW_peace_treaty_category = {
 		cancel_trigger = {
 			custom_trigger_tooltip = {
 				tooltip = concession_denied_tt
-				check_variable = { RUS.FIN_concession = 2 }
+				check_variable = { SOV.FIN_concession = 2 }
 			}
 		}
 		cancel_effect = { clr_country_flag = is_sending_demands }
@@ -170,29 +162,29 @@ RCW_peace_treaty_category = {
 		visible = {
 			has_global_flag = peace_negotiations_ongoing
 			OR = {
-				check_variable = { RUS.POL_concession = 2 }
-				check_variable = { RUS.RUT_concession = 2 }
-				check_variable = { RUS.BAL_concession = 2 }
-				check_variable = { RUS.FIN_concession = 2 }
+				check_variable = { SOV.POL_concession = 2 }
+				check_variable = { SOV.RUT_concession = 2 }
+				check_variable = { SOV.BAL_concession = 2 }
+				check_variable = { SOV.FIN_concession = 2 }
 			}
 		}
 		available = {
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = denied_POL_tt
-					check_variable = { RUS.POL_concession = 2 }
+					check_variable = { SOV.POL_concession = 2 }
 				}
 				custom_trigger_tooltip = {
 					tooltip = denied_RUT_tt
-					check_variable = { RUS.RUT_concession = 2 }
+					check_variable = { SOV.RUT_concession = 2 }
 				}
 				custom_trigger_tooltip = {
 					tooltip = denied_BAL_tt
-					check_variable = { RUS.BAL_concession = 2 }
+					check_variable = { SOV.BAL_concession = 2 }
 				}
 				custom_trigger_tooltip = {
 					tooltip = denied_FIN_tt
-					check_variable = { RUS.FIN_concession = 2 }
+					check_variable = { SOV.FIN_concession = 2 }
 				}
 			}
 		}
@@ -201,37 +193,35 @@ RCW_peace_treaty_category = {
 			modifier = {
 				add = 3
 				OR = {
-					check_variable = { RUS.POL_concession = 2 }
-					check_variable = { RUS.RUT_concession = 2 }
-					check_variable = { RUS.BAL_concession = 2 }
-					check_variable = { RUS.FIN_concession = 2 }
+					check_variable = { SOV.POL_concession = 2 }
+					check_variable = { SOV.RUT_concession = 2 }
+					check_variable = { SOV.BAL_concession = 2 }
+					check_variable = { SOV.FIN_concession = 2 }
 				}
 			}
 			modifier = {
 				add = 3
 				count_triggers = {
 					amount = 2
-					check_variable = { RUS.POL_concession = 2 }
-					check_variable = { RUS.RUT_concession = 2 }
-					check_variable = { RUS.BAL_concession = 2 }
-					check_variable = { RUS.FIN_concession = 2 }
+					check_variable = { SOV.POL_concession = 2 }
+					check_variable = { SOV.RUT_concession = 2 }
+					check_variable = { SOV.BAL_concession = 2 }
+					check_variable = { SOV.FIN_concession = 2 }
 				}
 			}
 			modifier = {
 				add = 3
 				count_triggers = {
 					amount = 3
-					check_variable = { RUS.POL_concession = 2 }
-					check_variable = { RUS.RUT_concession = 2 }
-					check_variable = { RUS.BAL_concession = 2 }
-					check_variable = { RUS.FIN_concession = 2 }
+					check_variable = { SOV.POL_concession = 2 }
+					check_variable = { SOV.RUT_concession = 2 }
+					check_variable = { SOV.BAL_concession = 2 }
+					check_variable = { SOV.FIN_concession = 2 }
 				}
 			}
 		}
 		complete_effect = {
-			hidden_effect = {
-				RUS = { country_event = RCW_treaty.9 }
-			}
+			hidden_effect = { SOV = { country_event = RCW_treaty.9 } }
 		}
 	}
 }

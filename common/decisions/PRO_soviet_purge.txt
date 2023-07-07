@@ -28,13 +28,7 @@ PRO_balance_of_power_category = {
 		icon = generic_break_treaty
 		visible = { has_completed_focus = PRO_purge_the_soviets }
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = PRO_petrograd_soviet_crippled
-				NOT = {
-					has_idea = PRO_petrograd_soviet_passive
-					has_idea = PRO_petrograd_soviet_domineering
-				}
-			}
+			has_idea = PRO_petrograd_soviet_weakened
 			custom_trigger_tooltip = {
 				tooltip = rsdlp_divide_is_6
 				check_variable = { rsdlp_divide > 5 }
