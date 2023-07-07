@@ -8,12 +8,18 @@
 
  white_movement:0 "White Movement"
 
+ AUS_NOT_WHITE:0 "Cisleithania"
+ AUS_NOT_WHITE_DEF:0 "Cisleithania"
+
  SOV_menshevik_party:0 "RSDRP(m)"
  SOV_menshevik_party_long:0 "Rossiyskaya sotsial-demokraticheskaya rabochaya partiya (men'shevikov)"
-
  SOV_kornilov_gvt:1 "Pravityel'stvo Kornilova"
  SOV_kornilov_gvt_long:1 "Vryemyennoye pravityel'stvo gyenyerala Kornilova"
  SOV_white_movement:1 "Byeloye dvizheniye"
+ MOL_democratic_party:0 "Sfatul Tării"
+
+ VP_chisinau:0 "Chisinău"
+ VP_cetatea_alba:0 "Cetatea Albă"
 
  RULE_FACTION_BLOCKED_TT:0 "§R(Game Rule) Cannot join or invite others into factions§!"
 

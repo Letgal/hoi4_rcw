@@ -6,7 +6,6 @@
 			add = 10
 			tag = SOV
 			has_government = neutrality
-			has_cosmetic_tag = SOV_white
 		}
 	}
 	default = no
@@ -19,13 +18,10 @@
 		cost = 10
 		available = {
 			has_global_flag = RCW_ongoing
-			OR = {
-				country_exists = SOV
-				any_country_with_original_tag = {
-					original_tag_to_check = RUS
-					has_government = communism
-					has_war_with = ROOT
-				}
+			any_country_with_original_tag = {
+				original_tag_to_check = SOV
+				has_government = communism
+				has_war_with = ROOT
 			}
 		}
 		bypass_if_unavailable = yes
@@ -222,9 +218,11 @@
 		y = 4
 		cost = 10
 		available = {
-			NOT = {
-				country_exists = SOV
-				has_global_flag = RCW_ongoing
+			NOT = { has_global_flag = RCW_ongoing }
+			any_country_with_original_tag = {
+				original_tag_to_check = SOV
+				has_government = communism
+				exists = no
 			}
 		}
 		completion_reward = {

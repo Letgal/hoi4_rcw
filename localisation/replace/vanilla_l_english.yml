@@ -1,5 +1,5 @@
 ﻿l_english:
- LOADING_TIP_6: "Thanks for playing the “Russian Civil War” mod."
+ LOADING_TIP_6: "Thank you for playing the “Russian Civil War” mod."
 
  FE_INTERESTING_COUNTRIES: "Russia Overview"
  FE_COUNTRY_INFO_TITLE: "Country Overview"
@@ -52,6 +52,13 @@
  FRA: "Allied Powers"
  FRA_DEF: "the Allied Powers"
  FRA_ADJ: "Allied"
+
+ HUN_GREATER_fascism: "Transleithania"
+ HUN_GREATER_fascism_DEF: "Transleithania"
+ HUN_GREATER_neutrality: "Transleithania"
+ HUN_GREATER_neutrality_DEF: "Transleithania"
+ HUN_GREATER: "Transleithania"
+ HUN_GREATER_DEF: "Transleithania"
 
  autonomy_colony: "Autonomous Puppet"
 

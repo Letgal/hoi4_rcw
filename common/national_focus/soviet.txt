@@ -5936,48 +5936,6 @@ focus_tree = {
 
 			#Spawn Cossack divisions
 			custom_effect_tooltip = SOV_restore_cossack_units_spawn_tt
-			hidden_effect = {
-				division_template = {
-					name = "Kazachya Kavaleryskaya Diviziya"
-					division_names_group = SOV_CAV_02
-					template_counter = 05
-
-					regiments = {
-						cavalry = { x = 0 y = 0 }
-						cavalry = { x = 0 y = 1 }
-						cavalry = { x = 1 y = 0 }
-						cavalry = { x = 1 y = 1 }
-						mot_artillery_brigade = { x = 2 y = 0 }
-						light_armor = { x = 3 y = 0 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
-						recon = { x = 0 y = 2 }
-					}
-				}
-
-				capital_scope = {
-					#Cossack Cavalry
-					create_unit = { 
-						division = "name = \"4ya Donskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
-					}
-					create_unit = { 
-						division = "name = \"6ya Kubansko-Terskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
-					}
-					create_unit = { 
-						division = "name = \"10ya Tersko-Stavropolskaya Kazachya Kav. Div\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
-					}
-					create_unit = { 
-						division = "name = \"12ya Kubanskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
-					}
-
-					#Cossack Infantry
-					create_unit = {
-						division = "name = \"13ya Donskaya Kazachya Div.\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.7 start_equipment_factor = 1.0" owner = ROOT
-					}
-				}
-			}
 		}
 	}
 
@@ -6185,27 +6143,6 @@ focus_tree = {
 			custom_effect_tooltip = SOV_penal_battalions_spawn_tt
 			hidden_effect = {
 				set_technology = { penal_infantry = 1 popup = no }
-
-				division_template = {
-					name = "Shtrafnaya Chast"
-					division_names_group = SOV_PEN_01
-					is_locked = yes
-
-					regiments = {
-						penal_battalion = { x = 0 y = 0 }
-						penal_battalion = { x = 0 y = 1 }
-						penal_battalion = { x = 0 y = 2 }
-						penal_battalion = { x = 1 y = 0 }
-						penal_battalion = { x = 1 y = 1 }
-						penal_battalion = { x = 1 y = 2 }
-						penal_battalion = { x = 2 y = 0 }
-						penal_battalion = { x = 2 y = 1 }
-						penal_battalion = { x = 2 y = 2 }
-					}
-					support = {
-						artillery = { x = 0 y = 0 }
-					}
-				}
 
 				SOV_spawn_penal_divisions_effect = yes
 			}
@@ -8893,17 +8830,6 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SOV_the_permanent_revolution_decisions_tt
-			division_template = { #Template for Permanent Revolution decisions
-				name = "Trotskyist Revolutionary Militias"
-				priority = 1
-				is_locked = yes
-				division_names_group = SOV_INF_02
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 0 y = 2 }
-				}
-			}
 
 			IF = {
 				limit = {

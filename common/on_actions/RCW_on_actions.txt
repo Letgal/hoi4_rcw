@@ -16,6 +16,17 @@ on_actions = {
 			}
 		}
 	}
+	on_subject_free = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = HUN
+					FROM = { original_tag = AUS }
+				}
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
 	on_government_change = {
 		effect = {
 			if = {
@@ -55,6 +66,34 @@ on_actions = {
 			if = {
 				limit = { FROM.FROM = { state = 88 } }
 				ROOT = { country_event = russian_civil_war.104 }
+			}
+			if = {
+				limit = {
+					FROM.FROM = { state = 78 }
+					ROOT = {
+						OR = {
+							original_tag = ROM
+							original_tag = MOL
+							original_tag = TRA
+						}
+					}
+				}
+				set_province_name = { id = 3707 name = VP_chisinau }
+				else = { reset_province_name = 3707 }
+			}
+			if = {
+				limit = {
+					FROM.FROM = { state = 766 }
+					ROOT = {
+						OR = {
+							original_tag = ROM
+							original_tag = MOL
+							original_tag = TRA
+						}
+					}
+				}
+				set_province_name = { id = 6727 name = VP_cetatea_alba }
+				else = { reset_province_name = 6727 }
 			}
 		}
 	}

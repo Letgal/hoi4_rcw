@@ -32,15 +32,12 @@ country_event = {
 			remove_dynamic_modifier = { modifier = PRO_failing_state }
 
 			retire_character = SOV_aleksandr_kerensky
-			retire_character = SOV_lavr_kornilov
 			retire_character = SOV_pavel_milyukov
 			retire_character = SOV_georgi_lvov
 			retire_character = SOV_mikhail_rodzyanko
-
-			leave_faction = yes
 		}
 		start_civil_war = {
-			ruling_party = ROOT
+			ruling_party = neutrality
 			ideology = communism
 			size = 0.1
 			capital = 195
@@ -49,27 +46,19 @@ country_event = {
 				PREV = {
 					#set_capital = 219
 					SOV_vladimir_lenin = { set_nationality = PREV.PREV }
-					set_cosmetic_tag = SOV_white
-					create_faction = white_movement
-					load_focus_tree = white_russia_focus
-					set_party_name = {
-						ideology = neutrality
-						name = SOV_white_movement
-						long_name = SOV_white_movement
-					}
 					set_party_name = {
 						ideology = communism
 						name = SOV_menshevik_party
 						long_name = SOV_menshevik_party_long
 					}
-					add_ideas = {
-						WHI_factionalism
-						communism_banned
-					}
+					promote_character = SOV_irakli_tsereteli
 				}
 				set_cosmetic_tag = SOV_soviet
 				create_faction = Comintern
-				remove_ideas = provisional_government_idea
+				remove_ideas = {
+					provisional_government_idea
+					PRO_undersupplied_army
+				}
 				remove_dynamic_modifier = { modifier = war_weariness }
 				load_focus_tree = soviet_russia_focus
 				add_ideas = {
@@ -82,6 +71,7 @@ country_event = {
 	}
 	option = {
 		name = russian_civil_war.1.b
+		name = russian_civil_war.1.a
 		set_global_flag = RCW_ongoing
 		hidden_effect = {
 			if = {
@@ -98,13 +88,12 @@ country_event = {
 			remove_dynamic_modifier = { modifier = PRO_failing_state }
 
 			retire_character = SOV_aleksandr_kerensky
-			retire_character = SOV_lavr_kornilov
 			retire_character = SOV_pavel_milyukov
 			retire_character = SOV_georgi_lvov
 			retire_character = SOV_mikhail_rodzyanko
 		}
 		start_civil_war = {
-			ruling_party = ROOT
+			ruling_party = neutrality
 			ideology = communism
 			size = 0.1
 			capital = 195
@@ -113,25 +102,19 @@ country_event = {
 				PREV = {
 					#set_capital = 219
 					SOV_vladimir_lenin = { set_nationality = PREV.PREV }
-					set_cosmetic_tag = SOV_white
-					load_focus_tree = white_russia_focus
-					set_party_name = {
-						ideology = neutrality
-						name = SOV_white_movement
-						long_name = SOV_white_movement
-					}
 					set_party_name = {
 						ideology = communism
 						name = SOV_menshevik_party
 						long_name = SOV_menshevik_party_long
 					}
-					add_ideas = {
-						WHI_factionalism
-						communism_banned
-					}
+					promote_character = SOV_irakli_tsereteli
 				}
 				set_cosmetic_tag = SOV_soviet
-				remove_ideas = provisional_government_idea
+				create_faction = Comintern
+				remove_ideas = {
+					provisional_government_idea
+					PRO_undersupplied_army
+				}
 				remove_dynamic_modifier = { modifier = war_weariness }
 				load_focus_tree = soviet_russia_focus
 				add_ideas = {
@@ -144,10 +127,43 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = russian_civil_war.2
+	title = russian_civil_war.2.t
+	desc = russian_civil_war.2.d
+	picture = GFX_report_event_generic_conference
+
+	fire_only_once = yes
+	trigger = {
+		has_global_flag = RCW_ongoing
+		tag = SOV
+		has_government = neutrality
+	}
+	mean_time_to_happen = { days = 7 }
+
+	option = {
+		name = russian_civil_war.2.a
+		set_cosmetic_tag = SOV_white
+		hidden_effect = {
+			add_ideas = {
+				WHI_factionalism
+				communism_banned
+			}
+			leave_faction = yes
+			create_faction = white_movement
+		}
+		load_focus_tree = white_russia_focus
+		set_party_name = {
+			ideology = neutrality
+			name = SOV_white_movement
+			long_name = SOV_white_movement
+		}
+	}
+}
 #country_event = {
-#	id = russian_civil_war.2
-#	title = russian_civil_war.2.t
-#	desc = russian_civil_war.2.d
+#	id = russian_civil_war.3
+#	title = russian_civil_war.3.t
+#	desc = russian_civil_war.3.d
 #	picture = GFX_report_event_generic_riot
 #
 #	minor_flavor = yes
@@ -169,7 +185,7 @@ country_event = {
 #	immediate = {}
 #
 #	option = {
-#		name = russian_civil_war.2.a
+#		name = russian_civil_war.3.a
 #	}
 #}
 

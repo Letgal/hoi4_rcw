@@ -17,7 +17,22 @@ set_technology = {
 	gw_artillery = 1
 }
 
-set_cosmetic_tag = HUN_EMPIRE
+if = {
+	limit = { has_dlc = "Together for Victory" }
+	set_cosmetic_tag = AUS_NOT_WHITE
+	set_autonomy = {
+		target = HUN
+		autonomy_state = autonomy_integrated_puppet
+	}
+	HUN = { set_cosmetic_tag = HUN_GREATER }
+	else = {
+		set_cosmetic_tag = HUN_EMPIRE
+		annex_country = {
+			target = HUN
+			transfer_troops = yes
+		}
+	}
+}
 
 1914.7.28 = {
 	add_named_threat = {
